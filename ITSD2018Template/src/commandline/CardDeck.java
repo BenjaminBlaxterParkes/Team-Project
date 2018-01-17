@@ -18,9 +18,9 @@ public class CardDeck {
 	// Instance variables
 	private String deckOfCards;	
 	private Card[] originalDeck = new Card[DECK_SIZE];
-	private Card[] shuffledDeck = new Card[DECK_SIZE];
+	public Card[] shuffledDeck = new Card[DECK_SIZE];
 	private ArrayList<Card> tempDeck;
-	Card card;
+
 	
 	// CardDeck object
 	// Initiates reading in deck file.txt
@@ -76,6 +76,8 @@ public class CardDeck {
 		}
 	}
 	
+
+	
 	
 	// Accessor methods
 	public Card[] getOriginalDeck() {
@@ -91,5 +93,6 @@ public class CardDeck {
 		CardDeck cd = new CardDeck();
 		cd.populateDeck();
 		cd.shuffleDeck();
+
 	}
 }

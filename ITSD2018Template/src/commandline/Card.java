@@ -69,7 +69,7 @@ public class Card {
 	 * Method that returns the integer from the third category
 	 * @return
 	 */
-	public int getcategoryThree() {
+	public int getCategoryThree() {
 		return categoryThree; 
 	}
 	
@@ -77,7 +77,7 @@ public class Card {
 	 * Method that returns the integer from the fourth category
 	 * @return
 	 */
-	public int getcategoryFour() {
+	public int getCategoryFour() {
 		return categoryFour;
 	}
 	
@@ -85,8 +85,13 @@ public class Card {
 	 * Method that returns the integer from the fifth category
 	 * @return
 	 */
-	public int getcategoryFive() {
+	public int getCategoryFive() {
 		return categoryFive;
+	}
+	
+	public String toString() {
+		return "" + description + " " + categoryOne + " " + categoryTwo + " " + categoryThree + " "
+				+ categoryFour + " " + categoryFive;
 	}
 	
 }
