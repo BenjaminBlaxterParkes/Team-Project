@@ -13,14 +13,14 @@ import java.util.stream.Stream;
 public class CardDeck {
 	
 	// Constant variables
-	private int DECK_SIZE = 40;
+	final private int DECK_SIZE = 40;
 	
 	// Instance variables
 	private String deckOfCards;	
 	private Card[] originalDeck = new Card[DECK_SIZE];
 	private Card[] shuffledDeck = new Card[DECK_SIZE];
 	private ArrayList<Card> tempDeck;
-
+	Card card;
 	
 	// CardDeck object
 	// Initiates reading in deck file.txt
@@ -63,16 +63,16 @@ public class CardDeck {
 		Card tempCard; // Card object for passing from originalDeck to shuffledDeck
 		
 		tempDeck = new ArrayList<Card>(Arrays.asList(originalDeck)); // Convert originalDeck into ArrayList
-//		System.out.println(tempDeck);
+		System.out.println(tempDeck);
 		
 		Collections.shuffle(tempDeck); // Shuffle cards
-//		System.out.println(tempDeck.toString());
+		System.out.println(tempDeck.toString());
 
 		// Loop through shuffled cards
 		for (int i = 0; i < DECK_SIZE; i++) {
 			tempCard = tempDeck.get(i); // Stored each card
 			shuffledDeck[i] = tempCard; // Populate the shuffled deck
-//			System.out.println(shuffledDeck[i].toString());
+			System.out.println(shuffledDeck[i].getDescription());
 		}
 	}
 	
