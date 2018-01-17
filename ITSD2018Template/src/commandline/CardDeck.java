@@ -76,6 +76,15 @@ public class CardDeck {
 		}
 	}
 	
+	
+	// Accessor methods
+	public Card[] getOriginalDeck() {
+		return originalDeck;
+	}
+	public Card[] getShuffledDeck() {
+		return shuffledDeck;
+	}
+	
 	// Main class for testing
 	public static void main(String[] args) {
 		
