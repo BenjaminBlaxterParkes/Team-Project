@@ -17,6 +17,9 @@ public class TopTrumpsCLIApplication {
 		GameMaster gm = new GameMaster();
 		CardDeck cd = new CardDeck();
 		final int DECK_SIZE = 40;
+		int round = 1;
+		AIPlayer AI;
+		HumanPlayer HP;
 		boolean writeGameLogsToFile = false; // Should we write game logs to file?
 //		if (args[0].equalsIgnoreCase("true")) {
 //			writeGameLogsToFile = true; // Command line selection 
@@ -92,7 +95,46 @@ public class TopTrumpsCLIApplication {
 				
 				gm.chooseFirstPlayer();
 				
-//				if (human )
+				// start of round loop
+				while (gm.getArraySize() > 2) {
+				
+					System.out.println("Enter any key to continue to round " + round);
+				
+					String startRound = in.next();
+				
+					if (gm.getActivePlayer() == human) {
+						System.out.println("It's your turn! Here's your card:\n");
+						System.out.println(gm.getActivePlayer().getTopCardInfo());
+						System.out.println("Which category would you like to select?");
+					
+						String chooseCategory = in.next();
+					
+							if (chooseCategory.equals("1")) {
+								gm.sortByFirstCategory();
+							}
+							if (chooseCategory.equals("2")) {
+								
+							}
+							if (chooseCategory.equals("3")) {
+								
+							}
+							if (chooseCategory.equals("4")) {
+									
+								}
+							if (chooseCategory.equals("5")) {
+								
+							}
+							
+					}
+					else {
+					
+					}
+				
+				
+				}
+				
+				System.out.println("The game is over.");
+				
 				
 				// creating players
 

@@ -8,6 +8,7 @@ public class GameMaster {
 	Card card;
 	int numOfPlayers = 5; // CL version will always have 5 players
 	Player[] players = new Player[numOfPlayers];
+	ArrayList<Player> playersArrList; 
 	//Card[] shuffleDeck = cardDeck.getShuffledDeck();
 	
 
@@ -42,14 +43,44 @@ public class GameMaster {
 	 * @return
 	 */
 	public Player chooseFirstPlayer() {
-		Random rand = new Random();
-		int firstPlayer = rand.nextInt(numOfPlayers -1);
-		Player p;
-		p = players[firstPlayer];
+		playersArrList = new ArrayList<Player>(Arrays.asList(players));
+		Collections.shuffle(playersArrList);
+		System.err.println("The shuffled list of players is: " + playersArrList.toString());
+		Player p = playersArrList.get(0);
 		System.err.println("The first player will be: " + p.getName());
 		return p;
 	}
 	
+	public Player getActivePlayer() {
+		Player p;
+		p = playersArrList.get(0);
+		return p; 
+	}
+	
+	public int getArraySize() {
+		int size = playersArrList.size();
+		return size;
+	}
+	
+	public void categoryChosen(int choice) {
+		//choice = category (say, 1, which is combat)
+		// int max = 0;
+		//for(int i = 0; i < playersArrList; i++){
+		//	if (playersArrList.getTopHand[i] > max) {
+        	//max = playersArrList[i];}
+	
+    }
+		//return category;
+	
+	public void sortByFirstCategory() {
+		Collections.sort(playersArrList, Collections.reverseOrder());
+		
+		for(int i = 0; i < playersArrList.size(); i++) {
+			System.out.println(playersArrList.get(i));
+		}
+		
+	}
+	 
 	
 	// will find the player with the highest category amount
 //	public Player findWinner() {

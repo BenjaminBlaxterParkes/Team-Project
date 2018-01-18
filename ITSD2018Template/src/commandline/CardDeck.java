@@ -15,6 +15,7 @@ public class CardDeck {
 	// Constant variables
 	final private int DECK_SIZE = 40;
 	final private int NUM_OF_CATEGORIES = 5;
+	final String FUTURAMA_DECK = "FuturamaDeck.txt";
 	
 	// Instance variables
 	private String deckOfCards;
@@ -22,6 +23,7 @@ public class CardDeck {
 	private Card[] originalDeck = new Card[DECK_SIZE];
 	public Card[] shuffledDeck = new Card[DECK_SIZE];
 	private ArrayList<Card> tempDeck;
+	private String listOfCategories;
 
 	
 	// CardDeck object
@@ -30,21 +32,25 @@ public class CardDeck {
 
 		// Read in deck .txt file
 		StringBuilder deckFile = new StringBuilder();
-		try (Stream<String> stream = Files.lines(Paths.get("FuturamaDeck.txt"), StandardCharsets.UTF_8)) {
+		try (Stream<String> stream = Files.lines(Paths.get(FUTURAMA_DECK), StandardCharsets.UTF_8)) {
 			stream.forEach(s -> deckFile.append(s).append("\n"));
 		} catch (IOException e) {
 			e.printStackTrace();
 		}
 		String deckAsString = deckFile.toString(); // Save deck file as string
 		String[] temp = deckAsString.split("\n", 2);
+		
+		String descriptionAsString = temp[0];
+		System.err.println(descriptionAsString);
+		
 		deckOfCards = temp[1];
 		System.out.println(deckOfCards);
-		String descriptionAsString = temp[0];
-		System.out.println(descriptionAsString);
+		
 		String[] temp2 = descriptionAsString.split(" ", 2);
-		String listOfCategories = temp2[1];
-		System.out.println(listOfCategories);
+		this.listOfCategories = temp2[1];
+		System.out.println(listOfCategories + " is list of categories");
 		categories = listOfCategories.split(" ");
+		
 		// System.out.println(deckOfCards);
 
 	}
@@ -52,17 +58,19 @@ public class CardDeck {
 	
 	// Method to sort the deck file into individual cards and populate originalDeck[]
 	public void populateDeck() {
-		
+		System.err.println(listOfCategories + " in populateDeck");
 		Card newCard; // new card objects to fill originalDeck[]
-		String [] temp = deckOfCards.split("\n", 2);
-		String doc = temp[1];
-		String[] deckSplit = doc.split("\n"); // split to individual cards
+//		String [] temp = deckOfCards.split("\n", 2);
+//		String doc = temp[1];
+		String[] deckSplit = deckOfCards.split("\n"); // split to individual cards
 		
 		// Loop through deck, index i = 1 to skip first line of deck file
-		for (int i = 1; i < deckSplit.length; i++) {
+		for (int i = 0; i < deckSplit.length; i++) {
 				String singleCard = deckSplit[i]; // Store each line of deck file
 				newCard = new Card(singleCard); // Create new Card with each new line
-				originalDeck[i-1] = newCard; // Insert Card elements into array, i-1 to fill index 0
+				newCard.setCardInfo(listOfCategories);
+				
+				originalDeck[i] = newCard; // Insert Card elements into array, i-1 to fill index 0
 		}
 	}
 	

@@ -4,6 +4,7 @@ public class Card {
 
 	final protected String description;
 	final protected int categoryOne, categoryTwo, categoryThree, categoryFour, categoryFive;
+	String cardInfo = "";
 	
 	/**
 	 * This is a manual constructor that takes the following parameters
@@ -94,4 +95,11 @@ public class Card {
 				+ categoryFour + " " + categoryFive;
 	}
 	
+	public void setCardInfo(String info) {
+		this.cardInfo = info;
+	}
+	
+	public String getCardInfo() {
+		return this.cardInfo;
+	}
 }
