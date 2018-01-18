@@ -95,14 +95,17 @@ public class TopTrumpsCLIApplication {
 				
 				gm.chooseFirstPlayer();
 				
+				
 				// start of round loop
 				while (gm.getArraySize() > 2) {
 				
 					System.out.println("Enter any key to continue to round " + round);
 				
 					String startRound = in.next();
+					
+					String activePlayerName = gm.getActivePlayerName();
 				
-					if (gm.getActivePlayer() == human) {
+					if (activePlayerName.equals(human.getName())) {
 						System.out.println("It's your turn! Here's your card:\n");
 						System.out.println(gm.getActivePlayer().getTopCardInfo());
 						System.out.println("Which category would you like to select?");
@@ -127,26 +130,27 @@ public class TopTrumpsCLIApplication {
 							
 					}
 					else {
-						String AIName = gm.getActivePlayerName();
-						if (AIName.equals(AI1.getName())) {
+						if (activePlayerName.equals(AI1.getName())) {
 							int choice = AI1.chooseCategory();
 							gm.sortByCategory(choice);
 						}
-						if (AIName.equals(AI2.getName())) {
+						if (activePlayerName.equals(AI2.getName())) {
 							int choice = AI2.chooseCategory();
 							gm.sortByCategory(choice);
 						}
-						if (AIName.equals(AI3.getName())) {
+						if (activePlayerName.equals(AI3.getName())) {
 							int choice = AI3.chooseCategory();
 							gm.sortByCategory(choice);
 						}
-						if (AIName.equals(AI4.getName())) {
+						if (activePlayerName.equals(AI4.getName())) {
 							int choice = AI4.chooseCategory();
 							gm.sortByCategory(choice);
 						}
 					}
 				
 				
+					
+					
 				}
 				
 				System.out.println("The game is over.");

@@ -82,23 +82,27 @@ public class GameMaster {
 		
 		if (choice == 1) {
 			Collections.sort(playersArrList, Player.sortByCategoryOne);
-		
+			System.out.println("The category was one");
 		}
 		
 		if (choice == 2) {
 			Collections.sort(playersArrList, Player.sortByCategoryTwo);
+			System.out.println("The category was two");
 		}
 		
 		if (choice == 3) {
 			Collections.sort(playersArrList, Player.sortByCategoryThree);
+			System.out.println("The category was three");
 		}
 		
 		if (choice == 4) {
 			Collections.sort(playersArrList, Player.sortByCategoryFour);
+			System.out.println("The category was four");
 		}
 		
 		if (choice == 5) {
 			Collections.sort(playersArrList, Player.sortByCategoryFive);
+			System.out.println("The category was five");
 		}
 		
 		
