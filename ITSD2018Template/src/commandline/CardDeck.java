@@ -14,9 +14,11 @@ public class CardDeck {
 	
 	// Constant variables
 	final private int DECK_SIZE = 40;
+	final private int NUM_OF_CATEGORIES = 5;
 	
 	// Instance variables
-	private String deckOfCards;	
+	private String deckOfCards;
+	private String [] categories = new String[NUM_OF_CATEGORIES];
 	private Card[] originalDeck = new Card[DECK_SIZE];
 	public Card[] shuffledDeck = new Card[DECK_SIZE];
 	private ArrayList<Card> tempDeck;
@@ -36,7 +38,16 @@ public class CardDeck {
    			{
    			e.printStackTrace();
    			}
-   			deckOfCards = deckFile.toString(); // Save deck file as string
+   			String deckAsString = deckFile.toString(); // Save deck file as string
+   			String[] temp = deckAsString.split("\n", 2);
+   			deckOfCards = temp[1];
+   													System.out.println(deckOfCards);
+   			String descriptionAsString = temp[0];
+   													System.out.println(descriptionAsString);
+   			String[]temp2 = descriptionAsString.split(" ", 2);
+   			String listOfCategories = temp2[1];
+   													System.out.println(listOfCategories);
+   			categories = listOfCategories.split(" ");
 //			System.out.println(deckOfCards);
 
 	}
@@ -89,7 +100,7 @@ public class CardDeck {
 		return shuffledDeck;
 	}
 	public String[] getCategories() {
-		return getCategories;
+		return categories; 
 	}
 	
 }
