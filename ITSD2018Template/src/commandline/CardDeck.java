@@ -72,7 +72,7 @@ public class CardDeck {
 		for (int i = 0; i < DECK_SIZE; i++) {
 			tempCard = tempDeck.get(i); // Stored each card
 			shuffledDeck[i] = tempCard; // Populate the shuffled deck
-			System.out.println(shuffledDeck[i].getDescription());
+			//System.out.println(shuffledDeck[i].getDescription());
 		}
 	}
 	

@@ -40,6 +40,8 @@ public class TopTrumpsCLIApplication {
 
 				String name = in.next();
 				
+				System.out.println();
+				
 				HumanPlayer human = new HumanPlayer(name);
 				AIPlayer AI1 = new AIPlayer("HAL 9000");
 				AIPlayer AI2 = new AIPlayer("Cortana");
@@ -52,30 +54,41 @@ public class TopTrumpsCLIApplication {
 				gm.loadPlayers(AI3, 3);
 				gm.loadPlayers(AI4, 4);
 				
+				System.err.println();
+				
+				cd.populateDeck();
+				cd.shuffleDeck();
+				
+				System.err.println();
+				
 				int i = 0;
 				while (i < DECK_SIZE) {
-					human.setHand(gm.dealCard(i));
-					System.err.println("The player " +human.getName() + " now has: "+ gm.dealCard(i).getDescription());
+					human.setHand(gm.dealCard(cd, i));
+					System.err.println("The player " +human.getName() + " now has: "+ gm.dealCard(cd, i).getDescription());
 					i++;
-					AI1.setHand(gm.dealCard(i));
-					System.err.println("The player " +AI1.getName() + " now has: "+ gm.dealCard(i).getDescription());
+					AI1.setHand(gm.dealCard(cd, i));
+					System.err.println("The player " +AI1.getName() + " now has: "+ gm.dealCard(cd, i).getDescription());
 					i++;
-					AI2.setHand(gm.dealCard(i));
-					System.err.println("The player " +AI2.getName() + " now has: "+ gm.dealCard(i).getDescription());
+					AI2.setHand(gm.dealCard(cd, i));
+					System.err.println("The player " +AI2.getName() + " now has: "+ gm.dealCard(cd, i).getDescription());
 					i++;
-					AI3.setHand(gm.dealCard(i));
-					System.err.println("The player " +AI3.getName() + " now has: "+ gm.dealCard(i).getDescription());
+					AI3.setHand(gm.dealCard(cd, i));
+					System.err.println("The player " +AI3.getName() + " now has: "+ gm.dealCard(cd, i).getDescription());
 					i++;
-					AI4.setHand(gm.dealCard(i));
-					System.err.println("The player " +AI4.getName() + " now has: "+ gm.dealCard(i).getDescription());
+					AI4.setHand(gm.dealCard(cd, i));
+					System.err.println("The player " +AI4.getName() + " now has: "+ gm.dealCard(cd, i).getDescription());
 					i++;
 				}
+				
+				System.err.println();
 				
 				System.err.println(human.toString());
 				System.err.println(AI1.toString());
 				System.err.println(AI2.toString());
 				System.err.println(AI3.toString());
 				System.err.println(AI4.toString());
+				
+				System.err.println();
 				
 				gm.chooseFirstPlayer();
 				
