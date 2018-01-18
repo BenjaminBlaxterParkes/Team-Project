@@ -6,6 +6,7 @@ public abstract class Player {
 
 	protected String name;
 	public ArrayList<Card> hand = new ArrayList<Card>();
+	protected int numOfCardsInHand = 0;
 	
 	Player(String name) {
 		this.name = name;
@@ -20,7 +21,11 @@ public abstract class Player {
 		return name;
 	}
 	
+	public int getNumOfCardsInHand() {
+		return this.numOfCardsInHand;
+	}
+	
 	public String toString() {
-		return "The player, " + name + ", has the following hand: " + hand.toString();
+		return "" + name + ", has the following hand: " + hand.toString();
 	}
 }

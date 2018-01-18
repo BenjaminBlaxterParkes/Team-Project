@@ -64,19 +64,19 @@ public class TopTrumpsCLIApplication {
 				int i = 0;
 				while (i < DECK_SIZE) {
 					human.setHand(gm.dealCard(cd, i));
-					System.err.println("The player " +human.getName() + " now has: "+ gm.dealCard(cd, i).getDescription());
+					System.err.println("" +human.getName() + " now has: "+ gm.dealCard(cd, i).getDescription());
 					i++;
 					AI1.setHand(gm.dealCard(cd, i));
-					System.err.println("The player " +AI1.getName() + " now has: "+ gm.dealCard(cd, i).getDescription());
+					System.err.println("" +AI1.getName() + " now has: "+ gm.dealCard(cd, i).getDescription());
 					i++;
 					AI2.setHand(gm.dealCard(cd, i));
-					System.err.println("The player " +AI2.getName() + " now has: "+ gm.dealCard(cd, i).getDescription());
+					System.err.println("" +AI2.getName() + " now has: "+ gm.dealCard(cd, i).getDescription());
 					i++;
 					AI3.setHand(gm.dealCard(cd, i));
-					System.err.println("The player " +AI3.getName() + " now has: "+ gm.dealCard(cd, i).getDescription());
+					System.err.println("" +AI3.getName() + " now has: "+ gm.dealCard(cd, i).getDescription());
 					i++;
 					AI4.setHand(gm.dealCard(cd, i));
-					System.err.println("The player " +AI4.getName() + " now has: "+ gm.dealCard(cd, i).getDescription());
+					System.err.println("" +AI4.getName() + " now has: "+ gm.dealCard(cd, i).getDescription());
 					i++;
 				}
 				

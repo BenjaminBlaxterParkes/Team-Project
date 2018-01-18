@@ -27,28 +27,25 @@ public class CardDeck {
 	// CardDeck object
 	// Initiates reading in deck file.txt
 	public CardDeck() {
-		
+
 		// Read in deck .txt file
-   		StringBuilder deckFile = new StringBuilder();
-   			try (Stream<String> stream = Files.lines(Paths.get("FuturamaDeck.txt"), StandardCharsets.UTF_8))
-   			{
-   			stream.forEach(s -> deckFile.append(s).append("\n"));
-   			}
-   			catch (IOException e)
-   			{
-   			e.printStackTrace();
-   			}
-   			String deckAsString = deckFile.toString(); // Save deck file as string
-   			String[] temp = deckAsString.split("\n", 2);
-   			deckOfCards = temp[1];
-   													System.out.println(deckOfCards);
-   			String descriptionAsString = temp[0];
-   													System.out.println(descriptionAsString);
-   			String[]temp2 = descriptionAsString.split(" ", 2);
-   			String listOfCategories = temp2[1];
-   													System.out.println(listOfCategories);
-   			categories = listOfCategories.split(" ");
-//			System.out.println(deckOfCards);
+		StringBuilder deckFile = new StringBuilder();
+		try (Stream<String> stream = Files.lines(Paths.get("FuturamaDeck.txt"), StandardCharsets.UTF_8)) {
+			stream.forEach(s -> deckFile.append(s).append("\n"));
+		} catch (IOException e) {
+			e.printStackTrace();
+		}
+		String deckAsString = deckFile.toString(); // Save deck file as string
+		String[] temp = deckAsString.split("\n", 2);
+		deckOfCards = temp[1];
+		System.out.println(deckOfCards);
+		String descriptionAsString = temp[0];
+		System.out.println(descriptionAsString);
+		String[] temp2 = descriptionAsString.split(" ", 2);
+		String listOfCategories = temp2[1];
+		System.out.println(listOfCategories);
+		categories = listOfCategories.split(" ");
+		// System.out.println(deckOfCards);
 
 	}
 	
