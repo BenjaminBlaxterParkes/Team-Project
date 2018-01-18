@@ -1,4 +1,6 @@
 package commandline;
+import java.util.Collections;
+import java.util.Comparator;
 
 public class AIPlayer extends Player implements Comparable<Player> {
 
@@ -6,22 +8,32 @@ public class AIPlayer extends Player implements Comparable<Player> {
 		super(name);
 	}
 	
-	public void chooseCategory() {
+	public int chooseCategory() {
+		int[] categories = new int[5];
+		Card c = getTopCard();
+		categories[0] = c.getCategoryOne();
+		categories[1] = c.getCategoryTwo();
+		categories[2] = c.getCategoryThree();
+		categories[3] = c.getCategoryFour();
+		categories[4] = c.getCategoryFive();
 		
+		int max = 0;
+		for(int i = 0; i < categories.length; i++) {
+	        if (categories[i] > max) {
+	            max = categories[i];
+	        }
+	        System.err.println("the max is: " + max + " which is position: " + (max+1) + " of the array");
+	        return max+1;
+		}
+		
+		
+		return max + 1;
 	}
-	
-	
+
 	public int compareTo(Player other) {
 		int result = 0;
 
-		if (this.getTopCard().getCategoryOne() > other.getTopCard().getCategoryOne()) { // if other is lesser, return 1
-			result = 1; }
 		
-		else if (this.getTopCard().getCategoryOne() < other.getTopCard().getCategoryOne()) { // if other is greater, return -1
-			result = -1; }
-		
-		else {
-			result = 0; } // if equal, return 0
 
 		return result;
 	}

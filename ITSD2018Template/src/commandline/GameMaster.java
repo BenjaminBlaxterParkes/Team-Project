@@ -57,6 +57,11 @@ public class GameMaster {
 		return p; 
 	}
 	
+	public String getActivePlayerName() {
+		Player p = playersArrList.get(0);
+		return p.getName();
+	}
+	
 	public int getArraySize() {
 		int size = playersArrList.size();
 		return size;
@@ -72,9 +77,32 @@ public class GameMaster {
     }
 		//return category;
 	
-	public void sortByFirstCategory() {
-		Collections.sort(playersArrList, Collections.reverseOrder());
+	public void sortByCategory(int choice) {
+		//Collections.sort(playersArrList, Collections.reverseOrder());
 		
+		if (choice == 1) {
+			Collections.sort(playersArrList, Player.sortByCategoryOne);
+		
+		}
+		
+		if (choice == 2) {
+			Collections.sort(playersArrList, Player.sortByCategoryTwo);
+		}
+		
+		if (choice == 3) {
+			Collections.sort(playersArrList, Player.sortByCategoryThree);
+		}
+		
+		if (choice == 4) {
+			Collections.sort(playersArrList, Player.sortByCategoryFour);
+		}
+		
+		if (choice == 5) {
+			Collections.sort(playersArrList, Player.sortByCategoryFive);
+		}
+		
+		
+
 		for(int i = 0; i < playersArrList.size(); i++) {
 			System.out.println(playersArrList.get(i));
 		}

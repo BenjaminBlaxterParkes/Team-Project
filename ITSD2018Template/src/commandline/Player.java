@@ -1,6 +1,7 @@
 package commandline;
 
 import java.util.ArrayList;
+import java.util.Comparator;
 
 public abstract class Player implements Comparable<Player> {
 
@@ -69,38 +70,54 @@ public abstract class Player implements Comparable<Player> {
 		return "" + name + ", has the following hand: " + hand.toString();
 	}
 	
-	
-	
-	public int compareCatagoryOne(Player other) {
-		int result = 0;
-	
-		if (this.getTopCard().getCategoryOne() > other.getTopCard().getCategoryOne()) { // if other is lesser, return 1
-			result = 1; }
-		
-		else if (this.getTopCard().getCategoryOne() < other.getTopCard().getCategoryOne()) { // if other is greater, return -1
-			result = -1; }
-		
-		else {
-			result = 0; } // if equal, return 0
 
-		return result;
-	}
-	
-	
-	
-	public int compareCatagoryTwo(Player other) {
-		int result = 0;
-	
-		if (this.getTopCard().getCategoryTwo() > other.getTopCard().getCategoryTwo()) { // if other is lesser, return 1
-			result = 1; }
-		
-		else if (this.getTopCard().getCategoryTwo() < other.getTopCard().getCategoryTwo()) { // if other is greater, return -1
-			result = -1; }
-		
-		else {
-			result = 0; } // if equal, return 0
+	public static Comparator<Player> sortByCategoryOne = new Comparator<Player>() {
 
-		return result;
-	}
+		public int compare(Player one, Player two) {
+				int compareOne = one.getTopCard().getCategoryOne();
+				int compareTwo = two.getTopCard().getCategoryOne();
+
+				return compareTwo-(compareOne);
+		}
+	};
 	
+	public static Comparator<Player> sortByCategoryTwo = new Comparator<Player>() {
+
+		public int compare(Player one, Player two) {
+				int compareOne = one.getTopCard().getCategoryTwo();
+				int compareTwo = two.getTopCard().getCategoryTwo();
+
+				return compareTwo-(compareOne);
+		}
+	};
+	
+	public static Comparator<Player> sortByCategoryThree = new Comparator<Player>() {
+
+		public int compare(Player one, Player two) {
+				int compareOne = one.getTopCard().getCategoryThree();
+				int compareTwo = two.getTopCard().getCategoryThree();
+
+				return compareTwo-(compareOne);
+		}
+	};
+	
+	public static Comparator<Player> sortByCategoryFour = new Comparator<Player>() {
+
+		public int compare(Player one, Player two) {
+				int compareOne = one.getTopCard().getCategoryFour();
+				int compareTwo = two.getTopCard().getCategoryFour();
+
+				return compareTwo-(compareOne);
+		}
+	};
+	
+	public static Comparator<Player> sortByCategoryFive = new Comparator<Player>() {
+
+		public int compare(Player one, Player two) {
+				int compareOne = one.getTopCard().getCategoryFive();
+				int compareTwo = two.getTopCard().getCategoryFive();
+
+				return compareTwo-(compareOne);
+		}
+	};
 }

@@ -110,24 +110,40 @@ public class TopTrumpsCLIApplication {
 						String chooseCategory = in.next();
 					
 							if (chooseCategory.equals("1")) {
-								gm.sortByFirstCategory();
+								gm.sortByCategory(1);
 							}
 							if (chooseCategory.equals("2")) {
-								
+								gm.sortByCategory(2);
 							}
 							if (chooseCategory.equals("3")) {
-								
+								gm.sortByCategory(3);
 							}
 							if (chooseCategory.equals("4")) {
-									
+								gm.sortByCategory(4);
 								}
 							if (chooseCategory.equals("5")) {
-								
+								gm.sortByCategory(5);
 							}
 							
 					}
 					else {
-					
+						String AIName = gm.getActivePlayerName();
+						if (AIName.equals(AI1.getName())) {
+							int choice = AI1.chooseCategory();
+							gm.sortByCategory(choice);
+						}
+						if (AIName.equals(AI2.getName())) {
+							int choice = AI2.chooseCategory();
+							gm.sortByCategory(choice);
+						}
+						if (AIName.equals(AI3.getName())) {
+							int choice = AI3.chooseCategory();
+							gm.sortByCategory(choice);
+						}
+						if (AIName.equals(AI4.getName())) {
+							int choice = AI4.chooseCategory();
+							gm.sortByCategory(choice);
+						}
 					}
 				
 				
