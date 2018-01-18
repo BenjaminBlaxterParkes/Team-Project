@@ -88,5 +88,8 @@ public class CardDeck {
 	public Card[] getShuffledDeck() {
 		return shuffledDeck;
 	}
+	public String[] getCategories() {
+		return getCategories;
+	}
 	
 }
