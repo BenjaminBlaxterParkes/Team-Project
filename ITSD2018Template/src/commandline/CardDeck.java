@@ -46,7 +46,9 @@ public class CardDeck {
 	public void populateDeck() {
 		
 		Card newCard; // new card objects to fill originalDeck[]
-		String[] deckSplit = deckOfCards.split("\n"); // split to individual cards
+		String [] temp = deckOfCards.split("\n", 2);
+		String doc = temp[1];
+		String[] deckSplit = doc.split("\n"); // split to individual cards
 		
 		// Loop through deck, index i = 1 to skip first line of deck file
 		for (int i = 1; i < deckSplit.length; i++) {
@@ -87,12 +89,4 @@ public class CardDeck {
 		return shuffledDeck;
 	}
 	
-	// Main class for testing
-	public static void main(String[] args) {
-		
-		CardDeck cd = new CardDeck();
-		cd.populateDeck();
-		cd.shuffleDeck();
-
-	}
 }
