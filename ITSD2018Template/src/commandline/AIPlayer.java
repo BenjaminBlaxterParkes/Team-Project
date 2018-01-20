@@ -27,7 +27,7 @@ public class AIPlayer extends Player implements Comparable<Player> {
 	        }
 	        
 		}
-		System.out.println("the max number for " + getName() + " is " + max + " ,which is category: " + (index + 1)+ "");
+		System.out.println("the max number in " + getName() + "'s hand is " + max + " ,which is category: " + (index + 1)+ "");
 		
 		
 		return index + 1;

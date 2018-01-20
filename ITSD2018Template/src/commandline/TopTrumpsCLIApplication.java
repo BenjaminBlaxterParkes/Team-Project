@@ -67,19 +67,19 @@ public class TopTrumpsCLIApplication {
 				int i = 0;
 				while (i < DECK_SIZE) {
 					human.setHand(gm.dealCard(cd, i));
-					System.out.println("" +human.getName() + " now has: "+ gm.dealCard(cd, i).getDescription());
+					//System.out.println("" +human.getName() + " now has: "+ gm.dealCard(cd, i).getDescription());
 					i++;
 					AI1.setHand(gm.dealCard(cd, i));
-					System.out.println("" +AI1.getName() + " now has: "+ gm.dealCard(cd, i).getDescription());
+					//System.out.println("" +AI1.getName() + " now has: "+ gm.dealCard(cd, i).getDescription());
 					i++;
 					AI2.setHand(gm.dealCard(cd, i));
-					System.out.println("" +AI2.getName() + " now has: "+ gm.dealCard(cd, i).getDescription());
+					//System.out.println("" +AI2.getName() + " now has: "+ gm.dealCard(cd, i).getDescription());
 					i++;
 					AI3.setHand(gm.dealCard(cd, i));
-					System.out.println("" +AI3.getName() + " now has: "+ gm.dealCard(cd, i).getDescription());
+					//System.out.println("" +AI3.getName() + " now has: "+ gm.dealCard(cd, i).getDescription());
 					i++;
 					AI4.setHand(gm.dealCard(cd, i));
-					System.out.println("" +AI4.getName() + " now has: "+ gm.dealCard(cd, i).getDescription());
+					//System.out.println("" +AI4.getName() + " now has: "+ gm.dealCard(cd, i).getDescription());
 					i++;
 				}
 				
@@ -94,19 +94,25 @@ public class TopTrumpsCLIApplication {
 				System.out.println();
 				
 				gm.chooseFirstPlayer();
-				System.out.println(gm.getActivePlayer().getTopCardInfo());
+				System.out.println();
+				//System.out.println("\n" + gm.getActivePlayer().getTopCardInfo());
 				
 				// start of round loop
 				while (gm.getArraySize() > 2) {
 					gm.playerIsElminated();
+					
+					System.out.println();
+					
 					System.out.println("Enter any key to continue to round " + round);
 				
+					System.out.println(gm.getPlayerArrayInfo());
+					
 					String startRound = in.next();
 					
 					String activePlayerName = gm.getActivePlayerName();
 				
 					if (activePlayerName.equals(human.getName())) {
-						System.out.println("It's your turn! Here's your card:\n");
+						System.out.println("\nIt's your turn! Here's your card:\n");
 						System.out.println(gm.getActivePlayer().getTopCardInfo());
 						System.out.println("Which category would you like to select?");
 					
@@ -158,7 +164,8 @@ public class TopTrumpsCLIApplication {
 				
 				System.out.println("The game is over.");
 				System.out.println("The winner of the game was: " +gm.getActivePlayerName());
-				System.out.println("Their hand is: " + gm.getActivePlayer().getNumOfCardsInHand());
+				System.out.println("They have this many cards: " + gm.getActivePlayer().getNumOfCardsInHand());
+				System.out.println("Their full hand is: " + gm.getActivePlayer().toString());
 				
 				
 				// creating players

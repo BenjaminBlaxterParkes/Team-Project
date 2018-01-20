@@ -31,6 +31,11 @@ public abstract class Player implements Comparable<Player> {
 	
 	public Card getTopCard() {
 		Card card = hand.get(0);
+		
+		if (card == null) {
+			return null;
+		}
+		
 		return card;
 	}
 	
@@ -74,7 +79,7 @@ public abstract class Player implements Comparable<Player> {
 	}
 	
 	public String toString() {
-		return "" + name + ", has num cards: " + getNumOfCardsInHand() +  " & hand: \t" + hand.toString();
+		return "" + name + ", has num cards: " + getNumOfCardsInHand() + " full deck: " + hand.toString();
 	}
 	
 
@@ -99,7 +104,7 @@ public abstract class Player implements Comparable<Player> {
 	};
 	
 	public static Comparator<Player> sortByCategoryThree = new Comparator<Player>() {
-
+		
 		public int compare(Player one, Player two) {
 				int compareOne = one.getTopCard().getCategoryThree();
 				int compareTwo = two.getTopCard().getCategoryThree();
