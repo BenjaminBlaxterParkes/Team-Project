@@ -99,7 +99,42 @@ public class Card {
 		this.cardInfo = info;
 	}
 	
-	public String getCardInfo() {
+	public String getCardCategories() {
 		return this.cardInfo;
 	}
+	
+	public String getCardInfo() {
+		String categories = getDescription() + "\n";
+		String card = getCardCategories();
+		
+		String catOne = "";
+		String catTwo = "";
+		String catThree = ""; 
+		String catFour = "";
+		String catFive = "";
+		
+		try {
+		String[] cardInfo = card.split(" ");
+		
+		catOne = cardInfo[0];
+		catTwo = cardInfo[1];
+		catThree = cardInfo[2];
+		catFour = cardInfo[3];
+		catFive = cardInfo[4];
+		
+		}
+		
+		catch (NullPointerException n) {
+			System.out.println("Null was found in 'getCardInfo' in 'Card' class");
+		}
+		
+		categories += 	"1. " + catOne + ": \t" + categoryOne + "\n"
+							+ "2. " +   catTwo + ": \t" + categoryTwo + "\n"
+							+ "3. " +  catThree + ": \t" + categoryThree + "\n"
+							+ "4. " +   catFour + ": \t" + categoryFour + "\n"
+							+ "5. " +   catFive + ": \t\t" + categoryFive + "\n";
+		
+		return categories;
+	}
+	
 }

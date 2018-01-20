@@ -85,11 +85,11 @@ public class TopTrumpsCLIApplication {
 				
 				System.out.println();
 				
-				System.out.println(human.toString());
-				System.out.println(AI1.toString());
-				System.out.println(AI2.toString());
-				System.out.println(AI3.toString());
-				System.out.println(AI4.toString());
+//				System.out.println(human.toString());
+//				System.out.println(AI1.toString());
+//				System.out.println(AI2.toString());
+//				System.out.println(AI3.toString());
+//				System.out.println(AI4.toString());
 				
 				System.out.println();
 				
@@ -98,7 +98,9 @@ public class TopTrumpsCLIApplication {
 				//System.out.println("\n" + gm.getActivePlayer().getTopCardInfo());
 				
 				// start of round loop
-				while (gm.getArraySize() > 2) {
+				
+				// continue game until one player is left in the Players ArrayList
+				while (gm.getArraySize() > 1) {
 					gm.playerIsElminated();
 					
 					System.out.println();

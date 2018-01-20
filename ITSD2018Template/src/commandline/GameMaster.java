@@ -137,7 +137,7 @@ public class GameMaster {
 	
 	public void rewardWinner() {
 		System.out.println("The winner was " + playersArrList.get(0).getName());
-		System.out.println("Their card was: " + cardsInPlay.get(0).getCardInfo());
+		System.out.println("Their winning card was: " + cardsInPlay.get(0).getCardInfo());
 		Card c;
 		for(int i = 0; i < cardsInPlay.size(); i++) {
 			c = cardsInPlay.get(i);
@@ -150,10 +150,11 @@ public class GameMaster {
 	
 	
 	public void playerIsElminated() {
-		for(int i = 0; i < playersArrList.size(); i ++) {
+		for(int i = 0; i <  playersArrList.size(); i ++) {
 			if(playersArrList.get(i).getNumOfCardsInHand() == 0) {
 				//System.out.println(playersArrList.get(i).getName() + " was eliminated");
 				playersArrList.remove(i);
+				i--;
 				
 			}
 			else {

@@ -45,7 +45,7 @@ public abstract class Player implements Comparable<Player> {
 	
 	public String getTopCardInfo() {
 		String desciption = hand.get(0).getDescription() + "\n";
-		String allCardInfo = hand.get(0).getCardInfo();
+		String allCardInfo = hand.get(0).getCardCategories();
 		
 		String catOne = "";
 		String catTwo = "";
@@ -79,7 +79,7 @@ public abstract class Player implements Comparable<Player> {
 	}
 	
 	public String toString() {
-		return "" + name + ", has num cards: " + getNumOfCardsInHand() + " full deck: " + hand.toString();
+		return "" + name + ", has num cards: " + getNumOfCardsInHand() + " full deck: \t" + hand.toString();
 	}
 	
 
