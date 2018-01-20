@@ -17,17 +17,20 @@ public class AIPlayer extends Player implements Comparable<Player> {
 		categories[3] = c.getCategoryFour();
 		categories[4] = c.getCategoryFive();
 		
+		int i = 0;
 		int max = 0;
-		for(int i = 0; i < categories.length; i++) {
+		int index = 0;
+		for(i = 0; i < categories.length; i++) {
 	        if (categories[i] > max) {
 	            max = categories[i];
+	            index = i;
 	        }
-	        System.err.println("the max is: " + max + " which is position: " + (max+1) + " of the array");
-	        return max+1;
+	        
 		}
+		System.out.println("the max number for " + getName() + " is " + max + " ,which is category: " + (index + 1)+ "");
 		
 		
-		return max + 1;
+		return index + 1;
 	}
 
 	public int compareTo(Player other) {

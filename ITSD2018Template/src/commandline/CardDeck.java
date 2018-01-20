@@ -41,7 +41,7 @@ public class CardDeck {
 		String[] temp = deckAsString.split("\n", 2);
 		
 		String descriptionAsString = temp[0];
-		System.err.println(descriptionAsString);
+		System.out.println(descriptionAsString);
 		
 		deckOfCards = temp[1];
 		System.out.println(deckOfCards);
@@ -58,7 +58,7 @@ public class CardDeck {
 	
 	// Method to sort the deck file into individual cards and populate originalDeck[]
 	public void populateDeck() {
-		System.err.println(listOfCategories + " in populateDeck");
+		System.out.println(listOfCategories + " in populateDeck");
 		Card newCard; // new card objects to fill originalDeck[]
 //		String [] temp = deckOfCards.split("\n", 2);
 //		String doc = temp[1];

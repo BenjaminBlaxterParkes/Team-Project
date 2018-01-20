@@ -57,48 +57,48 @@ public class TopTrumpsCLIApplication {
 				gm.loadPlayers(AI3, 3);
 				gm.loadPlayers(AI4, 4);
 				
-				System.err.println();
+				System.out.println();
 				
 				cd.populateDeck();
 				cd.shuffleDeck();
 				
-				System.err.println();
+				System.out.println();
 				
 				int i = 0;
 				while (i < DECK_SIZE) {
 					human.setHand(gm.dealCard(cd, i));
-					System.err.println("" +human.getName() + " now has: "+ gm.dealCard(cd, i).getDescription());
+					System.out.println("" +human.getName() + " now has: "+ gm.dealCard(cd, i).getDescription());
 					i++;
 					AI1.setHand(gm.dealCard(cd, i));
-					System.err.println("" +AI1.getName() + " now has: "+ gm.dealCard(cd, i).getDescription());
+					System.out.println("" +AI1.getName() + " now has: "+ gm.dealCard(cd, i).getDescription());
 					i++;
 					AI2.setHand(gm.dealCard(cd, i));
-					System.err.println("" +AI2.getName() + " now has: "+ gm.dealCard(cd, i).getDescription());
+					System.out.println("" +AI2.getName() + " now has: "+ gm.dealCard(cd, i).getDescription());
 					i++;
 					AI3.setHand(gm.dealCard(cd, i));
-					System.err.println("" +AI3.getName() + " now has: "+ gm.dealCard(cd, i).getDescription());
+					System.out.println("" +AI3.getName() + " now has: "+ gm.dealCard(cd, i).getDescription());
 					i++;
 					AI4.setHand(gm.dealCard(cd, i));
-					System.err.println("" +AI4.getName() + " now has: "+ gm.dealCard(cd, i).getDescription());
+					System.out.println("" +AI4.getName() + " now has: "+ gm.dealCard(cd, i).getDescription());
 					i++;
 				}
 				
-				System.err.println();
+				System.out.println();
 				
-				System.err.println(human.toString());
-				System.err.println(AI1.toString());
-				System.err.println(AI2.toString());
-				System.err.println(AI3.toString());
-				System.err.println(AI4.toString());
+				System.out.println(human.toString());
+				System.out.println(AI1.toString());
+				System.out.println(AI2.toString());
+				System.out.println(AI3.toString());
+				System.out.println(AI4.toString());
 				
-				System.err.println();
+				System.out.println();
 				
 				gm.chooseFirstPlayer();
-				
+				System.out.println(gm.getActivePlayer().getTopCardInfo());
 				
 				// start of round loop
 				while (gm.getArraySize() > 2) {
-				
+					gm.playerIsElminated();
 					System.out.println("Enter any key to continue to round " + round);
 				
 					String startRound = in.next();
@@ -110,6 +110,7 @@ public class TopTrumpsCLIApplication {
 						System.out.println(gm.getActivePlayer().getTopCardInfo());
 						System.out.println("Which category would you like to select?");
 					
+						// fix this later so that it's one thing
 						String chooseCategory = in.next();
 					
 							if (chooseCategory.equals("1")) {
@@ -148,12 +149,16 @@ public class TopTrumpsCLIApplication {
 						}
 					}
 				
-				
 					
+					gm.communalPile();
+					
+					round++;
 					
 				}
 				
 				System.out.println("The game is over.");
+				System.out.println("The winner of the game was: " +gm.getActivePlayerName());
+				System.out.println("Their hand is: " + gm.getActivePlayer().getNumOfCardsInHand());
 				
 				
 				// creating players

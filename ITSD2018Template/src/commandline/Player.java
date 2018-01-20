@@ -7,7 +7,7 @@ public abstract class Player implements Comparable<Player> {
 
 	protected String name;
 	public ArrayList<Card> hand = new ArrayList<Card>();
-	protected int numOfCardsInHand = 0;
+	protected int numOfCardsInHand;
 	
 	Player(String name) {
 		this.name = name;
@@ -19,7 +19,14 @@ public abstract class Player implements Comparable<Player> {
 	
 	public void setHand(Card c) {
 		hand.add(c);
-		//System.err.println("The card (" + c.getDescription() + ") is being loaded into "+ getName() + "'s hand");
+		numOfCardsInHand++;
+		//System.out.println("The card (" + c.getDescription() + ") is being loaded into "+ getName() + "'s hand");
+	}
+	
+	
+	public void RemoveTopCard() {
+		hand.remove(0);
+		numOfCardsInHand--;
 	}
 	
 	public Card getTopCard() {
@@ -53,7 +60,7 @@ public abstract class Player implements Comparable<Player> {
 		}
 		
 		catch (NullPointerException n) {
-			System.err.println("Null was found in 'getTopCardInfo' in 'Players' class");
+			System.out.println("Null was found in 'getTopCardInfo' in 'Players' class");
 		}
 		
 		String categories = "1. " + catOne + ": \t" + hand.get(0).categoryOne + "\n"
@@ -67,7 +74,7 @@ public abstract class Player implements Comparable<Player> {
 	}
 	
 	public String toString() {
-		return "" + name + ", has the following hand: " + hand.toString();
+		return "" + name + ", has num cards: " + getNumOfCardsInHand() +  " & hand: \t" + hand.toString();
 	}
 	
 
@@ -107,7 +114,7 @@ public abstract class Player implements Comparable<Player> {
 				int compareOne = one.getTopCard().getCategoryFour();
 				int compareTwo = two.getTopCard().getCategoryFour();
 
-				return compareTwo-(compareOne);
+				return compareTwo - compareOne;
 		}
 	};
 	
@@ -120,4 +127,6 @@ public abstract class Player implements Comparable<Player> {
 				return compareTwo-(compareOne);
 		}
 	};
+	
+
 }
