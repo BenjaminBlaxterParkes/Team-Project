@@ -15,6 +15,7 @@ public abstract class Player implements Comparable<Player> {
 	protected String name;
 	public ArrayList<Card> hand = new ArrayList<Card>();
 	protected int numOfCardsInHand;
+	protected int categoryChoice;
 	
 	/**
 	 * Constructor
@@ -62,6 +63,14 @@ public abstract class Player implements Comparable<Player> {
 		}
 
 		return card;
+	}
+	
+	public void setCategoryChoice(int choice) {
+		this.categoryChoice = choice;
+	}
+	
+	public int getCategoryChoice() {
+		return this.categoryChoice;
 	}
 	
 	/**
@@ -114,7 +123,7 @@ public abstract class Player implements Comparable<Player> {
 	 * Returns Player's name, number of cards in hand, and list of cards in hand.
 	 */
 	public String toString() {
-		return "" + name + " has " + getNumOfCardsInHand() + " cards:\t" + hand.toString();
+		return "" + name + " has " + getNumOfCardsInHand() + " cards.";
 	}
 	
 	/**

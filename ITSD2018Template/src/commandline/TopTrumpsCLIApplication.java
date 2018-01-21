@@ -98,8 +98,11 @@ public class TopTrumpsCLIApplication {
 				// continue rounds until one player is left in the Game Master's ArrayList of players
 				while (gm.getArraySize() > 1) {
 					
-					// Game Master checks that all players have at least one card
-					gm.playerIsElminated(); 
+					//  System.out.println(gm.getPlayerArrayInfo());
+					
+					System.out.println("Round " + round 
+							+ "\n====================\n"
+							+ "Players:");
 					
 					System.out.println(gm.getPlayerArrayInfo());
 					
@@ -107,13 +110,17 @@ public class TopTrumpsCLIApplication {
 					String startRound = "";
 					boolean humanPlayer = gm.findHumanPlayer(name);
 						if (humanPlayer == true) {
-							System.out.println("Enter any key to continue to round " + round);
+							
+							System.out.println("Here's your top card:");
+							System.out.println(human.getTopCardInfo());
+							
+							System.out.println("Enter any key to continue\n");
 							startRound = in.next();
 					}
-					String activePlayerName = gm.getActivePlayerName();
+					String activePlayerName = gm.getPastPlayerName();
 				
 					if (activePlayerName.equals(human.getName())) {
-						System.out.println("\nIt's your turn! Here's your card:\n");
+						System.out.println("\nIt's your turn! Here's your top card:\n");
 						System.out.println(gm.getActivePlayer().getTopCardInfo());
 						
 						
@@ -126,22 +133,27 @@ public class TopTrumpsCLIApplication {
 					
 								if (chooseCategory.equals("1")) {
 									gm.sortByCategory(1);
+									human.setCategoryChoice(1);
 									y = 2;
 								}
 								else if (chooseCategory.equals("2")) {
 									gm.sortByCategory(2);
+									human.setCategoryChoice(2);
 									y = 2;
 								}
 								else if (chooseCategory.equals("3")) {
 									gm.sortByCategory(3);
+									human.setCategoryChoice(3);
 									y = 2;
 								}
 								else if (chooseCategory.equals("4")) {
 									gm.sortByCategory(4);
+									human.setCategoryChoice(4);
 									y = 2;
 									}
 								else if (chooseCategory.equals("5")) {
 									gm.sortByCategory(5);
+									human.setCategoryChoice(5);
 									y = 2;
 								}
 								else {
@@ -153,25 +165,33 @@ public class TopTrumpsCLIApplication {
 					else {
 						if (activePlayerName.equals(AI1.getName())) {
 							int choice = AI1.chooseCategory();
+							AI1.setCategoryChoice(choice);
 							gm.sortByCategory(choice);
 						}
 						if (activePlayerName.equals(AI2.getName())) {
 							int choice = AI2.chooseCategory();
+							AI2.setCategoryChoice(choice);
 							gm.sortByCategory(choice);
 						}
 						if (activePlayerName.equals(AI3.getName())) {
 							int choice = AI3.chooseCategory();
+							AI3.setCategoryChoice(choice);
 							gm.sortByCategory(choice);
 						}
 						if (activePlayerName.equals(AI4.getName())) {
 							int choice = AI4.chooseCategory();
+							AI4.setCategoryChoice(choice);
 							gm.sortByCategory(choice);
 						}
 					}
 				
-					
 					gm.communalPile();
+					
+					// Increment round
 					round++;
+					
+					// Game Master checks that all players have at least one card
+					gm.playerIsElminated(); 
 					
 				}
 				
@@ -179,7 +199,7 @@ public class TopTrumpsCLIApplication {
 				System.out.println("The winner of the game was:\t " +gm.getActivePlayerName());
 				System.out.println("The number of rounds was:\t " + round);
 				System.out.println("They have this many cards:\t " + gm.getActivePlayer().getNumOfCardsInHand());
-				System.out.println("Their full hand is:\t\t " + gm.getActivePlayer().toString());
+				//System.out.println("Their full hand is:\t\t " + gm.getActivePlayer().toString());
 				
 				System.out.println("\nStats have been saved");
 				// +++++++++++++++++++++++++++++++++++++++++++++++++ add stats object
@@ -213,7 +233,7 @@ public class TopTrumpsCLIApplication {
 		
 		// if answer is see past game stats
 		if (answer.equals("2")) {
-			System.out.println("You entered 2.\n");
+			System.out.println("Stats class has not been coded yet.\n");
 			// a method from the stats class will load a string which will print in the terminal
 		}
 

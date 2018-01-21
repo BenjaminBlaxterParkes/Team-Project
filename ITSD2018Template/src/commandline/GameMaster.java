@@ -19,6 +19,7 @@ public class GameMaster {
 	Player[] players = new Player[numOfPlayers];
 	ArrayList<Player> playersArrList;
 	ArrayList<Card> cardsInPlay = new ArrayList<Card>();
+	String pastActivePlayer;
 	
 	/**
 	 * Loads Player objects into an array.
@@ -53,10 +54,11 @@ public class GameMaster {
 	public Player chooseFirstPlayer() {
 		playersArrList = new ArrayList<Player>(Arrays.asList(players));
 		Collections.shuffle(playersArrList);
+		setPastPlayerName();
 		// System.out.println("The shuffled list of players is: " +
 		// playersArrList.toString());
 		Player p = playersArrList.get(0);
-		System.out.println("The first player will be: " + p.getName() + "\n");
+		System.out.println("" + p.getName() + " will go first\n");
 		return p;
 	}
 	
@@ -70,6 +72,42 @@ public class GameMaster {
 			info += playersArrList.get(i).toString() + "\n";
 		}
 		return info;
+	}
+	
+	/**
+	 * Sets PastPlayerName class variable.  
+	 */
+	public void setPastPlayerName() {
+		// System.out.println("Most recent active player: " + getActivePlayerName());
+		this.pastActivePlayer = getActivePlayerName();
+	}
+	
+	/**
+	 * Returns PastPlayerName class variable.  
+	 * @return
+	 */
+	public String getPastPlayerName() {
+		// System.out.println("Most recent active player: " + this.pastActivePlayer + "
+		// was called");
+		return this.pastActivePlayer;
+	}
+	
+	/**
+	 * Returns Player based on name parameter.
+	 * @param name
+	 * @return
+	 */
+	public Player getPlayerByName(String name) {
+		Player p;
+		for (int i = 0; i < playersArrList.size(); i++) {
+			p = playersArrList.get(i);
+			if (p.getName().equals(name)) {
+				return p;
+			} else {
+
+			}
+		}
+		return null;
 	}
 	
 	/**
@@ -128,27 +166,27 @@ public class GameMaster {
 		try {
 			if (choice == 1) {
 				Collections.sort(playersArrList, Player.sortByCategoryOne);
-				System.out.println("The chosen category was Combat");
+				System.out.println(getPastPlayerName() + " chose category: Combat");
 			}
 
 			if (choice == 2) {
 				Collections.sort(playersArrList, Player.sortByCategoryTwo);
-				System.out.println("The chosen category was Lewdness");
+				System.out.println(getPastPlayerName() + " chose category: Lewdness");
 			}
 
 			if (choice == 3) {
 				Collections.sort(playersArrList, Player.sortByCategoryThree);
-				System.out.println("The chosen category was Agility");
+				System.out.println(getPastPlayerName() + " chose category: Agility");
 			}
 
 			if (choice == 4) {
 				Collections.sort(playersArrList, Player.sortByCategoryFour);
-				System.out.println("The chosen category was Lunacy");
+				System.out.println(getPastPlayerName() + " chose category: Lunacy");
 			}
 
 			if (choice == 5) {
 				Collections.sort(playersArrList, Player.sortByCategoryFive);
-				System.out.println("The chosen category was IQ");
+				System.out.println(getPastPlayerName() + " chose category: IQ");
 			}
 		} catch (IndexOutOfBoundsException e) {
 			System.out.println("Cannot access position 0 of an empty Array");
@@ -157,8 +195,8 @@ public class GameMaster {
 	}
 	
 	/**
-	 * Removes cards from Players and places them in a ArrayList<Card> 
-	 * and then gives them to the winner of the round.  
+	 * Removes cards from Players and places them in a ArrayList<Card> and then
+	 * gives them to the winner of the round.
 	 */
 	public void communalPile() {
 		Card c;
@@ -172,15 +210,46 @@ public class GameMaster {
 			playersArrList.get(i).RemoveTopCard();
 		}
 
-		System.out.println("The comm pile holds the following cards: " + cardsInPlay.toString());
-		rewardWinner();
+		// System.out.println("The comm pile holds the following cards: " +
+		// cardsInPlay.toString());
+
+		if (checkforDraw() == false) {
+			rewardWinner();
+		}
+
+	}
+	
+	/**
+	 * Checks to see if draw, or tie, happened during the round.
+	 * @return
+	 */
+	public boolean checkforDraw() {
+		card = cardsInPlay.get(0);
+		Card other = cardsInPlay.get(1);
+
+		Player p = getPlayerByName(getPastPlayerName());
+
+		int category = p.getCategoryChoice();
+		// System.out.println("\n"+getActivePlayer().getName() + "'s draw category was:
+		// "+ (category));
+
+		if (card.getCategoryValue(category) == other.getCategoryValue(category)) {
+			System.out.println("\n*** TIE DETECTED ***");
+			System.out.println("The cards " + card.getDescription() + " and " + other.getDescription() + " tied.");
+			System.out.println("Next round will be the tie breaker!\n");
+			// System.out.println("because " + card.getCategoryValue(category) + " equals "
+			// + other.getCategoryValue(category) + "\n");
+			return true;
+		}
+		return false;
 	}
 	
 	/**
 	 * Gives Cards from ArrayList<Card> to the winner of the round.    
 	 */
 	public void rewardWinner() {
-		System.out.println("\nThe winner was " + playersArrList.get(0).getName());
+		setPastPlayerName();
+		System.out.println("\n" + playersArrList.get(0).getName() + " won the round");
 		System.out.println("Their winning card was: " + cardsInPlay.get(0).getCardInfo());
 		Card c;
 		for (int i = 0; i < cardsInPlay.size(); i++) {

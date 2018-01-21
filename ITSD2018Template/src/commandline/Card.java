@@ -156,4 +156,24 @@ public class Card {
 		return categories;
 	}
 	
+	public int getCategoryValue(int choice) {
+		int value = 0;
+		if (choice == 1) {
+			value = this.getCategoryOne();
+		}
+		if (choice == 2) {
+			value = this.getCategoryTwo();
+		}
+		if (choice == 3) {
+			value = this.getCategoryThree();
+		}
+		if (choice == 4) {
+			value = this.getCategoryFour();
+		}
+		if (choice == 5) {
+			value = this.getCategoryFive();
+		}
+		return value;
+	}
+	
 } // End of class.
