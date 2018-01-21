@@ -16,8 +16,8 @@ public class GameMaster {
 	final private int DECK_SIZE = 40;
 	Card card;
 	int numOfPlayers = 5; // CL version will always have 5 players
-	Player[] players = new Player[numOfPlayers];
-	ArrayList<Player> playersArrList;
+	//Player[] players = new Player[numOfPlayers];
+	ArrayList<Player> playersArrList = new ArrayList<Player>();
 	ArrayList<Card> cardsInPlay = new ArrayList<Card>();
 	String pastActivePlayer;
 	
@@ -27,10 +27,19 @@ public class GameMaster {
 	 * @param position
 	 */
 	public void loadPlayers(Player p, int position) {
-		players[position] = p;
+		playersArrList.add(position, p);
 		// System.out.println(p.getName());
 	}
 	
+	
+	public void createAI(int number) {
+
+		String[] names = { "HAL 9000", "Cortana", "GLaDOS", "Marvin" };
+		for (int i = 0; i < number; i++) {
+			 playersArrList.add(new Player(names[i]));
+		}
+	}
+
 	/**
 	 * Returns a card from the shuffled deck.   
 	 */
@@ -47,12 +56,16 @@ public class GameMaster {
 		return card;
 	}
 	
+	public Player getPlayerByPosition(int position) {
+		Player p = playersArrList.get(position);
+		return p;
+	}
+	
 	/**
 	 * Returns a randomly chosen Player object to go first from ArrayList<Player>.
 	 * @return
 	 */
 	public Player chooseFirstPlayer() {
-		playersArrList = new ArrayList<Player>(Arrays.asList(players));
 		Collections.shuffle(playersArrList);
 		setPastPlayerName();
 		// System.out.println("The shuffled list of players is: " +
@@ -230,8 +243,8 @@ public class GameMaster {
 		Player p = getPlayerByName(getPastPlayerName());
 
 		int category = p.getCategoryChoice();
-		// System.out.println("\n"+getActivePlayer().getName() + "'s draw category was:
-		// "+ (category));
+		// System.out.println("\n"+getPastPlayerName() + "'s draw category was:"
+		// + (category));
 
 		if (card.getCategoryValue(category) == other.getCategoryValue(category)) {
 			System.out.println("\n*** TIE DETECTED ***");

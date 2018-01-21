@@ -9,7 +9,7 @@ import java.util.Comparator;
  *
  */
 
-public abstract class Player implements Comparable<Player> {
+public class Player implements Comparable<Player> {
 
 	// Class variables
 	protected String name;
@@ -81,6 +81,31 @@ public abstract class Player implements Comparable<Player> {
 		return this.numOfCardsInHand;
 	}
 	
+	public int AIChooseCategory() {
+	int[] categories = new int[5];
+	Card c = getTopCard();
+	categories[0] = c.getCategoryOne();
+	categories[1] = c.getCategoryTwo();
+	categories[2] = c.getCategoryThree();
+	categories[3] = c.getCategoryFour();
+	categories[4] = c.getCategoryFive();
+
+	int i = 0;
+	int max = 0;
+	int index = 0;
+	for (i = 0; i < categories.length; i++) {
+		if (categories[i] > max) {
+			max = categories[i];
+			index = i;
+		}
+	}
+	// System.out.println("The max number in " + getName() +
+	// "'s hand is " + max + ", which is category: " + (index + 1) + "");
+
+	this.setCategoryChoice(index+1);
+	return index + 1;
+}
+	
 	/** 
 	 * Returns a String containing information from Player's first Card in ArrayList<Card>.
 	 * @return
@@ -123,7 +148,7 @@ public abstract class Player implements Comparable<Player> {
 	 * Returns Player's name, number of cards in hand, and list of cards in hand.
 	 */
 	public String toString() {
-		return "" + name + " has " + getNumOfCardsInHand() + " cards.";
+		return "-" + name + " has " + getNumOfCardsInHand() + " cards.";
 	}
 	
 	/**
@@ -192,4 +217,10 @@ public abstract class Player implements Comparable<Player> {
 	};
 	
 
+	public int compareTo(Player other) {
+		int result = 0;
+
+		return result;
+	}
+	
 } // End of class

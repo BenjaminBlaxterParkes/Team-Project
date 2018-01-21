@@ -51,41 +51,53 @@ public class TopTrumpsCLIApplication {
 				String name = in.next();
 				
 				// Instantiate players
-				HumanPlayer human = new HumanPlayer(name);
-				AIPlayer AI1 = new AIPlayer("HAL 9000");
-				AIPlayer AI2 = new AIPlayer("Cortana");
-				AIPlayer AI3 = new AIPlayer("GLaDOS");
-				AIPlayer AI4 = new AIPlayer("Marvin");
+				Player human = new Player(name);
 				
 				// Game Master loads players into an ArrayList
 				gm.loadPlayers(human, 0);
-				gm.loadPlayers(AI1, 1);
-				gm.loadPlayers(AI2, 2);
-				gm.loadPlayers(AI3, 3);
-				gm.loadPlayers(AI4, 4);
+				
+				
+				int b = 1;
+				String opponents = "";
+					while (b == 1) {
+						System.out.println("\nHow many AI opponents would you like to play against: 1-4?");
+						opponents = in.next();
+
+						if (opponents.equals("1")) {
+							gm.createAI(1);
+							b = 2;
+						} else if (opponents.equals("2")) {
+							gm.createAI(2);
+							b = 2;
+						} else if (opponents.equals("3")) {
+							gm.createAI(3);
+							b = 2;
+						} else if (opponents.equals("4")) {
+							gm.createAI(4);
+							b = 2;
+						}
+						else {
+							System.out.print("Invalid option.\n");
+						}
+
+					}
 				
 				// Deck is populated and shuffled
 				cd.populateDeck();
 				cd.shuffleDeck();
 				
 				// Game Master deals out the cards
+				int j = 0;
 				int i = 0;
-				while (i < DECK_SIZE) {
-					human.setHand(gm.dealCard(cd, i));
-					//System.out.println(human.getName() + " now has: "+ gm.dealCard(cd, i).getDescription());
-					i++;
-					AI1.setHand(gm.dealCard(cd, i));
-					//System.out.println(AI1.getName() + " now has: "+ gm.dealCard(cd, i).getDescription());
-					i++;
-					AI2.setHand(gm.dealCard(cd, i));
-					//System.out.println(AI2.getName() + " now has: "+ gm.dealCard(cd, i).getDescription());
-					i++;
-					AI3.setHand(gm.dealCard(cd, i));
-					//System.out.println(AI3.getName() + " now has: "+ gm.dealCard(cd, i).getDescription());
-					i++;
-					AI4.setHand(gm.dealCard(cd, i));
-					//System.out.println(AI4.getName() + " now has: "+ gm.dealCard(cd, i).getDescription());
-					i++;
+				while (j < DECK_SIZE) {
+						gm.getPlayerByPosition(i).setHand(gm.dealCard(cd, j));
+//						System.out.println(gm.getPlayerByPosition(i).getName() + " got"
+//								+ " card: " + gm.dealCard(cd, j));
+						j++;
+						i++;
+							if (i == (gm.getArraySize())) {
+								i = 0;
+							}
 				}
 				
 				System.out.println();
@@ -102,6 +114,7 @@ public class TopTrumpsCLIApplication {
 					
 					System.out.println("Round " + round 
 							+ "\n====================\n"
+							+ "It's " + gm.getPastPlayerName() + "'s turn!\n\n"
 							+ "Players:");
 					
 					System.out.println(gm.getPlayerArrayInfo());
@@ -111,10 +124,10 @@ public class TopTrumpsCLIApplication {
 					boolean humanPlayer = gm.findHumanPlayer(name);
 						if (humanPlayer == true) {
 							
-							System.out.println("Here's your top card:");
+							System.out.println("Peek at your top card:");
 							System.out.println(human.getTopCardInfo());
 							
-							System.out.println("Enter any key to continue\n");
+							System.out.println("To continue, enter any key.\n");
 							startRound = in.next();
 					}
 					String activePlayerName = gm.getPastPlayerName();
@@ -163,26 +176,9 @@ public class TopTrumpsCLIApplication {
 					}
 					
 					else {
-						if (activePlayerName.equals(AI1.getName())) {
-							int choice = AI1.chooseCategory();
-							AI1.setCategoryChoice(choice);
-							gm.sortByCategory(choice);
-						}
-						if (activePlayerName.equals(AI2.getName())) {
-							int choice = AI2.chooseCategory();
-							AI2.setCategoryChoice(choice);
-							gm.sortByCategory(choice);
-						}
-						if (activePlayerName.equals(AI3.getName())) {
-							int choice = AI3.chooseCategory();
-							AI3.setCategoryChoice(choice);
-							gm.sortByCategory(choice);
-						}
-						if (activePlayerName.equals(AI4.getName())) {
-							int choice = AI4.chooseCategory();
-							AI4.setCategoryChoice(choice);
-							gm.sortByCategory(choice);
-						}
+						int choice = gm.getActivePlayer().AIChooseCategory();
+						gm.sortByCategory(choice);
+						
 					}
 				
 					gm.communalPile();
