@@ -13,7 +13,6 @@ public class GameMaster {
 	ArrayList<Card> cardsInPlay = new ArrayList<Card>();
 	//Card[] shuffleDeck = cardDeck.getShuffledDeck();
 	
-
 	/**
 	 * This will load the player objects into an array
 	 * @param p
@@ -30,7 +29,7 @@ public class GameMaster {
 	public Card dealCard(CardDeck cd, int position) {
 		//System.out.println("dealCard in CardDeck method has been activated");
 		Card[] shuffledDeck = cd.getShuffledDeck();
-		Card card = shuffledDeck[0];
+		card = shuffledDeck[0];
 		
 		for(int i = 0; i < DECK_SIZE; i++) {
 			card = shuffledDeck[position];
@@ -70,6 +69,22 @@ public class GameMaster {
 	public String getActivePlayerName() {
 		Player p = playersArrList.get(0);
 		return p.getName();
+	}
+	
+	public boolean findHumanPlayer(String name) {
+		String other = "";
+		for (int i = 0; i < playersArrList.size(); i++) {
+			other = playersArrList.get(i).getName();
+			if (other.equals(name)) {
+				return true;
+			}
+			else {
+				//System.out.println("Human player not found yet.");
+			}
+			
+		}
+		
+		return false;
 	}
 	
 	public int getArraySize() {
@@ -136,7 +151,7 @@ public class GameMaster {
 	
 	
 	public void rewardWinner() {
-		System.out.println("The winner was " + playersArrList.get(0).getName());
+		System.out.println("\nThe winner was " + playersArrList.get(0).getName());
 		System.out.println("Their winning card was: " + cardsInPlay.get(0).getCardInfo());
 		Card c;
 		for(int i = 0; i < cardsInPlay.size(); i++) {
@@ -147,7 +162,6 @@ public class GameMaster {
 		//System.out.println(playersArrList.get(0).toString());
 		//System.out.println(cardsInPlay.toString());
 	}
-	
 	
 	public void playerIsElminated() {
 		for(int i = 0; i <  playersArrList.size(); i ++) {
@@ -165,11 +179,7 @@ public class GameMaster {
 //			System.out.println(playersArrList.get(i).getName());
 //		}
 	}
-	// will find the player with the highest category amount
-//	public Player findWinner() {
-//		Player p;
-//		return p;
-//	}
+
 	
 	
 	

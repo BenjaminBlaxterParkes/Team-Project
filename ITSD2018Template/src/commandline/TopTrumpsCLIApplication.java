@@ -14,6 +14,10 @@ public class TopTrumpsCLIApplication {
 	
 	public static void main(String[] args) {
 		
+		// ----------------------------------------------------
+		// Add your game logic here based on the requirements
+		// ----------------------------------------------------
+		
 		GameMaster gm = new GameMaster();
 		CardDeck cd = new CardDeck();
 		final int DECK_SIZE = 40;
@@ -27,23 +31,21 @@ public class TopTrumpsCLIApplication {
 
 		// State
 		boolean userWantsToQuit = false; // flag to check whether the user wants to quit the application
-
 		Scanner in = new Scanner(System.in);
 
+		// game loop
+		while (!userWantsToQuit == true) {
+		
 		System.out.println("Main Menu \n 1. Start New Game \n 2. See Past Stats");
+		String answer = in.next();
 
-		int answer = in.nextInt();
-
-		if (answer == 1) {
-
+		if (answer.equals("1")) {
 			// start game loop
-			while (!userWantsToQuit) {
+			int play = 1;
+			while (play == 1) {
 
-				System.out.println("What is your name?");
-
+				System.out.println("\nWhat is your name?");
 				String name = in.next();
-				
-				System.out.println();
 				
 				HumanPlayer human = new HumanPlayer(name);
 				AIPlayer AI1 = new AIPlayer("HAL 9000");
@@ -57,12 +59,8 @@ public class TopTrumpsCLIApplication {
 				gm.loadPlayers(AI3, 3);
 				gm.loadPlayers(AI4, 4);
 				
-				System.out.println();
-				
 				cd.populateDeck();
 				cd.shuffleDeck();
-				
-				System.out.println();
 				
 				int i = 0;
 				while (i < DECK_SIZE) {
@@ -85,59 +83,64 @@ public class TopTrumpsCLIApplication {
 				
 				System.out.println();
 				
-//				System.out.println(human.toString());
-//				System.out.println(AI1.toString());
-//				System.out.println(AI2.toString());
-//				System.out.println(AI3.toString());
-//				System.out.println(AI4.toString());
-				
-				System.out.println();
-				
 				gm.chooseFirstPlayer();
 				System.out.println();
 				//System.out.println("\n" + gm.getActivePlayer().getTopCardInfo());
 				
 				// start of round loop
-				
 				// continue game until one player is left in the Players ArrayList
 				while (gm.getArraySize() > 1) {
-					gm.playerIsElminated();
 					
-					System.out.println();
+					gm.playerIsElminated(); // check that players still have cards
 					
-					System.out.println("Enter any key to continue to round " + round);
-				
 					System.out.println(gm.getPlayerArrayInfo());
 					
-					String startRound = in.next();
-					
+					String startRound = "";
+					boolean humanPlayer = gm.findHumanPlayer(name);
+						if (humanPlayer == true) {
+							System.out.println("Enter any key to continue to round " + round);
+							startRound = in.next();
+					}
 					String activePlayerName = gm.getActivePlayerName();
 				
 					if (activePlayerName.equals(human.getName())) {
 						System.out.println("\nIt's your turn! Here's your card:\n");
 						System.out.println(gm.getActivePlayer().getTopCardInfo());
-						System.out.println("Which category would you like to select?");
+						
+						
+						int y = 1;
+						while (y == 1) {
+							System.out.println("Which category would you like to select?");
 					
-						// fix this later so that it's one thing
-						String chooseCategory = in.next();
+							// fix this later so that it's one thing
+							String chooseCategory = in.next();
 					
-							if (chooseCategory.equals("1")) {
-								gm.sortByCategory(1);
-							}
-							if (chooseCategory.equals("2")) {
-								gm.sortByCategory(2);
-							}
-							if (chooseCategory.equals("3")) {
-								gm.sortByCategory(3);
-							}
-							if (chooseCategory.equals("4")) {
-								gm.sortByCategory(4);
+								if (chooseCategory.equals("1")) {
+									gm.sortByCategory(1);
+									y = 2;
 								}
-							if (chooseCategory.equals("5")) {
-								gm.sortByCategory(5);
-							}
-							
+								else if (chooseCategory.equals("2")) {
+									gm.sortByCategory(2);
+									y = 2;
+								}
+								else if (chooseCategory.equals("3")) {
+									gm.sortByCategory(3);
+									y = 2;
+								}
+								else if (chooseCategory.equals("4")) {
+									gm.sortByCategory(4);
+									y = 2;
+									}
+								else if (chooseCategory.equals("5")) {
+									gm.sortByCategory(5);
+									y = 2;
+								}
+								else {
+									System.out.println("Invalid option.");
+								}
+						}
 					}
+					
 					else {
 						if (activePlayerName.equals(AI1.getName())) {
 							int choice = AI1.chooseCategory();
@@ -159,42 +162,63 @@ public class TopTrumpsCLIApplication {
 				
 					
 					gm.communalPile();
-					
 					round++;
 					
 				}
 				
 				System.out.println("The game is over.");
 				System.out.println("The winner of the game was: " +gm.getActivePlayerName());
+				System.out.println("The number of rounds was: " + round);
 				System.out.println("They have this many cards: " + gm.getActivePlayer().getNumOfCardsInHand());
 				System.out.println("Their full hand is: " + gm.getActivePlayer().toString());
 				
+				System.out.println("\nStats have been saved");
+				// +++++++++++++++++++++++++++++++++++++++++++++++++ add stats object
+				round = 1;
 				
-				// creating players
-
-				// Loop until the user wants to exit the game
-
-				// ----------------------------------------------------
-				// Add your game logic here based on the requirements
-				// ----------------------------------------------------
-
 				
-				//System.out.println("Do you want to play again?");
-				userWantsToQuit = true; // use this when the user wants to exit the game
+				int again = 1;
+				while (again == 1) {
+				System.out.println("\nDo you want to play again: Y/N?");
+				String playAgain = in.next();
+				
+				if ((playAgain.equals("Y")) || (playAgain.equals("y"))) {
+					play = 1;
+					again = 2;
+				}
+				
+				else if ((playAgain.equals("N")) || (playAgain.equals("n"))) {
+					play = 2;
+					again = 2;
+				}
+				
+				else {
+					System.out.println("Invalid answer.\n");
+				}
+				}
+				
+				
+				//userWantsToQuit = true; // use this when the user wants to exit the game
 			}
 		}
 		
 		// if answer is see past game stats
-		if(answer == 2) {
+		if (answer.equals("2")) {
+			System.out.println("You entered 2.\n");
 			// a method from the stats class will load a string which will print in the terminal
 		}
 
-
-	}
-
-	private static void CardDeck() {
-		// TODO Auto-generated method stub
 		
+		else if ((!answer.equals("1")) || (!answer.equals("1")))   {
+			System.out.println("Invalid option.\n");
+		}
+		
+		}
+	
+	
+	
 	}
+
+
 
 }

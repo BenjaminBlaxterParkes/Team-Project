@@ -79,7 +79,7 @@ public abstract class Player implements Comparable<Player> {
 	}
 	
 	public String toString() {
-		return "" + name + ", has num cards: " + getNumOfCardsInHand() + " full deck: \t" + hand.toString();
+		return "" + name + " has " + getNumOfCardsInHand() + " cards:\t" + hand.toString();
 	}
 	
 
