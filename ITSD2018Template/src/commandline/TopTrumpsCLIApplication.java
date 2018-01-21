@@ -22,7 +22,7 @@ public class TopTrumpsCLIApplication {
 		GameMaster gm = new GameMaster();
 		CardDeck cd = new CardDeck();
 		final int DECK_SIZE = 40;
-		int round = 1;
+		int round = 0;
 		AIPlayer AI;
 		HumanPlayer HP;
 		boolean writeGameLogsToFile = false; // Should we write game logs to file?
@@ -110,6 +110,7 @@ public class TopTrumpsCLIApplication {
 				// continue rounds until one player is left in the Game Master's ArrayList of players
 				while (gm.getArraySize() > 1) {
 					
+					round++;
 					//  System.out.println(gm.getPlayerArrayInfo());
 					
 					System.out.println("Round " + round 
@@ -184,10 +185,11 @@ public class TopTrumpsCLIApplication {
 					gm.communalPile();
 					
 					// Increment round
-					round++;
+					
 					
 					// Game Master checks that all players have at least one card
 					gm.playerIsElminated(); 
+					
 					
 				}
 				
@@ -197,7 +199,7 @@ public class TopTrumpsCLIApplication {
 				System.out.println("They have this many cards:\t " + gm.getActivePlayer().getNumOfCardsInHand());
 				//System.out.println("Their full hand is:\t\t " + gm.getActivePlayer().toString());
 				
-				System.out.println("\nStats have been saved");
+				System.out.println("\nStats can't be saved at this time");
 				// +++++++++++++++++++++++++++++++++++++++++++++++++ add stats object
 				round = 1;
 				
