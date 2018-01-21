@@ -1,10 +1,17 @@
 package commandline;
 
+/**
+ * Card class manages the information from the .txt file that contains
+ * the deck of cards.  
+ * @author apalm
+ *
+ */
+
 public class Card {
 
-	final protected String description;
+	final protected String description; // card name
 	final protected int categoryOne, categoryTwo, categoryThree, categoryFour, categoryFive;
-	String cardInfo = "";
+	protected String cardInfo = "";
 	
 	/**
 	 * This is a manual constructor that takes the following parameters
@@ -26,8 +33,8 @@ public class Card {
 	}
 	
 	/**
-	 * This constructors takes a single String and parses it out
-	 * the description and five categories to create the Card object.
+	 * This constructors takes a single String, parses it out
+	 * the description and five categories, and creates the Card object.
 	 * @param line
 	 */
 	Card(String line) {
@@ -43,7 +50,7 @@ public class Card {
 	}
 	
 	/**
-	 * Returns the description
+	 * Returns the description, or card name.
 	 * @return
 	 */
 	public String getDescription() {
@@ -51,7 +58,7 @@ public class Card {
 	}
 	
 	/**
-	 * Method that returns the integer from the first category
+	 * Method that returns the integer from the first category.
 	 * @return
 	 */
 	public int getCategoryOne() {
@@ -59,7 +66,7 @@ public class Card {
 	}
 	
 	/**
-	 * Method that returns the integer from the second category
+	 * Method that returns the integer from the second category.
 	 * @return
 	 */
 	public int getCategoryTwo() {
@@ -67,7 +74,7 @@ public class Card {
 	}
 	
 	/**
-	 * Method that returns the integer from the third category
+	 * Method that returns the integer from the third category.
 	 * @return
 	 */
 	public int getCategoryThree() {
@@ -75,7 +82,7 @@ public class Card {
 	}
 	
 	/**
-	 * Method that returns the integer from the fourth category
+	 * Method that returns the integer from the fourth category.
 	 * @return
 	 */
 	public int getCategoryFour() {
@@ -83,58 +90,70 @@ public class Card {
 	}
 	
 	/**
-	 * Method that returns the integer from the fifth category
+	 * Method that returns the integer from the fifth category.
 	 * @return
 	 */
 	public int getCategoryFive() {
 		return categoryFive;
 	}
 	
+	/**
+	 * Concatenates the card instance variables.
+	 */
 	public String toString() {
 		return "" + description + " " + categoryOne + " " + categoryTwo + " " + categoryThree + " "
 				+ categoryFour + " " + categoryFive;
 	}
 	
+	/**
+	 * Sets a String containing the category names to the class variable.
+	 * @param info
+	 */
 	public void setCardInfo(String info) {
 		this.cardInfo = info;
 	}
-	
+	 /**
+	  * Returns a String containing the category names of the class variable.
+	  * @return
+	  */
 	public String getCardCategories() {
 		return this.cardInfo;
 	}
 	
+	/** 
+	 * Returns a concatenation of all a Card's information in a single String.
+	 * @return
+	 */
 	public String getCardInfo() {
 		String categories = getDescription() + "\n";
 		String card = getCardCategories();
-		
+
 		String catOne = "";
 		String catTwo = "";
-		String catThree = ""; 
+		String catThree = "";
 		String catFour = "";
 		String catFive = "";
-		
+
 		try {
-		String[] cardInfo = card.split(" ");
-		
-		catOne = cardInfo[0];
-		catTwo = cardInfo[1];
-		catThree = cardInfo[2];
-		catFour = cardInfo[3];
-		catFive = cardInfo[4];
-		
+			String[] cardInfo = card.split(" ");
+
+			catOne = cardInfo[0];
+			catTwo = cardInfo[1];
+			catThree = cardInfo[2];
+			catFour = cardInfo[3];
+			catFive = cardInfo[4];
+
 		}
-		
+
 		catch (NullPointerException n) {
 			System.out.println("Null was found in 'getCardInfo' in 'Card' class");
 		}
-		
-		categories += 	"1. " + catOne + ": \t" + categoryOne + "\n"
-							+ "2. " +   catTwo + ": \t" + categoryTwo + "\n"
-							+ "3. " +  catThree + ": \t" + categoryThree + "\n"
-							+ "4. " +   catFour + ": \t" + categoryFour + "\n"
-							+ "5. " +   catFive + ": \t\t" + categoryFive + "\n";
-		
+
+		categories += "1. " + catOne + ": \t" + categoryOne + "\n" + "2. " + catTwo + ": \t" + categoryTwo + "\n"
+				+ "3. " + catThree + ": \t" + categoryThree + "\n" + "4. " + catFour + ": \t" + categoryFour + "\n"
+				+ "5. " + catFive + ": \t\t" + categoryFive + "\n";
+
 		return categories;
 	}
 	
-}
+} // End of class.

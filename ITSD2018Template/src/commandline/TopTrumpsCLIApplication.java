@@ -18,6 +18,7 @@ public class TopTrumpsCLIApplication {
 		// Add your game logic here based on the requirements
 		// ----------------------------------------------------
 		
+		// Main variables
 		GameMaster gm = new GameMaster();
 		CardDeck cd = new CardDeck();
 		final int DECK_SIZE = 40;
@@ -33,68 +34,76 @@ public class TopTrumpsCLIApplication {
 		boolean userWantsToQuit = false; // flag to check whether the user wants to quit the application
 		Scanner in = new Scanner(System.in);
 
-		// game loop
+		// Start game loop
 		while (!userWantsToQuit == true) {
 		
-		System.out.println("Main Menu \n 1. Start New Game \n 2. See Past Stats");
+		System.out.println("Main Menu \n1. Start New Game \n2. See Past Stats");
 		String answer = in.next();
 
 		if (answer.equals("1")) {
-			// start game loop
+			
+			// start round loop
 			int play = 1;
 			while (play == 1) {
 
+				// Get human player's name
 				System.out.println("\nWhat is your name?");
 				String name = in.next();
 				
+				// Instantiate players
 				HumanPlayer human = new HumanPlayer(name);
 				AIPlayer AI1 = new AIPlayer("HAL 9000");
 				AIPlayer AI2 = new AIPlayer("Cortana");
 				AIPlayer AI3 = new AIPlayer("GLaDOS");
 				AIPlayer AI4 = new AIPlayer("Marvin");
 				
+				// Game Master loads players into an ArrayList
 				gm.loadPlayers(human, 0);
 				gm.loadPlayers(AI1, 1);
 				gm.loadPlayers(AI2, 2);
 				gm.loadPlayers(AI3, 3);
 				gm.loadPlayers(AI4, 4);
 				
+				// Deck is populated and shuffled
 				cd.populateDeck();
 				cd.shuffleDeck();
 				
+				// Game Master deals out the cards
 				int i = 0;
 				while (i < DECK_SIZE) {
 					human.setHand(gm.dealCard(cd, i));
-					//System.out.println("" +human.getName() + " now has: "+ gm.dealCard(cd, i).getDescription());
+					//System.out.println(human.getName() + " now has: "+ gm.dealCard(cd, i).getDescription());
 					i++;
 					AI1.setHand(gm.dealCard(cd, i));
-					//System.out.println("" +AI1.getName() + " now has: "+ gm.dealCard(cd, i).getDescription());
+					//System.out.println(AI1.getName() + " now has: "+ gm.dealCard(cd, i).getDescription());
 					i++;
 					AI2.setHand(gm.dealCard(cd, i));
-					//System.out.println("" +AI2.getName() + " now has: "+ gm.dealCard(cd, i).getDescription());
+					//System.out.println(AI2.getName() + " now has: "+ gm.dealCard(cd, i).getDescription());
 					i++;
 					AI3.setHand(gm.dealCard(cd, i));
-					//System.out.println("" +AI3.getName() + " now has: "+ gm.dealCard(cd, i).getDescription());
+					//System.out.println(AI3.getName() + " now has: "+ gm.dealCard(cd, i).getDescription());
 					i++;
 					AI4.setHand(gm.dealCard(cd, i));
-					//System.out.println("" +AI4.getName() + " now has: "+ gm.dealCard(cd, i).getDescription());
+					//System.out.println(AI4.getName() + " now has: "+ gm.dealCard(cd, i).getDescription());
 					i++;
 				}
 				
 				System.out.println();
 				
+				// Game Master chooses first player
 				gm.chooseFirstPlayer();
-				System.out.println();
 				//System.out.println("\n" + gm.getActivePlayer().getTopCardInfo());
 				
 				// start of round loop
-				// continue game until one player is left in the Players ArrayList
+				// continue rounds until one player is left in the Game Master's ArrayList of players
 				while (gm.getArraySize() > 1) {
 					
-					gm.playerIsElminated(); // check that players still have cards
+					// Game Master checks that all players have at least one card
+					gm.playerIsElminated(); 
 					
 					System.out.println(gm.getPlayerArrayInfo());
 					
+					// If human player is in the array, ask to proceed to next round
 					String startRound = "";
 					boolean humanPlayer = gm.findHumanPlayer(name);
 						if (humanPlayer == true) {
@@ -167,10 +176,10 @@ public class TopTrumpsCLIApplication {
 				}
 				
 				System.out.println("The game is over.");
-				System.out.println("The winner of the game was: " +gm.getActivePlayerName());
-				System.out.println("The number of rounds was: " + round);
-				System.out.println("They have this many cards: " + gm.getActivePlayer().getNumOfCardsInHand());
-				System.out.println("Their full hand is: " + gm.getActivePlayer().toString());
+				System.out.println("The winner of the game was:\t " +gm.getActivePlayerName());
+				System.out.println("The number of rounds was:\t " + round);
+				System.out.println("They have this many cards:\t " + gm.getActivePlayer().getNumOfCardsInHand());
+				System.out.println("Their full hand is:\t\t " + gm.getActivePlayer().toString());
 				
 				System.out.println("\nStats have been saved");
 				// +++++++++++++++++++++++++++++++++++++++++++++++++ add stats object

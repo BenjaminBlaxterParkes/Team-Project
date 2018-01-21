@@ -9,6 +9,13 @@ import java.util.Arrays;
 import java.util.Collections;
 import java.util.stream.Stream;
 
+/**
+ * CardDeck class organizes Card objects and shuffles them so the GameMaster
+ * can deal them out to the Player objects.  
+ * @author apalm
+ *
+ */
+
 // Class to contain all variables contained in the deck of cards
 public class CardDeck {
 	
@@ -39,71 +46,80 @@ public class CardDeck {
 		}
 		String deckAsString = deckFile.toString(); // Save deck file as string
 		String[] temp = deckAsString.split("\n", 2);
-		
+
 		String descriptionAsString = temp[0];
-		//System.out.println(descriptionAsString);
-		
+		// System.out.println(descriptionAsString);
+
 		deckOfCards = temp[1];
-		//System.out.println(deckOfCards);
-		
-		String[] temp2 = descriptionAsString.split(" ", 2);
-		this.listOfCategories = temp2[1];
-		//System.out.println(listOfCategories + " is list of categories");
-		categories = listOfCategories.split(" ");
-		
 		// System.out.println(deckOfCards);
 
+		String[] temp2 = descriptionAsString.split(" ", 2);
+		this.listOfCategories = temp2[1];
+		// System.out.println(listOfCategories + " is list of categories");
+		categories = listOfCategories.split(" ");
+		// System.out.println(deckOfCards);
 	}
 	
-	
-	// Method to sort the deck file into individual cards and populate originalDeck[]
+	/**
+	 * Sorts the deck file into individual Cards and populate originalDeck[].
+	 */
 	public void populateDeck() {
-		//System.out.println(listOfCategories + " in populateDeck");
+		// System.out.println(listOfCategories + " in populateDeck");
 		Card newCard; // new card objects to fill originalDeck[]
-//		String [] temp = deckOfCards.split("\n", 2);
-//		String doc = temp[1];
+		// String [] temp = deckOfCards.split("\n", 2);
+		// String doc = temp[1];
 		String[] deckSplit = deckOfCards.split("\n"); // split to individual cards
-		
+
 		// Loop through deck, index i = 1 to skip first line of deck file
 		for (int i = 0; i < deckSplit.length; i++) {
-				String singleCard = deckSplit[i]; // Store each line of deck file
-				newCard = new Card(singleCard); // Create new Card with each new line
-				newCard.setCardInfo(listOfCategories);
-				
-				originalDeck[i] = newCard; // Insert Card elements into array, i-1 to fill index 0
+			String singleCard = deckSplit[i]; // Store each line of deck file
+			newCard = new Card(singleCard); // Create new Card with each new line
+			newCard.setCardInfo(listOfCategories);
+
+			originalDeck[i] = newCard; // Insert Card elements into array, i-1 to fill index 0
 		}
 	}
 	
-	
-	// Method to shuffle originalDeck
+	/**
+	 * Shuffles originalDeck.
+	 */
 	public void shuffleDeck() {
-		
 		Card tempCard; // Card object for passing from originalDeck to shuffledDeck
-		
+
 		tempDeck = new ArrayList<Card>(Arrays.asList(originalDeck)); // Convert originalDeck into ArrayList
-		//System.out.println(tempDeck);
-		
+		// System.out.println(tempDeck);
+
 		Collections.shuffle(tempDeck); // Shuffle cards
-		//System.out.println(tempDeck.toString());
+		// System.out.println(tempDeck.toString());
 
 		// Loop through shuffled cards
 		for (int i = 0; i < DECK_SIZE; i++) {
 			tempCard = tempDeck.get(i); // Stored each card
 			shuffledDeck[i] = tempCard; // Populate the shuffled deck
-			//System.out.println(shuffledDeck[i].getDescription());
+			// System.out.println(shuffledDeck[i].getDescription());
 		}
 	}
 	
-
-	
-	
-	// Accessor methods
+	/**
+	 * Returns original deck from the Card[].
+	 * @return
+	 */
 	public Card[] getOriginalDeck() {
 		return originalDeck;
 	}
+	
+	/**
+	 * Returns shuffled dead from the Card[].
+	 * @return
+	 */
 	public Card[] getShuffledDeck() {
 		return shuffledDeck;
 	}
+	
+	/**
+	 * Returns the categories from the .txt file.
+	 * @return
+	 */
 	public String[] getCategories() {
 		return categories; 
 	}
