@@ -28,7 +28,7 @@ public class Stats {
 			return;
 		}
 		if (connection != null) {
-			System.out.println("Connection was successful");
+			System.out.println("Connected to database.\n");
 		} else {
 			System.err.println("Failed to make connection!");
 		}
@@ -37,7 +37,7 @@ public class Stats {
 	public void disconnection() {
 		try {
 			connection.close();
-			System.out.println("Connection closed");
+			System.out.println("Ended connection to database.\n");
 		} catch (SQLException e) {
 			e.printStackTrace();
 			System.out.println("Connection could not be closed – SQL exception");

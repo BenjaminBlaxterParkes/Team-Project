@@ -26,8 +26,6 @@ public class TopTrumpsCLIApplication {
 		Stats stats = new Stats("m_17_2293327p", "m_17_2293327p", "2293327p");
 		final int DECK_SIZE = 40;
 		int round = 0;
-		AIPlayer AI;
-		HumanPlayer HP;
 		boolean writeGameLogsToFile = false; // Should we write game logs to file?
 		// if (args[0].equalsIgnoreCase("true")) {
 		// writeGameLogsToFile = true; // Command line selection
@@ -52,9 +50,6 @@ public class TopTrumpsCLIApplication {
 
 					// Instantiate Game Master
 					GameMaster gm = new GameMaster();
-
-					System.out.println(stats.getGameSummary());
-					
 					
 					// Get human player's name
 					String name = "";
@@ -113,10 +108,10 @@ public class TopTrumpsCLIApplication {
 						gm.getPlayerByPosition(i).setHand(gm.dealCard(cd, j));
 						// System.out.println(gm.getPlayerByPosition(i).getName() + " got"
 						// + " card: " + gm.dealCard(cd, j));
-						j++;
-						i++;
+						j++; // increment Card
+						i++; // increment Player
 						if (i == (gm.getArraySize())) {
-							i = 0;
+							i = 0; // start dealing again to first player
 						}
 					}
 
@@ -197,13 +192,12 @@ public class TopTrumpsCLIApplication {
 
 						gm.communalPile();
 
-						// Increment round
-
 						// Game Master checks that all players have at least one card
 						gm.playerIsElminated();
 
 					}
 
+					// Game is over.  Print results.
 					System.out.println("The game is over.");
 					System.out.println("The winner of the game was:\t " + gm.getActivePlayerName());
 					System.out.println("The number of rounds was:\t " + round);
@@ -211,9 +205,30 @@ public class TopTrumpsCLIApplication {
 					// System.out.println("Their full hand is:\t\t " +
 					// gm.getActivePlayer().toString());
 
-					System.out.println("\nStats can't be saved at this time");
-					// +++++++++++++++++++++++++++++++++++++++++++++++++ add stats object
-					round = 1;
+					
+
+					// Database stuff
+//					int humanWinner = 0;
+//					int AIWinner = 0;
+//					if (gm.getActivePlayerName().equals(name)) {
+//						humanWinner = 1;
+//					}
+//					else {
+//						AIWinner = 1;
+//					}
+//					
+//					stats.connection();
+//					int gameID = Integer.parseInt(stats.getGameCount()) + 1;
+//					int draws = gm.getDraws();
+//					int AIRounds = gm.getAIWin();
+//					int humanRounds = gm.getHumanWin();
+//					
+//					stats.recordStats(gameID, draws, humanWinner, AIWinner, round, humanRounds, AIRounds);
+//
+//					stats.disconnection();
+					
+					System.out.println("\nStats have been saved to the database.");
+					round = 1; // reset round counter
 
 					int again = 1;
 					while (again == 1) {
@@ -241,9 +256,12 @@ public class TopTrumpsCLIApplication {
 
 			// if answer is see past game stats
 			if (answer.equals("2")) {
-				System.out.println("Stats class has not been coded yet.\n");
-				// a method from the stats class will load a string which will print in the
-				// terminal
+				System.out.println("Here are the previous stats: \n");
+				
+//				stats.connection();
+//				System.out.println(stats.getGameSummary() + "\n");
+//				stats.disconnection();
+				
 			}
 
 			else if ((!answer.equals("1")) || (!answer.equals("1"))) {
