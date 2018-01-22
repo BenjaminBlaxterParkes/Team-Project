@@ -20,6 +20,8 @@ public class GameMaster {
 	ArrayList<Player> playersArrList = new ArrayList<Player>();
 	ArrayList<Card> cardsInPlay = new ArrayList<Card>();
 	String pastActivePlayer;
+	int draws, humanWin, AIWin;
+
 	
 	/**
 	 * Loads Player objects into an array.
@@ -247,6 +249,7 @@ public class GameMaster {
 		// + (category));
 
 		if (card.getCategoryValue(category) == other.getCategoryValue(category)) {
+			draws++;
 			System.out.println("\n*** TIE DETECTED ***");
 			System.out.println("The cards " + card.getDescription() + " and " + other.getDescription() + " tied.");
 			System.out.println("Next round will be the tie breaker!\n");
@@ -257,12 +260,46 @@ public class GameMaster {
 		return false;
 	}
 	
+	public int getDraws() {
+		return this.draws;
+	}
+	
+	public int getAIWin() {
+		return this.AIWin;
+	}
+	
+	public int getHumanWin() {
+		return this.humanWin;
+	}
+	
+	public boolean checkHumanName(String name) {
+		if ((name.equals("HAL 9000")) ||
+				(name.equals("Cortana")) ||
+				(name.equals("GLaDOS")) ||
+				(name.equals("Marvin"))) {
+			return false;
+		}
+		
+		return true;
+	}
+	
 	/**
 	 * Gives Cards from ArrayList<Card> to the winner of the round.    
 	 */
 	public void rewardWinner() {
 		setPastPlayerName();
 		System.out.println("\n" + playersArrList.get(0).getName() + " won the round");
+		
+		if ((getActivePlayerName().equals("HAL 9000")) ||
+				(getActivePlayerName().equals("Cortana")) ||
+				(getActivePlayerName().equals("GLaDOS")) ||
+				(getActivePlayerName().equals("Marvin"))) {
+			 AIWin++;
+		}
+		else {
+			humanWin++;
+		}
+		
 		System.out.println("Their winning card was: " + cardsInPlay.get(0).getCardInfo());
 		Card c;
 		for (int i = 0; i < cardsInPlay.size(); i++) {
