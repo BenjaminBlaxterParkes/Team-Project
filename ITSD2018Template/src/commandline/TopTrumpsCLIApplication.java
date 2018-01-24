@@ -207,29 +207,33 @@ public class TopTrumpsCLIApplication {
 
 					
 
-					// Database stuff
-//					int humanWinner = 0;
-//					int AIWinner = 0;
-//					if (gm.getActivePlayerName().equals(name)) {
-//						humanWinner = 1;
-//					}
-//					else {
-//						AIWinner = 1;
-//					}
-//					
-//					stats.connection();
-//					int gameID = Integer.parseInt(stats.getGameCount()) + 1;
-//					int draws = gm.getDraws();
-//					int AIRounds = gm.getAIWin();
-//					int humanRounds = gm.getHumanWin();
-//					
-//					stats.recordStats(gameID, draws, humanWinner, AIWinner, round, humanRounds, AIRounds);
-//
-//					stats.disconnection();
+					
+					int humanWinner = 0;
+					int AIWinner = 0;
+					if (gm.getActivePlayerName().equals(name)) {
+						humanWinner = 1;
+					}
+					else {
+						AIWinner = 1;
+					}
+					
+					stats.connection();
+					int gameID = Integer.parseInt(stats.getGameCount()) + 1;
+					int draws = gm.getDraws();
+					int AIRounds = gm.getAIWin();
+					int humanRounds = gm.getHumanWin();
+					
+					stats.recordStats(gameID, draws, humanWinner, AIWinner, round, humanRounds, AIRounds);
+
+					stats.disconnection();
 					
 					System.out.println("\nStats have been saved to the database.");
 					round = 1; // reset round counter
 
+					
+					
+					
+					
 					int again = 1;
 					while (again == 1) {
 						System.out.println("\nDo you want to play again: Y/N?");
@@ -258,9 +262,9 @@ public class TopTrumpsCLIApplication {
 			if (answer.equals("2")) {
 				System.out.println("Here are the previous stats: \n");
 				
-//				stats.connection();
-//				System.out.println(stats.getGameSummary() + "\n");
-//				stats.disconnection();
+				stats.connection();
+				System.out.println(stats.getGameSummary() + "\n");
+				stats.disconnection();
 				
 			}
 
