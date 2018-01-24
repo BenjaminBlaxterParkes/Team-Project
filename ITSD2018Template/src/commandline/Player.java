@@ -111,7 +111,8 @@ public class Player implements Comparable<Player> {
 	 * @return
 	 */
 	public String getTopCardInfo() {
-		String desciption = hand.get(0).getDescription() + "\n";
+		String desciption = "=================================\n" 
+						  +"| " + hand.get(0).getDescription() +"   \t\t\t| \n";
 		String allCardInfo = hand.get(0).getCardCategories();
 
 		String catOne = "";
@@ -135,10 +136,12 @@ public class Player implements Comparable<Player> {
 			System.out.println("Null was found in 'getTopCardInfo' in 'Players' class");
 		}
 
-		String categories = "1. " + catOne + ": \t" + hand.get(0).categoryOne + "\n" + "2. " + catTwo + ": \t"
-				+ hand.get(0).categoryTwo + "\n" + "3. " + catThree + ": \t" + hand.get(0).categoryThree + "\n" + "4. "
-				+ catFour + ": \t" + hand.get(0).categoryFour + "\n" + "5. " + catFive + ": \t\t"
-				+ hand.get(0).categoryFive + "\n";
+		String categories = "| 1. " + catOne + ": \t\t" + hand.get(0).categoryOne + "\t|\n" + "| 2. " + catTwo + ": \t\t"
+				+ hand.get(0).categoryTwo + "\t|\n" + "| 3. " + catThree + ": \t\t" + hand.get(0).categoryThree + "\t|\n" + "| 4. "
+				+ catFour + ": \t\t" + hand.get(0).categoryFour + "\t|\n" + "| 5. " + catFive + ": \t\t"
+				+ hand.get(0).categoryFive + "\t|\n"
+				+ "=================================\n";
+					
 
 		return desciption + categories;
 

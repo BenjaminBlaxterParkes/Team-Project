@@ -125,7 +125,8 @@ public class Card {
 	 * @return
 	 */
 	public String getCardInfo() {
-		String categories = getDescription() + "\n";
+		String categories = "=================================\n"
+							+ "| " + getDescription() + "   \t\t\t| \n";
 		String card = getCardCategories();
 
 		String catOne = "";
@@ -149,9 +150,10 @@ public class Card {
 			System.out.println("Null was found in 'getCardInfo' in 'Card' class");
 		}
 
-		categories += "1. " + catOne + ": \t" + categoryOne + "\n" + "2. " + catTwo + ": \t" + categoryTwo + "\n"
-				+ "3. " + catThree + ": \t" + categoryThree + "\n" + "4. " + catFour + ": \t" + categoryFour + "\n"
-				+ "5. " + catFive + ": \t\t" + categoryFive + "\n";
+		categories += "| 1. " + catOne + ": \t\t" + categoryOne + "\t|\n" + "| 2. " + catTwo + ": \t\t" + categoryTwo + "\t|\n"
+				+ "| 3. " + catThree + ": \t\t" + categoryThree + "\t|\n" + "| 4. " + catFour + ": \t\t" + categoryFour + "\t|\n"
+				+ "| 5. " + catFive + ": \t\t" + categoryFive + "\t|\n"
+				+ "=================================\n";
 
 		return categories;
 	}

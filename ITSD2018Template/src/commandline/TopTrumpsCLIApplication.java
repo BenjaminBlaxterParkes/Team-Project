@@ -37,10 +37,10 @@ public class TopTrumpsCLIApplication {
 
 		// start round loop
 		int play = 1;
-		while (play == 1) {
+		while (!userWantsToQuit == true) {
 		
 
-			System.out.println("Main Menu \n1. Start New Game \n2. See Past Stats");
+			System.out.println("*****************\n**  Main Menu  ** \n*****************\n1. Start New Game \n2. See Past Stats");
 			String answer = in.next();
 
 			if (answer.equals("1")) {
@@ -55,14 +55,18 @@ public class TopTrumpsCLIApplication {
 					String name = "";
 					int checkName = 1;
 					while (checkName == 1) {
-						System.out.println("\nWhat is your name?");
+						System.out.println(" -------------------\n"
+								         + "| What's your name? | \n "
+								          + "-------------------");
 						name = in.next();
 
 						boolean check = gm.checkHumanName(name);
 						if (check == true) {
 							checkName = 2;
 						} else {
-							System.out.println("That name is already taken.");
+							System.out.println(" --------------------------------------------------------------------\n"
+									         + "| That name is taken, please enter a different name and press enter. |\n"
+									         + " --------------------------------------------------------------------\n");
 						}
 
 					}
@@ -76,7 +80,9 @@ public class TopTrumpsCLIApplication {
 					int b = 1;
 					String opponents = "";
 					while (b == 1) {
-						System.out.println("\nHow many AI opponents would you like to play against: 1-4?");
+						System.out.println(" -----------------------------------------------------------------\n"
+								         + "| How many AI's would you like to play with you, between 1 and 4? |\n"
+								         + " -----------------------------------------------------------------");
 						opponents = in.next();
 
 						if (opponents.equals("1")) {
@@ -92,7 +98,9 @@ public class TopTrumpsCLIApplication {
 							gm.createAI(4);
 							b = 2;
 						} else {
-							System.out.print("Invalid option.\n");
+							System.out.print("-----------------------------------------------------------------------\n"
+									       + "| Invalid option.  Please enter a number between 1 and 4 and hit enter |\n"
+										   + "-----------------------------------------------------------------------\n");
 						}
 
 					}
@@ -129,8 +137,8 @@ public class TopTrumpsCLIApplication {
 						round++;
 						// System.out.println(gm.getPlayerArrayInfo());
 
-						System.out.println("Round " + round + "\n====================\n" + "It's "
-								+ gm.getPastPlayerName() + "'s turn!\n\n" + "Players:");
+						System.out.println("ROUND " + round + "\n====================\n" + "It's "
+								+ gm.getPastPlayerName() + "'s turn!\n\n" + "List of active players:");
 
 						System.out.println(gm.getPlayerArrayInfo());
 
@@ -139,21 +147,45 @@ public class TopTrumpsCLIApplication {
 						boolean humanPlayer = gm.findHumanPlayer(name);
 						if (humanPlayer == true) {
 
-							System.out.println("Peek at your top card:");
+							System.out.println("Here's your card for this round:");
 							System.out.println(human.getTopCardInfo());
-
-							System.out.println("To continue, enter any key.\n");
-							startRound = in.next();
+							
+							int r = 1;
+							while(r == 1) {
+								System.out.println(" ---------------------------------\n"
+										          +"| Now that you've seen your card: |\n"
+										          +" ---------------------------------\n"
+										+ "  C. Continue to category choice\n"
+										+ "  E. Exit to Main Menu");
+								startRound = in.next();
+								if(startRound.equals("c") || startRound.equals("C")) {
+									userWantsToQuit = false;
+									r = 2;
+								}
+								else if(startRound.equals("e") || startRound.equals("E")) {
+									userWantsToQuit = true;
+									r = 2;
+								}
+								else {
+									System.out.println(" -----------------------------------------\n"
+											        +  "| Invalid option, please enter 'C' or 'E' |\n"
+													 + " -----------------------------------------\n");
+								}
+							}
+							
+							
 						}
 						String activePlayerName = gm.getPastPlayerName();
 
 						if (activePlayerName.equals(human.getName())) {
-							System.out.println("\nIt's your turn! Here's your top card:\n");
-							System.out.println(gm.getActivePlayer().getTopCardInfo());
+//							System.out.println("\nIt's your turn! Here's your top card, again:\n");
+//							System.out.println(gm.getActivePlayer().getTopCardInfo());
 
 							int y = 1;
 							while (y == 1) {
-								System.out.println("Which category would you like to select?");
+								System.out.println(" ------------------------------------------\n"
+									        	+  "| Which category would you like to select? |\n"
+												+  " ------------------------------------------\n");
 
 								// fix this later so that it's one thing
 								String chooseCategory = in.next();
@@ -179,7 +211,9 @@ public class TopTrumpsCLIApplication {
 									human.setCategoryChoice(5);
 									y = 2;
 								} else {
-									System.out.println("Invalid option.");
+									System.out.println(" ----------------------------------------------------------------\n"
+											         + "| Invalid option, please enter a # between 1 and 5 and hit enter |\n"
+													 + " ----------------------------------------------------------------\n");
 								}
 							}
 						}
@@ -198,34 +232,34 @@ public class TopTrumpsCLIApplication {
 					}
 
 					// Game is over.  Print results.
-					System.out.println("The game is over.");
+					System.out.println("The game is over!");
 					System.out.println("The winner of the game was:\t " + gm.getActivePlayerName());
 					System.out.println("The number of rounds was:\t " + round);
-					System.out.println("They have this many cards:\t " + gm.getActivePlayer().getNumOfCardsInHand());
+//					System.out.println("They have this many cards:\t " + gm.getActivePlayer().getNumOfCardsInHand());
 					// System.out.println("Their full hand is:\t\t " +
 					// gm.getActivePlayer().toString());
 
 					
 
 					
-					int humanWinner = 0;
-					int AIWinner = 0;
-					if (gm.getActivePlayerName().equals(name)) {
-						humanWinner = 1;
-					}
-					else {
-						AIWinner = 1;
-					}
-					
-					stats.connection();
-					int gameID = Integer.parseInt(stats.getGameCount()) + 1;
-					int draws = gm.getDraws();
-					int AIRounds = gm.getAIWin();
-					int humanRounds = gm.getHumanWin();
-					
-					stats.recordStats(gameID, draws, humanWinner, AIWinner, round, humanRounds, AIRounds);
-
-					stats.disconnection();
+//					int humanWinner = 0;
+//					int AIWinner = 0;
+//					if (gm.getActivePlayerName().equals(name)) {
+//						humanWinner = 1;
+//					}
+//					else {
+//						AIWinner = 1;
+//					}
+//					
+//					stats.connection();
+//					int gameID = Integer.parseInt(stats.getGameCount()) + 1;
+//					int draws = gm.getDraws();
+//					int AIRounds = gm.getAIWin();
+//					int humanRounds = gm.getHumanWin();
+//					
+//					stats.recordStats(gameID, draws, humanWinner, AIWinner, round, humanRounds, AIRounds);
+//
+//					stats.disconnection();
 					
 					System.out.println("\nStats have been saved to the database.");
 					round = 1; // reset round counter
@@ -236,7 +270,9 @@ public class TopTrumpsCLIApplication {
 					
 					int again = 1;
 					while (again == 1) {
-						System.out.println("\nDo you want to play again: Y/N?");
+						System.out.println("\n ---------------------------------\n"
+										 + "| Do you want to play again: Y/N? |\n"
+										 + " ---------------------------------\n");
 						String playAgain = in.next();
 
 						if ((playAgain.equals("Y")) || (playAgain.equals("y"))) {
@@ -250,7 +286,9 @@ public class TopTrumpsCLIApplication {
 						}
 
 						else {
-							System.out.println("Invalid answer.\n");
+							System.out.println(" ----------------------------------\n"
+											 + "| Invalid answer, please try again |\n"
+											 + " ----------------------------------\n");
 						}
 					}
 
@@ -260,7 +298,9 @@ public class TopTrumpsCLIApplication {
 
 			// if answer is see past game stats
 			if (answer.equals("2")) {
-				System.out.println("Here are the previous stats: \n");
+				System.out.println(" ------------------------------\n"
+								 + "| Here are the previous stats: |\n"
+								 + " ------------------------------\n");
 				
 				stats.connection();
 				System.out.println(stats.getGameSummary() + "\n");
@@ -269,7 +309,9 @@ public class TopTrumpsCLIApplication {
 			}
 
 			else if ((!answer.equals("1")) || (!answer.equals("1"))) {
-				System.out.println("Invalid option.\n");
+				System.out.println(" -------------------------------------------------\n"
+								+  "| Invalid option! Press 1 or 2, then press enter. |\n"
+								+  " -------------------------------------------------\n");
 			}
 
 		}

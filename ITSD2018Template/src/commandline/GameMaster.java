@@ -72,7 +72,7 @@ public class GameMaster {
 		// System.out.println("The shuffled list of players is: " +
 		// playersArrList.toString());
 		Player p = playersArrList.get(0);
-		System.out.println("" + p.getName() + " will go first\n");
+		System.out.println("--- " + p.getName() + " will go first ---\n");
 		return p;
 	}
 	
@@ -180,27 +180,32 @@ public class GameMaster {
 		try {
 			if (choice == 1) {
 				Collections.sort(playersArrList, Player.sortByCategoryOne);
-				System.out.println(getPastPlayerName() + " chose category: Combat");
+				System.out.println("\n_________________________________________\n"
+						+ "** For " + getPastPlayerName() + "'s turn, they chose the category: Combat **");
 			}
 
 			if (choice == 2) {
 				Collections.sort(playersArrList, Player.sortByCategoryTwo);
-				System.out.println(getPastPlayerName() + " chose category: Lewdness");
+				System.out.println("\n_________________________________________\n"
+						+ "** For " + getPastPlayerName() + "'s turn, they chose the category: Lewdness **");
 			}
 
 			if (choice == 3) {
 				Collections.sort(playersArrList, Player.sortByCategoryThree);
-				System.out.println(getPastPlayerName() + " chose category: Agility");
+				System.out.println("\n_________________________________________\n"
+						+ "** For " + getPastPlayerName() + "'s turn, they chose the category: Agility **");
 			}
 
 			if (choice == 4) {
 				Collections.sort(playersArrList, Player.sortByCategoryFour);
-				System.out.println(getPastPlayerName() + " chose category: Lunacy");
+				System.out.println("\n_________________________________________\n"
+						+ "** For " + getPastPlayerName() + "'s turn, they chose the category: Lunacy **");
 			}
 
 			if (choice == 5) {
 				Collections.sort(playersArrList, Player.sortByCategoryFive);
-				System.out.println(getPastPlayerName() + " chose category: IQ");
+				System.out.println("\n_________________________________________\n"
+						+ "** For " + getPastPlayerName() + "'s turn, they chose the category: IQ **");
 			}
 		} catch (IndexOutOfBoundsException e) {
 			System.out.println("Cannot access position 0 of an empty Array");
@@ -287,7 +292,7 @@ public class GameMaster {
 	 */
 	public void rewardWinner() {
 		setPastPlayerName();
-		System.out.println("\n" + playersArrList.get(0).getName() + " won the round");
+		System.out.println("\n" + playersArrList.get(0).getName() + " won the round!");
 		
 		if ((getActivePlayerName().equals("HAL 9000")) ||
 				(getActivePlayerName().equals("Cortana")) ||
@@ -299,7 +304,7 @@ public class GameMaster {
 			humanWin++;
 		}
 		
-		System.out.println("Their winning card was: " + cardsInPlay.get(0).getCardInfo());
+		System.out.println("Their winning card was: \n" + cardsInPlay.get(0).getCardInfo() + "\n**\n**\n\nThe next round has started!\n");
 		Card c;
 		for (int i = 0; i < cardsInPlay.size(); i++) {
 			c = cardsInPlay.get(i);
