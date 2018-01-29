@@ -32,13 +32,17 @@ public class TopTrumpsCLIApplication {
 		// }
 
 		// State
-		boolean userWantsToQuit = false; // flag to check whether the user wants to quit the application
+		
+		// flag to check whether the user wants to quit the application
+		boolean userWantsToQuit = false;
+
+		// Instantiate scanner to be used for user input
 		Scanner in = new Scanner(System.in);
 
 		// start round loop
-		int play = 1;
-		while (!userWantsToQuit == true) {
-		
+		CONTINUE:
+		while (!userWantsToQuit == true) { 
+			boolean yesPlayAgain = false;
 
 			System.out.println("*****************\n**  Main Menu  ** \n*****************\n1. Start New Game \n2. See Past Stats");
 			String answer = in.next();
@@ -46,7 +50,7 @@ public class TopTrumpsCLIApplication {
 			if (answer.equals("1")) {
 
 				// Start game loop
-				while (!userWantsToQuit == true) {
+				while (yesPlayAgain == false) {
 
 					// Instantiate Game Master
 					GameMaster gm = new GameMaster();
@@ -159,12 +163,13 @@ public class TopTrumpsCLIApplication {
 										+ "  E. Exit to Main Menu");
 								startRound = in.next();
 								if(startRound.equals("c") || startRound.equals("C")) {
-									userWantsToQuit = false;
+									yesPlayAgain = false;
 									r = 2;
 								}
 								else if(startRound.equals("e") || startRound.equals("E")) {
-									userWantsToQuit = true;
 									r = 2;
+									continue CONTINUE;
+								
 								}
 								else {
 									System.out.println(" -----------------------------------------\n"
@@ -276,12 +281,12 @@ public class TopTrumpsCLIApplication {
 						String playAgain = in.next();
 
 						if ((playAgain.equals("Y")) || (playAgain.equals("y"))) {
-							userWantsToQuit = false;
+							yesPlayAgain = false;
 							again = 2;
 						}
 
 						else if ((playAgain.equals("N")) || (playAgain.equals("n"))) {
-							userWantsToQuit = true;
+							yesPlayAgain = true;
 							again = 2;
 						}
 
