@@ -246,25 +246,29 @@ public class TopTrumpsCLIApplication {
 
 					
 
-					
-//					int humanWinner = 0;
-//					int AIWinner = 0;
-//					if (gm.getActivePlayerName().equals(name)) {
-//						humanWinner = 1;
-//					}
-//					else {
-//						AIWinner = 1;
-//					}
-//					
-//					stats.connection();
-//					int gameID = Integer.parseInt(stats.getGameCount()) + 1;
-//					int draws = gm.getDraws();
-//					int AIRounds = gm.getAIWin();
-//					int humanRounds = gm.getHumanWin();
-//					
-//					stats.recordStats(gameID, draws, humanWinner, AIWinner, round, humanRounds, AIRounds);
-//
-//					stats.disconnection();
+					// This code only works on Aaron Palmer's lab computer since
+					// it's connected to the SQL database.
+
+					// int humanWinner = 0;
+					// int AIWinner = 0;
+					// if (gm.getActivePlayerName().equals(name)) {
+					// humanWinner = 1;
+					// }
+					// else {
+					// AIWinner = 1;
+					// }
+					//
+					// stats.connection();
+					// int gameID = Integer.parseInt(stats.getGameCount()) + 1;
+					// int draws = gm.getDraws();
+					// int AIRounds = gm.getAIWin();
+					// int humanRounds = gm.getHumanWin();
+					// String gameWinner = gm.getActivePlayerName();
+					//
+					// stats.recordStats(gameID, draws, humanWinner, AIWinner, round, humanRounds,
+					// AIRounds, gameWinner);
+					//
+					// stats.disconnection();
 					
 					System.out.println("\nStats have been saved to the database.");
 					round = 1; // reset round counter
@@ -307,9 +311,11 @@ public class TopTrumpsCLIApplication {
 								 + "| Here are the previous stats: |\n"
 								 + " ------------------------------\n");
 				
-				stats.connection();
-				System.out.println(stats.getGameSummary() + "\n");
-				stats.disconnection();
+				// This code only works on Aaron Palmer's lab computer since
+				// it's connected to the SQL database.
+				// stats.connection();
+				// System.out.println(stats.getGameSummary() + "\n");
+				// stats.disconnection();
 				
 			}
 

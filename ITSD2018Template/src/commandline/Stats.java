@@ -28,7 +28,7 @@ public class Stats {
 			return;
 		}
 		if (connection != null) {
-			System.out.println("Connected to database.\n");
+			//System.out.println("Connected to database.\n");
 		} else {
 			System.err.println("Failed to make connection!");
 		}
@@ -37,7 +37,7 @@ public class Stats {
 	public void disconnection() {
 		try {
 			connection.close();
-			System.out.println("Ended connection to database.\n");
+			//System.out.println("Ended connection to database.\n");
 		} catch (SQLException e) {
 			e.printStackTrace();
 			System.out.println("Connection could not be closed – SQL exception");
@@ -45,11 +45,11 @@ public class Stats {
 	}
 
 	public void recordStats(int gameID, int draws, int humanWinner, int AIWinner, int rounds, int humanRounds,
-			int AIRounds) {
+			int AIRounds, String gameWinner) {
 
 		Statement stmt = null;
 		String query = "insert into stats.gamestats \n" + "values \n" + "(" + gameID + "," + draws + "," + humanWinner
-				+ "," + AIWinner + "," + rounds + "," + humanRounds + "," + AIRounds + "); \n";
+				+ "," + AIWinner + "," + rounds + "," + humanRounds + "," + AIRounds + ", '" + gameWinner + "'); \n";
 
 		try {
 			stmt = connection.createStatement();
