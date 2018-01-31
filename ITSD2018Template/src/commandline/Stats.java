@@ -2,21 +2,36 @@ package commandline;
 
 import java.sql.*;
 
+/**
+ * This class contains and controls the database queries
+ * @author Kyrie
+ */
+
 public class Stats {
 
+	/*
+	 * Class constants
+	 */
 	private String databaseName = "m_17_2293327p";
 	private String username = "m_17_2293327p";
 	private String password = "2293327p";
-
 	private Connection connection = null;
 
+	/**
+	 * Stats constructor
+	 * @param dName
+	 * @param username
+	 * @param password
+	 */
 	public Stats(String dName, String username, String password) {
 		this.databaseName = dName;
 		this.username = username;
 		this.password = password;
-
 	}
 
+	/**
+	 * Method to form connection with DB
+	 */
 	public void connection() {
 
 		try {
@@ -28,22 +43,34 @@ public class Stats {
 			return;
 		}
 		if (connection != null) {
-			//System.out.println("Connected to database.\n");
 		} else {
 			System.err.println("Failed to make connection!");
 		}
 	}
 
+	/**
+	 * Method to disconnect from DB
+	 */
 	public void disconnection() {
 		try {
 			connection.close();
-			//System.out.println("Ended connection to database.\n");
 		} catch (SQLException e) {
 			e.printStackTrace();
 			System.out.println("Connection could not be closed – SQL exception");
 		}
 	}
 
+	/**
+	 * Method to insert query into DB
+	 * @param gameID
+	 * @param draws
+	 * @param humanWinner
+	 * @param AIWinner
+	 * @param rounds
+	 * @param humanRounds
+	 * @param AIRounds
+	 * @param gameWinner
+	 */
 	public void recordStats(int gameID, int draws, int humanWinner, int AIWinner, int rounds, int humanRounds,
 			int AIRounds, String gameWinner) {
 
@@ -59,51 +86,11 @@ public class Stats {
 			e.printStackTrace();
 			System.err.println("error executing query " + query);
 		}
-
 	}
-
-	/*
-	 * This method allows all courses to be viewed in another frame
-	 */
-
-	public void viewStats() {
-
-		Statement stmt = null;
-		String query = "select courses.courseid, courses.name, courses.capacity, instructor.fname, instructor.lname\n "
-				+ "FROM gym_schema.courses\n " + "inner join gym_schema.instructor\n "
-				+ "on courses.instructorid = instructor.instructorid ";
-
-		String combo = "";
-		String header = "# of Games \tDraws \tHuman Wins \tAI Wins \tHighestround \tFName \tSname\n\n";
-		String report = "";
-
-		try {
-			stmt = connection.createStatement();
-			ResultSet rs = stmt.executeQuery(query);
-
-			while (rs.next()) {
-				String count = getGameCount();
-				String draws = rs.getString("draws");
-				String humanWin = rs.getString("human_winner");
-				String aiWin = rs.getString("ai_winner");
-				String rounds = rs.getString("rounds");
-				combo += count + "\t" + aiWin + "\t " + humanWin + "\t" + draws + "\t" + rounds + "\n";
-			}
-			report = header + combo;
-		}
-
-		catch (SQLException e) {
-			e.printStackTrace();
-			System.err.println("error executing query " + query);
-		}
-
-		// this takes line and prints into a viewer gui
-
-	}
+	
 
 	/**
 	 * Returns total number of games played
-	 * 
 	 * @return
 	 */
 	public String getGameCount() {
@@ -128,8 +115,11 @@ public class Stats {
 		return count;
 	}
 
-	// • How many times the computer has won
 
+	/**
+	 * Method to return number of AI wins
+	 * @return
+	 */
 	public String getAIWin() {
 
 		Statement stmt = null;
@@ -148,12 +138,14 @@ public class Stats {
 			e.printStackTrace();
 			System.err.println("error executing query: " + query);
 		}
-		
 		return ave;
 	}
 
-	// • How many times the human has won
 
+	/**
+	 * Method to return number of human wins
+	 * @return
+	 */
 	public String getHumanWin() {
 
 		Statement stmt = null;
@@ -176,8 +168,11 @@ public class Stats {
 		return ave;
 	}
 
-	// • The average number of draws
 
+	/**
+	 * Method to return average number of draws
+	 * @return
+	 */
 	public String getAveDraws() {
 
 		Statement stmt = null;
@@ -198,14 +193,17 @@ public class Stats {
 		}
 
 		double number = Double.parseDouble(ave);
-		
+
 		String answer = String.format("%.0f", number);
-		
+
 		return answer;
 	}
 
-	// • The largest number of rounds played in a single game
 
+	/**
+	 * Returns the largest number of rounds played in a single game
+	 * @return
+	 */
 	public String getLargestRound() {
 
 		Statement stmt = null;
@@ -227,19 +225,19 @@ public class Stats {
 
 		return ave;
 	}
+
 	
+	/**
+	 * Method to return string of all stats info
+	 * @return
+	 */
 	public String getGameSummary() {
-		
-		String summary = "Games played: \t" + getGameCount() + "\n" +
-		  "AI wins: \t" + getAIWin() + "\n" +
-		  "Human wins: \t" + getHumanWin() + "\n" +
-		  "Average draws: \t" + getAveDraws() + "\n" +
-		  "Largest round: \t" +  getLargestRound();
-		
+
+		String summary = "Games played: \t" + getGameCount() + "\n" + "AI wins: \t" + getAIWin() + "\n"
+				+ "Human wins: \t" + getHumanWin() + "\n" + "Average draws: \t" + getAveDraws() + "\n"
+				+ "Largest round: \t" + getLargestRound();
+
 		return summary;
-		
 	}
-	
-	
 
 } // End of class

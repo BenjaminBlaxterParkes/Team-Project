@@ -1,27 +1,27 @@
 package commandline;
+
 import java.util.*;
 
 /**
- * GameMaster class controls the flow of the Top Trumps game.  Its responsibilities 
- * include dealing cards, eliminating Player objects, and transferring
- * cards between Players.  
+ * GameMaster class controls the flow of the Top Trumps game. Its
+ * responsibilities include dealing cards, eliminating Player objects, and
+ * transferring cards between Players.
  * @author apalm
  *
  */
 
 public class GameMaster {
-	
-	// Class variables
-	final private int DECK_SIZE = 40;
-	Card card;
-	int numOfPlayers = 5; // CL version will always have 5 players
-	//Player[] players = new Player[numOfPlayers];
-	ArrayList<Player> playersArrList = new ArrayList<Player>();
-	ArrayList<Card> cardsInPlay = new ArrayList<Card>();
-	String pastActivePlayer;
+
+	/*
+	 * Class variables
+	 */
+	final private int DECK_SIZE = 40; // Deck will always have 40 cards
+	Card card; // instantiate a card object
+	ArrayList<Player> playersArrList = new ArrayList<Player>(); // instantiate array of players
+	ArrayList<Card> cardsInPlay = new ArrayList<Card>(); // instantiate cardsInPlay array
+	String pastActivePlayer; 
 	int draws, humanWin, AIWin;
 
-	
 	/**
 	 * Loads Player objects into an array.
 	 * @param p
@@ -29,55 +29,62 @@ public class GameMaster {
 	 */
 	public void loadPlayers(Player p, int position) {
 		playersArrList.add(position, p);
-		// System.out.println(p.getName());
 	}
+
 	
-	
+	/**
+	 * Method to create AI players based on user input
+	 * @param number
+	 */
 	public void createAI(int number) {
 
 		String[] names = { "HAL 9000", "Cortana", "GLaDOS", "Marvin" };
 		for (int i = 0; i < number; i++) {
-			 playersArrList.add(new Player(names[i]));
+			playersArrList.add(new Player(names[i]));
 		}
 	}
 
+	
 	/**
-	 * Returns a card from the shuffled deck.   
+	 * Returns a card from the shuffled deck.
 	 */
 	public Card dealCard(CardDeck cd, int position) {
-		// System.out.println("dealCard in CardDeck method has been activated");
-		Card[] shuffledDeck = cd.getShuffledDeck();
-		card = shuffledDeck[0];
+		Card[] shuffledDeck = cd.getShuffledDeck(); // load shuffled deck into a new array
 
 		for (int i = 0; i < DECK_SIZE; i++) {
 			card = shuffledDeck[position];
 		}
-
-		// System.out.println("The card currently being dealt is: " + card);
 		return card;
 	}
+
 	
+	/**
+	 * Returns the player at a given position in the array
+	 * @param position
+	 * @return
+	 */
 	public Player getPlayerByPosition(int position) {
 		Player p = playersArrList.get(position);
 		return p;
 	}
+
 	
 	/**
 	 * Returns a randomly chosen Player object to go first from ArrayList<Player>.
 	 * @return
 	 */
 	public Player chooseFirstPlayer() {
-		Collections.shuffle(playersArrList);
+		Collections.shuffle(playersArrList); // shuffle the array of players
 		setPastPlayerName();
-		// System.out.println("The shuffled list of players is: " +
-		// playersArrList.toString());
-		Player p = playersArrList.get(0);
+		Player p = playersArrList.get(0); // p is the first player
 		System.out.println("--- " + p.getName() + " will go first ---\n");
 		return p;
 	}
+
 	
 	/**
-	 * Returns all Player's name, number of cards in hand, and list of cards in hand.
+	 * Returns all Player's name, number of cards in hand, and list of cards in
+	 * hand.
 	 * @return
 	 */
 	public String getPlayerArrayInfo() {
@@ -87,27 +94,27 @@ public class GameMaster {
 		}
 		return info;
 	}
+
 	
 	/**
-	 * Sets PastPlayerName class variable.  
+	 * Sets PastPlayerName class variable.
 	 */
 	public void setPastPlayerName() {
-		// System.out.println("Most recent active player: " + getActivePlayerName());
 		this.pastActivePlayer = getActivePlayerName();
 	}
+
 	
 	/**
-	 * Returns PastPlayerName class variable.  
+	 * Returns PastPlayerName class variable.
 	 * @return
 	 */
 	public String getPastPlayerName() {
-		// System.out.println("Most recent active player: " + this.pastActivePlayer + "
-		// was called");
 		return this.pastActivePlayer;
 	}
+
 	
 	/**
-	 * Returns Player based on name parameter.
+	 * Returns Player based on given name.
 	 * @param name
 	 * @return
 	 */
@@ -115,17 +122,18 @@ public class GameMaster {
 		Player p;
 		for (int i = 0; i < playersArrList.size(); i++) {
 			p = playersArrList.get(i);
+			// if given String name is equal to the players name in the array...
 			if (p.getName().equals(name)) {
 				return p;
 			} else {
-
 			}
 		}
 		return null;
 	}
+
 	
 	/**
-	 * Returns active Player object.  
+	 * Returns active Player object.
 	 * @return
 	 */
 	public Player getActivePlayer() {
@@ -133,6 +141,7 @@ public class GameMaster {
 		p = playersArrList.get(0);
 		return p;
 	}
+
 	
 	/**
 	 * Returns active Player ojbect's name.
@@ -142,9 +151,11 @@ public class GameMaster {
 		Player p = playersArrList.get(0);
 		return p.getName();
 	}
+
 	
 	/**
-	 * Returns boolean stating whether a HumanPlayer objects exists in ArrayList<Player>.
+	 * Returns boolean stating whether a HumanPlayer objects exists in
+	 * ArrayList<Player>.
 	 * @param name
 	 * @return
 	 */
@@ -155,13 +166,12 @@ public class GameMaster {
 			if (other.equals(name)) {
 				return true;
 			} else {
-				// System.out.println("Human player not found yet.");
 			}
-
 		}
 
 		return false;
 	}
+
 	
 	/**
 	 * Returns size of the ArrayList<Player>.
@@ -171,47 +181,73 @@ public class GameMaster {
 		int size = playersArrList.size();
 		return size;
 	}
+
 	
 	/**
-	 * Sorts ArrayList<Player> based on integer parameter.  
+	 * Sorts ArrayList<Player> based on the integer choice.
 	 * @param choice
 	 */
 	public void sortByCategory(int choice) {
+		String option = "";
+		String words = "\nThe category selected and corresponding values when a user or computer selects a category: \n";
+		String breaking = "\n ----------------------------------------------";
+
 		try {
-			if (choice == 1) {
-				Collections.sort(playersArrList, Player.sortByCategoryOne);
-				System.out.println("\n_________________________________________\n"
-						+ "** For " + getPastPlayerName() + "'s turn, they chose the category: Combat **");
+			if (choice == 1) { // if the int choice is equal to 1
+				Collections.sort(playersArrList, Player.sortByCategoryOne); // sort the players array based on cat 1
+				option = ("\n_________________________________________\n" + "** For " + getPastPlayerName()
+						+ "'s turn, they chose the category: Combat for "
+						+ getPlayerByName(getPastPlayerName()).getTopCard().getCategoryOne() + " points.");
+				System.out.println(option);
+				
+				// Log what's in communal pile
+				TopTrumpsCLIApplication.LOGGER.info(words + option + breaking);
 			}
 
-			if (choice == 2) {
-				Collections.sort(playersArrList, Player.sortByCategoryTwo);
-				System.out.println("\n_________________________________________\n"
-						+ "** For " + getPastPlayerName() + "'s turn, they chose the category: Lewdness **");
+			
+			if (choice == 2) { // if the int choice is equal to 2
+				Collections.sort(playersArrList, Player.sortByCategoryTwo); // sort the players array based on cat 2
+				option = ("\n_________________________________________\n" + "** For " + getPastPlayerName()
+						+ "'s turn, they chose the category: Lewdness for "
+						+ getPlayerByName(getPastPlayerName()).getTopCard().getCategoryTwo() + " points.\"");
+				System.out.println(option);
+				TopTrumpsCLIApplication.LOGGER.info(words + option + breaking);
 			}
 
-			if (choice == 3) {
-				Collections.sort(playersArrList, Player.sortByCategoryThree);
-				System.out.println("\n_________________________________________\n"
-						+ "** For " + getPastPlayerName() + "'s turn, they chose the category: Agility **");
+			
+			if (choice == 3) { // if the int choice is equal to 3
+				Collections.sort(playersArrList, Player.sortByCategoryThree); // sort the players array based on cat 3
+				option = ("\n_________________________________________\n" + "** For " + getPastPlayerName()
+						+ "'s turn, they chose the category: Agility for "
+						+ getPlayerByName(getPastPlayerName()).getTopCard().getCategoryThree() + " points.");
+				System.out.println(option);
+				TopTrumpsCLIApplication.LOGGER.info(words + option + breaking);
 			}
 
-			if (choice == 4) {
-				Collections.sort(playersArrList, Player.sortByCategoryFour);
-				System.out.println("\n_________________________________________\n"
-						+ "** For " + getPastPlayerName() + "'s turn, they chose the category: Lunacy **");
+			
+			if (choice == 4) { // if the int choice is equal to 4
+				Collections.sort(playersArrList, Player.sortByCategoryFour); // sort the players array based on cat 4
+				option = ("\n_________________________________________\n" + "** For " + getPastPlayerName()
+						+ "'s turn, they chose the category: Lunacy for "
+						+ getPlayerByName(getPastPlayerName()).getTopCard().getCategoryFour() + " points.");
+				System.out.println(option);
+				TopTrumpsCLIApplication.LOGGER.info(words + option + breaking);
 			}
 
-			if (choice == 5) {
-				Collections.sort(playersArrList, Player.sortByCategoryFive);
-				System.out.println("\n_________________________________________\n"
-						+ "** For " + getPastPlayerName() + "'s turn, they chose the category: IQ **");
+			
+			if (choice == 5) { // if the int choice is equal to 5
+				Collections.sort(playersArrList, Player.sortByCategoryFive); // sort the players array based on cat 5
+				option = ("\n_________________________________________\n" + "** For " + getPastPlayerName()
+						+ "'s turn, they chose the category: IQ for "
+						+ getPlayerByName(getPastPlayerName()).getTopCard().getCategoryFive() + " points.");
+				System.out.println(option);
+				TopTrumpsCLIApplication.LOGGER.info(words + option + breaking);
 			}
 		} catch (IndexOutOfBoundsException e) {
 			System.out.println("Cannot access position 0 of an empty Array");
 		}
-
 	}
+
 	
 	/**
 	 * Removes cards from Players and places them in a ArrayList<Card> and then
@@ -221,119 +257,158 @@ public class GameMaster {
 		Card c;
 		for (int i = 0; i < playersArrList.size(); i++) {
 			c = playersArrList.get(i).getTopCard();
-			// System.out.println("the card " + c + " from player " +
-			// playersArrList.get(i).getName()
-			// + "is now in the comm pile. The array now holds " + cardsInPlay.toString());
 			cardsInPlay.add(i, c);
-			// System.out.println(cardsInPlay.toString());
 			playersArrList.get(i).RemoveTopCard();
 		}
-
-		// System.out.println("The comm pile holds the following cards: " +
-		// cardsInPlay.toString());
-
 		if (checkforDraw() == false) {
-			rewardWinner();
+			rewardWinner(); // if no draw, add communal pile to winners hand
 		}
-
 	}
+
 	
 	/**
-	 * Checks to see if draw, or tie, happened during the round.
+	 * Return the communal pile
+	 * @return
+	 */
+	public String getCommPile() {
+		return cardsInPlay.toString();
+	}
+
+	/**
+	 * Returns the array cardsInPlay as a string
+	 * @return
+	 */
+	public String getCardsInPlay() {
+		String cards = "";
+		for (int i = 0; i < playersArrList.size(); i++) {
+			cards += playersArrList.get(i).getTopCardInfo();
+		}
+		return cards;
+	}
+	
+	
+	/**
+	 * Checks if draw, or tie, happened during the round.
 	 * @return
 	 */
 	public boolean checkforDraw() {
-		card = cardsInPlay.get(0);
-		Card other = cardsInPlay.get(1);
+		card = cardsInPlay.get(0); // load first card of comm. pile
+		Card other = cardsInPlay.get(1); // load second card of the comm. pile
 
-		Player p = getPlayerByName(getPastPlayerName());
+		Player p = getPlayerByName(getPastPlayerName()); // load person who initiated tie
 
-		int category = p.getCategoryChoice();
-		// System.out.println("\n"+getPastPlayerName() + "'s draw category was:"
-		// + (category));
+		int category = p.getCategoryChoice(); // find out the category choice
 
+		// if the 2 cards are equal, a draw has occured, based on category
 		if (card.getCategoryValue(category) == other.getCategoryValue(category)) {
 			draws++;
 			System.out.println("\n*** TIE DETECTED ***");
 			System.out.println("The cards " + card.getDescription() + " and " + other.getDescription() + " tied.");
 			System.out.println("Next round will be the tie breaker!\n");
-			// System.out.println("because " + card.getCategoryValue(category) + " equals "
-			// + other.getCategoryValue(category) + "\n");
 			return true;
 		}
 		return false;
 	}
+
 	
+	/**
+	 * Returns the number of draws
+	 * @return
+	 */
 	public int getDraws() {
 		return this.draws;
 	}
+
 	
+	/**
+	 * Returns number of AI wins
+	 * @return
+	 */
 	public int getAIWin() {
 		return this.AIWin;
 	}
+
 	
+	/** 
+	 * Returns number of human player wins
+	 * @return
+	 */
 	public int getHumanWin() {
 		return this.humanWin;
 	}
-	
-	public boolean checkHumanName(String name) {
-		if ((name.equals("HAL 9000")) ||
-				(name.equals("Cortana")) ||
-				(name.equals("GLaDOS")) ||
-				(name.equals("Marvin"))) {
-			return false;
-		}
-		
-		return true;
-	}
+
 	
 	/**
-	 * Gives Cards from ArrayList<Card> to the winner of the round.    
+	 * Checks to make sure human name isn't an AI name
+	 * @param name
+	 * @return
+	 */
+	public boolean checkHumanName(String name) {
+		if ((name.equals("HAL 9000")) || (name.equals("Cortana")) || (name.equals("GLaDOS"))
+				|| (name.equals("Marvin"))) {
+			return false;
+		}
+		return true;
+	}
+
+	
+	/**
+	 * Gives Cards from ArrayList<Card> to the winner of the round.
 	 */
 	public void rewardWinner() {
 		setPastPlayerName();
 		System.out.println("\n" + playersArrList.get(0).getName() + " won the round!");
-		
-		if ((getActivePlayerName().equals("HAL 9000")) ||
-				(getActivePlayerName().equals("Cortana")) ||
-				(getActivePlayerName().equals("GLaDOS")) ||
-				(getActivePlayerName().equals("Marvin"))) {
-			 AIWin++;
-		}
-		else {
+
+		// if the winner is an AI, increment AI wins
+		if ((getActivePlayerName().equals("HAL 9000")) || (getActivePlayerName().equals("Cortana"))
+				|| (getActivePlayerName().equals("GLaDOS")) || (getActivePlayerName().equals("Marvin"))) {
+			AIWin++;
+		} else { // else, increment human wins
 			humanWin++;
 		}
+
+		// Log what's in communal pile
+		TopTrumpsCLIApplication.LOGGER
+				.info("\nThe contents of the communal pile when cards are added or removed from it: \n" + getCommPile()
+						+ "\n ----------------------------------------------");
+
+		System.out.println("Their winning card was: \n" + cardsInPlay.get(0).getCardInfo()
+				+ "\n**\n**\n\nThe next round has started!\n");
 		
-		System.out.println("Their winning card was: \n" + cardsInPlay.get(0).getCardInfo() + "\n**\n**\n\nThe next round has started!\n");
+		// for loop to give comm. pile to winner
 		Card c;
 		for (int i = 0; i < cardsInPlay.size(); i++) {
-			c = cardsInPlay.get(i);
-			playersArrList.get(0).setHand(c);
+			c = cardsInPlay.get(i); // load card from comm. pile
+			playersArrList.get(0).setHand(c); // set to winners hand
 		}
-		cardsInPlay.clear();
-		// System.out.println(playersArrList.get(0).toString());
-		// System.out.println(cardsInPlay.toString());
+		cardsInPlay.clear(); // clear comm. pile
 	}
+
 	
 	/**
-	 * Removes a Player from the ArrayList<Player>. 
+	 * Removes a Player from the ArrayList<Player> when eliminated.
 	 */
 	public void playerIsElminated() {
 		for (int i = 0; i < playersArrList.size(); i++) {
 			if (playersArrList.get(i).getNumOfCardsInHand() == 0) {
-				// System.out.println(playersArrList.get(i).getName() + " was eliminated");
-				playersArrList.remove(i);
-				i--;
-
+				playersArrList.remove(i); // remove player if their hand is empty
+				i--; // decrement if person is removed, so loop is correct
 			} else {
-				// System.out.println(playersArrList.get(i).getName() + " still has cards, is
-				// safe");
 			}
 		}
-		// for(int i =0; i < playersArrList.size(); i++) {
-		// System.out.println(playersArrList.get(i).getName());
-		// }
 	}
 
 	
+	/**
+	 * Returns a string of the player and their hand
+	 * @return
+	 */
+	public String playersAndHand() {
+		String players = "";
+		for (int i = 0; i < playersArrList.size(); i++) {
+			players += playersArrList.get(i).getName() + "'s hand is: " + playersArrList.get(i).getHand() + "\n";
+		}
+		return players;
+	}
+
 } // End of class
