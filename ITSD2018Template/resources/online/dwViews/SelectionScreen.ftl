@@ -9,8 +9,8 @@
     	<script src="https://code.jquery.com/ui/1.11.1/jquery-ui.js"></script>
     	<link rel="stylesheet" href="https://code.jquery.com/ui/1.11.1/themes/flick/jquery-ui.css">
 
-		<!-- Optional Styling of the Website, for the demo I used Bootstrap (see https://getbootstrap.com/docs/4.0/getting-started/introduction/) -->
-		<link rel="stylesheet" href="http://dcs.gla.ac.uk/~richardm/TREC_IS/bootstrap.min.css">
+	<!-- Optional Styling of the Website, for the demo I used Bootstrap (see https://getbootstrap.com/docs/4.0/getting-started/introduction/) -->
+	<link rel="stylesheet" href="http://dcs.gla.ac.uk/~richardm/TREC_IS/bootstrap.min.css">
     	<script src="http://dcs.gla.ac.uk/~richardm/vex.combined.min.js"></script>
     	<script>vex.defaultOptions.className = 'vex-theme-os';</script>
     	<link rel="stylesheet" href="http://dcs.gla.ac.uk/~richardm/assets/stylesheets/vex.css"/>
@@ -18,13 +18,43 @@
     	<script src="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.4/js/bootstrap.min.js"></script>
 		<link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/font-awesome/4.5.0/css/font-awesome.min.css">
 
+	<style>
+	body {background-color: coral;
+		  text-align: center;
+		  margin: 200;
+		 }
+	
+	
+	</style>
 	</head>
+
 
     <body onload="initalize()"> <!-- Call the initalize method when the page loads -->
     	
     	<div class="container">
-
+		
 			<!-- Add your HTML Here -->
+			
+			
+			<div class="buttons">
+			
+			
+			<!-- Stats button -->
+			<a class="btn btn-lg btn-primary" href="stats" role="button" >Stats</a>
+			<!-- Play button -->
+			<a class="btn btn-success" href="game" role="button">Play</a>
+			<!-- how to play button -->
+			<a class="btn btn-lg btn-info" href="#" role="button">How to play</a>
+			</div>
+			
+			<!-- my picture of mustache-->
+			<div class="mypic">
+			  <img src="https://raw.githubusercontent.com/aive/toptrump_images/master/zoid_piece.png">
+			</div>
+			
+			
+			
+			<!-- end of HTML -->
 		
 		</div>
 		
