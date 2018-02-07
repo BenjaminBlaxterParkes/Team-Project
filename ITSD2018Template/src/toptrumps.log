@@ -1,87 +1,115 @@
-Jan 31, 2018 11:42:31 AM commandline.TopTrumpsCLIApplication main
+Feb 07, 2018 5:31:45 AM commandline.TopTrumpsCLIApplication main
 INFO: 
 The contents of the complete deck once it has been read in and constructed: 
 [Fry 20 25 30 40 10, Leela 45 25 40 20 20, Bender 40 45 20 30 15, Amy 35 40 30 15 35, Elzar 35 25 15 20 25, Professor 5 35 10 50 45, Zoidberg 40 15 30 35 25, Hermes 15 25 20 30 40, Scruffy 25 10 40 25 20, Nibbler 40 5 35 25 40, Zap 25 50 15 30 5, Kif 10 15 25 20 40, Cubert 15 5 20 35 45, TinnyTim 5 0 10 15 30, LaBarbara 20 25 40 10 15, Dwight 15 5 25 30 40, Mom 10 35 20 25 45, RobotSanta 50 15 40 20 35, RobotDevil 35 20 20 45 15, Donbot 20 10 15 35 20, Clamps 40 15 30 35 20, Nixon 5 30 10 45 25, Calculon 15 40 20 35 10, Hypnotoad 0 10 35 25 45, Lrrr 40 25 15 30 15, Ndnd 35 15 25 25 25, Morbo 30 20 15 45 10, Pazuzu 40 10 50 20 15, Wernstrom 5 15 10 40 45, Preacherbot 5 40 10 25 15, Roberto 40 20 35 45 15, Randy 15 30 20 25 40, Crushinator 30 45 5 35 25, Smitty 20 35 40 15 10, URL 35 30 35 10 15, Hedonismbot 5 45 10 25 20, Bubblegum 35 25 45 15 40, Petunia 20 40 15 35 15, Sal 30 45 20 15 20, Hattie 10 20 5 45 30]
  ----------------------------------------------
-Jan 31, 2018 11:42:31 AM commandline.TopTrumpsCLIApplication main
+Feb 07, 2018 5:31:45 AM commandline.TopTrumpsCLIApplication main
 INFO: 
 The contents of the complete deck after it has been shuffled: 
-[Zap 25 50 15 30 5, RobotDevil 35 20 20 45 15, Bubblegum 35 25 45 15 40, Zoidberg 40 15 30 35 25, Roberto 40 20 35 45 15, RobotSanta 50 15 40 20 35, Nixon 5 30 10 45 25, Kif 10 15 25 20 40, Cubert 15 5 20 35 45, Hedonismbot 5 45 10 25 20, Hattie 10 20 5 45 30, Bender 40 45 20 30 15, Elzar 35 25 15 20 25, Randy 15 30 20 25 40, Fry 20 25 30 40 10, Sal 30 45 20 15 20, Morbo 30 20 15 45 10, Calculon 15 40 20 35 10, Ndnd 35 15 25 25 25, Clamps 40 15 30 35 20, Scruffy 25 10 40 25 20, Dwight 15 5 25 30 40, Smitty 20 35 40 15 10, Hypnotoad 0 10 35 25 45, Mom 10 35 20 25 45, Leela 45 25 40 20 20, Hermes 15 25 20 30 40, LaBarbara 20 25 40 10 15, Professor 5 35 10 50 45, Donbot 20 10 15 35 20, URL 35 30 35 10 15, Petunia 20 40 15 35 15, Amy 35 40 30 15 35, Lrrr 40 25 15 30 15, Nibbler 40 5 35 25 40, Preacherbot 5 40 10 25 15, Wernstrom 5 15 10 40 45, Crushinator 30 45 5 35 25, Pazuzu 40 10 50 20 15, TinnyTim 5 0 10 15 30]
+[Sal 30 45 20 15 20, Cubert 15 5 20 35 45, Hattie 10 20 5 45 30, RobotSanta 50 15 40 20 35, Hypnotoad 0 10 35 25 45, Clamps 40 15 30 35 20, Zoidberg 40 15 30 35 25, TinnyTim 5 0 10 15 30, Smitty 20 35 40 15 10, Wernstrom 5 15 10 40 45, Preacherbot 5 40 10 25 15, Hedonismbot 5 45 10 25 20, Bubblegum 35 25 45 15 40, URL 35 30 35 10 15, Bender 40 45 20 30 15, Nixon 5 30 10 45 25, Calculon 15 40 20 35 10, Professor 5 35 10 50 45, Roberto 40 20 35 45 15, Leela 45 25 40 20 20, Elzar 35 25 15 20 25, Kif 10 15 25 20 40, Lrrr 40 25 15 30 15, Scruffy 25 10 40 25 20, Donbot 20 10 15 35 20, Fry 20 25 30 40 10, Petunia 20 40 15 35 15, Nibbler 40 5 35 25 40, Morbo 30 20 15 45 10, Ndnd 35 15 25 25 25, Mom 10 35 20 25 45, Dwight 15 5 25 30 40, Randy 15 30 20 25 40, Amy 35 40 30 15 35, Pazuzu 40 10 50 20 15, LaBarbara 20 25 40 10 15, Crushinator 30 45 5 35 25, RobotDevil 35 20 20 45 15, Hermes 15 25 20 30 40, Zap 25 50 15 30 5]
  ----------------------------------------------
-Jan 31, 2018 11:42:31 AM commandline.TopTrumpsCLIApplication main
+Feb 07, 2018 5:31:45 AM commandline.TopTrumpsCLIApplication main
 INFO: 
 The contents of the user’s deck and the computer’s deck(s) once they have been allocated: 
-kyrie's hand is: [Zap 25 50 15 30 5, Zoidberg 40 15 30 35 25, Nixon 5 30 10 45 25, Hedonismbot 5 45 10 25 20, Elzar 35 25 15 20 25, Sal 30 45 20 15 20, Ndnd 35 15 25 25 25, Dwight 15 5 25 30 40, Mom 10 35 20 25 45, LaBarbara 20 25 40 10 15, URL 35 30 35 10 15, Lrrr 40 25 15 30 15, Wernstrom 5 15 10 40 45, TinnyTim 5 0 10 15 30]
-HAL 9000's hand is: [RobotDevil 35 20 20 45 15, Roberto 40 20 35 45 15, Kif 10 15 25 20 40, Hattie 10 20 5 45 30, Randy 15 30 20 25 40, Morbo 30 20 15 45 10, Clamps 40 15 30 35 20, Smitty 20 35 40 15 10, Leela 45 25 40 20 20, Professor 5 35 10 50 45, Petunia 20 40 15 35 15, Nibbler 40 5 35 25 40, Crushinator 30 45 5 35 25]
-Cortana's hand is: [Bubblegum 35 25 45 15 40, RobotSanta 50 15 40 20 35, Cubert 15 5 20 35 45, Bender 40 45 20 30 15, Fry 20 25 30 40 10, Calculon 15 40 20 35 10, Scruffy 25 10 40 25 20, Hypnotoad 0 10 35 25 45, Hermes 15 25 20 30 40, Donbot 20 10 15 35 20, Amy 35 40 30 15 35, Preacherbot 5 40 10 25 15, Pazuzu 40 10 50 20 15]
+STEVEN's hand is: [Sal 30 45 20 15 20, Clamps 40 15 30 35 20, Preacherbot 5 40 10 25 15, Nixon 5 30 10 45 25, Elzar 35 25 15 20 25, Fry 20 25 30 40 10, Mom 10 35 20 25 45, LaBarbara 20 25 40 10 15]
+HAL 9000's hand is: [Cubert 15 5 20 35 45, Zoidberg 40 15 30 35 25, Hedonismbot 5 45 10 25 20, Calculon 15 40 20 35 10, Kif 10 15 25 20 40, Petunia 20 40 15 35 15, Dwight 15 5 25 30 40, Crushinator 30 45 5 35 25]
+Cortana's hand is: [Hattie 10 20 5 45 30, TinnyTim 5 0 10 15 30, Bubblegum 35 25 45 15 40, Professor 5 35 10 50 45, Lrrr 40 25 15 30 15, Nibbler 40 5 35 25 40, Randy 15 30 20 25 40, RobotDevil 35 20 20 45 15]
+GLaDOS's hand is: [RobotSanta 50 15 40 20 35, Smitty 20 35 40 15 10, URL 35 30 35 10 15, Roberto 40 20 35 45 15, Scruffy 25 10 40 25 20, Morbo 30 20 15 45 10, Amy 35 40 30 15 35, Hermes 15 25 20 30 40]
+Marvin's hand is: [Hypnotoad 0 10 35 25 45, Wernstrom 5 15 10 40 45, Bender 40 45 20 30 15, Leela 45 25 40 20 20, Donbot 20 10 15 35 20, Ndnd 35 15 25 25 25, Pazuzu 40 10 50 20 15, Zap 25 50 15 30 5]
 
  ----------------------------------------------
-Jan 31, 2018 11:42:32 AM commandline.GameMaster sortByCategory
+Feb 07, 2018 5:31:50 AM commandline.GameMaster sortByCategory
 INFO: 
 The category selected and corresponding values when a user or computer selects a category: 
 
 _________________________________________
-** For HAL 9000's turn, they chose the category: Lunacy for 45 points.
+** For STEVEN's turn, they chose the category: Lunacy for 15 points.
  ----------------------------------------------
-Jan 31, 2018 11:42:32 AM commandline.TopTrumpsCLIApplication main
+Feb 07, 2018 5:31:50 AM commandline.TopTrumpsCLIApplication main
 INFO: 
 The contents of the current cards in play (the cards from the top of the user’s deck and the computer’s deck(s)): 
 =================================
-| RobotDevil   			| 
-| 1. Combat: 		35	|
+| Hattie   			| 
+| 1. Combat: 		10	|
 | 2. Lewdness: 		20	|
-| 3. Agility: 		20	|
+| 3. Agility: 		5	|
 | 4. Lunacy: 		45	|
-| 5. IQ: 		15	|
+| 5. IQ: 		30	|
 =================================
 =================================
-| Zap   			| 
-| 1. Combat: 		25	|
-| 2. Lewdness: 		50	|
-| 3. Agility: 		15	|
-| 4. Lunacy: 		30	|
-| 5. IQ: 		5	|
+| Cubert   			| 
+| 1. Combat: 		15	|
+| 2. Lewdness: 		5	|
+| 3. Agility: 		20	|
+| 4. Lunacy: 		35	|
+| 5. IQ: 		45	|
 =================================
 =================================
-| Bubblegum   			| 
-| 1. Combat: 		35	|
-| 2. Lewdness: 		25	|
-| 3. Agility: 		45	|
+| Hypnotoad   			| 
+| 1. Combat: 		0	|
+| 2. Lewdness: 		10	|
+| 3. Agility: 		35	|
+| 4. Lunacy: 		25	|
+| 5. IQ: 		45	|
+=================================
+=================================
+| RobotSanta   			| 
+| 1. Combat: 		50	|
+| 2. Lewdness: 		15	|
+| 3. Agility: 		40	|
+| 4. Lunacy: 		20	|
+| 5. IQ: 		35	|
+=================================
+=================================
+| Sal   			| 
+| 1. Combat: 		30	|
+| 2. Lewdness: 		45	|
+| 3. Agility: 		20	|
 | 4. Lunacy: 		15	|
-| 5. IQ: 		40	|
+| 5. IQ: 		20	|
 =================================
 
  ----------------------------------------------
-Jan 31, 2018 11:42:32 AM commandline.GameMaster rewardWinner
+Feb 07, 2018 5:31:50 AM commandline.GameMaster rewardWinner
 INFO: 
 The contents of the communal pile when cards are added or removed from it: 
-[RobotDevil 35 20 20 45 15, Zap 25 50 15 30 5, Bubblegum 35 25 45 15 40]
+[Hattie 10 20 5 45 30, Cubert 15 5 20 35 45, Hypnotoad 0 10 35 25 45, RobotSanta 50 15 40 20 35, Sal 30 45 20 15 20]
  ----------------------------------------------
-Jan 31, 2018 11:42:32 AM commandline.TopTrumpsCLIApplication main
+Feb 07, 2018 5:31:50 AM commandline.TopTrumpsCLIApplication main
 INFO: 
 The contents of each deck after a round: 
-HAL 9000's hand is: [Roberto 40 20 35 45 15, Kif 10 15 25 20 40, Hattie 10 20 5 45 30, Randy 15 30 20 25 40, Morbo 30 20 15 45 10, Clamps 40 15 30 35 20, Smitty 20 35 40 15 10, Leela 45 25 40 20 20, Professor 5 35 10 50 45, Petunia 20 40 15 35 15, Nibbler 40 5 35 25 40, Crushinator 30 45 5 35 25, RobotDevil 35 20 20 45 15, Zap 25 50 15 30 5, Bubblegum 35 25 45 15 40]
-kyrie's hand is: [Zoidberg 40 15 30 35 25, Nixon 5 30 10 45 25, Hedonismbot 5 45 10 25 20, Elzar 35 25 15 20 25, Sal 30 45 20 15 20, Ndnd 35 15 25 25 25, Dwight 15 5 25 30 40, Mom 10 35 20 25 45, LaBarbara 20 25 40 10 15, URL 35 30 35 10 15, Lrrr 40 25 15 30 15, Wernstrom 5 15 10 40 45, TinnyTim 5 0 10 15 30]
-Cortana's hand is: [RobotSanta 50 15 40 20 35, Cubert 15 5 20 35 45, Bender 40 45 20 30 15, Fry 20 25 30 40 10, Calculon 15 40 20 35 10, Scruffy 25 10 40 25 20, Hypnotoad 0 10 35 25 45, Hermes 15 25 20 30 40, Donbot 20 10 15 35 20, Amy 35 40 30 15 35, Preacherbot 5 40 10 25 15, Pazuzu 40 10 50 20 15]
+Cortana's hand is: [TinnyTim 5 0 10 15 30, Bubblegum 35 25 45 15 40, Professor 5 35 10 50 45, Lrrr 40 25 15 30 15, Nibbler 40 5 35 25 40, Randy 15 30 20 25 40, RobotDevil 35 20 20 45 15, Hattie 10 20 5 45 30, Cubert 15 5 20 35 45, Hypnotoad 0 10 35 25 45, RobotSanta 50 15 40 20 35, Sal 30 45 20 15 20]
+HAL 9000's hand is: [Zoidberg 40 15 30 35 25, Hedonismbot 5 45 10 25 20, Calculon 15 40 20 35 10, Kif 10 15 25 20 40, Petunia 20 40 15 35 15, Dwight 15 5 25 30 40, Crushinator 30 45 5 35 25]
+Marvin's hand is: [Wernstrom 5 15 10 40 45, Bender 40 45 20 30 15, Leela 45 25 40 20 20, Donbot 20 10 15 35 20, Ndnd 35 15 25 25 25, Pazuzu 40 10 50 20 15, Zap 25 50 15 30 5]
+GLaDOS's hand is: [Smitty 20 35 40 15 10, URL 35 30 35 10 15, Roberto 40 20 35 45 15, Scruffy 25 10 40 25 20, Morbo 30 20 15 45 10, Amy 35 40 30 15 35, Hermes 15 25 20 30 40]
+STEVEN's hand is: [Clamps 40 15 30 35 20, Preacherbot 5 40 10 25 15, Nixon 5 30 10 45 25, Elzar 35 25 15 20 25, Fry 20 25 30 40 10, Mom 10 35 20 25 45, LaBarbara 20 25 40 10 15]
 
  ----------------------------------------------
-Jan 31, 2018 11:42:33 AM commandline.GameMaster sortByCategory
+Feb 07, 2018 5:31:50 AM commandline.GameMaster sortByCategory
 INFO: 
 The category selected and corresponding values when a user or computer selects a category: 
 
 _________________________________________
-** For HAL 9000's turn, they chose the category: Lunacy for 45 points.
+** For Cortana's turn, they chose the category: IQ for 30 points.
  ----------------------------------------------
-Jan 31, 2018 11:42:33 AM commandline.TopTrumpsCLIApplication main
+Feb 07, 2018 5:31:50 AM commandline.TopTrumpsCLIApplication main
 INFO: 
 The contents of the current cards in play (the cards from the top of the user’s deck and the computer’s deck(s)): 
 =================================
-| Roberto   			| 
-| 1. Combat: 		40	|
-| 2. Lewdness: 		20	|
-| 3. Agility: 		35	|
-| 4. Lunacy: 		45	|
-| 5. IQ: 		15	|
+| Wernstrom   			| 
+| 1. Combat: 		5	|
+| 2. Lewdness: 		15	|
+| 3. Agility: 		10	|
+| 4. Lunacy: 		40	|
+| 5. IQ: 		45	|
+=================================
+=================================
+| TinnyTim   			| 
+| 1. Combat: 		5	|
+| 2. Lewdness: 		0	|
+| 3. Agility: 		10	|
+| 4. Lunacy: 		15	|
+| 5. IQ: 		30	|
 =================================
 =================================
 | Zoidberg   			| 
@@ -92,85 +120,46 @@ The contents of the current cards in play (the cards from the top of the user’s 
 | 5. IQ: 		25	|
 =================================
 =================================
-| RobotSanta   			| 
-| 1. Combat: 		50	|
+| Clamps   			| 
+| 1. Combat: 		40	|
 | 2. Lewdness: 		15	|
-| 3. Agility: 		40	|
-| 4. Lunacy: 		20	|
-| 5. IQ: 		35	|
-=================================
-
- ----------------------------------------------
-Jan 31, 2018 11:42:33 AM commandline.GameMaster rewardWinner
-INFO: 
-The contents of the communal pile when cards are added or removed from it: 
-[Roberto 40 20 35 45 15, Zoidberg 40 15 30 35 25, RobotSanta 50 15 40 20 35]
- ----------------------------------------------
-Jan 31, 2018 11:42:33 AM commandline.TopTrumpsCLIApplication main
-INFO: 
-The contents of each deck after a round: 
-HAL 9000's hand is: [Kif 10 15 25 20 40, Hattie 10 20 5 45 30, Randy 15 30 20 25 40, Morbo 30 20 15 45 10, Clamps 40 15 30 35 20, Smitty 20 35 40 15 10, Leela 45 25 40 20 20, Professor 5 35 10 50 45, Petunia 20 40 15 35 15, Nibbler 40 5 35 25 40, Crushinator 30 45 5 35 25, RobotDevil 35 20 20 45 15, Zap 25 50 15 30 5, Bubblegum 35 25 45 15 40, Roberto 40 20 35 45 15, Zoidberg 40 15 30 35 25, RobotSanta 50 15 40 20 35]
-kyrie's hand is: [Nixon 5 30 10 45 25, Hedonismbot 5 45 10 25 20, Elzar 35 25 15 20 25, Sal 30 45 20 15 20, Ndnd 35 15 25 25 25, Dwight 15 5 25 30 40, Mom 10 35 20 25 45, LaBarbara 20 25 40 10 15, URL 35 30 35 10 15, Lrrr 40 25 15 30 15, Wernstrom 5 15 10 40 45, TinnyTim 5 0 10 15 30]
-Cortana's hand is: [Cubert 15 5 20 35 45, Bender 40 45 20 30 15, Fry 20 25 30 40 10, Calculon 15 40 20 35 10, Scruffy 25 10 40 25 20, Hypnotoad 0 10 35 25 45, Hermes 15 25 20 30 40, Donbot 20 10 15 35 20, Amy 35 40 30 15 35, Preacherbot 5 40 10 25 15, Pazuzu 40 10 50 20 15]
-
- ----------------------------------------------
-Jan 31, 2018 11:42:34 AM commandline.GameMaster sortByCategory
-INFO: 
-The category selected and corresponding values when a user or computer selects a category: 
-
-_________________________________________
-** For HAL 9000's turn, they chose the category: IQ for 40 points.
- ----------------------------------------------
-Jan 31, 2018 11:42:34 AM commandline.TopTrumpsCLIApplication main
-INFO: 
-The contents of the current cards in play (the cards from the top of the user’s deck and the computer’s deck(s)): 
-=================================
-| Cubert   			| 
-| 1. Combat: 		15	|
-| 2. Lewdness: 		5	|
-| 3. Agility: 		20	|
+| 3. Agility: 		30	|
 | 4. Lunacy: 		35	|
-| 5. IQ: 		45	|
+| 5. IQ: 		20	|
 =================================
 =================================
-| Kif   			| 
-| 1. Combat: 		10	|
-| 2. Lewdness: 		15	|
-| 3. Agility: 		25	|
-| 4. Lunacy: 		20	|
-| 5. IQ: 		40	|
-=================================
-=================================
-| Nixon   			| 
-| 1. Combat: 		5	|
-| 2. Lewdness: 		30	|
-| 3. Agility: 		10	|
-| 4. Lunacy: 		45	|
-| 5. IQ: 		25	|
+| Smitty   			| 
+| 1. Combat: 		20	|
+| 2. Lewdness: 		35	|
+| 3. Agility: 		40	|
+| 4. Lunacy: 		15	|
+| 5. IQ: 		10	|
 =================================
 
  ----------------------------------------------
-Jan 31, 2018 11:42:34 AM commandline.GameMaster rewardWinner
+Feb 07, 2018 5:31:50 AM commandline.GameMaster rewardWinner
 INFO: 
 The contents of the communal pile when cards are added or removed from it: 
-[Cubert 15 5 20 35 45, Kif 10 15 25 20 40, Nixon 5 30 10 45 25]
+[Wernstrom 5 15 10 40 45, TinnyTim 5 0 10 15 30, Zoidberg 40 15 30 35 25, Clamps 40 15 30 35 20, Smitty 20 35 40 15 10]
  ----------------------------------------------
-Jan 31, 2018 11:42:34 AM commandline.TopTrumpsCLIApplication main
+Feb 07, 2018 5:31:50 AM commandline.TopTrumpsCLIApplication main
 INFO: 
 The contents of each deck after a round: 
-Cortana's hand is: [Bender 40 45 20 30 15, Fry 20 25 30 40 10, Calculon 15 40 20 35 10, Scruffy 25 10 40 25 20, Hypnotoad 0 10 35 25 45, Hermes 15 25 20 30 40, Donbot 20 10 15 35 20, Amy 35 40 30 15 35, Preacherbot 5 40 10 25 15, Pazuzu 40 10 50 20 15, Cubert 15 5 20 35 45, Kif 10 15 25 20 40, Nixon 5 30 10 45 25]
-HAL 9000's hand is: [Hattie 10 20 5 45 30, Randy 15 30 20 25 40, Morbo 30 20 15 45 10, Clamps 40 15 30 35 20, Smitty 20 35 40 15 10, Leela 45 25 40 20 20, Professor 5 35 10 50 45, Petunia 20 40 15 35 15, Nibbler 40 5 35 25 40, Crushinator 30 45 5 35 25, RobotDevil 35 20 20 45 15, Zap 25 50 15 30 5, Bubblegum 35 25 45 15 40, Roberto 40 20 35 45 15, Zoidberg 40 15 30 35 25, RobotSanta 50 15 40 20 35]
-kyrie's hand is: [Hedonismbot 5 45 10 25 20, Elzar 35 25 15 20 25, Sal 30 45 20 15 20, Ndnd 35 15 25 25 25, Dwight 15 5 25 30 40, Mom 10 35 20 25 45, LaBarbara 20 25 40 10 15, URL 35 30 35 10 15, Lrrr 40 25 15 30 15, Wernstrom 5 15 10 40 45, TinnyTim 5 0 10 15 30]
+Marvin's hand is: [Bender 40 45 20 30 15, Leela 45 25 40 20 20, Donbot 20 10 15 35 20, Ndnd 35 15 25 25 25, Pazuzu 40 10 50 20 15, Zap 25 50 15 30 5, Wernstrom 5 15 10 40 45, TinnyTim 5 0 10 15 30, Zoidberg 40 15 30 35 25, Clamps 40 15 30 35 20, Smitty 20 35 40 15 10]
+Cortana's hand is: [Bubblegum 35 25 45 15 40, Professor 5 35 10 50 45, Lrrr 40 25 15 30 15, Nibbler 40 5 35 25 40, Randy 15 30 20 25 40, RobotDevil 35 20 20 45 15, Hattie 10 20 5 45 30, Cubert 15 5 20 35 45, Hypnotoad 0 10 35 25 45, RobotSanta 50 15 40 20 35, Sal 30 45 20 15 20]
+HAL 9000's hand is: [Hedonismbot 5 45 10 25 20, Calculon 15 40 20 35 10, Kif 10 15 25 20 40, Petunia 20 40 15 35 15, Dwight 15 5 25 30 40, Crushinator 30 45 5 35 25]
+STEVEN's hand is: [Preacherbot 5 40 10 25 15, Nixon 5 30 10 45 25, Elzar 35 25 15 20 25, Fry 20 25 30 40 10, Mom 10 35 20 25 45, LaBarbara 20 25 40 10 15]
+GLaDOS's hand is: [URL 35 30 35 10 15, Roberto 40 20 35 45 15, Scruffy 25 10 40 25 20, Morbo 30 20 15 45 10, Amy 35 40 30 15 35, Hermes 15 25 20 30 40]
 
  ----------------------------------------------
-Jan 31, 2018 11:42:34 AM commandline.GameMaster sortByCategory
+Feb 07, 2018 5:31:51 AM commandline.GameMaster sortByCategory
 INFO: 
 The category selected and corresponding values when a user or computer selects a category: 
 
 _________________________________________
-** For Cortana's turn, they chose the category: Lewdness for 45 points."
+** For Marvin's turn, they chose the category: Lewdness for 45 points."
  ----------------------------------------------
-Jan 31, 2018 11:42:34 AM commandline.TopTrumpsCLIApplication main
+Feb 07, 2018 5:31:51 AM commandline.TopTrumpsCLIApplication main
 INFO: 
 The contents of the current cards in play (the cards from the top of the user’s deck and the computer’s deck(s)): 
 =================================
@@ -190,47 +179,148 @@ The contents of the current cards in play (the cards from the top of the user’s 
 | 5. IQ: 		20	|
 =================================
 =================================
-| Hattie   			| 
-| 1. Combat: 		10	|
-| 2. Lewdness: 		20	|
-| 3. Agility: 		5	|
-| 4. Lunacy: 		45	|
-| 5. IQ: 		30	|
+| Preacherbot   			| 
+| 1. Combat: 		5	|
+| 2. Lewdness: 		40	|
+| 3. Agility: 		10	|
+| 4. Lunacy: 		25	|
+| 5. IQ: 		15	|
+=================================
+=================================
+| URL   			| 
+| 1. Combat: 		35	|
+| 2. Lewdness: 		30	|
+| 3. Agility: 		35	|
+| 4. Lunacy: 		10	|
+| 5. IQ: 		15	|
+=================================
+=================================
+| Bubblegum   			| 
+| 1. Combat: 		35	|
+| 2. Lewdness: 		25	|
+| 3. Agility: 		45	|
+| 4. Lunacy: 		15	|
+| 5. IQ: 		40	|
 =================================
 
  ----------------------------------------------
-Jan 31, 2018 11:42:34 AM commandline.TopTrumpsCLIApplication main
+Feb 07, 2018 5:31:51 AM commandline.TopTrumpsCLIApplication main
 INFO: 
 The contents of each deck after a round: 
-Cortana's hand is: [Fry 20 25 30 40 10, Calculon 15 40 20 35 10, Scruffy 25 10 40 25 20, Hypnotoad 0 10 35 25 45, Hermes 15 25 20 30 40, Donbot 20 10 15 35 20, Amy 35 40 30 15 35, Preacherbot 5 40 10 25 15, Pazuzu 40 10 50 20 15, Cubert 15 5 20 35 45, Kif 10 15 25 20 40, Nixon 5 30 10 45 25]
-kyrie's hand is: [Elzar 35 25 15 20 25, Sal 30 45 20 15 20, Ndnd 35 15 25 25 25, Dwight 15 5 25 30 40, Mom 10 35 20 25 45, LaBarbara 20 25 40 10 15, URL 35 30 35 10 15, Lrrr 40 25 15 30 15, Wernstrom 5 15 10 40 45, TinnyTim 5 0 10 15 30]
-HAL 9000's hand is: [Randy 15 30 20 25 40, Morbo 30 20 15 45 10, Clamps 40 15 30 35 20, Smitty 20 35 40 15 10, Leela 45 25 40 20 20, Professor 5 35 10 50 45, Petunia 20 40 15 35 15, Nibbler 40 5 35 25 40, Crushinator 30 45 5 35 25, RobotDevil 35 20 20 45 15, Zap 25 50 15 30 5, Bubblegum 35 25 45 15 40, Roberto 40 20 35 45 15, Zoidberg 40 15 30 35 25, RobotSanta 50 15 40 20 35]
+Marvin's hand is: [Leela 45 25 40 20 20, Donbot 20 10 15 35 20, Ndnd 35 15 25 25 25, Pazuzu 40 10 50 20 15, Zap 25 50 15 30 5, Wernstrom 5 15 10 40 45, TinnyTim 5 0 10 15 30, Zoidberg 40 15 30 35 25, Clamps 40 15 30 35 20, Smitty 20 35 40 15 10]
+HAL 9000's hand is: [Calculon 15 40 20 35 10, Kif 10 15 25 20 40, Petunia 20 40 15 35 15, Dwight 15 5 25 30 40, Crushinator 30 45 5 35 25]
+STEVEN's hand is: [Nixon 5 30 10 45 25, Elzar 35 25 15 20 25, Fry 20 25 30 40 10, Mom 10 35 20 25 45, LaBarbara 20 25 40 10 15]
+GLaDOS's hand is: [Roberto 40 20 35 45 15, Scruffy 25 10 40 25 20, Morbo 30 20 15 45 10, Amy 35 40 30 15 35, Hermes 15 25 20 30 40]
+Cortana's hand is: [Professor 5 35 10 50 45, Lrrr 40 25 15 30 15, Nibbler 40 5 35 25 40, Randy 15 30 20 25 40, RobotDevil 35 20 20 45 15, Hattie 10 20 5 45 30, Cubert 15 5 20 35 45, Hypnotoad 0 10 35 25 45, RobotSanta 50 15 40 20 35, Sal 30 45 20 15 20]
 
  ----------------------------------------------
-Jan 31, 2018 11:42:35 AM commandline.GameMaster sortByCategory
+Feb 07, 2018 5:31:51 AM commandline.GameMaster sortByCategory
 INFO: 
 The category selected and corresponding values when a user or computer selects a category: 
 
 _________________________________________
-** For Cortana's turn, they chose the category: Lunacy for 40 points.
+** For Marvin's turn, they chose the category: Combat for 45 points.
  ----------------------------------------------
-Jan 31, 2018 11:42:35 AM commandline.TopTrumpsCLIApplication main
+Feb 07, 2018 5:31:51 AM commandline.TopTrumpsCLIApplication main
 INFO: 
 The contents of the current cards in play (the cards from the top of the user’s deck and the computer’s deck(s)): 
 =================================
-| Fry   			| 
-| 1. Combat: 		20	|
+| Leela   			| 
+| 1. Combat: 		45	|
 | 2. Lewdness: 		25	|
-| 3. Agility: 		30	|
-| 4. Lunacy: 		40	|
+| 3. Agility: 		40	|
+| 4. Lunacy: 		20	|
+| 5. IQ: 		20	|
+=================================
+=================================
+| Roberto   			| 
+| 1. Combat: 		40	|
+| 2. Lewdness: 		20	|
+| 3. Agility: 		35	|
+| 4. Lunacy: 		45	|
+| 5. IQ: 		15	|
+=================================
+=================================
+| Calculon   			| 
+| 1. Combat: 		15	|
+| 2. Lewdness: 		40	|
+| 3. Agility: 		20	|
+| 4. Lunacy: 		35	|
 | 5. IQ: 		10	|
 =================================
 =================================
-| Randy   			| 
-| 1. Combat: 		15	|
+| Nixon   			| 
+| 1. Combat: 		5	|
 | 2. Lewdness: 		30	|
-| 3. Agility: 		20	|
+| 3. Agility: 		10	|
+| 4. Lunacy: 		45	|
+| 5. IQ: 		25	|
+=================================
+=================================
+| Professor   			| 
+| 1. Combat: 		5	|
+| 2. Lewdness: 		35	|
+| 3. Agility: 		10	|
+| 4. Lunacy: 		50	|
+| 5. IQ: 		45	|
+=================================
+
+ ----------------------------------------------
+Feb 07, 2018 5:31:51 AM commandline.GameMaster rewardWinner
+INFO: 
+The contents of the communal pile when cards are added or removed from it: 
+[Leela 45 25 40 20 20, Roberto 40 20 35 45 15, Calculon 15 40 20 35 10, Nixon 5 30 10 45 25, Professor 5 35 10 50 45, Bender 40 45 20 30 15, Hedonismbot 5 45 10 25 20, Preacherbot 5 40 10 25 15, URL 35 30 35 10 15, Bubblegum 35 25 45 15 40]
+ ----------------------------------------------
+Feb 07, 2018 5:31:51 AM commandline.TopTrumpsCLIApplication main
+INFO: 
+The contents of each deck after a round: 
+Marvin's hand is: [Donbot 20 10 15 35 20, Ndnd 35 15 25 25 25, Pazuzu 40 10 50 20 15, Zap 25 50 15 30 5, Wernstrom 5 15 10 40 45, TinnyTim 5 0 10 15 30, Zoidberg 40 15 30 35 25, Clamps 40 15 30 35 20, Smitty 20 35 40 15 10, Leela 45 25 40 20 20, Roberto 40 20 35 45 15, Calculon 15 40 20 35 10, Nixon 5 30 10 45 25, Professor 5 35 10 50 45, Bender 40 45 20 30 15, Hedonismbot 5 45 10 25 20, Preacherbot 5 40 10 25 15, URL 35 30 35 10 15, Bubblegum 35 25 45 15 40]
+GLaDOS's hand is: [Scruffy 25 10 40 25 20, Morbo 30 20 15 45 10, Amy 35 40 30 15 35, Hermes 15 25 20 30 40]
+HAL 9000's hand is: [Kif 10 15 25 20 40, Petunia 20 40 15 35 15, Dwight 15 5 25 30 40, Crushinator 30 45 5 35 25]
+STEVEN's hand is: [Elzar 35 25 15 20 25, Fry 20 25 30 40 10, Mom 10 35 20 25 45, LaBarbara 20 25 40 10 15]
+Cortana's hand is: [Lrrr 40 25 15 30 15, Nibbler 40 5 35 25 40, Randy 15 30 20 25 40, RobotDevil 35 20 20 45 15, Hattie 10 20 5 45 30, Cubert 15 5 20 35 45, Hypnotoad 0 10 35 25 45, RobotSanta 50 15 40 20 35, Sal 30 45 20 15 20]
+
+ ----------------------------------------------
+Feb 07, 2018 5:31:52 AM commandline.GameMaster sortByCategory
+INFO: 
+The category selected and corresponding values when a user or computer selects a category: 
+
+_________________________________________
+** For Marvin's turn, they chose the category: Lunacy for 35 points.
+ ----------------------------------------------
+Feb 07, 2018 5:31:52 AM commandline.TopTrumpsCLIApplication main
+INFO: 
+The contents of the current cards in play (the cards from the top of the user’s deck and the computer’s deck(s)): 
+=================================
+| Donbot   			| 
+| 1. Combat: 		20	|
+| 2. Lewdness: 		10	|
+| 3. Agility: 		15	|
+| 4. Lunacy: 		35	|
+| 5. IQ: 		20	|
+=================================
+=================================
+| Lrrr   			| 
+| 1. Combat: 		40	|
+| 2. Lewdness: 		25	|
+| 3. Agility: 		15	|
+| 4. Lunacy: 		30	|
+| 5. IQ: 		15	|
+=================================
+=================================
+| Scruffy   			| 
+| 1. Combat: 		25	|
+| 2. Lewdness: 		10	|
+| 3. Agility: 		40	|
 | 4. Lunacy: 		25	|
+| 5. IQ: 		20	|
+=================================
+=================================
+| Kif   			| 
+| 1. Combat: 		10	|
+| 2. Lewdness: 		15	|
+| 3. Agility: 		25	|
+| 4. Lunacy: 		20	|
 | 5. IQ: 		40	|
 =================================
 =================================
@@ -243,27 +333,562 @@ The contents of the current cards in play (the cards from the top of the user’s 
 =================================
 
  ----------------------------------------------
-Jan 31, 2018 11:42:35 AM commandline.GameMaster rewardWinner
+Feb 07, 2018 5:31:52 AM commandline.GameMaster rewardWinner
 INFO: 
 The contents of the communal pile when cards are added or removed from it: 
-[Fry 20 25 30 40 10, Randy 15 30 20 25 40, Elzar 35 25 15 20 25, Bender 40 45 20 30 15, Hedonismbot 5 45 10 25 20, Hattie 10 20 5 45 30]
+[Donbot 20 10 15 35 20, Lrrr 40 25 15 30 15, Scruffy 25 10 40 25 20, Kif 10 15 25 20 40, Elzar 35 25 15 20 25]
  ----------------------------------------------
-Jan 31, 2018 11:42:35 AM commandline.TopTrumpsCLIApplication main
+Feb 07, 2018 5:31:52 AM commandline.TopTrumpsCLIApplication main
 INFO: 
 The contents of each deck after a round: 
-Cortana's hand is: [Calculon 15 40 20 35 10, Scruffy 25 10 40 25 20, Hypnotoad 0 10 35 25 45, Hermes 15 25 20 30 40, Donbot 20 10 15 35 20, Amy 35 40 30 15 35, Preacherbot 5 40 10 25 15, Pazuzu 40 10 50 20 15, Cubert 15 5 20 35 45, Kif 10 15 25 20 40, Nixon 5 30 10 45 25, Fry 20 25 30 40 10, Randy 15 30 20 25 40, Elzar 35 25 15 20 25, Bender 40 45 20 30 15, Hedonismbot 5 45 10 25 20, Hattie 10 20 5 45 30]
-HAL 9000's hand is: [Morbo 30 20 15 45 10, Clamps 40 15 30 35 20, Smitty 20 35 40 15 10, Leela 45 25 40 20 20, Professor 5 35 10 50 45, Petunia 20 40 15 35 15, Nibbler 40 5 35 25 40, Crushinator 30 45 5 35 25, RobotDevil 35 20 20 45 15, Zap 25 50 15 30 5, Bubblegum 35 25 45 15 40, Roberto 40 20 35 45 15, Zoidberg 40 15 30 35 25, RobotSanta 50 15 40 20 35]
-kyrie's hand is: [Sal 30 45 20 15 20, Ndnd 35 15 25 25 25, Dwight 15 5 25 30 40, Mom 10 35 20 25 45, LaBarbara 20 25 40 10 15, URL 35 30 35 10 15, Lrrr 40 25 15 30 15, Wernstrom 5 15 10 40 45, TinnyTim 5 0 10 15 30]
+Marvin's hand is: [Ndnd 35 15 25 25 25, Pazuzu 40 10 50 20 15, Zap 25 50 15 30 5, Wernstrom 5 15 10 40 45, TinnyTim 5 0 10 15 30, Zoidberg 40 15 30 35 25, Clamps 40 15 30 35 20, Smitty 20 35 40 15 10, Leela 45 25 40 20 20, Roberto 40 20 35 45 15, Calculon 15 40 20 35 10, Nixon 5 30 10 45 25, Professor 5 35 10 50 45, Bender 40 45 20 30 15, Hedonismbot 5 45 10 25 20, Preacherbot 5 40 10 25 15, URL 35 30 35 10 15, Bubblegum 35 25 45 15 40, Donbot 20 10 15 35 20, Lrrr 40 25 15 30 15, Scruffy 25 10 40 25 20, Kif 10 15 25 20 40, Elzar 35 25 15 20 25]
+Cortana's hand is: [Nibbler 40 5 35 25 40, Randy 15 30 20 25 40, RobotDevil 35 20 20 45 15, Hattie 10 20 5 45 30, Cubert 15 5 20 35 45, Hypnotoad 0 10 35 25 45, RobotSanta 50 15 40 20 35, Sal 30 45 20 15 20]
+GLaDOS's hand is: [Morbo 30 20 15 45 10, Amy 35 40 30 15 35, Hermes 15 25 20 30 40]
+HAL 9000's hand is: [Petunia 20 40 15 35 15, Dwight 15 5 25 30 40, Crushinator 30 45 5 35 25]
+STEVEN's hand is: [Fry 20 25 30 40 10, Mom 10 35 20 25 45, LaBarbara 20 25 40 10 15]
 
  ----------------------------------------------
-Jan 31, 2018 11:42:36 AM commandline.GameMaster sortByCategory
+Feb 07, 2018 5:31:52 AM commandline.GameMaster sortByCategory
 INFO: 
 The category selected and corresponding values when a user or computer selects a category: 
 
 _________________________________________
-** For Cortana's turn, they chose the category: Lewdness for 40 points."
+** For Marvin's turn, they chose the category: Combat for 35 points.
  ----------------------------------------------
-Jan 31, 2018 11:42:36 AM commandline.TopTrumpsCLIApplication main
+Feb 07, 2018 5:31:52 AM commandline.TopTrumpsCLIApplication main
+INFO: 
+The contents of the current cards in play (the cards from the top of the user’s deck and the computer’s deck(s)): 
+=================================
+| Nibbler   			| 
+| 1. Combat: 		40	|
+| 2. Lewdness: 		5	|
+| 3. Agility: 		35	|
+| 4. Lunacy: 		25	|
+| 5. IQ: 		40	|
+=================================
+=================================
+| Ndnd   			| 
+| 1. Combat: 		35	|
+| 2. Lewdness: 		15	|
+| 3. Agility: 		25	|
+| 4. Lunacy: 		25	|
+| 5. IQ: 		25	|
+=================================
+=================================
+| Morbo   			| 
+| 1. Combat: 		30	|
+| 2. Lewdness: 		20	|
+| 3. Agility: 		15	|
+| 4. Lunacy: 		45	|
+| 5. IQ: 		10	|
+=================================
+=================================
+| Petunia   			| 
+| 1. Combat: 		20	|
+| 2. Lewdness: 		40	|
+| 3. Agility: 		15	|
+| 4. Lunacy: 		35	|
+| 5. IQ: 		15	|
+=================================
+=================================
+| Fry   			| 
+| 1. Combat: 		20	|
+| 2. Lewdness: 		25	|
+| 3. Agility: 		30	|
+| 4. Lunacy: 		40	|
+| 5. IQ: 		10	|
+=================================
+
+ ----------------------------------------------
+Feb 07, 2018 5:31:52 AM commandline.GameMaster rewardWinner
+INFO: 
+The contents of the communal pile when cards are added or removed from it: 
+[Nibbler 40 5 35 25 40, Ndnd 35 15 25 25 25, Morbo 30 20 15 45 10, Petunia 20 40 15 35 15, Fry 20 25 30 40 10]
+ ----------------------------------------------
+Feb 07, 2018 5:31:52 AM commandline.TopTrumpsCLIApplication main
+INFO: 
+The contents of each deck after a round: 
+Cortana's hand is: [Randy 15 30 20 25 40, RobotDevil 35 20 20 45 15, Hattie 10 20 5 45 30, Cubert 15 5 20 35 45, Hypnotoad 0 10 35 25 45, RobotSanta 50 15 40 20 35, Sal 30 45 20 15 20, Nibbler 40 5 35 25 40, Ndnd 35 15 25 25 25, Morbo 30 20 15 45 10, Petunia 20 40 15 35 15, Fry 20 25 30 40 10]
+Marvin's hand is: [Pazuzu 40 10 50 20 15, Zap 25 50 15 30 5, Wernstrom 5 15 10 40 45, TinnyTim 5 0 10 15 30, Zoidberg 40 15 30 35 25, Clamps 40 15 30 35 20, Smitty 20 35 40 15 10, Leela 45 25 40 20 20, Roberto 40 20 35 45 15, Calculon 15 40 20 35 10, Nixon 5 30 10 45 25, Professor 5 35 10 50 45, Bender 40 45 20 30 15, Hedonismbot 5 45 10 25 20, Preacherbot 5 40 10 25 15, URL 35 30 35 10 15, Bubblegum 35 25 45 15 40, Donbot 20 10 15 35 20, Lrrr 40 25 15 30 15, Scruffy 25 10 40 25 20, Kif 10 15 25 20 40, Elzar 35 25 15 20 25]
+GLaDOS's hand is: [Amy 35 40 30 15 35, Hermes 15 25 20 30 40]
+HAL 9000's hand is: [Dwight 15 5 25 30 40, Crushinator 30 45 5 35 25]
+STEVEN's hand is: [Mom 10 35 20 25 45, LaBarbara 20 25 40 10 15]
+
+ ----------------------------------------------
+Feb 07, 2018 5:31:52 AM commandline.GameMaster sortByCategory
+INFO: 
+The category selected and corresponding values when a user or computer selects a category: 
+
+_________________________________________
+** For Cortana's turn, they chose the category: IQ for 40 points.
+ ----------------------------------------------
+Feb 07, 2018 5:31:52 AM commandline.TopTrumpsCLIApplication main
+INFO: 
+The contents of the current cards in play (the cards from the top of the user’s deck and the computer’s deck(s)): 
+=================================
+| Mom   			| 
+| 1. Combat: 		10	|
+| 2. Lewdness: 		35	|
+| 3. Agility: 		20	|
+| 4. Lunacy: 		25	|
+| 5. IQ: 		45	|
+=================================
+=================================
+| Randy   			| 
+| 1. Combat: 		15	|
+| 2. Lewdness: 		30	|
+| 3. Agility: 		20	|
+| 4. Lunacy: 		25	|
+| 5. IQ: 		40	|
+=================================
+=================================
+| Dwight   			| 
+| 1. Combat: 		15	|
+| 2. Lewdness: 		5	|
+| 3. Agility: 		25	|
+| 4. Lunacy: 		30	|
+| 5. IQ: 		40	|
+=================================
+=================================
+| Amy   			| 
+| 1. Combat: 		35	|
+| 2. Lewdness: 		40	|
+| 3. Agility: 		30	|
+| 4. Lunacy: 		15	|
+| 5. IQ: 		35	|
+=================================
+=================================
+| Pazuzu   			| 
+| 1. Combat: 		40	|
+| 2. Lewdness: 		10	|
+| 3. Agility: 		50	|
+| 4. Lunacy: 		20	|
+| 5. IQ: 		15	|
+=================================
+
+ ----------------------------------------------
+Feb 07, 2018 5:31:52 AM commandline.GameMaster rewardWinner
+INFO: 
+The contents of the communal pile when cards are added or removed from it: 
+[Mom 10 35 20 25 45, Randy 15 30 20 25 40, Dwight 15 5 25 30 40, Amy 35 40 30 15 35, Pazuzu 40 10 50 20 15]
+ ----------------------------------------------
+Feb 07, 2018 5:31:52 AM commandline.TopTrumpsCLIApplication main
+INFO: 
+The contents of each deck after a round: 
+STEVEN's hand is: [LaBarbara 20 25 40 10 15, Mom 10 35 20 25 45, Randy 15 30 20 25 40, Dwight 15 5 25 30 40, Amy 35 40 30 15 35, Pazuzu 40 10 50 20 15]
+Cortana's hand is: [RobotDevil 35 20 20 45 15, Hattie 10 20 5 45 30, Cubert 15 5 20 35 45, Hypnotoad 0 10 35 25 45, RobotSanta 50 15 40 20 35, Sal 30 45 20 15 20, Nibbler 40 5 35 25 40, Ndnd 35 15 25 25 25, Morbo 30 20 15 45 10, Petunia 20 40 15 35 15, Fry 20 25 30 40 10]
+HAL 9000's hand is: [Crushinator 30 45 5 35 25]
+GLaDOS's hand is: [Hermes 15 25 20 30 40]
+Marvin's hand is: [Zap 25 50 15 30 5, Wernstrom 5 15 10 40 45, TinnyTim 5 0 10 15 30, Zoidberg 40 15 30 35 25, Clamps 40 15 30 35 20, Smitty 20 35 40 15 10, Leela 45 25 40 20 20, Roberto 40 20 35 45 15, Calculon 15 40 20 35 10, Nixon 5 30 10 45 25, Professor 5 35 10 50 45, Bender 40 45 20 30 15, Hedonismbot 5 45 10 25 20, Preacherbot 5 40 10 25 15, URL 35 30 35 10 15, Bubblegum 35 25 45 15 40, Donbot 20 10 15 35 20, Lrrr 40 25 15 30 15, Scruffy 25 10 40 25 20, Kif 10 15 25 20 40, Elzar 35 25 15 20 25]
+
+ ----------------------------------------------
+Feb 07, 2018 5:31:55 AM commandline.GameMaster sortByCategory
+INFO: 
+The category selected and corresponding values when a user or computer selects a category: 
+
+_________________________________________
+** For STEVEN's turn, they chose the category: IQ for 15 points.
+ ----------------------------------------------
+Feb 07, 2018 5:31:55 AM commandline.TopTrumpsCLIApplication main
+INFO: 
+The contents of the current cards in play (the cards from the top of the user’s deck and the computer’s deck(s)): 
+=================================
+| Hermes   			| 
+| 1. Combat: 		15	|
+| 2. Lewdness: 		25	|
+| 3. Agility: 		20	|
+| 4. Lunacy: 		30	|
+| 5. IQ: 		40	|
+=================================
+=================================
+| Crushinator   			| 
+| 1. Combat: 		30	|
+| 2. Lewdness: 		45	|
+| 3. Agility: 		5	|
+| 4. Lunacy: 		35	|
+| 5. IQ: 		25	|
+=================================
+=================================
+| LaBarbara   			| 
+| 1. Combat: 		20	|
+| 2. Lewdness: 		25	|
+| 3. Agility: 		40	|
+| 4. Lunacy: 		10	|
+| 5. IQ: 		15	|
+=================================
+=================================
+| RobotDevil   			| 
+| 1. Combat: 		35	|
+| 2. Lewdness: 		20	|
+| 3. Agility: 		20	|
+| 4. Lunacy: 		45	|
+| 5. IQ: 		15	|
+=================================
+=================================
+| Zap   			| 
+| 1. Combat: 		25	|
+| 2. Lewdness: 		50	|
+| 3. Agility: 		15	|
+| 4. Lunacy: 		30	|
+| 5. IQ: 		5	|
+=================================
+
+ ----------------------------------------------
+Feb 07, 2018 5:31:55 AM commandline.GameMaster rewardWinner
+INFO: 
+The contents of the communal pile when cards are added or removed from it: 
+[Hermes 15 25 20 30 40, Crushinator 30 45 5 35 25, LaBarbara 20 25 40 10 15, RobotDevil 35 20 20 45 15, Zap 25 50 15 30 5]
+ ----------------------------------------------
+Feb 07, 2018 5:31:55 AM commandline.TopTrumpsCLIApplication main
+INFO: 
+The contents of each deck after a round: 
+GLaDOS's hand is: [Hermes 15 25 20 30 40, Crushinator 30 45 5 35 25, LaBarbara 20 25 40 10 15, RobotDevil 35 20 20 45 15, Zap 25 50 15 30 5]
+STEVEN's hand is: [Mom 10 35 20 25 45, Randy 15 30 20 25 40, Dwight 15 5 25 30 40, Amy 35 40 30 15 35, Pazuzu 40 10 50 20 15]
+Cortana's hand is: [Hattie 10 20 5 45 30, Cubert 15 5 20 35 45, Hypnotoad 0 10 35 25 45, RobotSanta 50 15 40 20 35, Sal 30 45 20 15 20, Nibbler 40 5 35 25 40, Ndnd 35 15 25 25 25, Morbo 30 20 15 45 10, Petunia 20 40 15 35 15, Fry 20 25 30 40 10]
+Marvin's hand is: [Wernstrom 5 15 10 40 45, TinnyTim 5 0 10 15 30, Zoidberg 40 15 30 35 25, Clamps 40 15 30 35 20, Smitty 20 35 40 15 10, Leela 45 25 40 20 20, Roberto 40 20 35 45 15, Calculon 15 40 20 35 10, Nixon 5 30 10 45 25, Professor 5 35 10 50 45, Bender 40 45 20 30 15, Hedonismbot 5 45 10 25 20, Preacherbot 5 40 10 25 15, URL 35 30 35 10 15, Bubblegum 35 25 45 15 40, Donbot 20 10 15 35 20, Lrrr 40 25 15 30 15, Scruffy 25 10 40 25 20, Kif 10 15 25 20 40, Elzar 35 25 15 20 25]
+
+ ----------------------------------------------
+Feb 07, 2018 5:31:56 AM commandline.GameMaster sortByCategory
+INFO: 
+The category selected and corresponding values when a user or computer selects a category: 
+
+_________________________________________
+** For GLaDOS's turn, they chose the category: IQ for 40 points.
+ ----------------------------------------------
+Feb 07, 2018 5:31:56 AM commandline.TopTrumpsCLIApplication main
+INFO: 
+The contents of the current cards in play (the cards from the top of the user’s deck and the computer’s deck(s)): 
+=================================
+| Mom   			| 
+| 1. Combat: 		10	|
+| 2. Lewdness: 		35	|
+| 3. Agility: 		20	|
+| 4. Lunacy: 		25	|
+| 5. IQ: 		45	|
+=================================
+=================================
+| Wernstrom   			| 
+| 1. Combat: 		5	|
+| 2. Lewdness: 		15	|
+| 3. Agility: 		10	|
+| 4. Lunacy: 		40	|
+| 5. IQ: 		45	|
+=================================
+=================================
+| Hermes   			| 
+| 1. Combat: 		15	|
+| 2. Lewdness: 		25	|
+| 3. Agility: 		20	|
+| 4. Lunacy: 		30	|
+| 5. IQ: 		40	|
+=================================
+=================================
+| Hattie   			| 
+| 1. Combat: 		10	|
+| 2. Lewdness: 		20	|
+| 3. Agility: 		5	|
+| 4. Lunacy: 		45	|
+| 5. IQ: 		30	|
+=================================
+
+ ----------------------------------------------
+Feb 07, 2018 5:31:56 AM commandline.TopTrumpsCLIApplication main
+INFO: 
+The contents of each deck after a round: 
+STEVEN's hand is: [Randy 15 30 20 25 40, Dwight 15 5 25 30 40, Amy 35 40 30 15 35, Pazuzu 40 10 50 20 15]
+Marvin's hand is: [TinnyTim 5 0 10 15 30, Zoidberg 40 15 30 35 25, Clamps 40 15 30 35 20, Smitty 20 35 40 15 10, Leela 45 25 40 20 20, Roberto 40 20 35 45 15, Calculon 15 40 20 35 10, Nixon 5 30 10 45 25, Professor 5 35 10 50 45, Bender 40 45 20 30 15, Hedonismbot 5 45 10 25 20, Preacherbot 5 40 10 25 15, URL 35 30 35 10 15, Bubblegum 35 25 45 15 40, Donbot 20 10 15 35 20, Lrrr 40 25 15 30 15, Scruffy 25 10 40 25 20, Kif 10 15 25 20 40, Elzar 35 25 15 20 25]
+GLaDOS's hand is: [Crushinator 30 45 5 35 25, LaBarbara 20 25 40 10 15, RobotDevil 35 20 20 45 15, Zap 25 50 15 30 5]
+Cortana's hand is: [Cubert 15 5 20 35 45, Hypnotoad 0 10 35 25 45, RobotSanta 50 15 40 20 35, Sal 30 45 20 15 20, Nibbler 40 5 35 25 40, Ndnd 35 15 25 25 25, Morbo 30 20 15 45 10, Petunia 20 40 15 35 15, Fry 20 25 30 40 10]
+
+ ----------------------------------------------
+Feb 07, 2018 5:31:56 AM commandline.GameMaster sortByCategory
+INFO: 
+The category selected and corresponding values when a user or computer selects a category: 
+
+_________________________________________
+** For GLaDOS's turn, they chose the category: IQ for 25 points.
+ ----------------------------------------------
+Feb 07, 2018 5:31:56 AM commandline.TopTrumpsCLIApplication main
+INFO: 
+The contents of the current cards in play (the cards from the top of the user’s deck and the computer’s deck(s)): 
+=================================
+| Cubert   			| 
+| 1. Combat: 		15	|
+| 2. Lewdness: 		5	|
+| 3. Agility: 		20	|
+| 4. Lunacy: 		35	|
+| 5. IQ: 		45	|
+=================================
+=================================
+| Randy   			| 
+| 1. Combat: 		15	|
+| 2. Lewdness: 		30	|
+| 3. Agility: 		20	|
+| 4. Lunacy: 		25	|
+| 5. IQ: 		40	|
+=================================
+=================================
+| TinnyTim   			| 
+| 1. Combat: 		5	|
+| 2. Lewdness: 		0	|
+| 3. Agility: 		10	|
+| 4. Lunacy: 		15	|
+| 5. IQ: 		30	|
+=================================
+=================================
+| Crushinator   			| 
+| 1. Combat: 		30	|
+| 2. Lewdness: 		45	|
+| 3. Agility: 		5	|
+| 4. Lunacy: 		35	|
+| 5. IQ: 		25	|
+=================================
+
+ ----------------------------------------------
+Feb 07, 2018 5:31:56 AM commandline.GameMaster rewardWinner
+INFO: 
+The contents of the communal pile when cards are added or removed from it: 
+[Cubert 15 5 20 35 45, Randy 15 30 20 25 40, TinnyTim 5 0 10 15 30, Crushinator 30 45 5 35 25, Mom 10 35 20 25 45, Wernstrom 5 15 10 40 45, Hermes 15 25 20 30 40, Hattie 10 20 5 45 30]
+ ----------------------------------------------
+Feb 07, 2018 5:31:56 AM commandline.TopTrumpsCLIApplication main
+INFO: 
+The contents of each deck after a round: 
+Cortana's hand is: [Hypnotoad 0 10 35 25 45, RobotSanta 50 15 40 20 35, Sal 30 45 20 15 20, Nibbler 40 5 35 25 40, Ndnd 35 15 25 25 25, Morbo 30 20 15 45 10, Petunia 20 40 15 35 15, Fry 20 25 30 40 10, Cubert 15 5 20 35 45, Randy 15 30 20 25 40, TinnyTim 5 0 10 15 30, Crushinator 30 45 5 35 25, Mom 10 35 20 25 45, Wernstrom 5 15 10 40 45, Hermes 15 25 20 30 40, Hattie 10 20 5 45 30]
+STEVEN's hand is: [Dwight 15 5 25 30 40, Amy 35 40 30 15 35, Pazuzu 40 10 50 20 15]
+Marvin's hand is: [Zoidberg 40 15 30 35 25, Clamps 40 15 30 35 20, Smitty 20 35 40 15 10, Leela 45 25 40 20 20, Roberto 40 20 35 45 15, Calculon 15 40 20 35 10, Nixon 5 30 10 45 25, Professor 5 35 10 50 45, Bender 40 45 20 30 15, Hedonismbot 5 45 10 25 20, Preacherbot 5 40 10 25 15, URL 35 30 35 10 15, Bubblegum 35 25 45 15 40, Donbot 20 10 15 35 20, Lrrr 40 25 15 30 15, Scruffy 25 10 40 25 20, Kif 10 15 25 20 40, Elzar 35 25 15 20 25]
+GLaDOS's hand is: [LaBarbara 20 25 40 10 15, RobotDevil 35 20 20 45 15, Zap 25 50 15 30 5]
+
+ ----------------------------------------------
+Feb 07, 2018 5:31:57 AM commandline.GameMaster sortByCategory
+INFO: 
+The category selected and corresponding values when a user or computer selects a category: 
+
+_________________________________________
+** For Cortana's turn, they chose the category: IQ for 45 points.
+ ----------------------------------------------
+Feb 07, 2018 5:31:57 AM commandline.TopTrumpsCLIApplication main
+INFO: 
+The contents of the current cards in play (the cards from the top of the user’s deck and the computer’s deck(s)): 
+=================================
+| Hypnotoad   			| 
+| 1. Combat: 		0	|
+| 2. Lewdness: 		10	|
+| 3. Agility: 		35	|
+| 4. Lunacy: 		25	|
+| 5. IQ: 		45	|
+=================================
+=================================
+| Dwight   			| 
+| 1. Combat: 		15	|
+| 2. Lewdness: 		5	|
+| 3. Agility: 		25	|
+| 4. Lunacy: 		30	|
+| 5. IQ: 		40	|
+=================================
+=================================
+| Zoidberg   			| 
+| 1. Combat: 		40	|
+| 2. Lewdness: 		15	|
+| 3. Agility: 		30	|
+| 4. Lunacy: 		35	|
+| 5. IQ: 		25	|
+=================================
+=================================
+| LaBarbara   			| 
+| 1. Combat: 		20	|
+| 2. Lewdness: 		25	|
+| 3. Agility: 		40	|
+| 4. Lunacy: 		10	|
+| 5. IQ: 		15	|
+=================================
+
+ ----------------------------------------------
+Feb 07, 2018 5:31:57 AM commandline.GameMaster rewardWinner
+INFO: 
+The contents of the communal pile when cards are added or removed from it: 
+[Hypnotoad 0 10 35 25 45, Dwight 15 5 25 30 40, Zoidberg 40 15 30 35 25, LaBarbara 20 25 40 10 15]
+ ----------------------------------------------
+Feb 07, 2018 5:31:57 AM commandline.TopTrumpsCLIApplication main
+INFO: 
+The contents of each deck after a round: 
+Cortana's hand is: [RobotSanta 50 15 40 20 35, Sal 30 45 20 15 20, Nibbler 40 5 35 25 40, Ndnd 35 15 25 25 25, Morbo 30 20 15 45 10, Petunia 20 40 15 35 15, Fry 20 25 30 40 10, Cubert 15 5 20 35 45, Randy 15 30 20 25 40, TinnyTim 5 0 10 15 30, Crushinator 30 45 5 35 25, Mom 10 35 20 25 45, Wernstrom 5 15 10 40 45, Hermes 15 25 20 30 40, Hattie 10 20 5 45 30, Hypnotoad 0 10 35 25 45, Dwight 15 5 25 30 40, Zoidberg 40 15 30 35 25, LaBarbara 20 25 40 10 15]
+STEVEN's hand is: [Amy 35 40 30 15 35, Pazuzu 40 10 50 20 15]
+Marvin's hand is: [Clamps 40 15 30 35 20, Smitty 20 35 40 15 10, Leela 45 25 40 20 20, Roberto 40 20 35 45 15, Calculon 15 40 20 35 10, Nixon 5 30 10 45 25, Professor 5 35 10 50 45, Bender 40 45 20 30 15, Hedonismbot 5 45 10 25 20, Preacherbot 5 40 10 25 15, URL 35 30 35 10 15, Bubblegum 35 25 45 15 40, Donbot 20 10 15 35 20, Lrrr 40 25 15 30 15, Scruffy 25 10 40 25 20, Kif 10 15 25 20 40, Elzar 35 25 15 20 25]
+GLaDOS's hand is: [RobotDevil 35 20 20 45 15, Zap 25 50 15 30 5]
+
+ ----------------------------------------------
+Feb 07, 2018 5:31:57 AM commandline.GameMaster sortByCategory
+INFO: 
+The category selected and corresponding values when a user or computer selects a category: 
+
+_________________________________________
+** For Cortana's turn, they chose the category: Combat for 50 points.
+ ----------------------------------------------
+Feb 07, 2018 5:31:57 AM commandline.TopTrumpsCLIApplication main
+INFO: 
+The contents of the current cards in play (the cards from the top of the user’s deck and the computer’s deck(s)): 
+=================================
+| RobotSanta   			| 
+| 1. Combat: 		50	|
+| 2. Lewdness: 		15	|
+| 3. Agility: 		40	|
+| 4. Lunacy: 		20	|
+| 5. IQ: 		35	|
+=================================
+=================================
+| Clamps   			| 
+| 1. Combat: 		40	|
+| 2. Lewdness: 		15	|
+| 3. Agility: 		30	|
+| 4. Lunacy: 		35	|
+| 5. IQ: 		20	|
+=================================
+=================================
+| Amy   			| 
+| 1. Combat: 		35	|
+| 2. Lewdness: 		40	|
+| 3. Agility: 		30	|
+| 4. Lunacy: 		15	|
+| 5. IQ: 		35	|
+=================================
+=================================
+| RobotDevil   			| 
+| 1. Combat: 		35	|
+| 2. Lewdness: 		20	|
+| 3. Agility: 		20	|
+| 4. Lunacy: 		45	|
+| 5. IQ: 		15	|
+=================================
+
+ ----------------------------------------------
+Feb 07, 2018 5:31:57 AM commandline.GameMaster rewardWinner
+INFO: 
+The contents of the communal pile when cards are added or removed from it: 
+[RobotSanta 50 15 40 20 35, Clamps 40 15 30 35 20, Amy 35 40 30 15 35, RobotDevil 35 20 20 45 15]
+ ----------------------------------------------
+Feb 07, 2018 5:31:57 AM commandline.TopTrumpsCLIApplication main
+INFO: 
+The contents of each deck after a round: 
+Cortana's hand is: [Sal 30 45 20 15 20, Nibbler 40 5 35 25 40, Ndnd 35 15 25 25 25, Morbo 30 20 15 45 10, Petunia 20 40 15 35 15, Fry 20 25 30 40 10, Cubert 15 5 20 35 45, Randy 15 30 20 25 40, TinnyTim 5 0 10 15 30, Crushinator 30 45 5 35 25, Mom 10 35 20 25 45, Wernstrom 5 15 10 40 45, Hermes 15 25 20 30 40, Hattie 10 20 5 45 30, Hypnotoad 0 10 35 25 45, Dwight 15 5 25 30 40, Zoidberg 40 15 30 35 25, LaBarbara 20 25 40 10 15, RobotSanta 50 15 40 20 35, Clamps 40 15 30 35 20, Amy 35 40 30 15 35, RobotDevil 35 20 20 45 15]
+Marvin's hand is: [Smitty 20 35 40 15 10, Leela 45 25 40 20 20, Roberto 40 20 35 45 15, Calculon 15 40 20 35 10, Nixon 5 30 10 45 25, Professor 5 35 10 50 45, Bender 40 45 20 30 15, Hedonismbot 5 45 10 25 20, Preacherbot 5 40 10 25 15, URL 35 30 35 10 15, Bubblegum 35 25 45 15 40, Donbot 20 10 15 35 20, Lrrr 40 25 15 30 15, Scruffy 25 10 40 25 20, Kif 10 15 25 20 40, Elzar 35 25 15 20 25]
+STEVEN's hand is: [Pazuzu 40 10 50 20 15]
+GLaDOS's hand is: [Zap 25 50 15 30 5]
+
+ ----------------------------------------------
+Feb 07, 2018 5:31:58 AM commandline.GameMaster sortByCategory
+INFO: 
+The category selected and corresponding values when a user or computer selects a category: 
+
+_________________________________________
+** For Cortana's turn, they chose the category: Lewdness for 45 points."
+ ----------------------------------------------
+Feb 07, 2018 5:31:58 AM commandline.TopTrumpsCLIApplication main
+INFO: 
+The contents of the current cards in play (the cards from the top of the user’s deck and the computer’s deck(s)): 
+=================================
+| Zap   			| 
+| 1. Combat: 		25	|
+| 2. Lewdness: 		50	|
+| 3. Agility: 		15	|
+| 4. Lunacy: 		30	|
+| 5. IQ: 		5	|
+=================================
+=================================
+| Sal   			| 
+| 1. Combat: 		30	|
+| 2. Lewdness: 		45	|
+| 3. Agility: 		20	|
+| 4. Lunacy: 		15	|
+| 5. IQ: 		20	|
+=================================
+=================================
+| Smitty   			| 
+| 1. Combat: 		20	|
+| 2. Lewdness: 		35	|
+| 3. Agility: 		40	|
+| 4. Lunacy: 		15	|
+| 5. IQ: 		10	|
+=================================
+=================================
+| Pazuzu   			| 
+| 1. Combat: 		40	|
+| 2. Lewdness: 		10	|
+| 3. Agility: 		50	|
+| 4. Lunacy: 		20	|
+| 5. IQ: 		15	|
+=================================
+
+ ----------------------------------------------
+Feb 07, 2018 5:31:58 AM commandline.GameMaster rewardWinner
+INFO: 
+The contents of the communal pile when cards are added or removed from it: 
+[Zap 25 50 15 30 5, Sal 30 45 20 15 20, Smitty 20 35 40 15 10, Pazuzu 40 10 50 20 15]
+ ----------------------------------------------
+Feb 07, 2018 5:31:58 AM commandline.TopTrumpsCLIApplication main
+INFO: 
+The contents of each deck after a round: 
+GLaDOS's hand is: [Zap 25 50 15 30 5, Sal 30 45 20 15 20, Smitty 20 35 40 15 10, Pazuzu 40 10 50 20 15]
+Cortana's hand is: [Nibbler 40 5 35 25 40, Ndnd 35 15 25 25 25, Morbo 30 20 15 45 10, Petunia 20 40 15 35 15, Fry 20 25 30 40 10, Cubert 15 5 20 35 45, Randy 15 30 20 25 40, TinnyTim 5 0 10 15 30, Crushinator 30 45 5 35 25, Mom 10 35 20 25 45, Wernstrom 5 15 10 40 45, Hermes 15 25 20 30 40, Hattie 10 20 5 45 30, Hypnotoad 0 10 35 25 45, Dwight 15 5 25 30 40, Zoidberg 40 15 30 35 25, LaBarbara 20 25 40 10 15, RobotSanta 50 15 40 20 35, Clamps 40 15 30 35 20, Amy 35 40 30 15 35, RobotDevil 35 20 20 45 15]
+Marvin's hand is: [Leela 45 25 40 20 20, Roberto 40 20 35 45 15, Calculon 15 40 20 35 10, Nixon 5 30 10 45 25, Professor 5 35 10 50 45, Bender 40 45 20 30 15, Hedonismbot 5 45 10 25 20, Preacherbot 5 40 10 25 15, URL 35 30 35 10 15, Bubblegum 35 25 45 15 40, Donbot 20 10 15 35 20, Lrrr 40 25 15 30 15, Scruffy 25 10 40 25 20, Kif 10 15 25 20 40, Elzar 35 25 15 20 25]
+
+ ----------------------------------------------
+Feb 07, 2018 5:31:58 AM commandline.GameMaster sortByCategory
+INFO: 
+The category selected and corresponding values when a user or computer selects a category: 
+
+_________________________________________
+** For GLaDOS's turn, they chose the category: Lewdness for 50 points."
+ ----------------------------------------------
+Feb 07, 2018 5:31:58 AM commandline.TopTrumpsCLIApplication main
+INFO: 
+The contents of the current cards in play (the cards from the top of the user’s deck and the computer’s deck(s)): 
+=================================
+| Zap   			| 
+| 1. Combat: 		25	|
+| 2. Lewdness: 		50	|
+| 3. Agility: 		15	|
+| 4. Lunacy: 		30	|
+| 5. IQ: 		5	|
+=================================
+=================================
+| Leela   			| 
+| 1. Combat: 		45	|
+| 2. Lewdness: 		25	|
+| 3. Agility: 		40	|
+| 4. Lunacy: 		20	|
+| 5. IQ: 		20	|
+=================================
+=================================
+| Nibbler   			| 
+| 1. Combat: 		40	|
+| 2. Lewdness: 		5	|
+| 3. Agility: 		35	|
+| 4. Lunacy: 		25	|
+| 5. IQ: 		40	|
+=================================
+
+ ----------------------------------------------
+Feb 07, 2018 5:31:58 AM commandline.GameMaster rewardWinner
+INFO: 
+The contents of the communal pile when cards are added or removed from it: 
+[Zap 25 50 15 30 5, Leela 45 25 40 20 20, Nibbler 40 5 35 25 40]
+ ----------------------------------------------
+Feb 07, 2018 5:31:58 AM commandline.TopTrumpsCLIApplication main
+INFO: 
+The contents of each deck after a round: 
+GLaDOS's hand is: [Sal 30 45 20 15 20, Smitty 20 35 40 15 10, Pazuzu 40 10 50 20 15, Zap 25 50 15 30 5, Leela 45 25 40 20 20, Nibbler 40 5 35 25 40]
+Marvin's hand is: [Roberto 40 20 35 45 15, Calculon 15 40 20 35 10, Nixon 5 30 10 45 25, Professor 5 35 10 50 45, Bender 40 45 20 30 15, Hedonismbot 5 45 10 25 20, Preacherbot 5 40 10 25 15, URL 35 30 35 10 15, Bubblegum 35 25 45 15 40, Donbot 20 10 15 35 20, Lrrr 40 25 15 30 15, Scruffy 25 10 40 25 20, Kif 10 15 25 20 40, Elzar 35 25 15 20 25]
+Cortana's hand is: [Ndnd 35 15 25 25 25, Morbo 30 20 15 45 10, Petunia 20 40 15 35 15, Fry 20 25 30 40 10, Cubert 15 5 20 35 45, Randy 15 30 20 25 40, TinnyTim 5 0 10 15 30, Crushinator 30 45 5 35 25, Mom 10 35 20 25 45, Wernstrom 5 15 10 40 45, Hermes 15 25 20 30 40, Hattie 10 20 5 45 30, Hypnotoad 0 10 35 25 45, Dwight 15 5 25 30 40, Zoidberg 40 15 30 35 25, LaBarbara 20 25 40 10 15, RobotSanta 50 15 40 20 35, Clamps 40 15 30 35 20, Amy 35 40 30 15 35, RobotDevil 35 20 20 45 15]
+
+ ----------------------------------------------
+Feb 07, 2018 5:31:58 AM commandline.GameMaster sortByCategory
+INFO: 
+The category selected and corresponding values when a user or computer selects a category: 
+
+_________________________________________
+** For GLaDOS's turn, they chose the category: Lewdness for 45 points."
+ ----------------------------------------------
+Feb 07, 2018 5:31:58 AM commandline.TopTrumpsCLIApplication main
 INFO: 
 The contents of the current cards in play (the cards from the top of the user’s deck and the computer’s deck(s)): 
 =================================
@@ -273,6 +898,55 @@ The contents of the current cards in play (the cards from the top of the user’s 
 | 3. Agility: 		20	|
 | 4. Lunacy: 		15	|
 | 5. IQ: 		20	|
+=================================
+=================================
+| Roberto   			| 
+| 1. Combat: 		40	|
+| 2. Lewdness: 		20	|
+| 3. Agility: 		35	|
+| 4. Lunacy: 		45	|
+| 5. IQ: 		15	|
+=================================
+=================================
+| Ndnd   			| 
+| 1. Combat: 		35	|
+| 2. Lewdness: 		15	|
+| 3. Agility: 		25	|
+| 4. Lunacy: 		25	|
+| 5. IQ: 		25	|
+=================================
+
+ ----------------------------------------------
+Feb 07, 2018 5:31:58 AM commandline.GameMaster rewardWinner
+INFO: 
+The contents of the communal pile when cards are added or removed from it: 
+[Sal 30 45 20 15 20, Roberto 40 20 35 45 15, Ndnd 35 15 25 25 25]
+ ----------------------------------------------
+Feb 07, 2018 5:31:58 AM commandline.TopTrumpsCLIApplication main
+INFO: 
+The contents of each deck after a round: 
+GLaDOS's hand is: [Smitty 20 35 40 15 10, Pazuzu 40 10 50 20 15, Zap 25 50 15 30 5, Leela 45 25 40 20 20, Nibbler 40 5 35 25 40, Sal 30 45 20 15 20, Roberto 40 20 35 45 15, Ndnd 35 15 25 25 25]
+Marvin's hand is: [Calculon 15 40 20 35 10, Nixon 5 30 10 45 25, Professor 5 35 10 50 45, Bender 40 45 20 30 15, Hedonismbot 5 45 10 25 20, Preacherbot 5 40 10 25 15, URL 35 30 35 10 15, Bubblegum 35 25 45 15 40, Donbot 20 10 15 35 20, Lrrr 40 25 15 30 15, Scruffy 25 10 40 25 20, Kif 10 15 25 20 40, Elzar 35 25 15 20 25]
+Cortana's hand is: [Morbo 30 20 15 45 10, Petunia 20 40 15 35 15, Fry 20 25 30 40 10, Cubert 15 5 20 35 45, Randy 15 30 20 25 40, TinnyTim 5 0 10 15 30, Crushinator 30 45 5 35 25, Mom 10 35 20 25 45, Wernstrom 5 15 10 40 45, Hermes 15 25 20 30 40, Hattie 10 20 5 45 30, Hypnotoad 0 10 35 25 45, Dwight 15 5 25 30 40, Zoidberg 40 15 30 35 25, LaBarbara 20 25 40 10 15, RobotSanta 50 15 40 20 35, Clamps 40 15 30 35 20, Amy 35 40 30 15 35, RobotDevil 35 20 20 45 15]
+
+ ----------------------------------------------
+Feb 07, 2018 5:31:58 AM commandline.GameMaster sortByCategory
+INFO: 
+The category selected and corresponding values when a user or computer selects a category: 
+
+_________________________________________
+** For GLaDOS's turn, they chose the category: Agility for 40 points.
+ ----------------------------------------------
+Feb 07, 2018 5:31:58 AM commandline.TopTrumpsCLIApplication main
+INFO: 
+The contents of the current cards in play (the cards from the top of the user’s deck and the computer’s deck(s)): 
+=================================
+| Smitty   			| 
+| 1. Combat: 		20	|
+| 2. Lewdness: 		35	|
+| 3. Agility: 		40	|
+| 4. Lunacy: 		15	|
+| 5. IQ: 		10	|
 =================================
 =================================
 | Calculon   			| 
@@ -292,120 +966,125 @@ The contents of the current cards in play (the cards from the top of the user’s 
 =================================
 
  ----------------------------------------------
-Jan 31, 2018 11:42:36 AM commandline.GameMaster rewardWinner
+Feb 07, 2018 5:31:58 AM commandline.GameMaster rewardWinner
 INFO: 
 The contents of the communal pile when cards are added or removed from it: 
-[Sal 30 45 20 15 20, Calculon 15 40 20 35 10, Morbo 30 20 15 45 10]
+[Smitty 20 35 40 15 10, Calculon 15 40 20 35 10, Morbo 30 20 15 45 10]
  ----------------------------------------------
-Jan 31, 2018 11:42:36 AM commandline.TopTrumpsCLIApplication main
+Feb 07, 2018 5:31:58 AM commandline.TopTrumpsCLIApplication main
 INFO: 
 The contents of each deck after a round: 
-kyrie's hand is: [Ndnd 35 15 25 25 25, Dwight 15 5 25 30 40, Mom 10 35 20 25 45, LaBarbara 20 25 40 10 15, URL 35 30 35 10 15, Lrrr 40 25 15 30 15, Wernstrom 5 15 10 40 45, TinnyTim 5 0 10 15 30, Sal 30 45 20 15 20, Calculon 15 40 20 35 10, Morbo 30 20 15 45 10]
-Cortana's hand is: [Scruffy 25 10 40 25 20, Hypnotoad 0 10 35 25 45, Hermes 15 25 20 30 40, Donbot 20 10 15 35 20, Amy 35 40 30 15 35, Preacherbot 5 40 10 25 15, Pazuzu 40 10 50 20 15, Cubert 15 5 20 35 45, Kif 10 15 25 20 40, Nixon 5 30 10 45 25, Fry 20 25 30 40 10, Randy 15 30 20 25 40, Elzar 35 25 15 20 25, Bender 40 45 20 30 15, Hedonismbot 5 45 10 25 20, Hattie 10 20 5 45 30]
-HAL 9000's hand is: [Clamps 40 15 30 35 20, Smitty 20 35 40 15 10, Leela 45 25 40 20 20, Professor 5 35 10 50 45, Petunia 20 40 15 35 15, Nibbler 40 5 35 25 40, Crushinator 30 45 5 35 25, RobotDevil 35 20 20 45 15, Zap 25 50 15 30 5, Bubblegum 35 25 45 15 40, Roberto 40 20 35 45 15, Zoidberg 40 15 30 35 25, RobotSanta 50 15 40 20 35]
+GLaDOS's hand is: [Pazuzu 40 10 50 20 15, Zap 25 50 15 30 5, Leela 45 25 40 20 20, Nibbler 40 5 35 25 40, Sal 30 45 20 15 20, Roberto 40 20 35 45 15, Ndnd 35 15 25 25 25, Smitty 20 35 40 15 10, Calculon 15 40 20 35 10, Morbo 30 20 15 45 10]
+Marvin's hand is: [Nixon 5 30 10 45 25, Professor 5 35 10 50 45, Bender 40 45 20 30 15, Hedonismbot 5 45 10 25 20, Preacherbot 5 40 10 25 15, URL 35 30 35 10 15, Bubblegum 35 25 45 15 40, Donbot 20 10 15 35 20, Lrrr 40 25 15 30 15, Scruffy 25 10 40 25 20, Kif 10 15 25 20 40, Elzar 35 25 15 20 25]
+Cortana's hand is: [Petunia 20 40 15 35 15, Fry 20 25 30 40 10, Cubert 15 5 20 35 45, Randy 15 30 20 25 40, TinnyTim 5 0 10 15 30, Crushinator 30 45 5 35 25, Mom 10 35 20 25 45, Wernstrom 5 15 10 40 45, Hermes 15 25 20 30 40, Hattie 10 20 5 45 30, Hypnotoad 0 10 35 25 45, Dwight 15 5 25 30 40, Zoidberg 40 15 30 35 25, LaBarbara 20 25 40 10 15, RobotSanta 50 15 40 20 35, Clamps 40 15 30 35 20, Amy 35 40 30 15 35, RobotDevil 35 20 20 45 15]
 
  ----------------------------------------------
-Jan 31, 2018 11:42:39 AM commandline.GameMaster sortByCategory
+Feb 07, 2018 5:31:58 AM commandline.GameMaster sortByCategory
 INFO: 
 The category selected and corresponding values when a user or computer selects a category: 
 
 _________________________________________
-** For kyrie's turn, they chose the category: Lewdness for 15 points."
+** For GLaDOS's turn, they chose the category: Agility for 50 points.
  ----------------------------------------------
-Jan 31, 2018 11:42:39 AM commandline.TopTrumpsCLIApplication main
+Feb 07, 2018 5:31:58 AM commandline.TopTrumpsCLIApplication main
 INFO: 
 The contents of the current cards in play (the cards from the top of the user’s deck and the computer’s deck(s)): 
 =================================
-| Ndnd   			| 
-| 1. Combat: 		35	|
-| 2. Lewdness: 		15	|
-| 3. Agility: 		25	|
-| 4. Lunacy: 		25	|
+| Pazuzu   			| 
+| 1. Combat: 		40	|
+| 2. Lewdness: 		10	|
+| 3. Agility: 		50	|
+| 4. Lunacy: 		20	|
+| 5. IQ: 		15	|
+=================================
+=================================
+| Petunia   			| 
+| 1. Combat: 		20	|
+| 2. Lewdness: 		40	|
+| 3. Agility: 		15	|
+| 4. Lunacy: 		35	|
+| 5. IQ: 		15	|
+=================================
+=================================
+| Nixon   			| 
+| 1. Combat: 		5	|
+| 2. Lewdness: 		30	|
+| 3. Agility: 		10	|
+| 4. Lunacy: 		45	|
 | 5. IQ: 		25	|
 =================================
-=================================
-| Clamps   			| 
-| 1. Combat: 		40	|
-| 2. Lewdness: 		15	|
-| 3. Agility: 		30	|
-| 4. Lunacy: 		35	|
-| 5. IQ: 		20	|
-=================================
-=================================
-| Scruffy   			| 
-| 1. Combat: 		25	|
-| 2. Lewdness: 		10	|
-| 3. Agility: 		40	|
-| 4. Lunacy: 		25	|
-| 5. IQ: 		20	|
-=================================
 
  ----------------------------------------------
-Jan 31, 2018 11:42:39 AM commandline.TopTrumpsCLIApplication main
+Feb 07, 2018 5:31:58 AM commandline.GameMaster rewardWinner
+INFO: 
+The contents of the communal pile when cards are added or removed from it: 
+[Pazuzu 40 10 50 20 15, Petunia 20 40 15 35 15, Nixon 5 30 10 45 25]
+ ----------------------------------------------
+Feb 07, 2018 5:31:58 AM commandline.TopTrumpsCLIApplication main
 INFO: 
 The contents of each deck after a round: 
-kyrie's hand is: [Dwight 15 5 25 30 40, Mom 10 35 20 25 45, LaBarbara 20 25 40 10 15, URL 35 30 35 10 15, Lrrr 40 25 15 30 15, Wernstrom 5 15 10 40 45, TinnyTim 5 0 10 15 30, Sal 30 45 20 15 20, Calculon 15 40 20 35 10, Morbo 30 20 15 45 10]
-HAL 9000's hand is: [Smitty 20 35 40 15 10, Leela 45 25 40 20 20, Professor 5 35 10 50 45, Petunia 20 40 15 35 15, Nibbler 40 5 35 25 40, Crushinator 30 45 5 35 25, RobotDevil 35 20 20 45 15, Zap 25 50 15 30 5, Bubblegum 35 25 45 15 40, Roberto 40 20 35 45 15, Zoidberg 40 15 30 35 25, RobotSanta 50 15 40 20 35]
-Cortana's hand is: [Hypnotoad 0 10 35 25 45, Hermes 15 25 20 30 40, Donbot 20 10 15 35 20, Amy 35 40 30 15 35, Preacherbot 5 40 10 25 15, Pazuzu 40 10 50 20 15, Cubert 15 5 20 35 45, Kif 10 15 25 20 40, Nixon 5 30 10 45 25, Fry 20 25 30 40 10, Randy 15 30 20 25 40, Elzar 35 25 15 20 25, Bender 40 45 20 30 15, Hedonismbot 5 45 10 25 20, Hattie 10 20 5 45 30]
+GLaDOS's hand is: [Zap 25 50 15 30 5, Leela 45 25 40 20 20, Nibbler 40 5 35 25 40, Sal 30 45 20 15 20, Roberto 40 20 35 45 15, Ndnd 35 15 25 25 25, Smitty 20 35 40 15 10, Calculon 15 40 20 35 10, Morbo 30 20 15 45 10, Pazuzu 40 10 50 20 15, Petunia 20 40 15 35 15, Nixon 5 30 10 45 25]
+Cortana's hand is: [Fry 20 25 30 40 10, Cubert 15 5 20 35 45, Randy 15 30 20 25 40, TinnyTim 5 0 10 15 30, Crushinator 30 45 5 35 25, Mom 10 35 20 25 45, Wernstrom 5 15 10 40 45, Hermes 15 25 20 30 40, Hattie 10 20 5 45 30, Hypnotoad 0 10 35 25 45, Dwight 15 5 25 30 40, Zoidberg 40 15 30 35 25, LaBarbara 20 25 40 10 15, RobotSanta 50 15 40 20 35, Clamps 40 15 30 35 20, Amy 35 40 30 15 35, RobotDevil 35 20 20 45 15]
+Marvin's hand is: [Professor 5 35 10 50 45, Bender 40 45 20 30 15, Hedonismbot 5 45 10 25 20, Preacherbot 5 40 10 25 15, URL 35 30 35 10 15, Bubblegum 35 25 45 15 40, Donbot 20 10 15 35 20, Lrrr 40 25 15 30 15, Scruffy 25 10 40 25 20, Kif 10 15 25 20 40, Elzar 35 25 15 20 25]
 
  ----------------------------------------------
-Jan 31, 2018 11:42:43 AM commandline.GameMaster sortByCategory
+Feb 07, 2018 5:31:58 AM commandline.GameMaster sortByCategory
 INFO: 
 The category selected and corresponding values when a user or computer selects a category: 
 
 _________________________________________
-** For kyrie's turn, they chose the category: Lewdness for 5 points."
+** For GLaDOS's turn, they chose the category: Lewdness for 50 points."
  ----------------------------------------------
-Jan 31, 2018 11:42:43 AM commandline.TopTrumpsCLIApplication main
+Feb 07, 2018 5:31:58 AM commandline.TopTrumpsCLIApplication main
 INFO: 
 The contents of the current cards in play (the cards from the top of the user’s deck and the computer’s deck(s)): 
 =================================
-| Smitty   			| 
-| 1. Combat: 		20	|
+| Zap   			| 
+| 1. Combat: 		25	|
+| 2. Lewdness: 		50	|
+| 3. Agility: 		15	|
+| 4. Lunacy: 		30	|
+| 5. IQ: 		5	|
+=================================
+=================================
+| Professor   			| 
+| 1. Combat: 		5	|
 | 2. Lewdness: 		35	|
-| 3. Agility: 		40	|
-| 4. Lunacy: 		15	|
-| 5. IQ: 		10	|
-=================================
-=================================
-| Hypnotoad   			| 
-| 1. Combat: 		0	|
-| 2. Lewdness: 		10	|
-| 3. Agility: 		35	|
-| 4. Lunacy: 		25	|
+| 3. Agility: 		10	|
+| 4. Lunacy: 		50	|
 | 5. IQ: 		45	|
 =================================
 =================================
-| Dwight   			| 
-| 1. Combat: 		15	|
-| 2. Lewdness: 		5	|
-| 3. Agility: 		25	|
-| 4. Lunacy: 		30	|
-| 5. IQ: 		40	|
+| Fry   			| 
+| 1. Combat: 		20	|
+| 2. Lewdness: 		25	|
+| 3. Agility: 		30	|
+| 4. Lunacy: 		40	|
+| 5. IQ: 		10	|
 =================================
 
  ----------------------------------------------
-Jan 31, 2018 11:42:43 AM commandline.GameMaster rewardWinner
+Feb 07, 2018 5:31:58 AM commandline.GameMaster rewardWinner
 INFO: 
 The contents of the communal pile when cards are added or removed from it: 
-[Smitty 20 35 40 15 10, Hypnotoad 0 10 35 25 45, Dwight 15 5 25 30 40, Ndnd 35 15 25 25 25, Clamps 40 15 30 35 20, Scruffy 25 10 40 25 20]
+[Zap 25 50 15 30 5, Professor 5 35 10 50 45, Fry 20 25 30 40 10]
  ----------------------------------------------
-Jan 31, 2018 11:42:43 AM commandline.TopTrumpsCLIApplication main
+Feb 07, 2018 5:31:58 AM commandline.TopTrumpsCLIApplication main
 INFO: 
 The contents of each deck after a round: 
-HAL 9000's hand is: [Leela 45 25 40 20 20, Professor 5 35 10 50 45, Petunia 20 40 15 35 15, Nibbler 40 5 35 25 40, Crushinator 30 45 5 35 25, RobotDevil 35 20 20 45 15, Zap 25 50 15 30 5, Bubblegum 35 25 45 15 40, Roberto 40 20 35 45 15, Zoidberg 40 15 30 35 25, RobotSanta 50 15 40 20 35, Smitty 20 35 40 15 10, Hypnotoad 0 10 35 25 45, Dwight 15 5 25 30 40, Ndnd 35 15 25 25 25, Clamps 40 15 30 35 20, Scruffy 25 10 40 25 20]
-Cortana's hand is: [Hermes 15 25 20 30 40, Donbot 20 10 15 35 20, Amy 35 40 30 15 35, Preacherbot 5 40 10 25 15, Pazuzu 40 10 50 20 15, Cubert 15 5 20 35 45, Kif 10 15 25 20 40, Nixon 5 30 10 45 25, Fry 20 25 30 40 10, Randy 15 30 20 25 40, Elzar 35 25 15 20 25, Bender 40 45 20 30 15, Hedonismbot 5 45 10 25 20, Hattie 10 20 5 45 30]
-kyrie's hand is: [Mom 10 35 20 25 45, LaBarbara 20 25 40 10 15, URL 35 30 35 10 15, Lrrr 40 25 15 30 15, Wernstrom 5 15 10 40 45, TinnyTim 5 0 10 15 30, Sal 30 45 20 15 20, Calculon 15 40 20 35 10, Morbo 30 20 15 45 10]
+GLaDOS's hand is: [Leela 45 25 40 20 20, Nibbler 40 5 35 25 40, Sal 30 45 20 15 20, Roberto 40 20 35 45 15, Ndnd 35 15 25 25 25, Smitty 20 35 40 15 10, Calculon 15 40 20 35 10, Morbo 30 20 15 45 10, Pazuzu 40 10 50 20 15, Petunia 20 40 15 35 15, Nixon 5 30 10 45 25, Zap 25 50 15 30 5, Professor 5 35 10 50 45, Fry 20 25 30 40 10]
+Marvin's hand is: [Bender 40 45 20 30 15, Hedonismbot 5 45 10 25 20, Preacherbot 5 40 10 25 15, URL 35 30 35 10 15, Bubblegum 35 25 45 15 40, Donbot 20 10 15 35 20, Lrrr 40 25 15 30 15, Scruffy 25 10 40 25 20, Kif 10 15 25 20 40, Elzar 35 25 15 20 25]
+Cortana's hand is: [Cubert 15 5 20 35 45, Randy 15 30 20 25 40, TinnyTim 5 0 10 15 30, Crushinator 30 45 5 35 25, Mom 10 35 20 25 45, Wernstrom 5 15 10 40 45, Hermes 15 25 20 30 40, Hattie 10 20 5 45 30, Hypnotoad 0 10 35 25 45, Dwight 15 5 25 30 40, Zoidberg 40 15 30 35 25, LaBarbara 20 25 40 10 15, RobotSanta 50 15 40 20 35, Clamps 40 15 30 35 20, Amy 35 40 30 15 35, RobotDevil 35 20 20 45 15]
 
  ----------------------------------------------
-Jan 31, 2018 11:42:44 AM commandline.GameMaster sortByCategory
+Feb 07, 2018 5:31:58 AM commandline.GameMaster sortByCategory
 INFO: 
 The category selected and corresponding values when a user or computer selects a category: 
 
 _________________________________________
-** For HAL 9000's turn, they chose the category: Combat for 45 points.
+** For GLaDOS's turn, they chose the category: Combat for 45 points.
  ----------------------------------------------
-Jan 31, 2018 11:42:44 AM commandline.TopTrumpsCLIApplication main
+Feb 07, 2018 5:31:58 AM commandline.TopTrumpsCLIApplication main
 INFO: 
 The contents of the current cards in play (the cards from the top of the user’s deck and the computer’s deck(s)): 
 =================================
@@ -417,11 +1096,207 @@ The contents of the current cards in play (the cards from the top of the user’s 
 | 5. IQ: 		20	|
 =================================
 =================================
-| Hermes   			| 
-| 1. Combat: 		15	|
-| 2. Lewdness: 		25	|
+| Bender   			| 
+| 1. Combat: 		40	|
+| 2. Lewdness: 		45	|
 | 3. Agility: 		20	|
 | 4. Lunacy: 		30	|
+| 5. IQ: 		15	|
+=================================
+=================================
+| Cubert   			| 
+| 1. Combat: 		15	|
+| 2. Lewdness: 		5	|
+| 3. Agility: 		20	|
+| 4. Lunacy: 		35	|
+| 5. IQ: 		45	|
+=================================
+
+ ----------------------------------------------
+Feb 07, 2018 5:31:58 AM commandline.GameMaster rewardWinner
+INFO: 
+The contents of the communal pile when cards are added or removed from it: 
+[Leela 45 25 40 20 20, Bender 40 45 20 30 15, Cubert 15 5 20 35 45]
+ ----------------------------------------------
+Feb 07, 2018 5:31:58 AM commandline.TopTrumpsCLIApplication main
+INFO: 
+The contents of each deck after a round: 
+GLaDOS's hand is: [Nibbler 40 5 35 25 40, Sal 30 45 20 15 20, Roberto 40 20 35 45 15, Ndnd 35 15 25 25 25, Smitty 20 35 40 15 10, Calculon 15 40 20 35 10, Morbo 30 20 15 45 10, Pazuzu 40 10 50 20 15, Petunia 20 40 15 35 15, Nixon 5 30 10 45 25, Zap 25 50 15 30 5, Professor 5 35 10 50 45, Fry 20 25 30 40 10, Leela 45 25 40 20 20, Bender 40 45 20 30 15, Cubert 15 5 20 35 45]
+Marvin's hand is: [Hedonismbot 5 45 10 25 20, Preacherbot 5 40 10 25 15, URL 35 30 35 10 15, Bubblegum 35 25 45 15 40, Donbot 20 10 15 35 20, Lrrr 40 25 15 30 15, Scruffy 25 10 40 25 20, Kif 10 15 25 20 40, Elzar 35 25 15 20 25]
+Cortana's hand is: [Randy 15 30 20 25 40, TinnyTim 5 0 10 15 30, Crushinator 30 45 5 35 25, Mom 10 35 20 25 45, Wernstrom 5 15 10 40 45, Hermes 15 25 20 30 40, Hattie 10 20 5 45 30, Hypnotoad 0 10 35 25 45, Dwight 15 5 25 30 40, Zoidberg 40 15 30 35 25, LaBarbara 20 25 40 10 15, RobotSanta 50 15 40 20 35, Clamps 40 15 30 35 20, Amy 35 40 30 15 35, RobotDevil 35 20 20 45 15]
+
+ ----------------------------------------------
+Feb 07, 2018 5:31:58 AM commandline.GameMaster sortByCategory
+INFO: 
+The category selected and corresponding values when a user or computer selects a category: 
+
+_________________________________________
+** For GLaDOS's turn, they chose the category: Combat for 40 points.
+ ----------------------------------------------
+Feb 07, 2018 5:31:58 AM commandline.TopTrumpsCLIApplication main
+INFO: 
+The contents of the current cards in play (the cards from the top of the user’s deck and the computer’s deck(s)): 
+=================================
+| Nibbler   			| 
+| 1. Combat: 		40	|
+| 2. Lewdness: 		5	|
+| 3. Agility: 		35	|
+| 4. Lunacy: 		25	|
+| 5. IQ: 		40	|
+=================================
+=================================
+| Randy   			| 
+| 1. Combat: 		15	|
+| 2. Lewdness: 		30	|
+| 3. Agility: 		20	|
+| 4. Lunacy: 		25	|
+| 5. IQ: 		40	|
+=================================
+=================================
+| Hedonismbot   			| 
+| 1. Combat: 		5	|
+| 2. Lewdness: 		45	|
+| 3. Agility: 		10	|
+| 4. Lunacy: 		25	|
+| 5. IQ: 		20	|
+=================================
+
+ ----------------------------------------------
+Feb 07, 2018 5:31:58 AM commandline.GameMaster rewardWinner
+INFO: 
+The contents of the communal pile when cards are added or removed from it: 
+[Nibbler 40 5 35 25 40, Randy 15 30 20 25 40, Hedonismbot 5 45 10 25 20]
+ ----------------------------------------------
+Feb 07, 2018 5:31:58 AM commandline.TopTrumpsCLIApplication main
+INFO: 
+The contents of each deck after a round: 
+GLaDOS's hand is: [Sal 30 45 20 15 20, Roberto 40 20 35 45 15, Ndnd 35 15 25 25 25, Smitty 20 35 40 15 10, Calculon 15 40 20 35 10, Morbo 30 20 15 45 10, Pazuzu 40 10 50 20 15, Petunia 20 40 15 35 15, Nixon 5 30 10 45 25, Zap 25 50 15 30 5, Professor 5 35 10 50 45, Fry 20 25 30 40 10, Leela 45 25 40 20 20, Bender 40 45 20 30 15, Cubert 15 5 20 35 45, Nibbler 40 5 35 25 40, Randy 15 30 20 25 40, Hedonismbot 5 45 10 25 20]
+Cortana's hand is: [TinnyTim 5 0 10 15 30, Crushinator 30 45 5 35 25, Mom 10 35 20 25 45, Wernstrom 5 15 10 40 45, Hermes 15 25 20 30 40, Hattie 10 20 5 45 30, Hypnotoad 0 10 35 25 45, Dwight 15 5 25 30 40, Zoidberg 40 15 30 35 25, LaBarbara 20 25 40 10 15, RobotSanta 50 15 40 20 35, Clamps 40 15 30 35 20, Amy 35 40 30 15 35, RobotDevil 35 20 20 45 15]
+Marvin's hand is: [Preacherbot 5 40 10 25 15, URL 35 30 35 10 15, Bubblegum 35 25 45 15 40, Donbot 20 10 15 35 20, Lrrr 40 25 15 30 15, Scruffy 25 10 40 25 20, Kif 10 15 25 20 40, Elzar 35 25 15 20 25]
+
+ ----------------------------------------------
+Feb 07, 2018 5:31:58 AM commandline.GameMaster sortByCategory
+INFO: 
+The category selected and corresponding values when a user or computer selects a category: 
+
+_________________________________________
+** For GLaDOS's turn, they chose the category: Lewdness for 45 points."
+ ----------------------------------------------
+Feb 07, 2018 5:31:58 AM commandline.TopTrumpsCLIApplication main
+INFO: 
+The contents of the current cards in play (the cards from the top of the user’s deck and the computer’s deck(s)): 
+=================================
+| Sal   			| 
+| 1. Combat: 		30	|
+| 2. Lewdness: 		45	|
+| 3. Agility: 		20	|
+| 4. Lunacy: 		15	|
+| 5. IQ: 		20	|
+=================================
+=================================
+| Preacherbot   			| 
+| 1. Combat: 		5	|
+| 2. Lewdness: 		40	|
+| 3. Agility: 		10	|
+| 4. Lunacy: 		25	|
+| 5. IQ: 		15	|
+=================================
+=================================
+| TinnyTim   			| 
+| 1. Combat: 		5	|
+| 2. Lewdness: 		0	|
+| 3. Agility: 		10	|
+| 4. Lunacy: 		15	|
+| 5. IQ: 		30	|
+=================================
+
+ ----------------------------------------------
+Feb 07, 2018 5:31:58 AM commandline.GameMaster rewardWinner
+INFO: 
+The contents of the communal pile when cards are added or removed from it: 
+[Sal 30 45 20 15 20, Preacherbot 5 40 10 25 15, TinnyTim 5 0 10 15 30]
+ ----------------------------------------------
+Feb 07, 2018 5:31:58 AM commandline.TopTrumpsCLIApplication main
+INFO: 
+The contents of each deck after a round: 
+GLaDOS's hand is: [Roberto 40 20 35 45 15, Ndnd 35 15 25 25 25, Smitty 20 35 40 15 10, Calculon 15 40 20 35 10, Morbo 30 20 15 45 10, Pazuzu 40 10 50 20 15, Petunia 20 40 15 35 15, Nixon 5 30 10 45 25, Zap 25 50 15 30 5, Professor 5 35 10 50 45, Fry 20 25 30 40 10, Leela 45 25 40 20 20, Bender 40 45 20 30 15, Cubert 15 5 20 35 45, Nibbler 40 5 35 25 40, Randy 15 30 20 25 40, Hedonismbot 5 45 10 25 20, Sal 30 45 20 15 20, Preacherbot 5 40 10 25 15, TinnyTim 5 0 10 15 30]
+Marvin's hand is: [URL 35 30 35 10 15, Bubblegum 35 25 45 15 40, Donbot 20 10 15 35 20, Lrrr 40 25 15 30 15, Scruffy 25 10 40 25 20, Kif 10 15 25 20 40, Elzar 35 25 15 20 25]
+Cortana's hand is: [Crushinator 30 45 5 35 25, Mom 10 35 20 25 45, Wernstrom 5 15 10 40 45, Hermes 15 25 20 30 40, Hattie 10 20 5 45 30, Hypnotoad 0 10 35 25 45, Dwight 15 5 25 30 40, Zoidberg 40 15 30 35 25, LaBarbara 20 25 40 10 15, RobotSanta 50 15 40 20 35, Clamps 40 15 30 35 20, Amy 35 40 30 15 35, RobotDevil 35 20 20 45 15]
+
+ ----------------------------------------------
+Feb 07, 2018 5:31:58 AM commandline.GameMaster sortByCategory
+INFO: 
+The category selected and corresponding values when a user or computer selects a category: 
+
+_________________________________________
+** For GLaDOS's turn, they chose the category: Lunacy for 45 points.
+ ----------------------------------------------
+Feb 07, 2018 5:31:58 AM commandline.TopTrumpsCLIApplication main
+INFO: 
+The contents of the current cards in play (the cards from the top of the user’s deck and the computer’s deck(s)): 
+=================================
+| Roberto   			| 
+| 1. Combat: 		40	|
+| 2. Lewdness: 		20	|
+| 3. Agility: 		35	|
+| 4. Lunacy: 		45	|
+| 5. IQ: 		15	|
+=================================
+=================================
+| Crushinator   			| 
+| 1. Combat: 		30	|
+| 2. Lewdness: 		45	|
+| 3. Agility: 		5	|
+| 4. Lunacy: 		35	|
+| 5. IQ: 		25	|
+=================================
+=================================
+| URL   			| 
+| 1. Combat: 		35	|
+| 2. Lewdness: 		30	|
+| 3. Agility: 		35	|
+| 4. Lunacy: 		10	|
+| 5. IQ: 		15	|
+=================================
+
+ ----------------------------------------------
+Feb 07, 2018 5:31:58 AM commandline.GameMaster rewardWinner
+INFO: 
+The contents of the communal pile when cards are added or removed from it: 
+[Roberto 40 20 35 45 15, Crushinator 30 45 5 35 25, URL 35 30 35 10 15]
+ ----------------------------------------------
+Feb 07, 2018 5:31:58 AM commandline.TopTrumpsCLIApplication main
+INFO: 
+The contents of each deck after a round: 
+GLaDOS's hand is: [Ndnd 35 15 25 25 25, Smitty 20 35 40 15 10, Calculon 15 40 20 35 10, Morbo 30 20 15 45 10, Pazuzu 40 10 50 20 15, Petunia 20 40 15 35 15, Nixon 5 30 10 45 25, Zap 25 50 15 30 5, Professor 5 35 10 50 45, Fry 20 25 30 40 10, Leela 45 25 40 20 20, Bender 40 45 20 30 15, Cubert 15 5 20 35 45, Nibbler 40 5 35 25 40, Randy 15 30 20 25 40, Hedonismbot 5 45 10 25 20, Sal 30 45 20 15 20, Preacherbot 5 40 10 25 15, TinnyTim 5 0 10 15 30, Roberto 40 20 35 45 15, Crushinator 30 45 5 35 25, URL 35 30 35 10 15]
+Cortana's hand is: [Mom 10 35 20 25 45, Wernstrom 5 15 10 40 45, Hermes 15 25 20 30 40, Hattie 10 20 5 45 30, Hypnotoad 0 10 35 25 45, Dwight 15 5 25 30 40, Zoidberg 40 15 30 35 25, LaBarbara 20 25 40 10 15, RobotSanta 50 15 40 20 35, Clamps 40 15 30 35 20, Amy 35 40 30 15 35, RobotDevil 35 20 20 45 15]
+Marvin's hand is: [Bubblegum 35 25 45 15 40, Donbot 20 10 15 35 20, Lrrr 40 25 15 30 15, Scruffy 25 10 40 25 20, Kif 10 15 25 20 40, Elzar 35 25 15 20 25]
+
+ ----------------------------------------------
+Feb 07, 2018 5:31:58 AM commandline.GameMaster sortByCategory
+INFO: 
+The category selected and corresponding values when a user or computer selects a category: 
+
+_________________________________________
+** For GLaDOS's turn, they chose the category: Combat for 35 points.
+ ----------------------------------------------
+Feb 07, 2018 5:31:58 AM commandline.TopTrumpsCLIApplication main
+INFO: 
+The contents of the current cards in play (the cards from the top of the user’s deck and the computer’s deck(s)): 
+=================================
+| Ndnd   			| 
+| 1. Combat: 		35	|
+| 2. Lewdness: 		15	|
+| 3. Agility: 		25	|
+| 4. Lunacy: 		25	|
+| 5. IQ: 		25	|
+=================================
+=================================
+| Bubblegum   			| 
+| 1. Combat: 		35	|
+| 2. Lewdness: 		25	|
+| 3. Agility: 		45	|
+| 4. Lunacy: 		15	|
 | 5. IQ: 		40	|
 =================================
 =================================
@@ -434,483 +1309,22 @@ The contents of the current cards in play (the cards from the top of the user’s 
 =================================
 
  ----------------------------------------------
-Jan 31, 2018 11:42:44 AM commandline.GameMaster rewardWinner
-INFO: 
-The contents of the communal pile when cards are added or removed from it: 
-[Leela 45 25 40 20 20, Hermes 15 25 20 30 40, Mom 10 35 20 25 45]
- ----------------------------------------------
-Jan 31, 2018 11:42:44 AM commandline.TopTrumpsCLIApplication main
+Feb 07, 2018 5:31:58 AM commandline.TopTrumpsCLIApplication main
 INFO: 
 The contents of each deck after a round: 
-HAL 9000's hand is: [Professor 5 35 10 50 45, Petunia 20 40 15 35 15, Nibbler 40 5 35 25 40, Crushinator 30 45 5 35 25, RobotDevil 35 20 20 45 15, Zap 25 50 15 30 5, Bubblegum 35 25 45 15 40, Roberto 40 20 35 45 15, Zoidberg 40 15 30 35 25, RobotSanta 50 15 40 20 35, Smitty 20 35 40 15 10, Hypnotoad 0 10 35 25 45, Dwight 15 5 25 30 40, Ndnd 35 15 25 25 25, Clamps 40 15 30 35 20, Scruffy 25 10 40 25 20, Leela 45 25 40 20 20, Hermes 15 25 20 30 40, Mom 10 35 20 25 45]
-Cortana's hand is: [Donbot 20 10 15 35 20, Amy 35 40 30 15 35, Preacherbot 5 40 10 25 15, Pazuzu 40 10 50 20 15, Cubert 15 5 20 35 45, Kif 10 15 25 20 40, Nixon 5 30 10 45 25, Fry 20 25 30 40 10, Randy 15 30 20 25 40, Elzar 35 25 15 20 25, Bender 40 45 20 30 15, Hedonismbot 5 45 10 25 20, Hattie 10 20 5 45 30]
-kyrie's hand is: [LaBarbara 20 25 40 10 15, URL 35 30 35 10 15, Lrrr 40 25 15 30 15, Wernstrom 5 15 10 40 45, TinnyTim 5 0 10 15 30, Sal 30 45 20 15 20, Calculon 15 40 20 35 10, Morbo 30 20 15 45 10]
+GLaDOS's hand is: [Smitty 20 35 40 15 10, Calculon 15 40 20 35 10, Morbo 30 20 15 45 10, Pazuzu 40 10 50 20 15, Petunia 20 40 15 35 15, Nixon 5 30 10 45 25, Zap 25 50 15 30 5, Professor 5 35 10 50 45, Fry 20 25 30 40 10, Leela 45 25 40 20 20, Bender 40 45 20 30 15, Cubert 15 5 20 35 45, Nibbler 40 5 35 25 40, Randy 15 30 20 25 40, Hedonismbot 5 45 10 25 20, Sal 30 45 20 15 20, Preacherbot 5 40 10 25 15, TinnyTim 5 0 10 15 30, Roberto 40 20 35 45 15, Crushinator 30 45 5 35 25, URL 35 30 35 10 15]
+Marvin's hand is: [Donbot 20 10 15 35 20, Lrrr 40 25 15 30 15, Scruffy 25 10 40 25 20, Kif 10 15 25 20 40, Elzar 35 25 15 20 25]
+Cortana's hand is: [Wernstrom 5 15 10 40 45, Hermes 15 25 20 30 40, Hattie 10 20 5 45 30, Hypnotoad 0 10 35 25 45, Dwight 15 5 25 30 40, Zoidberg 40 15 30 35 25, LaBarbara 20 25 40 10 15, RobotSanta 50 15 40 20 35, Clamps 40 15 30 35 20, Amy 35 40 30 15 35, RobotDevil 35 20 20 45 15]
 
  ----------------------------------------------
-Jan 31, 2018 11:42:45 AM commandline.GameMaster sortByCategory
+Feb 07, 2018 5:31:58 AM commandline.GameMaster sortByCategory
 INFO: 
 The category selected and corresponding values when a user or computer selects a category: 
 
 _________________________________________
-** For HAL 9000's turn, they chose the category: Lunacy for 50 points.
+** For GLaDOS's turn, they chose the category: Agility for 40 points.
  ----------------------------------------------
-Jan 31, 2018 11:42:45 AM commandline.TopTrumpsCLIApplication main
-INFO: 
-The contents of the current cards in play (the cards from the top of the user’s deck and the computer’s deck(s)): 
-=================================
-| Professor   			| 
-| 1. Combat: 		5	|
-| 2. Lewdness: 		35	|
-| 3. Agility: 		10	|
-| 4. Lunacy: 		50	|
-| 5. IQ: 		45	|
-=================================
-=================================
-| Donbot   			| 
-| 1. Combat: 		20	|
-| 2. Lewdness: 		10	|
-| 3. Agility: 		15	|
-| 4. Lunacy: 		35	|
-| 5. IQ: 		20	|
-=================================
-=================================
-| LaBarbara   			| 
-| 1. Combat: 		20	|
-| 2. Lewdness: 		25	|
-| 3. Agility: 		40	|
-| 4. Lunacy: 		10	|
-| 5. IQ: 		15	|
-=================================
-
- ----------------------------------------------
-Jan 31, 2018 11:42:45 AM commandline.GameMaster rewardWinner
-INFO: 
-The contents of the communal pile when cards are added or removed from it: 
-[Professor 5 35 10 50 45, Donbot 20 10 15 35 20, LaBarbara 20 25 40 10 15]
- ----------------------------------------------
-Jan 31, 2018 11:42:45 AM commandline.TopTrumpsCLIApplication main
-INFO: 
-The contents of each deck after a round: 
-HAL 9000's hand is: [Petunia 20 40 15 35 15, Nibbler 40 5 35 25 40, Crushinator 30 45 5 35 25, RobotDevil 35 20 20 45 15, Zap 25 50 15 30 5, Bubblegum 35 25 45 15 40, Roberto 40 20 35 45 15, Zoidberg 40 15 30 35 25, RobotSanta 50 15 40 20 35, Smitty 20 35 40 15 10, Hypnotoad 0 10 35 25 45, Dwight 15 5 25 30 40, Ndnd 35 15 25 25 25, Clamps 40 15 30 35 20, Scruffy 25 10 40 25 20, Leela 45 25 40 20 20, Hermes 15 25 20 30 40, Mom 10 35 20 25 45, Professor 5 35 10 50 45, Donbot 20 10 15 35 20, LaBarbara 20 25 40 10 15]
-Cortana's hand is: [Amy 35 40 30 15 35, Preacherbot 5 40 10 25 15, Pazuzu 40 10 50 20 15, Cubert 15 5 20 35 45, Kif 10 15 25 20 40, Nixon 5 30 10 45 25, Fry 20 25 30 40 10, Randy 15 30 20 25 40, Elzar 35 25 15 20 25, Bender 40 45 20 30 15, Hedonismbot 5 45 10 25 20, Hattie 10 20 5 45 30]
-kyrie's hand is: [URL 35 30 35 10 15, Lrrr 40 25 15 30 15, Wernstrom 5 15 10 40 45, TinnyTim 5 0 10 15 30, Sal 30 45 20 15 20, Calculon 15 40 20 35 10, Morbo 30 20 15 45 10]
-
- ----------------------------------------------
-Jan 31, 2018 11:42:46 AM commandline.GameMaster sortByCategory
-INFO: 
-The category selected and corresponding values when a user or computer selects a category: 
-
-_________________________________________
-** For HAL 9000's turn, they chose the category: Lewdness for 40 points."
- ----------------------------------------------
-Jan 31, 2018 11:42:46 AM commandline.TopTrumpsCLIApplication main
-INFO: 
-The contents of the current cards in play (the cards from the top of the user’s deck and the computer’s deck(s)): 
-=================================
-| Petunia   			| 
-| 1. Combat: 		20	|
-| 2. Lewdness: 		40	|
-| 3. Agility: 		15	|
-| 4. Lunacy: 		35	|
-| 5. IQ: 		15	|
-=================================
-=================================
-| Amy   			| 
-| 1. Combat: 		35	|
-| 2. Lewdness: 		40	|
-| 3. Agility: 		30	|
-| 4. Lunacy: 		15	|
-| 5. IQ: 		35	|
-=================================
-=================================
-| URL   			| 
-| 1. Combat: 		35	|
-| 2. Lewdness: 		30	|
-| 3. Agility: 		35	|
-| 4. Lunacy: 		10	|
-| 5. IQ: 		15	|
-=================================
-
- ----------------------------------------------
-Jan 31, 2018 11:42:46 AM commandline.TopTrumpsCLIApplication main
-INFO: 
-The contents of each deck after a round: 
-HAL 9000's hand is: [Nibbler 40 5 35 25 40, Crushinator 30 45 5 35 25, RobotDevil 35 20 20 45 15, Zap 25 50 15 30 5, Bubblegum 35 25 45 15 40, Roberto 40 20 35 45 15, Zoidberg 40 15 30 35 25, RobotSanta 50 15 40 20 35, Smitty 20 35 40 15 10, Hypnotoad 0 10 35 25 45, Dwight 15 5 25 30 40, Ndnd 35 15 25 25 25, Clamps 40 15 30 35 20, Scruffy 25 10 40 25 20, Leela 45 25 40 20 20, Hermes 15 25 20 30 40, Mom 10 35 20 25 45, Professor 5 35 10 50 45, Donbot 20 10 15 35 20, LaBarbara 20 25 40 10 15]
-Cortana's hand is: [Preacherbot 5 40 10 25 15, Pazuzu 40 10 50 20 15, Cubert 15 5 20 35 45, Kif 10 15 25 20 40, Nixon 5 30 10 45 25, Fry 20 25 30 40 10, Randy 15 30 20 25 40, Elzar 35 25 15 20 25, Bender 40 45 20 30 15, Hedonismbot 5 45 10 25 20, Hattie 10 20 5 45 30]
-kyrie's hand is: [Lrrr 40 25 15 30 15, Wernstrom 5 15 10 40 45, TinnyTim 5 0 10 15 30, Sal 30 45 20 15 20, Calculon 15 40 20 35 10, Morbo 30 20 15 45 10]
-
- ----------------------------------------------
-Jan 31, 2018 11:42:46 AM commandline.GameMaster sortByCategory
-INFO: 
-The category selected and corresponding values when a user or computer selects a category: 
-
-_________________________________________
-** For HAL 9000's turn, they chose the category: Combat for 40 points.
- ----------------------------------------------
-Jan 31, 2018 11:42:46 AM commandline.TopTrumpsCLIApplication main
-INFO: 
-The contents of the current cards in play (the cards from the top of the user’s deck and the computer’s deck(s)): 
-=================================
-| Nibbler   			| 
-| 1. Combat: 		40	|
-| 2. Lewdness: 		5	|
-| 3. Agility: 		35	|
-| 4. Lunacy: 		25	|
-| 5. IQ: 		40	|
-=================================
-=================================
-| Lrrr   			| 
-| 1. Combat: 		40	|
-| 2. Lewdness: 		25	|
-| 3. Agility: 		15	|
-| 4. Lunacy: 		30	|
-| 5. IQ: 		15	|
-=================================
-=================================
-| Preacherbot   			| 
-| 1. Combat: 		5	|
-| 2. Lewdness: 		40	|
-| 3. Agility: 		10	|
-| 4. Lunacy: 		25	|
-| 5. IQ: 		15	|
-=================================
-
- ----------------------------------------------
-Jan 31, 2018 11:42:46 AM commandline.TopTrumpsCLIApplication main
-INFO: 
-The contents of each deck after a round: 
-HAL 9000's hand is: [Crushinator 30 45 5 35 25, RobotDevil 35 20 20 45 15, Zap 25 50 15 30 5, Bubblegum 35 25 45 15 40, Roberto 40 20 35 45 15, Zoidberg 40 15 30 35 25, RobotSanta 50 15 40 20 35, Smitty 20 35 40 15 10, Hypnotoad 0 10 35 25 45, Dwight 15 5 25 30 40, Ndnd 35 15 25 25 25, Clamps 40 15 30 35 20, Scruffy 25 10 40 25 20, Leela 45 25 40 20 20, Hermes 15 25 20 30 40, Mom 10 35 20 25 45, Professor 5 35 10 50 45, Donbot 20 10 15 35 20, LaBarbara 20 25 40 10 15]
-kyrie's hand is: [Wernstrom 5 15 10 40 45, TinnyTim 5 0 10 15 30, Sal 30 45 20 15 20, Calculon 15 40 20 35 10, Morbo 30 20 15 45 10]
-Cortana's hand is: [Pazuzu 40 10 50 20 15, Cubert 15 5 20 35 45, Kif 10 15 25 20 40, Nixon 5 30 10 45 25, Fry 20 25 30 40 10, Randy 15 30 20 25 40, Elzar 35 25 15 20 25, Bender 40 45 20 30 15, Hedonismbot 5 45 10 25 20, Hattie 10 20 5 45 30]
-
- ----------------------------------------------
-Jan 31, 2018 11:42:47 AM commandline.GameMaster sortByCategory
-INFO: 
-The category selected and corresponding values when a user or computer selects a category: 
-
-_________________________________________
-** For HAL 9000's turn, they chose the category: Lewdness for 45 points."
- ----------------------------------------------
-Jan 31, 2018 11:42:47 AM commandline.TopTrumpsCLIApplication main
-INFO: 
-The contents of the current cards in play (the cards from the top of the user’s deck and the computer’s deck(s)): 
-=================================
-| Crushinator   			| 
-| 1. Combat: 		30	|
-| 2. Lewdness: 		45	|
-| 3. Agility: 		5	|
-| 4. Lunacy: 		35	|
-| 5. IQ: 		25	|
-=================================
-=================================
-| Wernstrom   			| 
-| 1. Combat: 		5	|
-| 2. Lewdness: 		15	|
-| 3. Agility: 		10	|
-| 4. Lunacy: 		40	|
-| 5. IQ: 		45	|
-=================================
-=================================
-| Pazuzu   			| 
-| 1. Combat: 		40	|
-| 2. Lewdness: 		10	|
-| 3. Agility: 		50	|
-| 4. Lunacy: 		20	|
-| 5. IQ: 		15	|
-=================================
-
- ----------------------------------------------
-Jan 31, 2018 11:42:47 AM commandline.GameMaster rewardWinner
-INFO: 
-The contents of the communal pile when cards are added or removed from it: 
-[Crushinator 30 45 5 35 25, Wernstrom 5 15 10 40 45, Pazuzu 40 10 50 20 15, Nibbler 40 5 35 25 40, Lrrr 40 25 15 30 15, Preacherbot 5 40 10 25 15, Petunia 20 40 15 35 15, Amy 35 40 30 15 35, URL 35 30 35 10 15]
- ----------------------------------------------
-Jan 31, 2018 11:42:47 AM commandline.TopTrumpsCLIApplication main
-INFO: 
-The contents of each deck after a round: 
-HAL 9000's hand is: [RobotDevil 35 20 20 45 15, Zap 25 50 15 30 5, Bubblegum 35 25 45 15 40, Roberto 40 20 35 45 15, Zoidberg 40 15 30 35 25, RobotSanta 50 15 40 20 35, Smitty 20 35 40 15 10, Hypnotoad 0 10 35 25 45, Dwight 15 5 25 30 40, Ndnd 35 15 25 25 25, Clamps 40 15 30 35 20, Scruffy 25 10 40 25 20, Leela 45 25 40 20 20, Hermes 15 25 20 30 40, Mom 10 35 20 25 45, Professor 5 35 10 50 45, Donbot 20 10 15 35 20, LaBarbara 20 25 40 10 15, Crushinator 30 45 5 35 25, Wernstrom 5 15 10 40 45, Pazuzu 40 10 50 20 15, Nibbler 40 5 35 25 40, Lrrr 40 25 15 30 15, Preacherbot 5 40 10 25 15, Petunia 20 40 15 35 15, Amy 35 40 30 15 35, URL 35 30 35 10 15]
-kyrie's hand is: [TinnyTim 5 0 10 15 30, Sal 30 45 20 15 20, Calculon 15 40 20 35 10, Morbo 30 20 15 45 10]
-Cortana's hand is: [Cubert 15 5 20 35 45, Kif 10 15 25 20 40, Nixon 5 30 10 45 25, Fry 20 25 30 40 10, Randy 15 30 20 25 40, Elzar 35 25 15 20 25, Bender 40 45 20 30 15, Hedonismbot 5 45 10 25 20, Hattie 10 20 5 45 30]
-
- ----------------------------------------------
-Jan 31, 2018 11:42:47 AM commandline.GameMaster sortByCategory
-INFO: 
-The category selected and corresponding values when a user or computer selects a category: 
-
-_________________________________________
-** For HAL 9000's turn, they chose the category: Lunacy for 45 points.
- ----------------------------------------------
-Jan 31, 2018 11:42:47 AM commandline.TopTrumpsCLIApplication main
-INFO: 
-The contents of the current cards in play (the cards from the top of the user’s deck and the computer’s deck(s)): 
-=================================
-| RobotDevil   			| 
-| 1. Combat: 		35	|
-| 2. Lewdness: 		20	|
-| 3. Agility: 		20	|
-| 4. Lunacy: 		45	|
-| 5. IQ: 		15	|
-=================================
-=================================
-| Cubert   			| 
-| 1. Combat: 		15	|
-| 2. Lewdness: 		5	|
-| 3. Agility: 		20	|
-| 4. Lunacy: 		35	|
-| 5. IQ: 		45	|
-=================================
-=================================
-| TinnyTim   			| 
-| 1. Combat: 		5	|
-| 2. Lewdness: 		0	|
-| 3. Agility: 		10	|
-| 4. Lunacy: 		15	|
-| 5. IQ: 		30	|
-=================================
-
- ----------------------------------------------
-Jan 31, 2018 11:42:47 AM commandline.GameMaster rewardWinner
-INFO: 
-The contents of the communal pile when cards are added or removed from it: 
-[RobotDevil 35 20 20 45 15, Cubert 15 5 20 35 45, TinnyTim 5 0 10 15 30]
- ----------------------------------------------
-Jan 31, 2018 11:42:47 AM commandline.TopTrumpsCLIApplication main
-INFO: 
-The contents of each deck after a round: 
-HAL 9000's hand is: [Zap 25 50 15 30 5, Bubblegum 35 25 45 15 40, Roberto 40 20 35 45 15, Zoidberg 40 15 30 35 25, RobotSanta 50 15 40 20 35, Smitty 20 35 40 15 10, Hypnotoad 0 10 35 25 45, Dwight 15 5 25 30 40, Ndnd 35 15 25 25 25, Clamps 40 15 30 35 20, Scruffy 25 10 40 25 20, Leela 45 25 40 20 20, Hermes 15 25 20 30 40, Mom 10 35 20 25 45, Professor 5 35 10 50 45, Donbot 20 10 15 35 20, LaBarbara 20 25 40 10 15, Crushinator 30 45 5 35 25, Wernstrom 5 15 10 40 45, Pazuzu 40 10 50 20 15, Nibbler 40 5 35 25 40, Lrrr 40 25 15 30 15, Preacherbot 5 40 10 25 15, Petunia 20 40 15 35 15, Amy 35 40 30 15 35, URL 35 30 35 10 15, RobotDevil 35 20 20 45 15, Cubert 15 5 20 35 45, TinnyTim 5 0 10 15 30]
-Cortana's hand is: [Kif 10 15 25 20 40, Nixon 5 30 10 45 25, Fry 20 25 30 40 10, Randy 15 30 20 25 40, Elzar 35 25 15 20 25, Bender 40 45 20 30 15, Hedonismbot 5 45 10 25 20, Hattie 10 20 5 45 30]
-kyrie's hand is: [Sal 30 45 20 15 20, Calculon 15 40 20 35 10, Morbo 30 20 15 45 10]
-
- ----------------------------------------------
-Jan 31, 2018 11:42:48 AM commandline.GameMaster sortByCategory
-INFO: 
-The category selected and corresponding values when a user or computer selects a category: 
-
-_________________________________________
-** For HAL 9000's turn, they chose the category: Lewdness for 50 points."
- ----------------------------------------------
-Jan 31, 2018 11:42:48 AM commandline.TopTrumpsCLIApplication main
-INFO: 
-The contents of the current cards in play (the cards from the top of the user’s deck and the computer’s deck(s)): 
-=================================
-| Zap   			| 
-| 1. Combat: 		25	|
-| 2. Lewdness: 		50	|
-| 3. Agility: 		15	|
-| 4. Lunacy: 		30	|
-| 5. IQ: 		5	|
-=================================
-=================================
-| Sal   			| 
-| 1. Combat: 		30	|
-| 2. Lewdness: 		45	|
-| 3. Agility: 		20	|
-| 4. Lunacy: 		15	|
-| 5. IQ: 		20	|
-=================================
-=================================
-| Kif   			| 
-| 1. Combat: 		10	|
-| 2. Lewdness: 		15	|
-| 3. Agility: 		25	|
-| 4. Lunacy: 		20	|
-| 5. IQ: 		40	|
-=================================
-
- ----------------------------------------------
-Jan 31, 2018 11:42:48 AM commandline.GameMaster rewardWinner
-INFO: 
-The contents of the communal pile when cards are added or removed from it: 
-[Zap 25 50 15 30 5, Sal 30 45 20 15 20, Kif 10 15 25 20 40]
- ----------------------------------------------
-Jan 31, 2018 11:42:48 AM commandline.TopTrumpsCLIApplication main
-INFO: 
-The contents of each deck after a round: 
-HAL 9000's hand is: [Bubblegum 35 25 45 15 40, Roberto 40 20 35 45 15, Zoidberg 40 15 30 35 25, RobotSanta 50 15 40 20 35, Smitty 20 35 40 15 10, Hypnotoad 0 10 35 25 45, Dwight 15 5 25 30 40, Ndnd 35 15 25 25 25, Clamps 40 15 30 35 20, Scruffy 25 10 40 25 20, Leela 45 25 40 20 20, Hermes 15 25 20 30 40, Mom 10 35 20 25 45, Professor 5 35 10 50 45, Donbot 20 10 15 35 20, LaBarbara 20 25 40 10 15, Crushinator 30 45 5 35 25, Wernstrom 5 15 10 40 45, Pazuzu 40 10 50 20 15, Nibbler 40 5 35 25 40, Lrrr 40 25 15 30 15, Preacherbot 5 40 10 25 15, Petunia 20 40 15 35 15, Amy 35 40 30 15 35, URL 35 30 35 10 15, RobotDevil 35 20 20 45 15, Cubert 15 5 20 35 45, TinnyTim 5 0 10 15 30, Zap 25 50 15 30 5, Sal 30 45 20 15 20, Kif 10 15 25 20 40]
-kyrie's hand is: [Calculon 15 40 20 35 10, Morbo 30 20 15 45 10]
-Cortana's hand is: [Nixon 5 30 10 45 25, Fry 20 25 30 40 10, Randy 15 30 20 25 40, Elzar 35 25 15 20 25, Bender 40 45 20 30 15, Hedonismbot 5 45 10 25 20, Hattie 10 20 5 45 30]
-
- ----------------------------------------------
-Jan 31, 2018 11:42:48 AM commandline.GameMaster sortByCategory
-INFO: 
-The category selected and corresponding values when a user or computer selects a category: 
-
-_________________________________________
-** For HAL 9000's turn, they chose the category: Agility for 45 points.
- ----------------------------------------------
-Jan 31, 2018 11:42:48 AM commandline.TopTrumpsCLIApplication main
-INFO: 
-The contents of the current cards in play (the cards from the top of the user’s deck and the computer’s deck(s)): 
-=================================
-| Bubblegum   			| 
-| 1. Combat: 		35	|
-| 2. Lewdness: 		25	|
-| 3. Agility: 		45	|
-| 4. Lunacy: 		15	|
-| 5. IQ: 		40	|
-=================================
-=================================
-| Calculon   			| 
-| 1. Combat: 		15	|
-| 2. Lewdness: 		40	|
-| 3. Agility: 		20	|
-| 4. Lunacy: 		35	|
-| 5. IQ: 		10	|
-=================================
-=================================
-| Nixon   			| 
-| 1. Combat: 		5	|
-| 2. Lewdness: 		30	|
-| 3. Agility: 		10	|
-| 4. Lunacy: 		45	|
-| 5. IQ: 		25	|
-=================================
-
- ----------------------------------------------
-Jan 31, 2018 11:42:48 AM commandline.GameMaster rewardWinner
-INFO: 
-The contents of the communal pile when cards are added or removed from it: 
-[Bubblegum 35 25 45 15 40, Calculon 15 40 20 35 10, Nixon 5 30 10 45 25]
- ----------------------------------------------
-Jan 31, 2018 11:42:48 AM commandline.TopTrumpsCLIApplication main
-INFO: 
-The contents of each deck after a round: 
-HAL 9000's hand is: [Roberto 40 20 35 45 15, Zoidberg 40 15 30 35 25, RobotSanta 50 15 40 20 35, Smitty 20 35 40 15 10, Hypnotoad 0 10 35 25 45, Dwight 15 5 25 30 40, Ndnd 35 15 25 25 25, Clamps 40 15 30 35 20, Scruffy 25 10 40 25 20, Leela 45 25 40 20 20, Hermes 15 25 20 30 40, Mom 10 35 20 25 45, Professor 5 35 10 50 45, Donbot 20 10 15 35 20, LaBarbara 20 25 40 10 15, Crushinator 30 45 5 35 25, Wernstrom 5 15 10 40 45, Pazuzu 40 10 50 20 15, Nibbler 40 5 35 25 40, Lrrr 40 25 15 30 15, Preacherbot 5 40 10 25 15, Petunia 20 40 15 35 15, Amy 35 40 30 15 35, URL 35 30 35 10 15, RobotDevil 35 20 20 45 15, Cubert 15 5 20 35 45, TinnyTim 5 0 10 15 30, Zap 25 50 15 30 5, Sal 30 45 20 15 20, Kif 10 15 25 20 40, Bubblegum 35 25 45 15 40, Calculon 15 40 20 35 10, Nixon 5 30 10 45 25]
-kyrie's hand is: [Morbo 30 20 15 45 10]
-Cortana's hand is: [Fry 20 25 30 40 10, Randy 15 30 20 25 40, Elzar 35 25 15 20 25, Bender 40 45 20 30 15, Hedonismbot 5 45 10 25 20, Hattie 10 20 5 45 30]
-
- ----------------------------------------------
-Jan 31, 2018 11:42:49 AM commandline.GameMaster sortByCategory
-INFO: 
-The category selected and corresponding values when a user or computer selects a category: 
-
-_________________________________________
-** For HAL 9000's turn, they chose the category: Lunacy for 45 points.
- ----------------------------------------------
-Jan 31, 2018 11:42:49 AM commandline.TopTrumpsCLIApplication main
-INFO: 
-The contents of the current cards in play (the cards from the top of the user’s deck and the computer’s deck(s)): 
-=================================
-| Roberto   			| 
-| 1. Combat: 		40	|
-| 2. Lewdness: 		20	|
-| 3. Agility: 		35	|
-| 4. Lunacy: 		45	|
-| 5. IQ: 		15	|
-=================================
-=================================
-| Morbo   			| 
-| 1. Combat: 		30	|
-| 2. Lewdness: 		20	|
-| 3. Agility: 		15	|
-| 4. Lunacy: 		45	|
-| 5. IQ: 		10	|
-=================================
-=================================
-| Fry   			| 
-| 1. Combat: 		20	|
-| 2. Lewdness: 		25	|
-| 3. Agility: 		30	|
-| 4. Lunacy: 		40	|
-| 5. IQ: 		10	|
-=================================
-
- ----------------------------------------------
-Jan 31, 2018 11:42:49 AM commandline.TopTrumpsCLIApplication main
-INFO: 
-The contents of each deck after a round: 
-HAL 9000's hand is: [Zoidberg 40 15 30 35 25, RobotSanta 50 15 40 20 35, Smitty 20 35 40 15 10, Hypnotoad 0 10 35 25 45, Dwight 15 5 25 30 40, Ndnd 35 15 25 25 25, Clamps 40 15 30 35 20, Scruffy 25 10 40 25 20, Leela 45 25 40 20 20, Hermes 15 25 20 30 40, Mom 10 35 20 25 45, Professor 5 35 10 50 45, Donbot 20 10 15 35 20, LaBarbara 20 25 40 10 15, Crushinator 30 45 5 35 25, Wernstrom 5 15 10 40 45, Pazuzu 40 10 50 20 15, Nibbler 40 5 35 25 40, Lrrr 40 25 15 30 15, Preacherbot 5 40 10 25 15, Petunia 20 40 15 35 15, Amy 35 40 30 15 35, URL 35 30 35 10 15, RobotDevil 35 20 20 45 15, Cubert 15 5 20 35 45, TinnyTim 5 0 10 15 30, Zap 25 50 15 30 5, Sal 30 45 20 15 20, Kif 10 15 25 20 40, Bubblegum 35 25 45 15 40, Calculon 15 40 20 35 10, Nixon 5 30 10 45 25]
-Cortana's hand is: [Randy 15 30 20 25 40, Elzar 35 25 15 20 25, Bender 40 45 20 30 15, Hedonismbot 5 45 10 25 20, Hattie 10 20 5 45 30]
-
- ----------------------------------------------
-Jan 31, 2018 11:42:49 AM commandline.GameMaster sortByCategory
-INFO: 
-The category selected and corresponding values when a user or computer selects a category: 
-
-_________________________________________
-** For HAL 9000's turn, they chose the category: Combat for 40 points.
- ----------------------------------------------
-Jan 31, 2018 11:42:49 AM commandline.TopTrumpsCLIApplication main
-INFO: 
-The contents of the current cards in play (the cards from the top of the user’s deck and the computer’s deck(s)): 
-=================================
-| Zoidberg   			| 
-| 1. Combat: 		40	|
-| 2. Lewdness: 		15	|
-| 3. Agility: 		30	|
-| 4. Lunacy: 		35	|
-| 5. IQ: 		25	|
-=================================
-=================================
-| Randy   			| 
-| 1. Combat: 		15	|
-| 2. Lewdness: 		30	|
-| 3. Agility: 		20	|
-| 4. Lunacy: 		25	|
-| 5. IQ: 		40	|
-=================================
-
- ----------------------------------------------
-Jan 31, 2018 11:42:49 AM commandline.GameMaster rewardWinner
-INFO: 
-The contents of the communal pile when cards are added or removed from it: 
-[Zoidberg 40 15 30 35 25, Randy 15 30 20 25 40, Roberto 40 20 35 45 15, Morbo 30 20 15 45 10, Fry 20 25 30 40 10]
- ----------------------------------------------
-Jan 31, 2018 11:42:49 AM commandline.TopTrumpsCLIApplication main
-INFO: 
-The contents of each deck after a round: 
-HAL 9000's hand is: [RobotSanta 50 15 40 20 35, Smitty 20 35 40 15 10, Hypnotoad 0 10 35 25 45, Dwight 15 5 25 30 40, Ndnd 35 15 25 25 25, Clamps 40 15 30 35 20, Scruffy 25 10 40 25 20, Leela 45 25 40 20 20, Hermes 15 25 20 30 40, Mom 10 35 20 25 45, Professor 5 35 10 50 45, Donbot 20 10 15 35 20, LaBarbara 20 25 40 10 15, Crushinator 30 45 5 35 25, Wernstrom 5 15 10 40 45, Pazuzu 40 10 50 20 15, Nibbler 40 5 35 25 40, Lrrr 40 25 15 30 15, Preacherbot 5 40 10 25 15, Petunia 20 40 15 35 15, Amy 35 40 30 15 35, URL 35 30 35 10 15, RobotDevil 35 20 20 45 15, Cubert 15 5 20 35 45, TinnyTim 5 0 10 15 30, Zap 25 50 15 30 5, Sal 30 45 20 15 20, Kif 10 15 25 20 40, Bubblegum 35 25 45 15 40, Calculon 15 40 20 35 10, Nixon 5 30 10 45 25, Zoidberg 40 15 30 35 25, Randy 15 30 20 25 40, Roberto 40 20 35 45 15, Morbo 30 20 15 45 10, Fry 20 25 30 40 10]
-Cortana's hand is: [Elzar 35 25 15 20 25, Bender 40 45 20 30 15, Hedonismbot 5 45 10 25 20, Hattie 10 20 5 45 30]
-
- ----------------------------------------------
-Jan 31, 2018 11:42:49 AM commandline.GameMaster sortByCategory
-INFO: 
-The category selected and corresponding values when a user or computer selects a category: 
-
-_________________________________________
-** For HAL 9000's turn, they chose the category: Combat for 50 points.
- ----------------------------------------------
-Jan 31, 2018 11:42:49 AM commandline.TopTrumpsCLIApplication main
-INFO: 
-The contents of the current cards in play (the cards from the top of the user’s deck and the computer’s deck(s)): 
-=================================
-| RobotSanta   			| 
-| 1. Combat: 		50	|
-| 2. Lewdness: 		15	|
-| 3. Agility: 		40	|
-| 4. Lunacy: 		20	|
-| 5. IQ: 		35	|
-=================================
-=================================
-| Elzar   			| 
-| 1. Combat: 		35	|
-| 2. Lewdness: 		25	|
-| 3. Agility: 		15	|
-| 4. Lunacy: 		20	|
-| 5. IQ: 		25	|
-=================================
-
- ----------------------------------------------
-Jan 31, 2018 11:42:49 AM commandline.GameMaster rewardWinner
-INFO: 
-The contents of the communal pile when cards are added or removed from it: 
-[RobotSanta 50 15 40 20 35, Elzar 35 25 15 20 25]
- ----------------------------------------------
-Jan 31, 2018 11:42:49 AM commandline.TopTrumpsCLIApplication main
-INFO: 
-The contents of each deck after a round: 
-HAL 9000's hand is: [Smitty 20 35 40 15 10, Hypnotoad 0 10 35 25 45, Dwight 15 5 25 30 40, Ndnd 35 15 25 25 25, Clamps 40 15 30 35 20, Scruffy 25 10 40 25 20, Leela 45 25 40 20 20, Hermes 15 25 20 30 40, Mom 10 35 20 25 45, Professor 5 35 10 50 45, Donbot 20 10 15 35 20, LaBarbara 20 25 40 10 15, Crushinator 30 45 5 35 25, Wernstrom 5 15 10 40 45, Pazuzu 40 10 50 20 15, Nibbler 40 5 35 25 40, Lrrr 40 25 15 30 15, Preacherbot 5 40 10 25 15, Petunia 20 40 15 35 15, Amy 35 40 30 15 35, URL 35 30 35 10 15, RobotDevil 35 20 20 45 15, Cubert 15 5 20 35 45, TinnyTim 5 0 10 15 30, Zap 25 50 15 30 5, Sal 30 45 20 15 20, Kif 10 15 25 20 40, Bubblegum 35 25 45 15 40, Calculon 15 40 20 35 10, Nixon 5 30 10 45 25, Zoidberg 40 15 30 35 25, Randy 15 30 20 25 40, Roberto 40 20 35 45 15, Morbo 30 20 15 45 10, Fry 20 25 30 40 10, RobotSanta 50 15 40 20 35, Elzar 35 25 15 20 25]
-Cortana's hand is: [Bender 40 45 20 30 15, Hedonismbot 5 45 10 25 20, Hattie 10 20 5 45 30]
-
- ----------------------------------------------
-Jan 31, 2018 11:42:49 AM commandline.GameMaster sortByCategory
-INFO: 
-The category selected and corresponding values when a user or computer selects a category: 
-
-_________________________________________
-** For HAL 9000's turn, they chose the category: Agility for 40 points.
- ----------------------------------------------
-Jan 31, 2018 11:42:49 AM commandline.TopTrumpsCLIApplication main
+Feb 07, 2018 5:31:58 AM commandline.TopTrumpsCLIApplication main
 INFO: 
 The contents of the current cards in play (the cards from the top of the user’s deck and the computer’s deck(s)): 
 =================================
@@ -922,84 +1336,102 @@ The contents of the current cards in play (the cards from the top of the user’s 
 | 5. IQ: 		10	|
 =================================
 =================================
-| Bender   			| 
-| 1. Combat: 		40	|
-| 2. Lewdness: 		45	|
+| Donbot   			| 
+| 1. Combat: 		20	|
+| 2. Lewdness: 		10	|
+| 3. Agility: 		15	|
+| 4. Lunacy: 		35	|
+| 5. IQ: 		20	|
+=================================
+=================================
+| Wernstrom   			| 
+| 1. Combat: 		5	|
+| 2. Lewdness: 		15	|
+| 3. Agility: 		10	|
+| 4. Lunacy: 		40	|
+| 5. IQ: 		45	|
+=================================
+
+ ----------------------------------------------
+Feb 07, 2018 5:31:58 AM commandline.GameMaster rewardWinner
+INFO: 
+The contents of the communal pile when cards are added or removed from it: 
+[Smitty 20 35 40 15 10, Donbot 20 10 15 35 20, Wernstrom 5 15 10 40 45, Ndnd 35 15 25 25 25, Bubblegum 35 25 45 15 40, Mom 10 35 20 25 45]
+ ----------------------------------------------
+Feb 07, 2018 5:31:58 AM commandline.TopTrumpsCLIApplication main
+INFO: 
+The contents of each deck after a round: 
+GLaDOS's hand is: [Calculon 15 40 20 35 10, Morbo 30 20 15 45 10, Pazuzu 40 10 50 20 15, Petunia 20 40 15 35 15, Nixon 5 30 10 45 25, Zap 25 50 15 30 5, Professor 5 35 10 50 45, Fry 20 25 30 40 10, Leela 45 25 40 20 20, Bender 40 45 20 30 15, Cubert 15 5 20 35 45, Nibbler 40 5 35 25 40, Randy 15 30 20 25 40, Hedonismbot 5 45 10 25 20, Sal 30 45 20 15 20, Preacherbot 5 40 10 25 15, TinnyTim 5 0 10 15 30, Roberto 40 20 35 45 15, Crushinator 30 45 5 35 25, URL 35 30 35 10 15, Smitty 20 35 40 15 10, Donbot 20 10 15 35 20, Wernstrom 5 15 10 40 45, Ndnd 35 15 25 25 25, Bubblegum 35 25 45 15 40, Mom 10 35 20 25 45]
+Marvin's hand is: [Lrrr 40 25 15 30 15, Scruffy 25 10 40 25 20, Kif 10 15 25 20 40, Elzar 35 25 15 20 25]
+Cortana's hand is: [Hermes 15 25 20 30 40, Hattie 10 20 5 45 30, Hypnotoad 0 10 35 25 45, Dwight 15 5 25 30 40, Zoidberg 40 15 30 35 25, LaBarbara 20 25 40 10 15, RobotSanta 50 15 40 20 35, Clamps 40 15 30 35 20, Amy 35 40 30 15 35, RobotDevil 35 20 20 45 15]
+
+ ----------------------------------------------
+Feb 07, 2018 5:31:58 AM commandline.GameMaster sortByCategory
+INFO: 
+The category selected and corresponding values when a user or computer selects a category: 
+
+_________________________________________
+** For GLaDOS's turn, they chose the category: Lewdness for 40 points."
+ ----------------------------------------------
+Feb 07, 2018 5:31:58 AM commandline.TopTrumpsCLIApplication main
+INFO: 
+The contents of the current cards in play (the cards from the top of the user’s deck and the computer’s deck(s)): 
+=================================
+| Calculon   			| 
+| 1. Combat: 		15	|
+| 2. Lewdness: 		40	|
 | 3. Agility: 		20	|
+| 4. Lunacy: 		35	|
+| 5. IQ: 		10	|
+=================================
+=================================
+| Lrrr   			| 
+| 1. Combat: 		40	|
+| 2. Lewdness: 		25	|
+| 3. Agility: 		15	|
 | 4. Lunacy: 		30	|
 | 5. IQ: 		15	|
 =================================
-
- ----------------------------------------------
-Jan 31, 2018 11:42:49 AM commandline.GameMaster rewardWinner
-INFO: 
-The contents of the communal pile when cards are added or removed from it: 
-[Smitty 20 35 40 15 10, Bender 40 45 20 30 15]
- ----------------------------------------------
-Jan 31, 2018 11:42:49 AM commandline.TopTrumpsCLIApplication main
-INFO: 
-The contents of each deck after a round: 
-HAL 9000's hand is: [Hypnotoad 0 10 35 25 45, Dwight 15 5 25 30 40, Ndnd 35 15 25 25 25, Clamps 40 15 30 35 20, Scruffy 25 10 40 25 20, Leela 45 25 40 20 20, Hermes 15 25 20 30 40, Mom 10 35 20 25 45, Professor 5 35 10 50 45, Donbot 20 10 15 35 20, LaBarbara 20 25 40 10 15, Crushinator 30 45 5 35 25, Wernstrom 5 15 10 40 45, Pazuzu 40 10 50 20 15, Nibbler 40 5 35 25 40, Lrrr 40 25 15 30 15, Preacherbot 5 40 10 25 15, Petunia 20 40 15 35 15, Amy 35 40 30 15 35, URL 35 30 35 10 15, RobotDevil 35 20 20 45 15, Cubert 15 5 20 35 45, TinnyTim 5 0 10 15 30, Zap 25 50 15 30 5, Sal 30 45 20 15 20, Kif 10 15 25 20 40, Bubblegum 35 25 45 15 40, Calculon 15 40 20 35 10, Nixon 5 30 10 45 25, Zoidberg 40 15 30 35 25, Randy 15 30 20 25 40, Roberto 40 20 35 45 15, Morbo 30 20 15 45 10, Fry 20 25 30 40 10, RobotSanta 50 15 40 20 35, Elzar 35 25 15 20 25, Smitty 20 35 40 15 10, Bender 40 45 20 30 15]
-Cortana's hand is: [Hedonismbot 5 45 10 25 20, Hattie 10 20 5 45 30]
-
- ----------------------------------------------
-Jan 31, 2018 11:42:49 AM commandline.GameMaster sortByCategory
-INFO: 
-The category selected and corresponding values when a user or computer selects a category: 
-
-_________________________________________
-** For HAL 9000's turn, they chose the category: IQ for 45 points.
- ----------------------------------------------
-Jan 31, 2018 11:42:49 AM commandline.TopTrumpsCLIApplication main
-INFO: 
-The contents of the current cards in play (the cards from the top of the user’s deck and the computer’s deck(s)): 
 =================================
-| Hypnotoad   			| 
-| 1. Combat: 		0	|
-| 2. Lewdness: 		10	|
-| 3. Agility: 		35	|
-| 4. Lunacy: 		25	|
-| 5. IQ: 		45	|
-=================================
-=================================
-| Hedonismbot   			| 
-| 1. Combat: 		5	|
-| 2. Lewdness: 		45	|
-| 3. Agility: 		10	|
-| 4. Lunacy: 		25	|
-| 5. IQ: 		20	|
-=================================
-
- ----------------------------------------------
-Jan 31, 2018 11:42:49 AM commandline.GameMaster rewardWinner
-INFO: 
-The contents of the communal pile when cards are added or removed from it: 
-[Hypnotoad 0 10 35 25 45, Hedonismbot 5 45 10 25 20]
- ----------------------------------------------
-Jan 31, 2018 11:42:49 AM commandline.TopTrumpsCLIApplication main
-INFO: 
-The contents of each deck after a round: 
-HAL 9000's hand is: [Dwight 15 5 25 30 40, Ndnd 35 15 25 25 25, Clamps 40 15 30 35 20, Scruffy 25 10 40 25 20, Leela 45 25 40 20 20, Hermes 15 25 20 30 40, Mom 10 35 20 25 45, Professor 5 35 10 50 45, Donbot 20 10 15 35 20, LaBarbara 20 25 40 10 15, Crushinator 30 45 5 35 25, Wernstrom 5 15 10 40 45, Pazuzu 40 10 50 20 15, Nibbler 40 5 35 25 40, Lrrr 40 25 15 30 15, Preacherbot 5 40 10 25 15, Petunia 20 40 15 35 15, Amy 35 40 30 15 35, URL 35 30 35 10 15, RobotDevil 35 20 20 45 15, Cubert 15 5 20 35 45, TinnyTim 5 0 10 15 30, Zap 25 50 15 30 5, Sal 30 45 20 15 20, Kif 10 15 25 20 40, Bubblegum 35 25 45 15 40, Calculon 15 40 20 35 10, Nixon 5 30 10 45 25, Zoidberg 40 15 30 35 25, Randy 15 30 20 25 40, Roberto 40 20 35 45 15, Morbo 30 20 15 45 10, Fry 20 25 30 40 10, RobotSanta 50 15 40 20 35, Elzar 35 25 15 20 25, Smitty 20 35 40 15 10, Bender 40 45 20 30 15, Hypnotoad 0 10 35 25 45, Hedonismbot 5 45 10 25 20]
-Cortana's hand is: [Hattie 10 20 5 45 30]
-
- ----------------------------------------------
-Jan 31, 2018 11:42:49 AM commandline.GameMaster sortByCategory
-INFO: 
-The category selected and corresponding values when a user or computer selects a category: 
-
-_________________________________________
-** For HAL 9000's turn, they chose the category: IQ for 40 points.
- ----------------------------------------------
-Jan 31, 2018 11:42:49 AM commandline.TopTrumpsCLIApplication main
-INFO: 
-The contents of the current cards in play (the cards from the top of the user’s deck and the computer’s deck(s)): 
-=================================
-| Dwight   			| 
+| Hermes   			| 
 | 1. Combat: 		15	|
-| 2. Lewdness: 		5	|
-| 3. Agility: 		25	|
+| 2. Lewdness: 		25	|
+| 3. Agility: 		20	|
 | 4. Lunacy: 		30	|
 | 5. IQ: 		40	|
+=================================
+
+ ----------------------------------------------
+Feb 07, 2018 5:31:58 AM commandline.GameMaster rewardWinner
+INFO: 
+The contents of the communal pile when cards are added or removed from it: 
+[Calculon 15 40 20 35 10, Lrrr 40 25 15 30 15, Hermes 15 25 20 30 40]
+ ----------------------------------------------
+Feb 07, 2018 5:31:58 AM commandline.TopTrumpsCLIApplication main
+INFO: 
+The contents of each deck after a round: 
+GLaDOS's hand is: [Morbo 30 20 15 45 10, Pazuzu 40 10 50 20 15, Petunia 20 40 15 35 15, Nixon 5 30 10 45 25, Zap 25 50 15 30 5, Professor 5 35 10 50 45, Fry 20 25 30 40 10, Leela 45 25 40 20 20, Bender 40 45 20 30 15, Cubert 15 5 20 35 45, Nibbler 40 5 35 25 40, Randy 15 30 20 25 40, Hedonismbot 5 45 10 25 20, Sal 30 45 20 15 20, Preacherbot 5 40 10 25 15, TinnyTim 5 0 10 15 30, Roberto 40 20 35 45 15, Crushinator 30 45 5 35 25, URL 35 30 35 10 15, Smitty 20 35 40 15 10, Donbot 20 10 15 35 20, Wernstrom 5 15 10 40 45, Ndnd 35 15 25 25 25, Bubblegum 35 25 45 15 40, Mom 10 35 20 25 45, Calculon 15 40 20 35 10, Lrrr 40 25 15 30 15, Hermes 15 25 20 30 40]
+Marvin's hand is: [Scruffy 25 10 40 25 20, Kif 10 15 25 20 40, Elzar 35 25 15 20 25]
+Cortana's hand is: [Hattie 10 20 5 45 30, Hypnotoad 0 10 35 25 45, Dwight 15 5 25 30 40, Zoidberg 40 15 30 35 25, LaBarbara 20 25 40 10 15, RobotSanta 50 15 40 20 35, Clamps 40 15 30 35 20, Amy 35 40 30 15 35, RobotDevil 35 20 20 45 15]
+
+ ----------------------------------------------
+Feb 07, 2018 5:31:58 AM commandline.GameMaster sortByCategory
+INFO: 
+The category selected and corresponding values when a user or computer selects a category: 
+
+_________________________________________
+** For GLaDOS's turn, they chose the category: Lunacy for 45 points.
+ ----------------------------------------------
+Feb 07, 2018 5:31:58 AM commandline.TopTrumpsCLIApplication main
+INFO: 
+The contents of the current cards in play (the cards from the top of the user’s deck and the computer’s deck(s)): 
+=================================
+| Morbo   			| 
+| 1. Combat: 		30	|
+| 2. Lewdness: 		20	|
+| 3. Agility: 		15	|
+| 4. Lunacy: 		45	|
+| 5. IQ: 		10	|
 =================================
 =================================
 | Hattie   			| 
@@ -1009,21 +1441,362 @@ The contents of the current cards in play (the cards from the top of the user’s 
 | 4. Lunacy: 		45	|
 | 5. IQ: 		30	|
 =================================
+=================================
+| Scruffy   			| 
+| 1. Combat: 		25	|
+| 2. Lewdness: 		10	|
+| 3. Agility: 		40	|
+| 4. Lunacy: 		25	|
+| 5. IQ: 		20	|
+=================================
 
  ----------------------------------------------
-Jan 31, 2018 11:42:49 AM commandline.GameMaster rewardWinner
-INFO: 
-The contents of the communal pile when cards are added or removed from it: 
-[Dwight 15 5 25 30 40, Hattie 10 20 5 45 30]
- ----------------------------------------------
-Jan 31, 2018 11:42:49 AM commandline.TopTrumpsCLIApplication main
+Feb 07, 2018 5:31:58 AM commandline.TopTrumpsCLIApplication main
 INFO: 
 The contents of each deck after a round: 
-HAL 9000's hand is: [Ndnd 35 15 25 25 25, Clamps 40 15 30 35 20, Scruffy 25 10 40 25 20, Leela 45 25 40 20 20, Hermes 15 25 20 30 40, Mom 10 35 20 25 45, Professor 5 35 10 50 45, Donbot 20 10 15 35 20, LaBarbara 20 25 40 10 15, Crushinator 30 45 5 35 25, Wernstrom 5 15 10 40 45, Pazuzu 40 10 50 20 15, Nibbler 40 5 35 25 40, Lrrr 40 25 15 30 15, Preacherbot 5 40 10 25 15, Petunia 20 40 15 35 15, Amy 35 40 30 15 35, URL 35 30 35 10 15, RobotDevil 35 20 20 45 15, Cubert 15 5 20 35 45, TinnyTim 5 0 10 15 30, Zap 25 50 15 30 5, Sal 30 45 20 15 20, Kif 10 15 25 20 40, Bubblegum 35 25 45 15 40, Calculon 15 40 20 35 10, Nixon 5 30 10 45 25, Zoidberg 40 15 30 35 25, Randy 15 30 20 25 40, Roberto 40 20 35 45 15, Morbo 30 20 15 45 10, Fry 20 25 30 40 10, RobotSanta 50 15 40 20 35, Elzar 35 25 15 20 25, Smitty 20 35 40 15 10, Bender 40 45 20 30 15, Hypnotoad 0 10 35 25 45, Hedonismbot 5 45 10 25 20, Dwight 15 5 25 30 40, Hattie 10 20 5 45 30]
+GLaDOS's hand is: [Pazuzu 40 10 50 20 15, Petunia 20 40 15 35 15, Nixon 5 30 10 45 25, Zap 25 50 15 30 5, Professor 5 35 10 50 45, Fry 20 25 30 40 10, Leela 45 25 40 20 20, Bender 40 45 20 30 15, Cubert 15 5 20 35 45, Nibbler 40 5 35 25 40, Randy 15 30 20 25 40, Hedonismbot 5 45 10 25 20, Sal 30 45 20 15 20, Preacherbot 5 40 10 25 15, TinnyTim 5 0 10 15 30, Roberto 40 20 35 45 15, Crushinator 30 45 5 35 25, URL 35 30 35 10 15, Smitty 20 35 40 15 10, Donbot 20 10 15 35 20, Wernstrom 5 15 10 40 45, Ndnd 35 15 25 25 25, Bubblegum 35 25 45 15 40, Mom 10 35 20 25 45, Calculon 15 40 20 35 10, Lrrr 40 25 15 30 15, Hermes 15 25 20 30 40]
+Cortana's hand is: [Hypnotoad 0 10 35 25 45, Dwight 15 5 25 30 40, Zoidberg 40 15 30 35 25, LaBarbara 20 25 40 10 15, RobotSanta 50 15 40 20 35, Clamps 40 15 30 35 20, Amy 35 40 30 15 35, RobotDevil 35 20 20 45 15]
+Marvin's hand is: [Kif 10 15 25 20 40, Elzar 35 25 15 20 25]
 
  ----------------------------------------------
-Jan 31, 2018 11:42:49 AM commandline.TopTrumpsCLIApplication main
+Feb 07, 2018 5:31:58 AM commandline.GameMaster sortByCategory
+INFO: 
+The category selected and corresponding values when a user or computer selects a category: 
+
+_________________________________________
+** For GLaDOS's turn, they chose the category: Agility for 50 points.
+ ----------------------------------------------
+Feb 07, 2018 5:31:58 AM commandline.TopTrumpsCLIApplication main
+INFO: 
+The contents of the current cards in play (the cards from the top of the user’s deck and the computer’s deck(s)): 
+=================================
+| Pazuzu   			| 
+| 1. Combat: 		40	|
+| 2. Lewdness: 		10	|
+| 3. Agility: 		50	|
+| 4. Lunacy: 		20	|
+| 5. IQ: 		15	|
+=================================
+=================================
+| Hypnotoad   			| 
+| 1. Combat: 		0	|
+| 2. Lewdness: 		10	|
+| 3. Agility: 		35	|
+| 4. Lunacy: 		25	|
+| 5. IQ: 		45	|
+=================================
+=================================
+| Kif   			| 
+| 1. Combat: 		10	|
+| 2. Lewdness: 		15	|
+| 3. Agility: 		25	|
+| 4. Lunacy: 		20	|
+| 5. IQ: 		40	|
+=================================
+
+ ----------------------------------------------
+Feb 07, 2018 5:31:58 AM commandline.GameMaster rewardWinner
+INFO: 
+The contents of the communal pile when cards are added or removed from it: 
+[Pazuzu 40 10 50 20 15, Hypnotoad 0 10 35 25 45, Kif 10 15 25 20 40, Morbo 30 20 15 45 10, Hattie 10 20 5 45 30, Scruffy 25 10 40 25 20]
+ ----------------------------------------------
+Feb 07, 2018 5:31:58 AM commandline.TopTrumpsCLIApplication main
+INFO: 
+The contents of each deck after a round: 
+GLaDOS's hand is: [Petunia 20 40 15 35 15, Nixon 5 30 10 45 25, Zap 25 50 15 30 5, Professor 5 35 10 50 45, Fry 20 25 30 40 10, Leela 45 25 40 20 20, Bender 40 45 20 30 15, Cubert 15 5 20 35 45, Nibbler 40 5 35 25 40, Randy 15 30 20 25 40, Hedonismbot 5 45 10 25 20, Sal 30 45 20 15 20, Preacherbot 5 40 10 25 15, TinnyTim 5 0 10 15 30, Roberto 40 20 35 45 15, Crushinator 30 45 5 35 25, URL 35 30 35 10 15, Smitty 20 35 40 15 10, Donbot 20 10 15 35 20, Wernstrom 5 15 10 40 45, Ndnd 35 15 25 25 25, Bubblegum 35 25 45 15 40, Mom 10 35 20 25 45, Calculon 15 40 20 35 10, Lrrr 40 25 15 30 15, Hermes 15 25 20 30 40, Pazuzu 40 10 50 20 15, Hypnotoad 0 10 35 25 45, Kif 10 15 25 20 40, Morbo 30 20 15 45 10, Hattie 10 20 5 45 30, Scruffy 25 10 40 25 20]
+Cortana's hand is: [Dwight 15 5 25 30 40, Zoidberg 40 15 30 35 25, LaBarbara 20 25 40 10 15, RobotSanta 50 15 40 20 35, Clamps 40 15 30 35 20, Amy 35 40 30 15 35, RobotDevil 35 20 20 45 15]
+Marvin's hand is: [Elzar 35 25 15 20 25]
+
+ ----------------------------------------------
+Feb 07, 2018 5:31:58 AM commandline.GameMaster sortByCategory
+INFO: 
+The category selected and corresponding values when a user or computer selects a category: 
+
+_________________________________________
+** For GLaDOS's turn, they chose the category: Lewdness for 40 points."
+ ----------------------------------------------
+Feb 07, 2018 5:31:58 AM commandline.TopTrumpsCLIApplication main
+INFO: 
+The contents of the current cards in play (the cards from the top of the user’s deck and the computer’s deck(s)): 
+=================================
+| Petunia   			| 
+| 1. Combat: 		20	|
+| 2. Lewdness: 		40	|
+| 3. Agility: 		15	|
+| 4. Lunacy: 		35	|
+| 5. IQ: 		15	|
+=================================
+=================================
+| Elzar   			| 
+| 1. Combat: 		35	|
+| 2. Lewdness: 		25	|
+| 3. Agility: 		15	|
+| 4. Lunacy: 		20	|
+| 5. IQ: 		25	|
+=================================
+=================================
+| Dwight   			| 
+| 1. Combat: 		15	|
+| 2. Lewdness: 		5	|
+| 3. Agility: 		25	|
+| 4. Lunacy: 		30	|
+| 5. IQ: 		40	|
+=================================
+
+ ----------------------------------------------
+Feb 07, 2018 5:31:58 AM commandline.GameMaster rewardWinner
+INFO: 
+The contents of the communal pile when cards are added or removed from it: 
+[Petunia 20 40 15 35 15, Elzar 35 25 15 20 25, Dwight 15 5 25 30 40]
+ ----------------------------------------------
+Feb 07, 2018 5:31:58 AM commandline.TopTrumpsCLIApplication main
+INFO: 
+The contents of each deck after a round: 
+GLaDOS's hand is: [Nixon 5 30 10 45 25, Zap 25 50 15 30 5, Professor 5 35 10 50 45, Fry 20 25 30 40 10, Leela 45 25 40 20 20, Bender 40 45 20 30 15, Cubert 15 5 20 35 45, Nibbler 40 5 35 25 40, Randy 15 30 20 25 40, Hedonismbot 5 45 10 25 20, Sal 30 45 20 15 20, Preacherbot 5 40 10 25 15, TinnyTim 5 0 10 15 30, Roberto 40 20 35 45 15, Crushinator 30 45 5 35 25, URL 35 30 35 10 15, Smitty 20 35 40 15 10, Donbot 20 10 15 35 20, Wernstrom 5 15 10 40 45, Ndnd 35 15 25 25 25, Bubblegum 35 25 45 15 40, Mom 10 35 20 25 45, Calculon 15 40 20 35 10, Lrrr 40 25 15 30 15, Hermes 15 25 20 30 40, Pazuzu 40 10 50 20 15, Hypnotoad 0 10 35 25 45, Kif 10 15 25 20 40, Morbo 30 20 15 45 10, Hattie 10 20 5 45 30, Scruffy 25 10 40 25 20, Petunia 20 40 15 35 15, Elzar 35 25 15 20 25, Dwight 15 5 25 30 40]
+Cortana's hand is: [Zoidberg 40 15 30 35 25, LaBarbara 20 25 40 10 15, RobotSanta 50 15 40 20 35, Clamps 40 15 30 35 20, Amy 35 40 30 15 35, RobotDevil 35 20 20 45 15]
+
+ ----------------------------------------------
+Feb 07, 2018 5:31:58 AM commandline.GameMaster sortByCategory
+INFO: 
+The category selected and corresponding values when a user or computer selects a category: 
+
+_________________________________________
+** For GLaDOS's turn, they chose the category: Lunacy for 45 points.
+ ----------------------------------------------
+Feb 07, 2018 5:31:58 AM commandline.TopTrumpsCLIApplication main
+INFO: 
+The contents of the current cards in play (the cards from the top of the user’s deck and the computer’s deck(s)): 
+=================================
+| Nixon   			| 
+| 1. Combat: 		5	|
+| 2. Lewdness: 		30	|
+| 3. Agility: 		10	|
+| 4. Lunacy: 		45	|
+| 5. IQ: 		25	|
+=================================
+=================================
+| Zoidberg   			| 
+| 1. Combat: 		40	|
+| 2. Lewdness: 		15	|
+| 3. Agility: 		30	|
+| 4. Lunacy: 		35	|
+| 5. IQ: 		25	|
+=================================
+
+ ----------------------------------------------
+Feb 07, 2018 5:31:58 AM commandline.GameMaster rewardWinner
+INFO: 
+The contents of the communal pile when cards are added or removed from it: 
+[Nixon 5 30 10 45 25, Zoidberg 40 15 30 35 25]
+ ----------------------------------------------
+Feb 07, 2018 5:31:58 AM commandline.TopTrumpsCLIApplication main
+INFO: 
+The contents of each deck after a round: 
+GLaDOS's hand is: [Zap 25 50 15 30 5, Professor 5 35 10 50 45, Fry 20 25 30 40 10, Leela 45 25 40 20 20, Bender 40 45 20 30 15, Cubert 15 5 20 35 45, Nibbler 40 5 35 25 40, Randy 15 30 20 25 40, Hedonismbot 5 45 10 25 20, Sal 30 45 20 15 20, Preacherbot 5 40 10 25 15, TinnyTim 5 0 10 15 30, Roberto 40 20 35 45 15, Crushinator 30 45 5 35 25, URL 35 30 35 10 15, Smitty 20 35 40 15 10, Donbot 20 10 15 35 20, Wernstrom 5 15 10 40 45, Ndnd 35 15 25 25 25, Bubblegum 35 25 45 15 40, Mom 10 35 20 25 45, Calculon 15 40 20 35 10, Lrrr 40 25 15 30 15, Hermes 15 25 20 30 40, Pazuzu 40 10 50 20 15, Hypnotoad 0 10 35 25 45, Kif 10 15 25 20 40, Morbo 30 20 15 45 10, Hattie 10 20 5 45 30, Scruffy 25 10 40 25 20, Petunia 20 40 15 35 15, Elzar 35 25 15 20 25, Dwight 15 5 25 30 40, Nixon 5 30 10 45 25, Zoidberg 40 15 30 35 25]
+Cortana's hand is: [LaBarbara 20 25 40 10 15, RobotSanta 50 15 40 20 35, Clamps 40 15 30 35 20, Amy 35 40 30 15 35, RobotDevil 35 20 20 45 15]
+
+ ----------------------------------------------
+Feb 07, 2018 5:31:58 AM commandline.GameMaster sortByCategory
+INFO: 
+The category selected and corresponding values when a user or computer selects a category: 
+
+_________________________________________
+** For GLaDOS's turn, they chose the category: Lewdness for 50 points."
+ ----------------------------------------------
+Feb 07, 2018 5:31:58 AM commandline.TopTrumpsCLIApplication main
+INFO: 
+The contents of the current cards in play (the cards from the top of the user’s deck and the computer’s deck(s)): 
+=================================
+| Zap   			| 
+| 1. Combat: 		25	|
+| 2. Lewdness: 		50	|
+| 3. Agility: 		15	|
+| 4. Lunacy: 		30	|
+| 5. IQ: 		5	|
+=================================
+=================================
+| LaBarbara   			| 
+| 1. Combat: 		20	|
+| 2. Lewdness: 		25	|
+| 3. Agility: 		40	|
+| 4. Lunacy: 		10	|
+| 5. IQ: 		15	|
+=================================
+
+ ----------------------------------------------
+Feb 07, 2018 5:31:58 AM commandline.GameMaster rewardWinner
+INFO: 
+The contents of the communal pile when cards are added or removed from it: 
+[Zap 25 50 15 30 5, LaBarbara 20 25 40 10 15]
+ ----------------------------------------------
+Feb 07, 2018 5:31:58 AM commandline.TopTrumpsCLIApplication main
+INFO: 
+The contents of each deck after a round: 
+GLaDOS's hand is: [Professor 5 35 10 50 45, Fry 20 25 30 40 10, Leela 45 25 40 20 20, Bender 40 45 20 30 15, Cubert 15 5 20 35 45, Nibbler 40 5 35 25 40, Randy 15 30 20 25 40, Hedonismbot 5 45 10 25 20, Sal 30 45 20 15 20, Preacherbot 5 40 10 25 15, TinnyTim 5 0 10 15 30, Roberto 40 20 35 45 15, Crushinator 30 45 5 35 25, URL 35 30 35 10 15, Smitty 20 35 40 15 10, Donbot 20 10 15 35 20, Wernstrom 5 15 10 40 45, Ndnd 35 15 25 25 25, Bubblegum 35 25 45 15 40, Mom 10 35 20 25 45, Calculon 15 40 20 35 10, Lrrr 40 25 15 30 15, Hermes 15 25 20 30 40, Pazuzu 40 10 50 20 15, Hypnotoad 0 10 35 25 45, Kif 10 15 25 20 40, Morbo 30 20 15 45 10, Hattie 10 20 5 45 30, Scruffy 25 10 40 25 20, Petunia 20 40 15 35 15, Elzar 35 25 15 20 25, Dwight 15 5 25 30 40, Nixon 5 30 10 45 25, Zoidberg 40 15 30 35 25, Zap 25 50 15 30 5, LaBarbara 20 25 40 10 15]
+Cortana's hand is: [RobotSanta 50 15 40 20 35, Clamps 40 15 30 35 20, Amy 35 40 30 15 35, RobotDevil 35 20 20 45 15]
+
+ ----------------------------------------------
+Feb 07, 2018 5:31:58 AM commandline.GameMaster sortByCategory
+INFO: 
+The category selected and corresponding values when a user or computer selects a category: 
+
+_________________________________________
+** For GLaDOS's turn, they chose the category: Lunacy for 50 points.
+ ----------------------------------------------
+Feb 07, 2018 5:31:58 AM commandline.TopTrumpsCLIApplication main
+INFO: 
+The contents of the current cards in play (the cards from the top of the user’s deck and the computer’s deck(s)): 
+=================================
+| Professor   			| 
+| 1. Combat: 		5	|
+| 2. Lewdness: 		35	|
+| 3. Agility: 		10	|
+| 4. Lunacy: 		50	|
+| 5. IQ: 		45	|
+=================================
+=================================
+| RobotSanta   			| 
+| 1. Combat: 		50	|
+| 2. Lewdness: 		15	|
+| 3. Agility: 		40	|
+| 4. Lunacy: 		20	|
+| 5. IQ: 		35	|
+=================================
+
+ ----------------------------------------------
+Feb 07, 2018 5:31:58 AM commandline.GameMaster rewardWinner
+INFO: 
+The contents of the communal pile when cards are added or removed from it: 
+[Professor 5 35 10 50 45, RobotSanta 50 15 40 20 35]
+ ----------------------------------------------
+Feb 07, 2018 5:31:58 AM commandline.TopTrumpsCLIApplication main
+INFO: 
+The contents of each deck after a round: 
+GLaDOS's hand is: [Fry 20 25 30 40 10, Leela 45 25 40 20 20, Bender 40 45 20 30 15, Cubert 15 5 20 35 45, Nibbler 40 5 35 25 40, Randy 15 30 20 25 40, Hedonismbot 5 45 10 25 20, Sal 30 45 20 15 20, Preacherbot 5 40 10 25 15, TinnyTim 5 0 10 15 30, Roberto 40 20 35 45 15, Crushinator 30 45 5 35 25, URL 35 30 35 10 15, Smitty 20 35 40 15 10, Donbot 20 10 15 35 20, Wernstrom 5 15 10 40 45, Ndnd 35 15 25 25 25, Bubblegum 35 25 45 15 40, Mom 10 35 20 25 45, Calculon 15 40 20 35 10, Lrrr 40 25 15 30 15, Hermes 15 25 20 30 40, Pazuzu 40 10 50 20 15, Hypnotoad 0 10 35 25 45, Kif 10 15 25 20 40, Morbo 30 20 15 45 10, Hattie 10 20 5 45 30, Scruffy 25 10 40 25 20, Petunia 20 40 15 35 15, Elzar 35 25 15 20 25, Dwight 15 5 25 30 40, Nixon 5 30 10 45 25, Zoidberg 40 15 30 35 25, Zap 25 50 15 30 5, LaBarbara 20 25 40 10 15, Professor 5 35 10 50 45, RobotSanta 50 15 40 20 35]
+Cortana's hand is: [Clamps 40 15 30 35 20, Amy 35 40 30 15 35, RobotDevil 35 20 20 45 15]
+
+ ----------------------------------------------
+Feb 07, 2018 5:31:58 AM commandline.GameMaster sortByCategory
+INFO: 
+The category selected and corresponding values when a user or computer selects a category: 
+
+_________________________________________
+** For GLaDOS's turn, they chose the category: Lunacy for 40 points.
+ ----------------------------------------------
+Feb 07, 2018 5:31:58 AM commandline.TopTrumpsCLIApplication main
+INFO: 
+The contents of the current cards in play (the cards from the top of the user’s deck and the computer’s deck(s)): 
+=================================
+| Fry   			| 
+| 1. Combat: 		20	|
+| 2. Lewdness: 		25	|
+| 3. Agility: 		30	|
+| 4. Lunacy: 		40	|
+| 5. IQ: 		10	|
+=================================
+=================================
+| Clamps   			| 
+| 1. Combat: 		40	|
+| 2. Lewdness: 		15	|
+| 3. Agility: 		30	|
+| 4. Lunacy: 		35	|
+| 5. IQ: 		20	|
+=================================
+
+ ----------------------------------------------
+Feb 07, 2018 5:31:58 AM commandline.GameMaster rewardWinner
+INFO: 
+The contents of the communal pile when cards are added or removed from it: 
+[Fry 20 25 30 40 10, Clamps 40 15 30 35 20]
+ ----------------------------------------------
+Feb 07, 2018 5:31:58 AM commandline.TopTrumpsCLIApplication main
+INFO: 
+The contents of each deck after a round: 
+GLaDOS's hand is: [Leela 45 25 40 20 20, Bender 40 45 20 30 15, Cubert 15 5 20 35 45, Nibbler 40 5 35 25 40, Randy 15 30 20 25 40, Hedonismbot 5 45 10 25 20, Sal 30 45 20 15 20, Preacherbot 5 40 10 25 15, TinnyTim 5 0 10 15 30, Roberto 40 20 35 45 15, Crushinator 30 45 5 35 25, URL 35 30 35 10 15, Smitty 20 35 40 15 10, Donbot 20 10 15 35 20, Wernstrom 5 15 10 40 45, Ndnd 35 15 25 25 25, Bubblegum 35 25 45 15 40, Mom 10 35 20 25 45, Calculon 15 40 20 35 10, Lrrr 40 25 15 30 15, Hermes 15 25 20 30 40, Pazuzu 40 10 50 20 15, Hypnotoad 0 10 35 25 45, Kif 10 15 25 20 40, Morbo 30 20 15 45 10, Hattie 10 20 5 45 30, Scruffy 25 10 40 25 20, Petunia 20 40 15 35 15, Elzar 35 25 15 20 25, Dwight 15 5 25 30 40, Nixon 5 30 10 45 25, Zoidberg 40 15 30 35 25, Zap 25 50 15 30 5, LaBarbara 20 25 40 10 15, Professor 5 35 10 50 45, RobotSanta 50 15 40 20 35, Fry 20 25 30 40 10, Clamps 40 15 30 35 20]
+Cortana's hand is: [Amy 35 40 30 15 35, RobotDevil 35 20 20 45 15]
+
+ ----------------------------------------------
+Feb 07, 2018 5:31:58 AM commandline.GameMaster sortByCategory
+INFO: 
+The category selected and corresponding values when a user or computer selects a category: 
+
+_________________________________________
+** For GLaDOS's turn, they chose the category: Combat for 45 points.
+ ----------------------------------------------
+Feb 07, 2018 5:31:58 AM commandline.TopTrumpsCLIApplication main
+INFO: 
+The contents of the current cards in play (the cards from the top of the user’s deck and the computer’s deck(s)): 
+=================================
+| Leela   			| 
+| 1. Combat: 		45	|
+| 2. Lewdness: 		25	|
+| 3. Agility: 		40	|
+| 4. Lunacy: 		20	|
+| 5. IQ: 		20	|
+=================================
+=================================
+| Amy   			| 
+| 1. Combat: 		35	|
+| 2. Lewdness: 		40	|
+| 3. Agility: 		30	|
+| 4. Lunacy: 		15	|
+| 5. IQ: 		35	|
+=================================
+
+ ----------------------------------------------
+Feb 07, 2018 5:31:58 AM commandline.GameMaster rewardWinner
+INFO: 
+The contents of the communal pile when cards are added or removed from it: 
+[Leela 45 25 40 20 20, Amy 35 40 30 15 35]
+ ----------------------------------------------
+Feb 07, 2018 5:31:58 AM commandline.TopTrumpsCLIApplication main
+INFO: 
+The contents of each deck after a round: 
+GLaDOS's hand is: [Bender 40 45 20 30 15, Cubert 15 5 20 35 45, Nibbler 40 5 35 25 40, Randy 15 30 20 25 40, Hedonismbot 5 45 10 25 20, Sal 30 45 20 15 20, Preacherbot 5 40 10 25 15, TinnyTim 5 0 10 15 30, Roberto 40 20 35 45 15, Crushinator 30 45 5 35 25, URL 35 30 35 10 15, Smitty 20 35 40 15 10, Donbot 20 10 15 35 20, Wernstrom 5 15 10 40 45, Ndnd 35 15 25 25 25, Bubblegum 35 25 45 15 40, Mom 10 35 20 25 45, Calculon 15 40 20 35 10, Lrrr 40 25 15 30 15, Hermes 15 25 20 30 40, Pazuzu 40 10 50 20 15, Hypnotoad 0 10 35 25 45, Kif 10 15 25 20 40, Morbo 30 20 15 45 10, Hattie 10 20 5 45 30, Scruffy 25 10 40 25 20, Petunia 20 40 15 35 15, Elzar 35 25 15 20 25, Dwight 15 5 25 30 40, Nixon 5 30 10 45 25, Zoidberg 40 15 30 35 25, Zap 25 50 15 30 5, LaBarbara 20 25 40 10 15, Professor 5 35 10 50 45, RobotSanta 50 15 40 20 35, Fry 20 25 30 40 10, Clamps 40 15 30 35 20, Leela 45 25 40 20 20, Amy 35 40 30 15 35]
+Cortana's hand is: [RobotDevil 35 20 20 45 15]
+
+ ----------------------------------------------
+Feb 07, 2018 5:31:58 AM commandline.GameMaster sortByCategory
+INFO: 
+The category selected and corresponding values when a user or computer selects a category: 
+
+_________________________________________
+** For GLaDOS's turn, they chose the category: Lewdness for 45 points."
+ ----------------------------------------------
+Feb 07, 2018 5:31:58 AM commandline.TopTrumpsCLIApplication main
+INFO: 
+The contents of the current cards in play (the cards from the top of the user’s deck and the computer’s deck(s)): 
+=================================
+| Bender   			| 
+| 1. Combat: 		40	|
+| 2. Lewdness: 		45	|
+| 3. Agility: 		20	|
+| 4. Lunacy: 		30	|
+| 5. IQ: 		15	|
+=================================
+=================================
+| RobotDevil   			| 
+| 1. Combat: 		35	|
+| 2. Lewdness: 		20	|
+| 3. Agility: 		20	|
+| 4. Lunacy: 		45	|
+| 5. IQ: 		15	|
+=================================
+
+ ----------------------------------------------
+Feb 07, 2018 5:31:58 AM commandline.GameMaster rewardWinner
+INFO: 
+The contents of the communal pile when cards are added or removed from it: 
+[Bender 40 45 20 30 15, RobotDevil 35 20 20 45 15]
+ ----------------------------------------------
+Feb 07, 2018 5:31:58 AM commandline.TopTrumpsCLIApplication main
+INFO: 
+The contents of each deck after a round: 
+GLaDOS's hand is: [Cubert 15 5 20 35 45, Nibbler 40 5 35 25 40, Randy 15 30 20 25 40, Hedonismbot 5 45 10 25 20, Sal 30 45 20 15 20, Preacherbot 5 40 10 25 15, TinnyTim 5 0 10 15 30, Roberto 40 20 35 45 15, Crushinator 30 45 5 35 25, URL 35 30 35 10 15, Smitty 20 35 40 15 10, Donbot 20 10 15 35 20, Wernstrom 5 15 10 40 45, Ndnd 35 15 25 25 25, Bubblegum 35 25 45 15 40, Mom 10 35 20 25 45, Calculon 15 40 20 35 10, Lrrr 40 25 15 30 15, Hermes 15 25 20 30 40, Pazuzu 40 10 50 20 15, Hypnotoad 0 10 35 25 45, Kif 10 15 25 20 40, Morbo 30 20 15 45 10, Hattie 10 20 5 45 30, Scruffy 25 10 40 25 20, Petunia 20 40 15 35 15, Elzar 35 25 15 20 25, Dwight 15 5 25 30 40, Nixon 5 30 10 45 25, Zoidberg 40 15 30 35 25, Zap 25 50 15 30 5, LaBarbara 20 25 40 10 15, Professor 5 35 10 50 45, RobotSanta 50 15 40 20 35, Fry 20 25 30 40 10, Clamps 40 15 30 35 20, Leela 45 25 40 20 20, Amy 35 40 30 15 35, Bender 40 45 20 30 15, RobotDevil 35 20 20 45 15]
+
+ ----------------------------------------------
+Feb 07, 2018 5:31:58 AM commandline.TopTrumpsCLIApplication main
 INFO: 
 The winner of the game: 
-HAL 9000
+GLaDOS
  ----------------------------------------------

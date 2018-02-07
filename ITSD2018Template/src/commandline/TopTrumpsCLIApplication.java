@@ -1,5 +1,6 @@
 package commandline;
 
+import java.sql.SQLException;
 import java.util.*;
 import java.util.logging.FileHandler;
 import java.util.logging.Level;
@@ -20,26 +21,11 @@ public class TopTrumpsCLIApplication {
 	 * @param args
 	 */
 
-	// Instantiae Logger for logging
+	// Instantiate Logger for logging
 	final static Logger LOGGER = Logger.getLogger(TopTrumpsCLIApplication.class.getName());
 
 	public static void main(String[] args) {
-		/*
-		 * Logger and FileHandler variables
-		 */
-		FileHandler fh = null;
-		try {
-			LogManager.getLogManager().reset(); // Reset LogManager
-			fh = new FileHandler("src/toptrumps.log", false); // Set log name and save in src folder, don't append files
-			LOGGER.addHandler(fh); // add handler to logger
-			fh.setFormatter(new SimpleFormatter()); // set format to simpleFormatter
-			LOGGER.setUseParentHandlers(false); // No parent handler
-			LOGGER.setLevel(Level.INFO); // Set logger level to info
-		} catch (Exception e) {
-			System.out.println("FileHander can't handle .log file"); // print out error message if exception is caught
-		}
 
-		
 		
 		/*
 		 * Main Variables
@@ -52,11 +38,13 @@ public class TopTrumpsCLIApplication {
 		boolean userWantsToQuit = false; // flag to check whether the user wants to quit the application
 
 		boolean writeGameLogsToFile = false; 
-//		if (args[0].equalsIgnoreCase("true")) {
-//			writeGameLogsToFile = true; // Command line selection
-//		}
+		if (args[0].equalsIgnoreCase("true")) {
+			writeGameLogsToFile = true; // Command line selection
+		}
 
-		
+		LOGGER.setLevel(Level.SEVERE); // Set logger level to severe to start, so it doesn't print info messages
+
+
 
 		/*
 		 * Start round loop
@@ -68,6 +56,9 @@ public class TopTrumpsCLIApplication {
 			while (!userWantsToQuit == true) {	//play until user wants to quit
 			boolean yesPlayAgain = false; // User doesn't want to play again, back to Main Menu 
 
+			GameMaster gm = new GameMaster(); // Instantiate Game Master
+			
+			
 			// Print out main menu
 			System.out.println(
 					"*****************\n"
@@ -78,13 +69,14 @@ public class TopTrumpsCLIApplication {
 			
 			String answer = in.next(); // Get main menu input from user
 			
-		
-			if (answer.equals("1")) { // If user chooses "Start New Game" 
 
+			
+			if (answer.equals("1")) { // If user chooses "Start New Game" 
+				
 				// Start game loop
 				while (yesPlayAgain == false) {
 					
-					GameMaster gm = new GameMaster(); // Instantiate Game Master
+					gm.startLogger(writeGameLogsToFile);
 
 					// Get human player's name
 					String name = "";
@@ -211,6 +203,7 @@ public class TopTrumpsCLIApplication {
 									
 								} else if (startRound.equals("e") || startRound.equals("E")) {
 									r = 2;
+									gm.closeLogger(writeGameLogsToFile);
 									continue CONTINUE;
 
 								} else {
@@ -301,36 +294,40 @@ public class TopTrumpsCLIApplication {
 					 *  This code only works on Aaron Palmer's lab computer since 
 					 *  it's connected to his SQL database.
 					 */
+//					try {
+//						 int humanWinner = 0;
+//						 int AIWinner = 0;
+//						 if (gm.getActivePlayerName().equals(name)) {
+//						 humanWinner = 1;
+//						 }
+//						 else {
+//						 AIWinner = 1;
+//						 }
+//						
+//						 stats.connection();
+//						 int gameID = Integer.parseInt(stats.getGameCount()) + 1;
+//						 int draws = gm.getDraws();
+//						 int AIRounds = gm.getAIWin();
+//						 int humanRounds = gm.getHumanWin();
+//						 String gameWinner = gm.getActivePlayerName();
+//						
+//						 stats.recordStats(gameID, draws, humanWinner, AIWinner, round, humanRounds,
+//						 AIRounds, gameWinner);
+//						
+//						 stats.disconnection();
+//
+//						System.out.println("\nStats have been saved to the database.");
+//					}
+//					catch(Exception e) {
+//						
+//						System.out.println("------------------------------------------\n"
+//										+ "| Database can't be accessed at this time! |\n"
+//										+ "------------------------------------------\n");
+//					}
 
-					// int humanWinner = 0;
-					// int AIWinner = 0;
-					// if (gm.getActivePlayerName().equals(name)) {
-					// humanWinner = 1;
-					// }
-					// else {
-					// AIWinner = 1;
-					// }
-					//
-					// stats.connection();
-					// int gameID = Integer.parseInt(stats.getGameCount()) + 1;
-					// int draws = gm.getDraws();
-					// int AIRounds = gm.getAIWin();
-					// int humanRounds = gm.getHumanWin();
-					// String gameWinner = gm.getActivePlayerName();
-					//
-					// stats.recordStats(gameID, draws, humanWinner, AIWinner, round, humanRounds,
-					// AIRounds, gameWinner);
-					//
-					// stats.disconnection();
-
-					System.out.println("\nStats have been saved to the database.");
 					round = 1; // reset round counter
 
-					try {
-						fh.close(); // close fileHandler
-					} catch (NullPointerException n) {
-						System.out.println("filehandler couldn't close"); // catch exceptions
-					}
+
 
 					// Ask if human player wants to play again.  
 					int again = 1;
@@ -357,23 +354,32 @@ public class TopTrumpsCLIApplication {
 									+ " ----------------------------------\n");
 						}
 					}
+					
 				}
+				gm.closeLogger(writeGameLogsToFile);
 			}
 
 			// On main menu, if answer is see past game stats
 			if (answer.equals("2")) {
-				System.out.println(" ------------------------------\n" 
-								+ "| Here are the previous stats: |\n"
-								+ " ------------------------------\n");
+
 
 				/*
 				 *  This code only works on Aaron Palmer's lab computer since 
 				 *  it's connected to his SQL database.
 				 */
 
-				// stats.connection();
-				// System.out.println(stats.getGameSummary() + "\n");
-				// stats.disconnection();
+//				try {
+//					stats.connection();
+//					System.out.println(" ------------------------------\n" 
+//									 + "| Here are the previous stats: |\n"
+//									 + " ------------------------------\n");
+//					System.out.println(stats.getGameSummary() + "\n");
+//					stats.disconnection();
+//				} catch (Exception e) {
+//					System.out.println("------------------------------------------\n"
+//									+ "| Database can't be accessed at this time! |\n"
+//									+ "------------------------------------------\n");
+//				}
 
 			}
 

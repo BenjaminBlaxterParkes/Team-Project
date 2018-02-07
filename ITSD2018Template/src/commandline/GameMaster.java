@@ -1,6 +1,11 @@
 package commandline;
 
 import java.util.*;
+import java.util.logging.FileHandler;
+import java.util.logging.Level;
+import java.util.logging.LogManager;
+import java.util.logging.Logger;
+import java.util.logging.SimpleFormatter;
 
 /**
  * GameMaster class controls the flow of the Top Trumps game. Its
@@ -21,7 +26,50 @@ public class GameMaster {
 	ArrayList<Card> cardsInPlay = new ArrayList<Card>(); // instantiate cardsInPlay array
 	String pastActivePlayer; 
 	int draws, humanWin, AIWin;
+	
+	// Instantiate Logger for logging
+	final static Logger LOGGER = Logger.getLogger(TopTrumpsCLIApplication.class.getName());
+	FileHandler fh = null;
 
+	/**
+	 * Method to create logger file handler and
+	 * do logger setup
+	 * @param log
+	 */
+	public void startLogger(boolean log) {
+		if (log == true) {
+			LOGGER.setLevel(Level.INFO); // Set logger level to info
+			try {
+				fh = new FileHandler("toptrumps.log"); // Set log name and save in src folder, don't append files
+				System.out.println("logger is working");
+				LOGGER.addHandler(fh); // add handler to logger
+				fh.setFormatter(new SimpleFormatter()); // set format to simpleFormatter
+				LOGGER.setUseParentHandlers(false);
+			} catch (Exception e) {
+				System.out.println("FileHander can't handle .log file"); // print out error message if exception is caught
+			}
+		}
+	}
+
+	
+	/**
+	 * Method to close the logger when it's done logging
+	 * @param log
+	 */
+	public void closeLogger(boolean log) {
+		if (log == true) {
+			try {
+				fh.close(); // close fileHandler
+				System.out.println("filehandler closed okay");
+			} catch (NullPointerException n) {
+				System.out.println("filehandler couldn't close"); // catch exceptions
+			}
+		}
+	}
+
+	
+	
+	
 	/**
 	 * Loads Player objects into an array.
 	 * @param p
