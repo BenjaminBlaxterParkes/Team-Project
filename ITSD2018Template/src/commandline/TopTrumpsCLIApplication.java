@@ -35,6 +35,7 @@ public class TopTrumpsCLIApplication {
 		final int DECK_SIZE = 40; // There will always be 40 cards in a deck
 		int round = 0; // start rounds at 0
 		Scanner in = new Scanner(System.in); // Instantiate scanner to be used for user input
+		in.useDelimiter("[\r\n]+");  // overrides the default delimiter so it doesn't break on spaces
 		boolean userWantsToQuit = false; // flag to check whether the user wants to quit the application
 		boolean writeGameLogsToFile = false;
 		if (args[0].equalsIgnoreCase("true")) {
@@ -51,7 +52,6 @@ public class TopTrumpsCLIApplication {
 
 		// Continue is name for game loop
 		CONTINUE:
-
 			while (!userWantsToQuit) {	//play until user wants to quit
 			boolean yesPlayAgain = false; // User doesn't want to play again, back to Main Menu
 
@@ -74,7 +74,6 @@ public class TopTrumpsCLIApplication {
 
 				// Start game loop
 				while (!yesPlayAgain) {
-
 					gm.startLogger(writeGameLogsToFile);
 
 					// Get human player's name
@@ -198,7 +197,6 @@ public class TopTrumpsCLIApplication {
 								if (startRound.equals("c") || startRound.equals("C")) {
 									yesPlayAgain = false;
 									break;
-
 								} else if (startRound.equals("e") || startRound.equals("E")) {
 									gm.closeLogger(writeGameLogsToFile);
 									continue CONTINUE;
@@ -327,7 +325,6 @@ public class TopTrumpsCLIApplication {
 
 
 					// Ask if human player wants to play again.
-
 					while (true) {
 						System.out.println("\n ---------------------------------\n"
 											+ "| Do you want to play again: Y/N? |\n"
