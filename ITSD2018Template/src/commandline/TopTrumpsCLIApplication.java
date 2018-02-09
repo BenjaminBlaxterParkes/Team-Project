@@ -36,7 +36,6 @@ public class TopTrumpsCLIApplication {
 		int round = 0; // start rounds at 0
 		Scanner in = new Scanner(System.in); // Instantiate scanner to be used for user input
 		boolean userWantsToQuit = false; // flag to check whether the user wants to quit the application
-
 		boolean writeGameLogsToFile = false;
 		if (args[0].equalsIgnoreCase("true")) {
 			writeGameLogsToFile = true; // Command line selection
@@ -80,20 +79,19 @@ public class TopTrumpsCLIApplication {
 
 					// Get human player's name
 					String name = "";
-					int checkName = 1;
-					while (checkName == 1) {
+					while (true) {
 						System.out.println(
 								" -------------------\n" +
 								"| What's your name? | \n "
 							   + "-------------------");
 						name = in.next();
 
-						boolean check = gm.checkHumanName(name); // see if name is taken by AI
-						if (check) { // if human name is unique, check is true
-							checkName = 2;
+
+						if (gm.checkHumanName(name)) { // if human name is unique, not taken by AI
+							break;
 						} else { // if human name isn't unique, make them pick a new one
 							System.out.println(" --------------------------------------------------------------------\n"
-										     + "| That name is taken, please enter a different name and press enter. |\n"
+										     + "| That name is taken, please choose a different name and press enter. |\n"
 										     + " --------------------------------------------------------------------\n");
 						}
 
@@ -103,29 +101,29 @@ public class TopTrumpsCLIApplication {
 					Player human = new Player(name); // Instantiate players
 					gm.loadPlayers(human, 0); 	// Game Master loads players into an ArrayList
 
-					int b = 1; // int for AI # input
+
 					String opponents = "";
-					while (b == 1) {
+					while (true) {
 						System.out.println(" -----------------------------------------------------------------\n"
-										 + "| How many AI's would you like to play with you, between 1 and 4? |\n"
+										 + "| How many AI's would you like to play with, between 1 and 4? |\n"
 										 + " -----------------------------------------------------------------");
-						opponents = in.next(); // collect number of AI opp from user
+						opponents = in.next(); // collect number of AI opponents from user
 
 						if (opponents.equals("1")) {
 							gm.createAI(1); // if user chooses 1 AI, make 1 AI player
-							b = 2;
+							break;
 						} else if (opponents.equals("2")) {
 							gm.createAI(2); // if user chooses 2 AIs, make 2 AI players
-							b = 2;
+							break;
 						} else if (opponents.equals("3")) {
 							gm.createAI(3); // if user chooses 3 AIs, make 3 AI players
-							b = 2;
+							break;
 						} else if (opponents.equals("4")) {
 							gm.createAI(4); // if user chooses 4 AIs, make 4 AI players
-							b = 2;
+							break;
 						} else { // if user chooses wrong input, display error messages
 							System.out.print("-----------------------------------------------------------------------\n"
-									+ "| Invalid option.  Please enter a number between 1 and 4 and hit enter |\n"
+									+ "| Invalid option. Please choose a number between 1 and 4 and hit enter |\n"
 									+ "-----------------------------------------------------------------------\n");
 						}
 					}
@@ -161,7 +159,7 @@ public class TopTrumpsCLIApplication {
 
 					// Log players hands once cards are dealt
 					LOGGER.info(
-							"\nThe contents of the user�s deck and the computer�s deck(s) once they have been allocated: \n"
+							"\nThe contents of the user's deck and the computer�s deck(s) once they have been allocated: \n"
 									+ gm.playersAndHand() + "\n ----------------------------------------------");
 
 					System.out.println();
@@ -186,23 +184,22 @@ public class TopTrumpsCLIApplication {
 							System.out.println("Here's your card for this round:");
 							System.out.println(human.getTopCardInfo()); // show top card info to user
 
-							int r = 1;
-							while (r == 1) {
+
+							while (true) {
 								System.out.println(
 										" ---------------------------------\n" +
 										"| Now that you've seen your card: |\n"
 									  + " ---------------------------------\n"
 									  + "  C. Continue to category choice\n" +
-									    "  E. Exit to Main Menu");
+									    "  E. End Game");
 
 								startRound = in.next(); // collect user input for C or E
 
 								if (startRound.equals("c") || startRound.equals("C")) {
 									yesPlayAgain = false;
-									r = 2;
+									break;
 
 								} else if (startRound.equals("e") || startRound.equals("E")) {
-									r = 2;
 									gm.closeLogger(writeGameLogsToFile);
 									continue CONTINUE;
 
@@ -218,10 +215,10 @@ public class TopTrumpsCLIApplication {
 
 						if (activePlayerName.equals(human.getName())) { // if the PastPlayer is human
 
-							int y = 1;
-							while (y == 1) {
+
+							while (true) {
 								System.out.println(" ------------------------------------------\n"
-											   	 + "| Which category would you like to select? |\n"
+											   	 + "| Choose a category. |\n"
 											   	+  " ------------------------------------------\n");
 
 								String chooseCategory = in.next(); // collect input from user for cat choice
@@ -229,23 +226,23 @@ public class TopTrumpsCLIApplication {
 								if (chooseCategory.equals("1")) {
 									gm.sortByCategory(1); // sort players based on cat one
 									human.setCategoryChoice(1); // remember cat choice was 1
-									y = 2;
+									break;
 								} else if (chooseCategory.equals("2")) {
 									gm.sortByCategory(2); // sort players based on cat two
 									human.setCategoryChoice(2); // remember cat choice was 2
-									y = 2;
+									break;
 								} else if (chooseCategory.equals("3")) {
 									gm.sortByCategory(3); // sort players based on cat three
 									human.setCategoryChoice(3); // remember cat choice was 3
-									y = 2;
+									break;
 								} else if (chooseCategory.equals("4")) {
 									gm.sortByCategory(4); // sort players based on cat four
 									human.setCategoryChoice(4); // remember cat choice was 4
-									y = 2;
+									break;
 								} else if (chooseCategory.equals("5")) {
 									gm.sortByCategory(5); // sort players based on cat five
 									human.setCategoryChoice(5); // remember cat choice was 5
-									y = 2;
+									break;
 								} else {
 									System.out.println( // if choice is invalid
 											" ----------------------------------------------------------------\n"
@@ -330,8 +327,8 @@ public class TopTrumpsCLIApplication {
 
 
 					// Ask if human player wants to play again.
-					int again = 1;
-					while (again == 1) {
+
+					while (true) {
 						System.out.println("\n ---------------------------------\n"
 											+ "| Do you want to play again: Y/N? |\n"
 											+ " ---------------------------------\n");
@@ -339,12 +336,12 @@ public class TopTrumpsCLIApplication {
 
 						if ((playAgain.equals("Y")) || (playAgain.equals("y"))) {
 							yesPlayAgain = false; // end game.  Return to main menu
-							again = 2; // exit loop
+							break; // exit loop
 						}
 
 						else if ((playAgain.equals("N")) || (playAgain.equals("n"))) {
 							yesPlayAgain = true; // start game loop over
-							again = 2; // exit loop
+							break; // exit loop
 						}
 
 						else {
