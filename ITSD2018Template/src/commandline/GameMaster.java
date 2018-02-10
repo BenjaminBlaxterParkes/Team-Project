@@ -24,9 +24,9 @@ public class GameMaster {
 	Card card; // instantiate a card object
 	ArrayList<Player> playersArrList = new ArrayList<Player>(); // instantiate array of players
 	ArrayList<Card> cardsInPlay = new ArrayList<Card>(); // instantiate cardsInPlay array
-	String pastActivePlayer; 
+	String pastActivePlayer;
 	int draws, humanWin, AIWin;
-	
+
 	// Instantiate Logger for logging
 	final static Logger LOGGER = Logger.getLogger(TopTrumpsCLIApplication.class.getName());
 	FileHandler fh = null;
@@ -51,7 +51,7 @@ public class GameMaster {
 		}
 	}
 
-	
+
 	/**
 	 * Method to close the logger when it's done logging
 	 * @param log
@@ -67,9 +67,9 @@ public class GameMaster {
 		}
 	}
 
-	
-	
-	
+
+
+
 	/**
 	 * Loads Player objects into an array.
 	 * @param p
@@ -79,7 +79,7 @@ public class GameMaster {
 		playersArrList.add(position, p);
 	}
 
-	
+
 	/**
 	 * Method to create AI players based on user input
 	 * @param number
@@ -92,7 +92,7 @@ public class GameMaster {
 		}
 	}
 
-	
+
 	/**
 	 * Returns a card from the shuffled deck.
 	 */
@@ -105,7 +105,7 @@ public class GameMaster {
 		return card;
 	}
 
-	
+
 	/**
 	 * Returns the player at a given position in the array
 	 * @param position
@@ -116,7 +116,7 @@ public class GameMaster {
 		return p;
 	}
 
-	
+
 	/**
 	 * Returns a randomly chosen Player object to go first from ArrayList<Player>.
 	 * @return
@@ -129,7 +129,7 @@ public class GameMaster {
 		return p;
 	}
 
-	
+
 	/**
 	 * Returns all Player's name, number of cards in hand, and list of cards in
 	 * hand.
@@ -143,7 +143,7 @@ public class GameMaster {
 		return info;
 	}
 
-	
+
 	/**
 	 * Sets PastPlayerName class variable.
 	 */
@@ -151,7 +151,7 @@ public class GameMaster {
 		this.pastActivePlayer = getActivePlayerName();
 	}
 
-	
+
 	/**
 	 * Returns PastPlayerName class variable.
 	 * @return
@@ -160,7 +160,7 @@ public class GameMaster {
 		return this.pastActivePlayer;
 	}
 
-	
+
 	/**
 	 * Returns Player based on given name.
 	 * @param name
@@ -179,7 +179,7 @@ public class GameMaster {
 		return null;
 	}
 
-	
+
 	/**
 	 * Returns active Player object.
 	 * @return
@@ -190,7 +190,7 @@ public class GameMaster {
 		return p;
 	}
 
-	
+
 	/**
 	 * Returns active Player ojbect's name.
 	 * @return
@@ -200,7 +200,7 @@ public class GameMaster {
 		return p.getName();
 	}
 
-	
+
 	/**
 	 * Returns boolean stating whether a HumanPlayer objects exists in
 	 * ArrayList<Player>.
@@ -220,7 +220,7 @@ public class GameMaster {
 		return false;
 	}
 
-	
+
 	/**
 	 * Returns size of the ArrayList<Player>.
 	 * @return
@@ -230,7 +230,17 @@ public class GameMaster {
 		return size;
 	}
 
-	
+	//method getPlayersArrList()
+
+	/**
+	 * Returns the ArrayList<Player>.
+	 * @return
+	 */
+	public ArrayList<Player> getPlayersArrList() {
+		return playersArrList;
+	}
+
+
 	/**
 	 * Sorts ArrayList<Player> based on the integer choice.
 	 * @param choice
@@ -247,12 +257,12 @@ public class GameMaster {
 						+ "'s turn, they chose the category: Combat for "
 						+ getPlayerByName(getPastPlayerName()).getTopCard().getCategoryOne() + " points.");
 				System.out.println(option);
-				
+
 				// Log what's in communal pile
 				TopTrumpsCLIApplication.LOGGER.info(words + option + breaking);
 			}
 
-			
+
 			if (choice == 2) { // if the int choice is equal to 2
 				Collections.sort(playersArrList, Player.sortByCategoryTwo); // sort the players array based on cat 2
 				option = ("\n_________________________________________\n" + "** For " + getPastPlayerName()
@@ -262,7 +272,7 @@ public class GameMaster {
 				TopTrumpsCLIApplication.LOGGER.info(words + option + breaking);
 			}
 
-			
+
 			if (choice == 3) { // if the int choice is equal to 3
 				Collections.sort(playersArrList, Player.sortByCategoryThree); // sort the players array based on cat 3
 				option = ("\n_________________________________________\n" + "** For " + getPastPlayerName()
@@ -272,7 +282,7 @@ public class GameMaster {
 				TopTrumpsCLIApplication.LOGGER.info(words + option + breaking);
 			}
 
-			
+
 			if (choice == 4) { // if the int choice is equal to 4
 				Collections.sort(playersArrList, Player.sortByCategoryFour); // sort the players array based on cat 4
 				option = ("\n_________________________________________\n" + "** For " + getPastPlayerName()
@@ -282,7 +292,7 @@ public class GameMaster {
 				TopTrumpsCLIApplication.LOGGER.info(words + option + breaking);
 			}
 
-			
+
 			if (choice == 5) { // if the int choice is equal to 5
 				Collections.sort(playersArrList, Player.sortByCategoryFive); // sort the players array based on cat 5
 				option = ("\n_________________________________________\n" + "** For " + getPastPlayerName()
@@ -296,7 +306,7 @@ public class GameMaster {
 		}
 	}
 
-	
+
 	/**
 	 * Removes cards from Players and places them in a ArrayList<Card> and then
 	 * gives them to the winner of the round.
@@ -313,7 +323,7 @@ public class GameMaster {
 		}
 	}
 
-	
+
 	/**
 	 * Return the communal pile
 	 * @return
@@ -333,8 +343,8 @@ public class GameMaster {
 		}
 		return cards;
 	}
-	
-	
+
+
 	/**
 	 * Checks if draw, or tie, happened during the round.
 	 * @return
@@ -358,7 +368,7 @@ public class GameMaster {
 		return false;
 	}
 
-	
+
 	/**
 	 * Returns the number of draws
 	 * @return
@@ -367,7 +377,7 @@ public class GameMaster {
 		return this.draws;
 	}
 
-	
+
 	/**
 	 * Returns number of AI wins
 	 * @return
@@ -376,8 +386,8 @@ public class GameMaster {
 		return this.AIWin;
 	}
 
-	
-	/** 
+
+	/**
 	 * Returns number of human player wins
 	 * @return
 	 */
@@ -385,7 +395,7 @@ public class GameMaster {
 		return this.humanWin;
 	}
 
-	
+
 	/**
 	 * Checks to make sure human name isn't an AI name
 	 * @param name
@@ -399,7 +409,7 @@ public class GameMaster {
 		return true;
 	}
 
-	
+
 	/**
 	 * Gives Cards from ArrayList<Card> to the winner of the round.
 	 */
@@ -422,7 +432,7 @@ public class GameMaster {
 
 		System.out.println("Their winning card was: \n" + cardsInPlay.get(0).getCardInfo()
 				+ "\n**\n**\n\nThe next round has started!\n");
-		
+
 		// for loop to give comm. pile to winner
 		Card c;
 		for (int i = 0; i < cardsInPlay.size(); i++) {
@@ -432,7 +442,7 @@ public class GameMaster {
 		cardsInPlay.clear(); // clear comm. pile
 	}
 
-	
+
 	/**
 	 * Removes a Player from the ArrayList<Player> when eliminated.
 	 */
@@ -446,7 +456,7 @@ public class GameMaster {
 		}
 	}
 
-	
+
 	/**
 	 * Returns a string of the player and their hand
 	 * @return

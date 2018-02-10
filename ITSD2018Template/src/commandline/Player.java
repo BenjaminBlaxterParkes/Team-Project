@@ -24,7 +24,7 @@ public class Player implements Comparable<Player> {
 	 * Constructor
 	 * @param name
 	 */
-	Player(String name) {
+	public Player(String name) {
 		this.name = name;
 	}
 
@@ -46,8 +46,8 @@ public class Player implements Comparable<Player> {
 		// System.out.println("The card (" + c.getDescription() + ") is being loaded
 		// into "+ getName() + "'s hand");
 	}
-	
-	
+
+
 	/**
 	 * Returns hand array as a string
 	 * @return
@@ -108,7 +108,7 @@ public class Player implements Comparable<Player> {
 	public int AIChooseCategory() {
 		int[] categories = new int[5]; // create array of ints
 		Card c = getTopCard(); // load top card into c
-		
+
 		// parse out the 5 category values
 		categories[0] = c.getCategoryOne();
 		categories[1] = c.getCategoryTwo();
@@ -130,17 +130,17 @@ public class Player implements Comparable<Player> {
 		return index + 1;
 	}
 
-	
+
 	/**
 	 * Returns a String containing information from Player's first Card in
 	 * ArrayList<Card>.
 	 * @return
 	 */
 	public String getTopCardInfo() {
-		
+
 		String desciption = "=================================\n" + "| " + hand.get(0).getDescription()
 				+ "   \t\t\t| \n"; // String the description of the card
-		
+
 		String allCardInfo = hand.get(0).getCardCategories(); // loads first line of deck, e.g. "Agility"
 
 		//	instantiate Strings for categories
@@ -150,7 +150,7 @@ public class Player implements Comparable<Player> {
 		String catFour = "";
 		String catFive = "";
 
-		
+
 		try {
 			String[] cardInfo = allCardInfo.split(" "); // create string array for categories
 
@@ -177,7 +177,7 @@ public class Player implements Comparable<Player> {
 		return desciption + categories;
 
 	}
-	
+
 
 
 	/**
@@ -253,7 +253,7 @@ public class Player implements Comparable<Player> {
 	};
 
 	/**
-	 * Required for implementing comparable, doens't do anything
+	 * Required for implementing comparable, doesn't do anything
 	 */
 	public int compareTo(Player other) {
 		int result = 0;
