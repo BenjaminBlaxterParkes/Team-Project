@@ -17,7 +17,7 @@ public class TopTrumpsCLIApplication {
 	 * This main method is called by TopTrumps.java when the user specifies that
 	 * they want to run in command line mode. The contents of args[0] is whether we
 	 * should write game logs to a file.
-	 *
+	 * 
 	 * @param args
 	 */
 
@@ -26,7 +26,7 @@ public class TopTrumpsCLIApplication {
 
 	public static void main(String[] args) {
 
-
+		
 		/*
 		 * Main Variables
 		 */
@@ -35,13 +35,12 @@ public class TopTrumpsCLIApplication {
 		final int DECK_SIZE = 40; // There will always be 40 cards in a deck
 		int round = 0; // start rounds at 0
 		Scanner in = new Scanner(System.in); // Instantiate scanner to be used for user input
-		in.useDelimiter("[\r\n]+");  // overrides the default delimiter so it doesn't break on spaces
 		boolean userWantsToQuit = false; // flag to check whether the user wants to quit the application
 
-		boolean writeGameLogsToFile = false;
-		if (args[0].equalsIgnoreCase("true")) {
-			writeGameLogsToFile = true; // Command line selection
-		}
+		boolean writeGameLogsToFile = false; 
+//		if (args[0].equalsIgnoreCase("true")) {
+//			writeGameLogsToFile = true; // Command line selection
+//		}
 
 		LOGGER.setLevel(Level.SEVERE); // Set logger level to severe to start, so it doesn't print info messages
 
@@ -50,16 +49,16 @@ public class TopTrumpsCLIApplication {
 		/*
 		 * Start round loop
 		 */
-
-		// Continue is name for game loop
-		CONTINUE:
-
+		 
+		// Continue is name for game loop 
+		CONTINUE: 
+			
 			while (!userWantsToQuit == true) {	//play until user wants to quit
-			boolean yesPlayAgain = false; // User doesn't want to play again, back to Main Menu
+			boolean yesPlayAgain = false; // User doesn't want to play again, back to Main Menu 
 
 			GameMaster gm = new GameMaster(); // Instantiate Game Master
-
-
+			
+			
 			// Print out main menu
 			System.out.println(
 					"*****************\n"
@@ -67,16 +66,16 @@ public class TopTrumpsCLIApplication {
 				  + "*****************\n"
 				  + "1. Start New Game \n"
 				  + "2. See Past Stats");
-
+			
 			String answer = in.next(); // Get main menu input from user
+			
 
-
-
-			if (answer.equals("1")) { // If user chooses "Start New Game"
-
+			
+			if (answer.equals("1")) { // If user chooses "Start New Game" 
+				
 				// Start game loop
 				while (yesPlayAgain == false) {
-
+					
 					gm.startLogger(writeGameLogsToFile);
 
 					// Get human player's name
@@ -84,8 +83,8 @@ public class TopTrumpsCLIApplication {
 					int checkName = 1;
 					while (checkName == 1) {
 						System.out.println(
-								" -------------------\n" +
-								"| What's your name? | \n "
+								" -------------------\n" + 
+								"| What's your name? | \n " 
 							   + "-------------------");
 						name = in.next();
 
@@ -100,7 +99,7 @@ public class TopTrumpsCLIApplication {
 
 					}
 
-
+					
 					Player human = new Player(name); // Instantiate players
 					gm.loadPlayers(human, 0); 	// Game Master loads players into an ArrayList
 
@@ -113,7 +112,7 @@ public class TopTrumpsCLIApplication {
 						opponents = in.next(); // collect number of AI opp from user
 
 						if (opponents.equals("1")) {
-							gm.createAI(1); // if user chooses 1 AI, make 1 AI player
+							gm.createAI(1); // if user chooses 1 AI, make 1 AI player 
 							b = 2;
 						} else if (opponents.equals("2")) {
 							gm.createAI(2); // if user chooses 2 AIs, make 2 AI players
@@ -131,15 +130,15 @@ public class TopTrumpsCLIApplication {
 						}
 					}
 
-
+					
 					cd.populateDeck(); // Deck is populated
-
+					
 					// Log original deck
 					LOGGER.info("\nThe contents of the complete deck once it has been read in and constructed: \n"
 							+ Arrays.toString(cd.getOriginalDeck())
 							+ "\n ----------------------------------------------");
 
-
+					
 					cd.shuffleDeck(); // Deck is shuffled
 					// Log shuffled deck
 					LOGGER.info("\nThe contents of the complete deck after it has been shuffled: \n"
@@ -162,11 +161,11 @@ public class TopTrumpsCLIApplication {
 
 					// Log players hands once cards are dealt
 					LOGGER.info(
-							"\nThe contents of the userï¿½s deck and the computerï¿½s deck(s) once they have been allocated: \n"
+							"\nThe contents of the user’s deck and the computer’s deck(s) once they have been allocated: \n"
 									+ gm.playersAndHand() + "\n ----------------------------------------------");
 
 					System.out.println();
-
+					
 					gm.chooseFirstPlayer(); // Game Master chooses first player
 
 					// continue rounds until one player is left in the Game Master's ArrayList of players
@@ -190,18 +189,18 @@ public class TopTrumpsCLIApplication {
 							int r = 1;
 							while (r == 1) {
 								System.out.println(
-										" ---------------------------------\n" +
+										" ---------------------------------\n" + 
 										"| Now that you've seen your card: |\n"
 									  + " ---------------------------------\n"
-									  + "  C. Continue to category choice\n" +
+									  + "  C. Continue to category choice\n" + 
 									    "  E. Exit to Main Menu");
-
+								
 								startRound = in.next(); // collect user input for C or E
-
+								
 								if (startRound.equals("c") || startRound.equals("C")) {
 									yesPlayAgain = false;
 									r = 2;
-
+									
 								} else if (startRound.equals("e") || startRound.equals("E")) {
 									r = 2;
 									gm.closeLogger(writeGameLogsToFile);
@@ -214,7 +213,7 @@ public class TopTrumpsCLIApplication {
 								}
 							}
 						}
-
+						
 						String activePlayerName = gm.getPastPlayerName(); // load past player name
 
 						if (activePlayerName.equals(human.getName())) { // if the PastPlayer is human
@@ -264,7 +263,7 @@ public class TopTrumpsCLIApplication {
 
 						// Log what cards are in play
 						LOGGER.info(
-								"\nThe contents of the current cards in play (the cards from the top of the userï¿½s deck and the computerï¿½s "
+								"\nThe contents of the current cards in play (the cards from the top of the user’s deck and the computer’s "
 										+ "deck(s)): \n" + gm.getCardsInPlay()
 										+ "\n ----------------------------------------------");
 
@@ -272,7 +271,7 @@ public class TopTrumpsCLIApplication {
 						gm.communalPile();
 
 						// Game Master checks that all players have at least one card.
-						// If a Player is out of cards, they're removed from the game.
+						// If a Player is out of cards, they're removed from the game.  
 						gm.playerIsElminated();
 
 						// Log players hands after each round
@@ -292,7 +291,7 @@ public class TopTrumpsCLIApplication {
 
 
 					/*
-					 *  This code only works on Aaron Palmer's lab computer since
+					 *  This code only works on Aaron Palmer's lab computer since 
 					 *  it's connected to his SQL database.
 					 */
 //					try {
@@ -304,23 +303,23 @@ public class TopTrumpsCLIApplication {
 //						 else {
 //						 AIWinner = 1;
 //						 }
-//
+//						
 //						 stats.connection();
 //						 int gameID = Integer.parseInt(stats.getGameCount()) + 1;
 //						 int draws = gm.getDraws();
 //						 int AIRounds = gm.getAIWin();
 //						 int humanRounds = gm.getHumanWin();
 //						 String gameWinner = gm.getActivePlayerName();
-//
+//						
 //						 stats.recordStats(gameID, draws, humanWinner, AIWinner, round, humanRounds,
 //						 AIRounds, gameWinner);
-//
+//						
 //						 stats.disconnection();
 //
 //						System.out.println("\nStats have been saved to the database.");
 //					}
 //					catch(Exception e) {
-//
+//						
 //						System.out.println("------------------------------------------\n"
 //										+ "| Database can't be accessed at this time! |\n"
 //										+ "------------------------------------------\n");
@@ -330,11 +329,11 @@ public class TopTrumpsCLIApplication {
 
 
 
-					// Ask if human player wants to play again.
+					// Ask if human player wants to play again.  
 					int again = 1;
 					while (again == 1) {
 						System.out.println("\n ---------------------------------\n"
-											+ "| Do you want to play again: Y/N? |\n"
+											+ "| Do you want to play again: Y/N? |\n" 
 											+ " ---------------------------------\n");
 						String playAgain = in.next(); // get user input
 
@@ -350,12 +349,12 @@ public class TopTrumpsCLIApplication {
 
 						else {
 							System.out.println(
-									" ----------------------------------\n"
+									" ----------------------------------\n" 
 									+ "| Invalid answer, please try again |\n"
 									+ " ----------------------------------\n");
 						}
 					}
-
+					
 				}
 				gm.closeLogger(writeGameLogsToFile);
 			}
@@ -365,22 +364,17 @@ public class TopTrumpsCLIApplication {
 
 
 				/*
-				 *  This code only works on Aaron Palmer's lab computer since
+				 *  This code only works on Aaron Palmer's lab computer since 
 				 *  it's connected to his SQL database.
 				 */
 
-//				try {
-//					stats.connection();
-//					System.out.println(" ------------------------------\n"
-//									 + "| Here are the previous stats: |\n"
-//									 + " ------------------------------\n");
-//					System.out.println(stats.getGameSummary() + "\n");
-//					stats.disconnection();
-//				} catch (Exception e) {
-//					System.out.println("------------------------------------------\n"
-//									+ "| Database can't be accessed at this time! |\n"
-//									+ "------------------------------------------\n");
-//				}
+					stats.connection();
+					System.out.println(" ------------------------------\n" 
+									 + "| Here are the previous stats: |\n"
+									 + " ------------------------------\n");
+					System.out.println(stats.getGameSummary() + "\n");
+					stats.disconnection();
+		
 
 			}
 

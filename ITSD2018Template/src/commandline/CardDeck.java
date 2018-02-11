@@ -63,6 +63,7 @@ public class CardDeck {
 	 * Sorts the deck file into individual Cards and populate originalDeck[].
 	 */
 	public void populateDeck() {
+
 		Card newCard; // new card objects to fill originalDeck[]
 		String[] deckSplit = deckOfCards.split("\n"); // split to individual cards
 
@@ -81,6 +82,7 @@ public class CardDeck {
 	 * Shuffles originalDeck.
 	 */
 	public void shuffleDeck() {
+		
 		Card tempCard; // Card object for passing from originalDeck to shuffledDeck
 
 		tempDeck = new ArrayList<Card>(Arrays.asList(originalDeck)); // Convert originalDeck into ArrayList
