@@ -1,7 +1,6 @@
 package commandline;
 
 import java.util.ArrayList;
-import java.util.Arrays;
 import java.util.Comparator;
 
 /**
@@ -24,7 +23,7 @@ public class Player implements Comparable<Player> {
 	 * Constructor
 	 * @param name
 	 */
-	Player(String name) {
+	public Player(String name) {
 		this.name = name;
 	}
 

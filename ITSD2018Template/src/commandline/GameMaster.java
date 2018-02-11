@@ -98,7 +98,7 @@ public class GameMaster {
 	 */
 	public Card dealCard(CardDeck cd, int position) {
 		Card[] shuffledDeck = cd.getShuffledDeck(); // load shuffled deck into a new array
-
+		
 		for (int i = 0; i < DECK_SIZE; i++) {
 			card = shuffledDeck[position];
 		}
@@ -458,5 +458,16 @@ public class GameMaster {
 		}
 		return players;
 	}
+
+
+	public ArrayList<Player> getPlayersArrList() {
+		return playersArrList;
+	}
+	
+	public ArrayList<Card> getNumCardsInPlay(){
+		return cardsInPlay;
+	}
+	
+
 
 } // End of class
