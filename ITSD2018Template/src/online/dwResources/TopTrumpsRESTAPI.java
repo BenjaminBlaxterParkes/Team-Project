@@ -18,6 +18,7 @@ import com.fasterxml.jackson.databind.ObjectMapper;
 import com.fasterxml.jackson.databind.ObjectWriter;
 import com.mysql.fabric.xmlrpc.base.Array;
 
+import commandline.Card;
 import commandline.CardDeck;
 import commandline.Player;
 import commandline.Stats;
@@ -98,9 +99,7 @@ public class TopTrumpsRESTAPI {
 		gm = new commandline.GameMaster();
 		human = new commandline.Player(name);
 		gm.loadPlayers(human, 0);
-		System.out.println("human player loaded");
 		gm.createAI(ai);
-		System.out.println("number of AI set = " + ai);
 	}
 	
 	
@@ -112,24 +111,21 @@ public class TopTrumpsRESTAPI {
 	@GET
 	@Path("/shuffleAndDeal")
 	public void shuffleAndDeal() throws IOException{
-								System.out.println("The deck was constructed shuffled and dealt");
-								// Deck is populated and shuffled
-								cd.populateDeck();
-								cd.shuffleDeck();
+		// Deck is populated and shuffled
+		cd.populateDeck();
+		cd.shuffleDeck();
 	
-								// Game Master deals out the cards
-								int j = 0;
-								int i = 0;
-								while (j < DECK_SIZE) {
-									gm.getPlayerByPosition(i).setHand(gm.dealCard(cd, j));
-									System.out.println(gm.getPlayerByPosition(i).getName() + " got"
-									 + " card: " + gm.dealCard(cd, j));
-									j++; // increment Card
-									i++; // increment Player
-									if (i == (gm.getArraySize())) {
-										i = 0; // start dealing again to first player
-									}
-								}
+		// Game Master deals out the cards
+		int j = 0;
+		int i = 0;
+		while (j < DECK_SIZE) {
+			gm.getPlayerByPosition(i).setHand(gm.dealCard(cd, j));
+			j++; // increment Card
+			i++; // increment Player
+			if (i == (gm.getArraySize())) {
+				i = 0; // start dealing again to first player
+			}
+		}
 	}
 
 
@@ -142,10 +138,10 @@ public class TopTrumpsRESTAPI {
 	@GET
 	@Path("/chooseFirstPlayer")
 	public String chooseFirstPlayer() throws IOException{
-								// Game Master chooses first player
-								gm.chooseFirstPlayer();
-								String fP = new String(gm.getActivePlayer().getName());
-								return fP;
+			// Game Master chooses first player
+			gm.chooseFirstPlayer();
+			String fP = new String(gm.getActivePlayer().getName());
+			return fP;
 	}
 	
 	
@@ -157,7 +153,7 @@ public class TopTrumpsRESTAPI {
 	@GET
 	@Path("/peek")
 	public String peek() throws IOException{
-		System.out.println("Peek at your top card:" + human.getTopCard().getCardInfo());
+		String remove = "|";
 		String s;
 		//we will print this in HTML
 		try {
@@ -167,7 +163,7 @@ public class TopTrumpsRESTAPI {
 		catch(Exception e) {
 			s = "\n You're boned!!!\n \n \n \n \n ";
 		}
-		s.replaceAll("[^A-Za-z0-9]", "");
+		s.replaceAll(remove, "");
 		return s;
 	}
 	
@@ -193,7 +189,6 @@ public class TopTrumpsRESTAPI {
 			s += "\n They're boned!!!\n \n \n \n \n \n \n \n \n \n";
 		}
 		gm.playerIsElminated();
-		System.out.println(s);
 		return s;
 	}
 	
@@ -227,11 +222,8 @@ public class TopTrumpsRESTAPI {
 			if (p != human) {	
 				cardInfo += p.getName() + "\n";
 				cardInfo += p.getTopCardInfo();
-				System.err.println(cardInfo);
-
 			}
 		}
-		System.out.println(cardInfo);
 		return cardInfo;
 	}
 	
@@ -248,7 +240,7 @@ public class TopTrumpsRESTAPI {
 		gm.sortByCategory(choice);
 		gm.communalPile();
 		gm.playerIsElminated();
-		if(gm.getArraySize()==1) System.out.println("The game has ended");
+		if(gm.getArraySize()==1);
 		}
 	String whowon = gm.getPlayersArrList().get(0).getName() + "won the round.";
 	return whowon;
@@ -295,10 +287,9 @@ public class TopTrumpsRESTAPI {
 	public void chooseCat(@QueryParam("choice") int choice) throws IOException{
 		human.setCategoryChoice(choice);
 		gm.sortByCategory(choice);
-		System.out.println("you chose: " + choice);
 		gm.communalPile();
 		gm.playerIsElminated();
-		if(gm.getArraySize()==1) System.out.println("The game has ended");
+		if(gm.getArraySize()==1);
 	}
 	
 	
@@ -338,7 +329,6 @@ public class TopTrumpsRESTAPI {
 			Player p = gm.getPlayerByPosition(i);
 			s += p.getName() + " " + p.getNumOfCardsInHand() + " - ";
 		}
-		System.out.println(s);
 		return s;
 	}
 	
@@ -402,9 +392,6 @@ public class TopTrumpsRESTAPI {
 		gameWinner = gm.getActivePlayerName();
 		rounds = AIRounds + humanRounds;}
 		catch (Exception e) {}
-		
-//		System.err.println(gameID + "\n" + draws + "\n" + humanWinner + "\n" + AIWinner + 
-//				"\n" + rounds + "\n" + humanRounds + "\n" + AIRounds + "\n" + gameWinner);
 	}
 	
 	
