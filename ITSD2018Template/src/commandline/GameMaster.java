@@ -239,8 +239,10 @@ public class GameMaster {
 	public ArrayList<Player> getPlayersArrList() {
 		return playersArrList;
 	}
-
-
+// method added by Cnr 
+	public ArrayList<Card> getNumCardsInPlay(){
+		return cardsInPlay;
+	}
 	/**
 	 * Sorts ArrayList<Player> based on the integer choice.
 	 * @param choice
