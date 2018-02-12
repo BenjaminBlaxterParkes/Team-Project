@@ -137,8 +137,8 @@ public class Player implements Comparable<Player> {
 	 */
 	public String getTopCardInfo() {
 		
-		String desciption = "=================================\n" + "| " + hand.get(0).getDescription()
-				+ "   \t\t\t| \n"; // String the description of the card
+		String desciption = "=================================\n" + " " + hand.get(0).getDescription()
+				+ "   \t\t\t \n"; // String the description of the card
 		
 		String allCardInfo = hand.get(0).getCardCategories(); // loads first line of deck, e.g. "Agility"
 
@@ -167,10 +167,10 @@ public class Player implements Comparable<Player> {
 		}
 
 		// Concatenate all the variables into a string
-		String categories = "| 1. " + catOne + ": \t\t" + hand.get(0).categoryOne + "\t|\n" + "| 2. " + catTwo
-				+ ": \t\t" + hand.get(0).categoryTwo + "\t|\n" + "| 3. " + catThree + ": \t\t"
-				+ hand.get(0).categoryThree + "\t|\n" + "| 4. " + catFour + ": \t\t" + hand.get(0).categoryFour
-				+ "\t|\n" + "| 5. " + catFive + ": \t\t" + hand.get(0).categoryFive + "\t|\n"
+		String categories = " 1. " + catOne + ": \t\t" + hand.get(0).categoryOne + "\t\n" + " 2. " + catTwo
+				+ ": \t\t" + hand.get(0).categoryTwo + "\t\n" + " 3. " + catThree + ": \t\t"
+				+ hand.get(0).categoryThree + "\t\n" + " 4. " + catFour + ": \t\t" + hand.get(0).categoryFour
+				+ "\t\n" + " 5. " + catFive + ": \t\t" + hand.get(0).categoryFive + "\t\n"
 				+ "=================================\n";
 
 		return desciption + categories;

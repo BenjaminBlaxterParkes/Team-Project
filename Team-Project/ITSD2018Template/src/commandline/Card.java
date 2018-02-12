@@ -143,7 +143,7 @@ public class Card {
 	 */
 	public String getCardInfo() {
 		// create strings to collect description and category info
-		String categories = "=================================\n" + "| " + getDescription() + "   \t\t\t| \n";
+		String categories = "=================================\n" + " " + getDescription() + "   \t\t\t \n";
 		String card = getCardCategories();
 
 		// instantiate strings for categories
@@ -168,9 +168,9 @@ public class Card {
 		}
 
 		// concatenate all info into a nifty card looking thing
-		categories += "| 1. " + catOne + ": \t\t" + categoryOne + "\t|\n" + "| 2. " + catTwo + ": \t\t" + categoryTwo
-				+ "\t|\n" + "| 3. " + catThree + ": \t\t" + categoryThree + "\t|\n" + "| 4. " + catFour + ": \t\t"
-				+ categoryFour + "\t|\n" + "| 5. " + catFive + ": \t\t" + categoryFive + "\t|\n"
+		categories += " 1. " + catOne + ": \t\t" + categoryOne + "\t\n" + " 2. " + catTwo + ": \t\t" + categoryTwo
+				+ "\t\n" + " 3. " + catThree + ": \t\t" + categoryThree + "\t\n" + " 4. " + catFour + ": \t\t"
+				+ categoryFour + "\t\n" + " 5. " + catFive + ": \t\t" + categoryFive + "\t\n"
 				+ "=================================\n";
 		return categories;
 	}

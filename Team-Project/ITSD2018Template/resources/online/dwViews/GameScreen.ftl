@@ -60,7 +60,7 @@ h4{
 	margin: 0 0 0 40px;
 	padding: 0 0 40px 0;
 	text-align: left;
-	color: #40e0d0;
+	color: #ffffff;
 }
 
 .col-xs-2{
@@ -142,6 +142,8 @@ div.nav ul {
 	margin: 0;
 	padding: 0;
 }
+
+p{font-size: 20px;}
 
 div.nav ul li {
 	list-style: none;
@@ -415,20 +417,20 @@ div.main {
 		
 		//HIDE AI CARDS
 		function hideAICards(){
-		var hide = document.getElementsByClassName('col-xs-2');
-		var i;
-		for (i = 0; i < hide.length; i++) {
-		hide[i].style.visibility = "hidden";
-		}
+			var hide = document.getElementsByClassName('col-xs-2');
+			var i;
+			for (i = 0; i < hide.length; i++) {
+			hide[i].style.visibility = "hidden";
+			}
 		}
 		
 		//SHOW AI CARDS
 		function showAICards() {
-    	var x = document.getElementById("bodyCnt").querySelectorAll(".col-xs-2");
-    	var i;
-   		for (i = 0; i < x.length; i++) {
-        x[i].style.visibility = "visible";
-		}
+    		var x = document.getElementById("bodyCnt").querySelectorAll(".col-xs-2");
+    		var i;
+   			for (i = 0; i < x.length; i++) {
+        	x[i].style.visibility = "visible";
+			}
 		}
 		
 		
@@ -512,19 +514,19 @@ div.main {
 			//-----------------------------------
 			//DECLARE FUNC
 			function chooseFirstPlayer(){
-			//CORS REQ
-			var gP = createCORSRequest('GET', "http://localhost:7777/toptrumps/chooseFirstPlayer");
-			if (!gP) {alert("CORS not supported");}
-			gP.onload = function(e){
-				var responseText = gP.response; //THIS SHOULD BE THE NAME OF THE FIRST PLAYER
-				let player = document.querySelector('.player');
-				let cat_one = player.querySelector('h3');
-				cat_one.innerHTML = "Good news everyone " + responseText + " is first...";
-				ifHuman(responseText);
-			};
-			gP.send();
-			//SHOW PLAYER CURRENT CARD
-			peek();
+				//CORS REQ
+				var gP = createCORSRequest('GET', "http://localhost:7777/toptrumps/chooseFirstPlayer");
+				if (!gP) {alert("CORS not supported");}
+					gP.onload = function(e){
+					var responseText = gP.response; //THIS SHOULD BE THE NAME OF THE FIRST PLAYER
+					let player = document.querySelector('.player');
+					let cat_one = player.querySelector('h3');
+					cat_one.innerHTML = "Good news everyone " + responseText + " is first...";
+					ifHuman(responseText);
+				};
+				gP.send();
+				//SHOW PLAYER CURRENT CARD
+				peek();
 			}
 			
 			
@@ -542,11 +544,11 @@ div.main {
 				pr.hidden = true;
 				//HIDE THE CONTINUE BUTTON
 				hideCNT();
-			}
+				}
 				else { let categories = document.querySelector('.categories');
 						let tmp = categories.querySelector('div');
 						tmp.innerHTML = "<div> </div>";
-					}
+				}
 			}
 			
 			
@@ -556,16 +558,16 @@ div.main {
 			//GET WHO WON/WHO IS THE ACTIVE PLAYER
 			//GET THE ACTIVE PLAYER NAME
 			function getWhoWon(){
-							//MAKE CORS
-							var wW = createCORSRequest('GET', "http://localhost:7777/toptrumps/getWhoWon");
-							//CHECK CORS 
-							if (!wW) {alert("CORS not supported");}
-			//ON LOAD CREATE
-			//A VAR USING
-			//THE RESPONSE TEXT
-			//WHICH SHOULD BE 
-			//THE ACTIVE PLAYER, IE THE WINNER OF THE PREVIOUS ROUND, NAME AS A STRING
-			wW.onload = function(e){
+				//MAKE CORS
+				var wW = createCORSRequest('GET', "http://localhost:7777/toptrumps/getWhoWon");
+				//CHECK CORS 
+				if (!wW) {alert("CORS not supported");}
+					//ON LOAD CREATE
+					//A VAR USING
+					//THE RESPONSE TEXT
+					//WHICH SHOULD BE 
+					//THE ACTIVE PLAYER, IE THE WINNER OF THE PREVIOUS ROUND, NAME AS A STRING
+					wW.onload = function(e){
 					var whoWon = wW.response;
 					//SAY WHO WON
 					let player = document.querySelector('.player');
@@ -583,7 +585,7 @@ div.main {
 					//IF IT'S THE PLAYER SHOW THE BUTTONS
 					ifHuman(whoWon);
 				}
-			wW.send();
+				wW.send();
 			}
 			
 			
@@ -594,27 +596,27 @@ div.main {
 			function changeState(){
 				var x = createCORSRequest('GET',"http://localhost:7777/toptrumps/changeState");
 				x.onload = function(e){
-						var details = x.response;
-						var s = details.split(/[\r\n]+/);
-						var activePlayer = s[0];
-						var name = s[2];
-						var comb = s[3];
-						var lew = s[4];
-						var agil = s[5];
-						var lun = s[6];
-						var iq = s[7];
-						// MODIFY HUMAN PLAYERS CARD
-						let card = document.getElementById('clmF');
-						let cat_one = clmF.querySelector('h3');
-						let cat_two = clmF.querySelector('h4');
-						cat_one.innerHTML = name;
-						cat_two.innerHTML = comb + "</br>" + lew + "</br>" + agil + "</br>" + lun + "</br>" + iq;
-						ifHuman(activePlayer);
-						// MODIFY PLAYER DISPLAY
-						let player = document.querySelector('.player');
-						let cat_three = player.querySelector('.pDisp'); 
-						cat_three.innerHTML = "Good news everyone! It's " + activePlayer + "'s turn!";
-						};
+					var details = x.response;
+					var s = details.split(/[\r\n]+/);
+					var activePlayer = s[0];
+					var name = s[2];
+					var comb = s[3];
+					var lew = s[4];
+					var agil = s[5];
+					var lun = s[6];
+					var iq = s[7];
+					// MODIFY HUMAN PLAYERS CARD
+					let card = document.getElementById('clmF');
+					let cat_one = clmF.querySelector('h3');
+					let cat_two = clmF.querySelector('h4');
+					cat_one.innerHTML = name;
+					cat_two.innerHTML = comb + "</br>" + lew + "</br>" + agil + "</br>" + lun + "</br>" + iq;
+					ifHuman(activePlayer);
+					// MODIFY PLAYER DISPLAY
+					let player = document.querySelector('.player');
+					let cat_three = player.querySelector('.pDisp'); 
+					cat_three.innerHTML = "Good news everyone! It's " + activePlayer + "'s turn!";
+					};
 				x.send();
 				//HIDE THE DRAW DISPLAY
 				hideDD();
@@ -641,26 +643,26 @@ div.main {
 			
 			//AI PLAY ROUND FUNCT
 			function playRound(){
-			//MAKE CORS RE
-			var pR = createCORSRequest('GET', "http://localhost:7777/toptrumps/playRound");
-			//CHECK CORS VALID
-			if (!pR) {alert("CORS not supported");}
-			pR.send();
-			//AFTER ROUND PLAYED...
-			//SHOW THE ACTIVE PLAYER 
-			getWhoWon();
-			//SHOW PLAYER CURRENT CARD
-			getDraw();
-			//UPDATE HANDS
-			getAllHands();
-			//CHECK THE COMMUNAL PILE
-			getCardsInPlay();
-			//CHECK FOR AN OVERALL WINNER
-			isItOver();
-			//SHOW THE AI CARDS
-			showAICards();
-			//UPDATE DATABASE STATS
-			database();
+				//MAKE CORS RE
+				var pR = createCORSRequest('GET', "http://localhost:7777/toptrumps/playRound");
+				//CHECK CORS VALID
+				if (!pR) {alert("CORS not supported");}
+				pR.send();
+				//AFTER ROUND PLAYED...
+				//SHOW THE ACTIVE PLAYER 
+				getWhoWon();
+				//SHOW PLAYER CURRENT CARD
+				getDraw();
+				//UPDATE HANDS
+				getAllHands();
+				//CHECK THE COMMUNAL PILE
+				getCardsInPlay();
+				//CHECK FOR AN OVERALL WINNER
+				isItOver();
+				//SHOW THE AI CARDS
+				showAICards();
+				//UPDATE DATABASE STATS
+				database();
 			} 
 			
 			
@@ -671,29 +673,29 @@ div.main {
 			//PEEK SCRIPT - DETAILS OF CURRENT CARD
 			//DECLARE FUNC
 			function peek(){
-			//MAKE CORS RE
-			var pk = createCORSRequest('GET', "http://localhost:7777/toptrumps/peek");
-			//CHECK CORS VALID
-			if (!pk) {alert("CORS not supported");} 
-			//WHEN PEEK REQUEST LOADS, THE RESPONSE WILL BE THE CARD DEETS. 
-			//UPDATES HTML
-			pk.onload = function(e){
-				var responseText = pk.response; //CARD DEETS
-				var s = responseText.split(/[\r\n]+/);
-				var name = s[1];
-				var comb = s[2];
-				var lew = s[3];
-				var agil = s[4];
-				var lun = s[5];
-				var iq = s[6];
-				let card = document.getElementById('clmF');
-				let cat_one = clmF.querySelector('h3');
-				let cat_two = clmF.querySelector('h4');
-				cat_one.innerHTML = name;
-				cat_two.innerHTML = comb + "</br>" + lew + "</br>" + agil + "</br>" + lun + "</br>" + iq;
-			};
-			//SEND THE CORS
-			pk.send();
+				//MAKE CORS RE
+				var pk = createCORSRequest('GET', "http://localhost:7777/toptrumps/peek");
+				//CHECK CORS VALID
+				if (!pk) {alert("CORS not supported");} 
+				//WHEN PEEK REQUEST LOADS, THE RESPONSE WILL BE THE CARD DEETS. 
+				//UPDATES HTML
+				pk.onload = function(e){
+					var responseText = pk.response; //CARD DEETS
+					var s = responseText.split(/[\r\n]+/);
+					var name = s[1];
+					var comb = s[2];
+					var lew = s[3];
+					var agil = s[4];
+					var lun = s[5];
+					var iq = s[6];
+					let card = document.getElementById('clmF');
+					let cat_one = clmF.querySelector('h3');
+					let cat_two = clmF.querySelector('h4');
+					cat_one.innerHTML = name;
+					cat_two.innerHTML = comb + "</br>" + lew + "</br>" + agil + "</br>" + lun + "</br>" + iq;
+				};
+				//SEND THE CORS
+				pk.send();
 			}
 			
 			
@@ -704,78 +706,78 @@ div.main {
 			
 			//SHOW ALL THE AI CARDS AT THE END OF EACH ROUND
 			function getAICards(){
-			//CORS REQUEST
-			var x = createCORSRequest ('GET', "http://localhost:7777/toptrumps/getAICards"); 
-			//UPDATES HTML
-			x.onload = function(e){
-				var responseText = x.response; //CARD DEETS
-				var s = responseText.split(/[\r\n]+/);
-				var pName1 = s[0];
-				var cName1 = s[2]
-				var comb1 = s[3];
-				var lew1 = s[4];
-				var agil1 = s[5];
-				var lun1 = s[6];
-				var iq1 = s[7];
+				//CORS REQUEST
+				var x = createCORSRequest ('GET', "http://localhost:7777/toptrumps/getAICards"); 
+				//UPDATES HTML
+				x.onload = function(e){
+					var responseText = x.response; //CARD DEETS
+					var s = responseText.split(/[\r\n]+/);
+					var pName1 = s[0];
+					var cName1 = s[2]
+					var comb1 = s[3];
+					var lew1 = s[4];
+					var agil1 = s[5];
+					var lun1 = s[6];
+					var iq1 = s[7];
 				//
-				var pName2 = s[9];
-				var cName2 = s[11]
-				var comb2 = s[12];
-				var lew2 = s[13];
-				var agil2 = s[14];
-				var lun2 = s[15];
-				var iq2 = s[16];
+					var pName2 = s[9];
+					var cName2 = s[11]
+					var comb2 = s[12];
+					var lew2 = s[13];
+					var agil2 = s[14];
+					var lun2 = s[15];
+					var iq2 = s[16];
 				//
-				var pName3 = s[18];
-				var cName3 = s[20]
-				var comb3 = s[21];
-				var lew3 = s[22];
-				var agil3 = s[23];
-				var lun3 = s[24];
-				var iq3 = s[25];
+					var pName3 = s[18];
+					var cName3 = s[20]
+					var comb3 = s[21];
+					var lew3 = s[22];
+					var agil3 = s[23];
+					var lun3 = s[24];
+					var iq3 = s[25];
 				//
-				var pName4 = s[27];
-				var cName4 = s[29]
-				var comb4 = s[30];
-				var lew4 = s[31];
-				var agil4 = s[32];
-				var lun4 = s[33];
-				var iq4 = s[34];
+					var pName4 = s[27];
+					var cName4 = s[29]
+					var comb4 = s[30];
+					var lew4 = s[31];
+					var agil4 = s[32];
+					var lun4 = s[33];
+					var iq4 = s[34];
 				//
-				let c1 = document.getElementById('c1');
-				let c1_h = c1.querySelector('h3');
-				let c1_h2 = c1.querySelector('h2');
-				let c1_p = c1.querySelector('h4');
-				c1_h.innerHTML = pName1;
-				c1_h2.innerHTML = cName1;
-				c1_p.innerHTML = comb1 + "</br>" + lew1 + "</br>" + agil1 + "</br>" + lun1 + "</br>" + iq1;
-			//
-				let c2 = document.getElementById('c2');
-				let c2_h = c2.querySelector('h3');
-				let c2_h2 = c2.querySelector('h2');
-				let c2_p = c2.querySelector('h4');
-				c2_h.innerHTML = pName2;
-				c2_h2.innerHTML = cName2;
-				c2_p.innerHTML = comb2 + "</br>" + lew2 + "</br>" + agil2 + "</br>" + lun2 + "</br>" + iq2;
-			//
-				let c3 = document.getElementById('c3');
-				let c3_h = c3.querySelector('h3');
-				let c3_h2 = c3.querySelector('h2');
-				let c3_p = c3.querySelector('h4');
-				c3_h.innerHTML = pName3;
-				c3_h2.innerHTML = cName3;
-				c3_p.innerHTML = comb3 + "</br>" + lew3 + "</br>" + agil3 + "</br>" + lun3 + "</br>" + iq3;
-			//
-				let c4 = document.getElementById('c4');
-				let c4_h = c4.querySelector('h3');
-				let c4_h2 = c4.querySelector('h2');
-				let c4_p = c4.querySelector('h4');
-				c4_h.innerHTML = pName4;
-				c4_h2.innerHTML = cName4;
-				c4_p.innerHTML = comb4 + "</br>" + lew4 + "</br>" + agil4 + "</br>" + lun4 + "</br>" + iq4;
-			};
-			//SEND THE CORS
-			x.send();
+					let c1 = document.getElementById('c1');
+					let c1_h = c1.querySelector('h3');
+					let c1_h2 = c1.querySelector('h2');
+					let c1_p = c1.querySelector('h4');
+					c1_h.innerHTML = pName1;
+					c1_h2.innerHTML = cName1;
+					c1_p.innerHTML = comb1 + "</br>" + lew1 + "</br>" + agil1 + "</br>" + lun1 + "</br>" + iq1;
+				//
+					let c2 = document.getElementById('c2');
+					let c2_h = c2.querySelector('h3');
+					let c2_h2 = c2.querySelector('h2');
+					let c2_p = c2.querySelector('h4');
+					c2_h.innerHTML = pName2;
+					c2_h2.innerHTML = cName2;
+					c2_p.innerHTML = comb2 + "</br>" + lew2 + "</br>" + agil2 + "</br>" + lun2 + "</br>" + iq2;
+				//
+					let c3 = document.getElementById('c3');
+					let c3_h = c3.querySelector('h3');
+					let c3_h2 = c3.querySelector('h2');
+					let c3_p = c3.querySelector('h4');
+					c3_h.innerHTML = pName3;
+					c3_h2.innerHTML = cName3;
+					c3_p.innerHTML = comb3 + "</br>" + lew3 + "</br>" + agil3 + "</br>" + lun3 + "</br>" + iq3;
+				//
+					let c4 = document.getElementById('c4');
+					let c4_h = c4.querySelector('h3');
+					let c4_h2 = c4.querySelector('h2');
+					let c4_p = c4.querySelector('h4');
+					c4_h.innerHTML = pName4;
+					c4_h2.innerHTML = cName4;
+					c4_p.innerHTML = comb4 + "</br>" + lew4 + "</br>" + agil4 + "</br>" + lun4 + "</br>" + iq4;
+				};
+				//SEND THE CORS
+				x.send();
 			}
 			
 			
@@ -784,9 +786,9 @@ div.main {
 			
 			//SHOW THE DRAW DISPLAY
 			function showDD(){
-			let showDrawDisplay = document.querySelector('.drawDisplay');
-			let show = showDrawDisplay.querySelector('.display');
-			show.hidden = false;
+				let showDrawDisplay = document.querySelector('.drawDisplay');
+				let show = showDrawDisplay.querySelector('.display');
+				show.hidden = false;
 			}
 			
 				
@@ -794,27 +796,27 @@ div.main {
 			
 			//HIDE THE DRAW DISPLAY
 			function hideDD(){
-			let showDrawDisplay = document.querySelector('.drawDisplay');
-			let show = showDrawDisplay.querySelector('.display');
-			show.hidden = true;
+				let showDrawDisplay = document.querySelector('.drawDisplay');
+				let show = showDrawDisplay.querySelector('.display');
+				show.hidden = true;
 			}
 			
 			
 			
 			//SHOW THE COMMUNAL PILE
 			function showCP(){
-			let showCommunalPile = document.querySelector('.csInP');
-			let show = showCommunalPile.querySelector('.display');
-			show.hidden = false;
+				let showCommunalPile = document.querySelector('.csInP');
+				let show = showCommunalPile.querySelector('.display');
+				show.hidden = false;
 			}
 									
 			
 											
 			//HIDE THE COMMUNAL PILE
 			function hideCP(){								
-			let showCommunalPile = document.querySelector('.csInP');
-			let show = showCommunalPile.querySelector('.display');
-			show.hidden = true;
+				let showCommunalPile = document.querySelector('.csInP');
+				let show = showCommunalPile.querySelector('.display');
+				show.hidden = true;
 			}
 			
 			
@@ -875,50 +877,47 @@ div.main {
 					let player = document.querySelector('.player');
 					let cat_one = player.querySelector('h3'); 
 					cat_one.innerHTML = "Congratulations " + whoWon +" you won the game!";
-					};
+				};
 			}
 			
 			
 			
 			//HIDE KILL SWITCH
 			function hideKillSwitch () {
-					document.getElementById("killSwitch").style.display = "none";
-					}
+				document.getElementById("killSwitch").style.display = "none";
+			}
 			
 			//SHOW KILL SWITCH
 			function showKillSwitch () {
-					document.getElementById("killSwitch").style.display = "block";
-					}
+				document.getElementById("killSwitch").style.display = "block";
+			}
 			
 			
 			
 			//KILL GAME
 			function killGame(){
-					var y = createCORSRequest('GET',"http://localhost:7777/toptrumps/killSwitch");
-					//CHECK IF CORS VALID
-					if (!y) {
-							alert("CORS not supported");
-							}
-					y.onload = function(e){};
-					//SEND
-					y.send();
-					returnToHome();
-				   }
+				var y = createCORSRequest('GET',"http://localhost:7777/toptrumps/killSwitch");
+				//CHECK IF CORS VALID
+				if (!y) {alert("CORS not supported");}
+				y.onload = function(e){};
+				//SEND
+				y.send();
+				returnToHome();
+			}
 			
 			//RETURN TO HOME SCREEN
 			function returnToHome() {window.location.replace("http://localhost:7777/toptrumps");}
 			
 			//HAS THE GAME ENDED???
-			//WE NEED TO FINISH THIS
 			//DISPLAY WHO WON
 			//HIDE EVERYTHING
 			//BUTTON TO PLAY A NEW GAME
 			//DECLARE
 			function isItOver(){
 				var iIO = createCORSRequest('GET', "http://localhost:7777/toptrumps/isItOver");
-			//CHECK IF CORS VALID
+				//CHECK IF CORS VALID
 				if (!iIO) {alert("CORS not supported");}
-			//THE RETURNED REQUEST TEXT WILL SAY IF IT'S OVER
+				//THE RETURNED REQUEST TEXT WILL SAY IF IT'S OVER
 				iIO.onload = function(e){
 					var responseText = iIO.response;
 					if (responseText != ""){
@@ -932,8 +931,8 @@ div.main {
 						showKillSwitch();
 						};
 					}; 
-			//SEND
-			iIO.send();
+				//SEND
+				iIO.send();
 			}
 			
 			
