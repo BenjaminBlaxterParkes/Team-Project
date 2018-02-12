@@ -51,132 +51,126 @@ public class TopTrumpsRESTAPI {
 	 * @param conf
 	 */
 	public TopTrumpsRESTAPI(TopTrumpsJSONConfiguration conf) {
-		// ----------------------------------------------------
-		// Add relevant initalization here
-		// ----------------------------------------------------
 	}
 	
 	
-	//*~*Variables!
-	int numPlayers = 1;
-	String name = "player";
-	CardDeck cd = new CardDeck();
-	Stats stats = new Stats("m_17_2293327p", "m_17_2293327p", "2293327p");
-	final int DECK_SIZE = 40;
-	boolean writeGameLogsToFile = false; // Should we write game logs to file?
-	// if (args[0].equalsIgnoreCase("true")) {
-	// writeGameLogsToFile = true; // Command line selection
-	// }
+	// Instance variables
+	private int numPlayers = 1;
+	private String name = "player";
+	private CardDeck cd = new CardDeck();
+	private Stats stats = new Stats("m_17_2293327p", "m_17_2293327p", "2293327p");
+	private final int DECK_SIZE = 40;	
+	private static commandline.GameMaster gm; 
+	private static commandline.Player human;
 	
-	//Variables for database
-	int humanWinner = 0;
-	int AIWinner = 0;
-	int gameID;
-	int draws;
-	int AIRounds;
-	int humanRounds;
-	int rounds;
-	String gameWinner;
-	
-	//I think by making 'gm' here, a gamemaster class, there is a better chance of 
-	//utilising further down. 
-	static commandline.GameMaster gm; 
-	
-	//Using this logic, it makes more sense to make the player here...
-	//commandline.Player human = new commandline.Player(name);
-	static commandline.Player human;
-	
+	//Variables for updating the database
+	private int humanWinner = 0;
+	private int AIWinner = 0;
+	private int gameID;
+	private int draws;
+	private int AIRounds;
+	private int humanRounds;
+	private int rounds;
+	private String gameWinner;
+
 	
 	
 	@GET
 	@Path("/setAI")
-	/**I want the player to be able to set the number of opponents.
-	 * we will make buttons that set the number of AI opponents
+	/**
+	 * Method to set the number of AI players and initialise the game
+	 * Loads all human and AI players
+	 * Initiates the shuffling and dealing of the cards
 	 * 
+	 * @throws IOException 
 	 */
 	public void setAI(@QueryParam("ai") int ai) throws IOException{
 		numPlayers += ai;
 		gm = new commandline.GameMaster();
 		human = new commandline.Player(name);
 		gm.loadPlayers(human, 0);
-		System.out.println("human player loaded");
 		gm.createAI(ai);
-		System.out.println("number of AI set = " + ai);
+		shuffleAndDeal();
 	}
 	
 	
 
-	/**This is GOT by the Javascript 'shuf' Function which is 
-	 * called by the newGame Javacript function. 
+	/**
+	 * Method to populate, shuffle, and deal the cards
+	 * Called when setting the number of AI players
+	 *  
 	 * @throws IOException
 	 */
 	@GET
 	@Path("/shuffleAndDeal")
 	public void shuffleAndDeal() throws IOException{
-								System.out.println("The deck was constructed shuffled and dealt");
-								// Deck is populated and shuffled
-								cd.populateDeck();
-								cd.shuffleDeck();
+		
+		// Deck is populated and shuffled
+		cd.populateDeck();
+		cd.shuffleDeck();
 	
-								// Game Master deals out the cards
-								int j = 0;
-								int i = 0;
-								while (j < DECK_SIZE) {
-									gm.getPlayerByPosition(i).setHand(gm.dealCard(cd, j));
-									System.out.println(gm.getPlayerByPosition(i).getName() + " got"
-									 + " card: " + gm.dealCard(cd, j));
-									j++; // increment Card
-									i++; // increment Player
-									if (i == (gm.getArraySize())) {
-										i = 0; // start dealing again to first player
-									}
-								}
+		// Game Master deals out the cards
+		int j = 0;
+		int i = 0;
+		while (j < DECK_SIZE) {
+			gm.getPlayerByPosition(i).setHand(gm.dealCard(cd, j));
+			j++; // increment Card
+			i++; // increment Player
+			if (i == (gm.getArraySize())) {
+				i = 0; // start dealing again to first player
+			}
+		}
 	}
 
 
 
-	/**This, I think, will need to be called at the same time
-	 * as next round...
-	 * @return
+	/**
+	 * Method to initiate the game master to choose the first player
+	 * 
+	 * @return String
 	 * @throws IOException
 	 */
 	@GET
 	@Path("/chooseFirstPlayer")
 	public String chooseFirstPlayer() throws IOException{
-								// Game Master chooses first player
-								gm.chooseFirstPlayer();
-								String fP = new String(gm.getActivePlayer().getName());
-								return fP;
+		
+			// Game Master chooses first player
+			gm.chooseFirstPlayer();
+			String fP = new String(gm.getActivePlayer().getName());
+			return fP;
 	}
 	
 	
-	
-	
-	
-	
-	
+	/**
+	 * Method to display the human players first card when the game is initialised
+	 * 
+	 * @return
+	 * @throws IOException
+	 */
 	@GET
 	@Path("/peek")
 	public String peek() throws IOException{
-		String remove = "|";
-		String s;
-		//we will print this in HTML
+		
+		// Contains the details of the humans top card
+		String humanCard;
 		try {
-		//human.getTopCardInfo();<--THIS MAY NOT BE NEEDED REMOVE IF WORKING.
-		s = human.getTopCardInfo();
+			// Try get card info
+			humanCard = human.getTopCardInfo(); 
 		}
 		catch(Exception e) {
-			s = "\n You're boned!!!\n \n \n \n \n ";
+			// Displayed if human player is eliminated
+			humanCard = "\n You're boned!!!\n \n \n \n \n "; 
 		}
-		s.replaceAll(remove, "");
-		return s;
+		return humanCard;
 	}
 	
 	
 	
 	
 	
-	/** INTERIM STATE
+	/** 
+	 * Method to display the current active player
+	 * the human players card after a round before continue is clicked
 	 * 
 	 * @return
 	 * @throws IOException
@@ -184,17 +178,19 @@ public class TopTrumpsRESTAPI {
 	@GET
 	@Path("/changeState")
 	public String changeState() throws IOException{
+		
 		String s = "";
+		// Get the active player name
 		s += gm.getActivePlayer().getName() + "\n";
 		try {
-			human.getTopCardInfo();
+			// Try get card info
 			s += human.getTopCardInfo();
 		}
 		catch (Exception e) {
+			// Displayed if human player is eliminated
 			s += "\n They're boned!!!\n \n \n \n \n \n \n \n \n \n";
 		}
-		gm.playerIsElminated();
-		System.out.println(s);
+		gm.playerIsElminated();// check if any players have been eliminated
 		return s;
 	}
 	
@@ -202,10 +198,8 @@ public class TopTrumpsRESTAPI {
 	
 	
 	
-	/**This allows us to 
-	 *See the enemy cards 
-	 *- it does not allow us to 
-	 *see how many cards in hand.  
+	/**
+	 * Method to display the AI players cards after a round is played
 	 *
 	 * @return
 	 * @throws IOException
@@ -213,53 +207,64 @@ public class TopTrumpsRESTAPI {
 	@GET
 	@Path("/getAICards")
 	public String getAICards() throws IOException{ 
+		
+		//Contains the info of all the AI cards
 		String cardInfo = "";
 		Player p = null;
 		for (int i = 0; i<numPlayers; i++) {
 			try {
+				// Try get each player in the players array list
 				p = gm.getPlayerByPosition(i);
 			}
 			catch (Exception e) {
+				//Display if the player has been eliminated
 				cardInfo += "They're boned!!!\n \n \n \n \n \n \n \n \n"
 						+ "They're boned!!!\n \n \n \n \n \n \n \n \n"
 						+ "They're boned!!!\n \n \n \n \n \n \n \n \n"
 						+ "They're boned!!!\n \n \n \n \n \n \n \n \n";
 			}
-			if (p != human) {	
+			if (p != human) {
+				//Get the AI players info
 				cardInfo += p.getName() + "\n";
 				cardInfo += p.getTopCardInfo();
-				System.err.println(cardInfo);
-
 			}
 		}
-		System.out.println(cardInfo);
 		return cardInfo;
 	}
 	
 	
 	
-	
-	
-	
+	/**
+	 * Method that initialises the process of playing a round
+	 * 
+	 * @return
+	 * @throws IOException
+	 */
 	@GET
 	@Path("/playRound")
 	public String playRound() throws IOException{
+		
+		// Check if the active player is AI
 	if (gm.getActivePlayerName() != "Player") {
-		int choice = gm.getActivePlayer().AIChooseCategory();
-		gm.sortByCategory(choice);
-		gm.communalPile();
-		gm.playerIsElminated();
-		if(gm.getArraySize()==1) System.out.println("The game has ended");
+		int choice = gm.getActivePlayer().AIChooseCategory();//Let AI players choose a category
+		gm.sortByCategory(choice);//Compare cards to see who won
+		gm.communalPile();//Update the communal pile display
+		gm.playerIsElminated();//Check to see if any players have been eliminated 
+		if(gm.getArraySize()==1);
 		}
+	// Display who won the round
 	String whowon = gm.getPlayersArrList().get(0).getName() + "won the round.";
 	return whowon;
 	}
 	
 	
 	
-	
-	
-	
+	/**
+	 * Method to check if the game is over
+	 * 
+	 * @return
+	 * @throws IOException
+	 */
 	@GET
 	@Path("/isItOver")
 	public String isItOver() throws IOException{
@@ -273,14 +278,23 @@ public class TopTrumpsRESTAPI {
 	}
 	
 	
-	
+	/**
+	 * Method to end the game master and the game
+	 * 
+	 * @throws NullPointerException
+	 */
 	@GET
 	@Path("/killSwitch")
 	public void killSwitch() throws NullPointerException{
 				gm = null;
 				}
 	
-	
+	/**
+	 * Method to check who won the game
+	 * 
+	 * @return
+	 * @throws IOException
+	 */
 	@GET
 	@Path("/getWhoWon")
 	public String getWhoWon() throws IOException{
@@ -289,17 +303,21 @@ public class TopTrumpsRESTAPI {
 	
 	
 	
-	
-	
+	/**
+	 * Method to allow the human player to select a category
+	 * when it is their turn
+	 * 
+	 * @param choice
+	 * @throws IOException
+	 */
 	@GET
 	@Path("/chooseCat")
 	public void chooseCat(@QueryParam("choice") int choice) throws IOException{
-		human.setCategoryChoice(choice);
-		gm.sortByCategory(choice);
-		System.out.println("you chose: " + choice);
-		gm.communalPile();
-		gm.playerIsElminated();
-		if(gm.getArraySize()==1) System.out.println("The game has ended");
+		human.setCategoryChoice(choice);//Send category choice to be compared to other cards
+		gm.sortByCategory(choice);//Compare cards to see who won
+		gm.communalPile();//Update the communal pile display
+		gm.playerIsElminated();//Check to see if any players have been eliminated 
+		if(gm.getArraySize()==1);
 	}
 	
 	
@@ -308,7 +326,8 @@ public class TopTrumpsRESTAPI {
 	
 	@GET
 	@Path("/getCardsInPlay")
-	/** gets cards in the communal pile**
+	/** 
+	 * Method gets the number of cards in the communal pile
 	* 
 	* @param choice
 	* @throws IOException
@@ -327,7 +346,8 @@ public class TopTrumpsRESTAPI {
 	
 	@GET
 	@Path("/getAllHands")
-	/** gets all the cards in player's hands**
+	/** 
+	 * Method get the number of cards in the players hands
 	* 
 	* @param choice
 	* @throws IOException
@@ -339,7 +359,6 @@ public class TopTrumpsRESTAPI {
 			Player p = gm.getPlayerByPosition(i);
 			s += p.getName() + " " + p.getNumOfCardsInHand() + " - ";
 		}
-		System.out.println(s);
 		return s;
 	}
 	
@@ -348,7 +367,7 @@ public class TopTrumpsRESTAPI {
 	
 	@GET
 	@Path("/getDraw")
-	/** checks for a draw**
+	/** Method checks for a draw
 	 * 
 	 * @param choice
 	 * @throws IOException
@@ -368,7 +387,7 @@ public class TopTrumpsRESTAPI {
 	@Path("/database")
 	/**
 	 * Connects to the database
-	 * Store statistics to be saved in database
+	 * Stores statistics to be saved in database
 	 * 
 	 */
 	public void database()  throws IOException{
@@ -403,14 +422,11 @@ public class TopTrumpsRESTAPI {
 		gameWinner = gm.getActivePlayerName();
 		rounds = AIRounds + humanRounds;}
 		catch (Exception e) {}
-		
-//		System.err.println(gameID + "\n" + draws + "\n" + humanWinner + "\n" + AIWinner + 
-//				"\n" + rounds + "\n" + humanRounds + "\n" + AIRounds + "\n" + gameWinner);
 	}
 	
 	
 	/**
-	 * Send the game stats to the database to be stored
+	 * Send the game statistics to the database to be stored
 	 * closes the database connection
 	 * 
 	 * @throws IOException
@@ -424,7 +440,7 @@ public class TopTrumpsRESTAPI {
 	}
 	
 	/**
-	 * Loads previous stats from the database
+	 * Loads previous statistics from the database
 	 * @return
 	 * @throws IOException
 	 */

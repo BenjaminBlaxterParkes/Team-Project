@@ -18,6 +18,27 @@
     	<script src="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.4/js/bootstrap.min.js"></script>
 		<link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/font-awesome/4.5.0/css/font-awesome.min.css">
 
+	<style>
+	body{
+	//width: 400px;
+	background-color: coral;}
+	
+	.container{
+	width: 400px;
+	}
+	
+	p{
+	margin-left: 100px;
+	margin-right: 100px;
+	font-size:20px;
+	}
+	
+	button{
+	margin-left: 100px;
+	margin-right: 100px;
+	}
+	</style>
+
 	</head>
 
     <body onload="initalize()"> <!-- Call the initalize method when the page loads -->
@@ -31,7 +52,7 @@
 			</div>
 			
 			<div id="home" class="home">
-			<button onclick="returnToHome()">Home</button>
+			<button id="button" onclick="returnToHome()">Home</button>
 			</div>
 		
 		</div>
@@ -77,13 +98,19 @@
 				var stats = createCORSRequest('GET', "http://localhost:7777/toptrumps/getPreviousStats");
 				if (!stats) {alert("CORS not supported")};
 			//THE RETURNED REQUEST TEXT WILL CONTAIN THE STATISTICS FROM THE DATABASE
-			stats.onload = function(e){
-				var statsText = stats.response;
-				let statsDiv = document.querySelector('.stats');
-				let statsP = statsDiv.querySelector('p');
-				statsP.innerHTML = statsText;
-				};
-			stats.send();
+				stats.onload = function(e){
+					var statsText = stats.response;
+					var s = statsText.split("\n");
+					var gamesPlayed = s[0];
+					var aiWins = s[1];
+					var humanWins = s[2];
+					var averageDraws = s[3];
+					var largestRound = s[4];
+					let statsDiv = document.querySelector('.stats');
+					let statsP = statsDiv.querySelector('p');
+					statsP.innerHTML = gamesPlayed + "<br>" + aiWins + "<br>" + humanWins + "<br>" + averageDraws + "<br>" + largestRound;
+					};
+				stats.send();
 			}
 		
 		//RETURNS USER TO HOME SCREEN

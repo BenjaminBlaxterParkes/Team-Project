@@ -596,7 +596,7 @@ div.main {
 				x.onload = function(e){
 						var details = x.response;
 						var s = details.split(/[\r\n]+/);
-						var activePlayer = s[1];
+						var activePlayer = s[0];
 						var name = s[2];
 						var comb = s[3];
 						var lew = s[4];
@@ -899,11 +899,14 @@ div.main {
 					if (!y) {
 							alert("CORS not supported");
 							}
-					y.onload = function(e){alert("sent");};
+					y.onload = function(e){};
 					//SEND
 					y.send();
+					returnToHome();
 				   }
 			
+			//RETURN TO HOME SCREEN
+			function returnToHome() {window.location.replace("http://localhost:7777/toptrumps");}
 			
 			//HAS THE GAME ENDED???
 			//WE NEED TO FINISH THIS
@@ -946,17 +949,20 @@ div.main {
 			//CHECK CORS VALID
 			if (!cC) {alert("CORS not supported");}
 			cC.send();
-			//AFTER ROUND PLAYED
-			//WHOSE CARD WON IS DISPLAYED 
-			getWhoWon();
-			//CHECK FOR A DRAW
+			//CHECK IF THERE WAS A DRAW
 			getDraw();
-			//UPDATE PLAYERS HANDS
+			//UPDATE HANDS
 			getAllHands();
-			//SHOW AI CARDS
+			//CHECK THE COMMUNAL PILE
+			getCardsInPlay();
+			//CHECK FOR AN OVERALL WINNER
+			isItOver();
+			//SHOW THE AI CARDS
 			showAICards();
-			//CHECK FOR A WINNER
-			isItOver();	
+			//CHECK WHO WON
+			getWhoWon();
+			//UPDATE DATABASE STATS
+			database();
 			}
 			
 			//OPENS CONNECTION WITH DATABASE AND COLLECTS THE STATS TO BE STORED

@@ -29,6 +29,10 @@
 			<div id="stats" class="stats">
 			<p>Test</p>
 			</div>
+			
+			<div id="home" class="home">
+			<button onclick="returnToHome()">Home</button>
+			</div>
 		
 		</div>
 		
@@ -82,6 +86,8 @@
 			stats.send();
 			}
 		
+		//RETURNS USER TO HOME SCREEN
+		function returnToHome() {window.location.replace("http://localhost:7777/toptrumps");}
 		
 		</script>
 		

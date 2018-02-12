@@ -52,11 +52,11 @@
 	
 	#buttons{
 	width: 500px;
-	font-size: 60px;
+	font-size: 10px;
 	font-family: 'Bungee Shade', cursive;
 	position: fixed;
-	margin-top:5%;
-	margin-left: 55%;
+	margin-top:35%;
+	margin-left: 38%;
 	}
 	
 	#logo{
@@ -117,7 +117,7 @@
     	<!-- This allows different player selections -->
 		<div id="buttons" class="buttons" hidden=true>
 		<form>
-		<p style="color:white"> <font size="6px"> Choose your number of opponents wisely! </p>
+		<p style="color:white"> <font size="4px"> Choose your number of opponents!</p>
 		<input id="oneAI" type="button" class="button" onclick="setAI(1)" value="1">
 		<input id="twoAI" type="button" class="button" onclick="setAI(2)" value="2">
 		<input id="threeAI" type="button" class="button" onclick="setAI(3)" value="3">
@@ -219,26 +219,23 @@
 			
 			
 			
-			//SET NUMBER OF AI
+				//SET NUMBER OF AI
 			//THIS IS WHAT ACTUALLY STARTS THE GAME
 			//
 			//
 			//
 			//
 			function setAI(ai){
-			var setAI = createCORSRequest('GET', "http://localhost:7777/toptrumps/setAI?ai="+ai)
-			// Check if CORS supported
-				if (!setAI) {
-  					alert("CORS not supported");
-				}	
-			//CORS request setup so send it off!
-			setAI.send();	
-			//OPENS A NEW WINDOW
-			openWindow();
-			//SHUFFLE AND DEAL THE DECK
-			shuf();
-			//HIDE THE BUTTONS TO MAKE PAGE INACTIVE
-			hideAISelection();
+				var setAI = createCORSRequest('GET', "http://localhost:7777/toptrumps/setAI?ai="+ai)
+				// Check if CORS supported
+				if (!setAI) {alert("CORS not supported");}
+				setAI.onload = function(e) {
+					openWindow();
+					//HIDE THE BUTTONS TO MAKE PAGE INACTIVE
+					hideAISelection();	
+				};
+				//CORS request setup so send it off!
+				setAI.send();
 			}
 			
 			

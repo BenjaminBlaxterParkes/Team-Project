@@ -52,11 +52,11 @@
 	
 	#buttons{
 	width: 500px;
-	font-size: 60px;
+	font-size: 10px;
 	font-family: 'Bungee Shade', cursive;
 	position: fixed;
-	margin-top:5%;
-	margin-left: 55%;
+	margin-top:35%;
+	margin-left: 38%;
 	}
 	
 	#logo{
@@ -117,7 +117,7 @@
     	<!-- This allows different player selections -->
 		<div id="buttons" class="buttons" hidden=true>
 		<form>
-		<p style="color:white"> <font size="6px"> Choose your number of opponents wisely! </p>
+		<p style="color:white"> <font size="4px"> Choose your number of opponents!</p>
 		<input id="oneAI" type="button" class="button" onclick="setAI(1)" value="1">
 		<input id="twoAI" type="button" class="button" onclick="setAI(2)" value="2">
 		<input id="threeAI" type="button" class="button" onclick="setAI(3)" value="3">
@@ -213,7 +213,7 @@
 			
 			
 			//OPEN NEW WINDOW WHEN NUMBER OF ENEMIES SELECTED
-			function openWindow() {window.open("http://localhost:7777/toptrumps/game");}
+			function openWindow() {window.location.replace("http://localhost:7777/toptrumps/game");}
 			
 			
 			
@@ -246,7 +246,7 @@
 					
 			
 			//OPEN NEW WINDOW WHEN NEW SEE SCORES PRESSED
-			function openStatsWindow() {window.open("http://localhost:7777/toptrumps/stats");}
+			function openStatsWindow() {window.location.replace("http://localhost:7777/toptrumps/stats");}
 			
 			
 			
